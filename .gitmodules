@@ -1,0 +1,32 @@
+[submodule "nixpkgs"]
+	path = nixpkgs
+	url = git@github.com:NixOS/nixpkgs.git
+	remote = "DamienCassou git@github.com:DamienCassou/nixpkgs.git"
+[submodule "home-manager"]
+	path = home-manager
+	url = git@github.com:nix-community/home-manager.git
+	remote = "DamienCassou git@github.com:DamienCassou/home-manager.git"
+[submodule "nixos-hardware"]
+	path = nixos-hardware
+	url = git@github.com:NixOS/nixos-hardware.git
+	remote = "DamienCassou git@github.com:DamienCassou/nixos-hardware.git"
+[submodule "nixGL"]
+	path = nixGL
+	url = https://github.com/guibou/nixGL/
+[submodule "emacs-overlay"]
+	path = emacs-overlay
+	url = git@github.com:nix-community/emacs-overlay.git
+	remote = "DamienCassou git@github.com:DamienCassou/emacs-overlay.git"
+[submodule "stylix"]
+	path = stylix
+	url = git@github.com:danth/stylix.git
+	remote = "DamienCassou git@github.com:DamienCassou/stylix.git"
+[submodule "base16"]
+	path = base16
+	url = git@github.com:SenchoPens/base16.nix.git
+[submodule "nix-index-database"]
+	path = nix-index-database
+	url = git@github.com:nix-community/nix-index-database.git
+[submodule "NUR"]
+	path = NUR
+	url = git@github.com:nix-community/NUR.git
