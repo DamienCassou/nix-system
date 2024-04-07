@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=~/.xsession
+Comment=This runs ~/.xsession
+Exec=default
+Icon=

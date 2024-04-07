@@ -1,0 +1,25 @@
+* Seuils des capteurs
+- orange entre 800 et 1000
+- rouge entre 1000 et 1500
+- rouge clignotant au delà de 1500
+
+* Quand aérer ?
+
+1000 commence à être un problème. Donc, il vaut mieux aérer à partir
+du rouge et laisser aéré jusqu'au vert.
+
+Le orange peut être ignoré, il sert seulement de second seuil : il
+encourage l'utilisateur à laisser aéré suffisamment longtemps pour ne
+pas avoir à ouvrir les fenêtres toutes les 2 minutes.
+
+* Comment changes les seuils des capteurs
+1. Lancer le client avec un python interactif python -i clientUsb.py
+2. Fermer la fenêtre d’affichage de la courbe
+3. Depuis le prompt python, on peut alors écrire sur le port serie
+4. ~ser.ser.write(b'tl')~ : lance un test de led. Ça ne sert à rien si
+   ce n’est à vérifier que les leds marchent, et aussi que on arrive
+   bien à discuter avec le capteur)
+4. ~ser.ser.write(b'st 800 1000 1500')~ : fixe les seuils à 800
+   (passage de vert à orange), 1000 (passage de orange à rouge), 1500
+   (passage de rouge à rouge clignotant)
+5. Je suppose que ~tl~ veut dire /test leds/ et ~st~ veut dire /set thresholds/
