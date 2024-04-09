@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
 
   imports = [
     ./i3status.nix
@@ -23,7 +24,9 @@
             icon_position = "left";
             max_icon_size = 100;
           };
-          fullscreen_show_everything = { fullscreen = "show"; };
+          fullscreen_show_everything = {
+            fullscreen = "show";
+          };
         };
       };
 
@@ -40,7 +43,9 @@
         };
       };
 
-      network-manager-applet = { enable = true; };
+      network-manager-applet = {
+        enable = true;
+      };
     };
   };
 }
