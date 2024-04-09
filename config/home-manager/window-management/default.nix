@@ -46,6 +46,7 @@
       network-manager-applet = {
         enable = true;
       };
+      caffeine.enable = true;
     };
   };
 }
