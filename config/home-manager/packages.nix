@@ -35,7 +35,6 @@ in
         blobfuse
         blueman
         brightnessctl
-        bun
         cachix
         calibre
         coreutils-full
