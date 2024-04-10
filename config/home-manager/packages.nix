@@ -129,6 +129,7 @@ in
         unzip
         usbutils
         vlc
+        vscode-langservers-extracted
         wget
         wmname
         xcape
