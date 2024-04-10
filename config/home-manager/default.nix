@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 let
   certificatesFile = "/etc/ssl/certs/ca-bundle.crt";
@@ -13,7 +18,8 @@ let
     $(systemctl status --user --full "$2")
     ERRMAIL
   '';
-in {
+in
+{
   imports = [
     ./bash.nix
     ./borg.nix
@@ -36,8 +42,7 @@ in {
 
   my.window-management.enable = true;
 
-  nixpkgs.overlays =
-    [ (self: super: { nur = pkgs.callPackage ../../NUR { }; }) ];
+  nixpkgs.overlays = [ (self: super: { nur = pkgs.callPackage ../../NUR { }; }) ];
 
   systemd.user = {
     # Automatically start new services and stop old ones:
@@ -45,18 +50,21 @@ in {
     services = {
       # https://wiki.archlinux.org/title/Systemd/Timers#MAILTO
       "status_email_user@" = {
-        Unit = { Description = "status email for %i"; };
+        Unit = {
+          Description = "status email for %i";
+        };
         Service = {
           Type = "oneshot";
-          ExecStart =
-            "${systemdEmail} ${config.accounts.email.accounts.perso.address} %i";
+          ExecStart = "${systemdEmail} ${config.accounts.email.accounts.perso.address} %i";
         };
       };
     };
   };
 
   programs = {
-    bashmount = { enable = true; };
+    bashmount = {
+      enable = true;
+    };
 
     direnv = {
       enable = true;
@@ -71,16 +79,22 @@ in {
 
     htop = {
       enable = true;
-      settings = { color_scheme = 6; };
+      settings = {
+        color_scheme = 6;
+      };
     };
 
     password-store = {
       enable = true;
       package = pkgs.pass.withExtensions (exts: [ exts.pass-otp ]);
-      settings = { PASSWORD_STORE_DIR = "/home/cassou/.password-store"; };
+      settings = {
+        PASSWORD_STORE_DIR = "/home/cassou/.password-store";
+      };
     };
 
-    ripgrep = { enable = true; };
+    ripgrep = {
+      enable = true;
+    };
 
     rofi = {
       enable = true;
@@ -92,23 +106,30 @@ in {
       settings = {
         misc = {
           assume_yes = true;
-          disable =
-            [ "nix" "emacs" "pipx" "stack" "node" "gem" "git_repos" "bun" ];
+          disable = [
+            "nix"
+            "emacs"
+            "pipx"
+            "stack"
+            "node"
+            "gem"
+            "git_repos"
+            "bun"
+          ];
           remote_topgrades = [ "librem14" ];
         };
         commands = {
-          "Emacs submodules" =
-            "git -C ~/.emacs.d fetch --recurse-submodules -j 4";
-          "Nix-system submodules" =
-            "git -C ~/Documents/projects/nix-system fetch --recurse-submodules -j 4";
-          "Nix garbage collection" =
-            "nix-collect-garbage --delete-older-than 10d";
+          "Emacs submodules" = "git -C ~/.emacs.d fetch --recurse-submodules -j 4";
+          "Nix-system submodules" = "git -C ~/Documents/projects/nix-system fetch --recurse-submodules -j 4";
+          "Nix garbage collection" = "nix-collect-garbage --delete-older-than 10d";
           "Vdirsyncer" = "vdirsyncer sync";
         };
       };
     };
 
-    yt-dlp = { enable = true; };
+    yt-dlp = {
+      enable = true;
+    };
   };
 
   gtk = {
@@ -224,11 +245,12 @@ in {
 
       MAILDIR = "/home/cassou/Mail";
 
-      FINSIT_GITHUB = "$(${
-          lib.getExe pkgs.pass-show-password
-        } api.github.com/DamienCassou^finsit-github)";
+      FINSIT_GITHUB = "$(${lib.getExe pkgs.pass-show-password} api.github.com/DamienCassou^finsit-github)";
     };
 
-    extraOutputsToInstall = [ "doc" "devdoc" ];
+    extraOutputsToInstall = [
+      "doc"
+      "devdoc"
+    ];
   };
 }
