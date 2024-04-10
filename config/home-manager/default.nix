@@ -21,20 +21,16 @@ let
 in
 {
   imports = [
-    ./bash.nix
     ./borg.nix
+    ./dev.nix
     ./desktop-entries.nix
     ./documentation.nix
-    ./emacs.nix
     ./email.nix
-    ./git.nix
-    ./gpg.nix
     ./nix-index-database.nix
     ./packages.nix
     ./pim.nix
     ./report-changes.nix
     ./scripts
-    ./ssh.nix
     ./stylix.nix
     ./web.nix
     ./window-management
