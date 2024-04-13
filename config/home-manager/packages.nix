@@ -93,7 +93,6 @@ in
         nodePackages.typescript-language-server
         nodePackages.dockerfile-language-server-nodejs
         nodePackages.vscode-json-languageserver
-        nodejs_20
         notmuch
         omnisharp-roslyn # for C# development in Monitor
         openssh
@@ -138,7 +137,6 @@ in
         xorg.xrdb
         xorg.xset
         yaml-language-server
-        yarn
         yarn-bash-completion
         wofi
         zbar # to scan QR codes for pass-otp
