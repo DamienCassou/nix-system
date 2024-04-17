@@ -33,5 +33,6 @@ stdenv.mkDerivation {
     description = "A script monitoring my CO2 sensor";
     license = licenses.free;
     platforms = platforms.all;
+    mainProgram = "co2-sensor";
   };
 }

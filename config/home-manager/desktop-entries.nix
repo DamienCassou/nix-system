@@ -7,6 +7,12 @@
 
 {
   config.xdg.desktopEntries = {
+    "co2Sensor" = {
+      name = "co2Sensor";
+      exec = "${lib.getExe pkgs.co2-sensor}";
+      terminal = false;
+    };
+
     jetbrains-rider = {
       name = "JetBrains Rider";
       exec = "/home/cassou/Downloads/rider/latest/bin/rider.sh %f";
