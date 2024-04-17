@@ -1,4 +1,9 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
   config.xdg.desktopEntries = {
@@ -8,8 +13,13 @@
       icon = "/home/cassou/Downloads/rider/latest/bin/rider.svg";
       comment = "A cross-platform IDE for .NET";
       terminal = false;
-      categories = [ "Development" "IDE" ];
-      settings = { StartupWMClass = "jetbrains-rider"; };
+      categories = [
+        "Development"
+        "IDE"
+      ];
+      settings = {
+        StartupWMClass = "jetbrains-rider";
+      };
     };
 
     rofi-bluetooth = {
@@ -59,17 +69,14 @@
     # Wrap into nixGLIntel
     "calibre-gui" = {
       name = "calibre";
-      exec =
-        "${pkgs.nixGLIntel}/bin/nixGLIntel ${pkgs.calibre}/bin/calibre --detach %U";
+      exec = "${pkgs.nixGLIntel}/bin/nixGLIntel ${pkgs.calibre}/bin/calibre --detach %U";
       icon = "calibre-gui";
     };
 
     # Wrap into nixGLIntel
     "firefox" = {
       name = "Firefox";
-      exec = "${pkgs.nixGLIntel}/bin/nixGLIntel ${
-          lib.getExe config.programs.firefox.finalPackage
-        } --name firefox %U";
+      exec = "${pkgs.nixGLIntel}/bin/nixGLIntel ${lib.getExe config.programs.firefox.finalPackage} --name firefox %U";
       icon = "firefox";
     };
   };
