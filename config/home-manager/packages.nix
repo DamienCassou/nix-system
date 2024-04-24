@@ -30,7 +30,6 @@ in
           ]
         ))
         arandr
-        bash
         bc
         blobfuse
         blueman
