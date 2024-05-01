@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   # Reference links:
   # - https://restoreprivacy.com/firefox-privacy/
   # - https://arkenfox.github.io/gui/

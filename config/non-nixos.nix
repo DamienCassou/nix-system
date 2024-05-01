@@ -19,16 +19,7 @@
 # - install docker (https://docs.docker.com/engine/install/fedora/#install-using-the-repository)
 # - Allow docker to access port 5000 (rider): sudo ufw allow in from any to 172.17.0.1/24 port 5000
 # - Add "127.0.0.1  database.ftgp" and "127.0.0.1   rabbitmq" à /etc/hosts
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
-let
-  # Only the en-US.UTF8 locale:
-  locales = pkgs.glibcLocales.override { allLocales = false; };
-in
+{ config, lib, ... }:
 {
   systemd.user.systemctlPath = "/usr/bin/systemctl";
 
