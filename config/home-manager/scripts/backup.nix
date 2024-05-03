@@ -15,15 +15,16 @@ let
     cd ~
     exec rsync \
      --exclude '*.vdi' \
-     --exclude ".cache" \
-     --exclude ".config/libvirt" \
-     --exclude ".local/share/containers" \
-     --exclude ".local/share/gnome-boxes" \
-     --exclude ".local/share/libvirt/images" \
-     --exclude ".local/share/Trash" \
-     --exclude "Documents/android/pixel7a/synced" \
-     --exclude "Documents/projects/sorry-cypress/sorry-cypress/data" \
-     --exclude "Documents/projects/javascript/cypress-hello-world/data" \
+     --exclude '**/node_modules/' \
+     --exclude "/.cache" \
+     --exclude "/.config/libvirt" \
+     --exclude "/.local/share/containers" \
+     --exclude "/.local/share/gnome-boxes" \
+     --exclude "/.local/share/libvirt/images" \
+     --exclude "/.local/share/Trash" \
+     --exclude "/Documents/android/pixel7a/synced" \
+     --exclude "/Documents/projects/sorry-cypress/sorry-cypress/data" \
+     --exclude "/Documents/projects/javascript/cypress-hello-world/data" \
      ${homeManagerRsyncExclude} \
      --delete-excluded --delete --archive --progress  \
      ~/ \
