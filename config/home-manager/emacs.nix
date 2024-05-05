@@ -26,7 +26,14 @@
       ];
   };
 
-  home.packages = with pkgs; [ emacs-all-the-icons-fonts ];
+  home.packages = with pkgs; [
+    emacs-all-the-icons-fonts
+    # For emacs-everywhere:
+    xclip
+    xdotool
+    xorg.xprop
+    xorg.xwininfo
+  ];
 
   services.emacs = {
     enable = true;
