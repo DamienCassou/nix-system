@@ -89,6 +89,9 @@ in
     # Lockscreen
     "--release ${modifier}+l" = lockScreenCommand;
 
+    # Emacs everywhere
+    "--release ${modifier}+u" = "exec ${config.programs.emacs.package}/bin/emacsclient --eval '(emacs-everywhere)'";
+
     # Change focus
     "${modifier}+n" = "focus left";
     "${modifier}+e" = "focus down";
