@@ -11,7 +11,7 @@
     };
     scdaemonSettings = {
       # Avoid conflicts with the global pcscd service:
-      disable-ccid = true;
+      # disable-ccid = true;
     };
   };
 
