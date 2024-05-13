@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
-let emailAccount = config.accounts.email.accounts.perso;
-in {
+let
+  emailAccount = config.accounts.email.accounts.perso;
+in
+{
   programs.git = {
     enable = true;
     userEmail = emailAccount.address;
@@ -11,14 +13,30 @@ in {
       signByDefault = true;
     };
     extraConfig = {
-      github = { user = "DamienCassou"; };
-      gitlab = { user = "DamienCassou"; };
-      branch = { autosetuprebase = "always"; };
-      log = { follow = true; };
-      init = { defaultBranch = "main"; };
-      fetch = { prune = true; };
-      pull = { rebase = true; };
-      sendemail = { confirm = "auto"; };
+      github = {
+        user = "DamienCassou";
+      };
+      gitlab = {
+        user = "DamienCassou";
+      };
+      branch = {
+        autosetuprebase = "always";
+      };
+      log = {
+        follow = true;
+      };
+      init = {
+        defaultBranch = "main";
+      };
+      fetch = {
+        prune = true;
+      };
+      pull = {
+        rebase = true;
+      };
+      sendemail = {
+        confirm = "auto";
+      };
       maintenance = {
         # Large repositories that Git should cleanup regularly:
         repo = [
@@ -27,16 +45,23 @@ in {
           "/home/cassou/Documents/projects/ftgp/finsit/monitor"
         ];
       };
-      "diff \"elisp\"" = { xfuncname = "^(\\(.*)$"; };
-      "diff \"orgmode\"" = { xfuncname = "^(\\*+.*)$"; };
-      "diff \"ecmascript\"" = {
-        xfuncname =
-          "^((.*function.*)|([ 	]+(static[ 	]+)?(async[ 	]+)?[[:alnum:]_]+\\(.*))$";
+      "diff \"elisp\"" = {
+        xfuncname = "^(\\(.*)$";
       };
-      "diff \"ledger\"" = { xfuncname = "^[^ ].*$"; };
+      "diff \"orgmode\"" = {
+        xfuncname = "^(\\*+.*)$";
+      };
+      "diff \"ecmascript\"" = {
+        xfuncname = "^((.*function.*)|([ 	]+(static[ 	]+)?(async[ 	]+)?[[:alnum:]_]+\\(.*))$";
+      };
+      "diff \"ledger\"" = {
+        xfuncname = "^[^ ].*$";
+      };
 
       # Access github.com through SSH instead of HTTPS:
-      "url \"git@github.com:\"" = { insteadOf = "https://github.com"; };
+      "url \"git@github.com:\"" = {
+        insteadOf = "https://github.com";
+      };
     };
     attributes = [
       # My own xfuncname definitions:
