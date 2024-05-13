@@ -87,6 +87,7 @@ in
       "Eldev-local"
       ".project"
       "*~"
+      ".conner"
       # JS
       ".tern-port"
       "node_modules"
