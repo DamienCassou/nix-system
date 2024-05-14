@@ -11,15 +11,6 @@ let
       });
   iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
   nixGLIntel = (pkgs.callPackage ../../nixGL { }).nixGLIntel;
-  curl = pkgs.curl.overrideAttrs (old: {
-    patches = (old.patches or [ ]) ++ [
-      (pkgs.fetchpatch {
-        name = "content_encoding-brotli-and-others,-pass-through-0-length.patch";
-        url = "https://github.com/curl/curl/commit/b30d694a027eb771c02a3db0dee0ca03ccab7377.patch";
-        hash = "sha256-njw+IZHM6/HvOsTZ1k7x81tmmGtCgz/c58TLHRvKSDU=";
-      })
-    ];
-  });
 in
 {
   nixpkgs.overlays = [ (self: super: { inherit nixGLIntel; }) ];
@@ -28,7 +19,6 @@ in
     [
       ledger-autosync
       iosevka-aile
-      curl
     ]
     ++ (
       with pkgs;
@@ -47,6 +37,7 @@ in
         cachix
         calibre
         coreutils-full
+        curl
         devenv
         diffutils
         direnv
