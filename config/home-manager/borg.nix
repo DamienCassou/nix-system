@@ -1,10 +1,15 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 let
-  borg-pass-command =
-    "${lib.getExe pkgs.pass-show-password} famille/lime2_borg";
+  borg-pass-command = "${lib.getExe pkgs.pass-show-password} famille/lime2_borg";
   main-repository = "ssh://yrw00380@yrw00380.repo.borgbase.com/./repo";
-in {
+in
+{
   programs.borgmatic = {
     enable = true;
     backups = {
@@ -20,7 +25,9 @@ in {
             check_i_know_what_i_am_doing = true;
           };
         };
-        storage = { encryptionPasscommand = borg-pass-command; };
+        storage = {
+          encryptionPasscommand = borg-pass-command;
+        };
         retention = {
           keepWithin = "2d";
           keepHourly = 2;
@@ -58,8 +65,7 @@ in {
     frequency = "hourly";
   };
 
-  systemd.user.services.borgmatic.Unit.OnFailure =
-    "status_email_user@%n.service";
+  systemd.user.services.borgmatic.Unit.OnFailure = "status_email_user@%n.service";
 
   home.sessionVariables = {
     BORG_PASSCOMMAND = borg-pass-command;
