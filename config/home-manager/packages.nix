@@ -107,6 +107,7 @@ in
         process-compose
         psmisc # for killall
         pulseaudio
+        python3Packages.woob
         pwgen
         qpdf # to remove passwords from PDF
         racket # for SICP scheme implementation
