@@ -36,6 +36,7 @@ let
       set -e
 
       function eject() {
+        sync
         udisksctl unmount --block-device /dev/mapper/luks-${uuid}
         udisksctl lock --block-device /dev/disk/by-uuid/${uuid}
         udisksctl power-off --block-device /dev/disk/by-uuid/${uuid}
