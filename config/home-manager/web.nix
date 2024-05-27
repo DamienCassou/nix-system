@@ -19,6 +19,10 @@
       "--no-default-browser-check"
       "--incognito"
     ];
+    dictionaries = [
+      pkgs.hunspellDictsChromium.en_US
+      pkgs.hunspellDictsChromium.fr_FR
+    ];
   };
 
   imports = [ ./firefox ];
