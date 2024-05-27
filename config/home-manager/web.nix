@@ -1,7 +1,11 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.browserpass = {
     enable = true;
-    browsers = [ "firefox" "chromium" ];
+    browsers = [
+      "firefox"
+      "chromium"
+    ];
   };
 
   programs.chromium = {
