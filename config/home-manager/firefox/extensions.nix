@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   extensions = with pkgs.nur.repos.rycee.firefox-addons; [
     overview
     rsf-censorship-detector
@@ -8,6 +9,7 @@
     i-dont-care-about-cookies
     libredirect
     multi-account-containers
+    react-devtools
     refined-github
     ublock-origin
     wallabagger
