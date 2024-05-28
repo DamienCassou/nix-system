@@ -28,6 +28,7 @@
 /home/cassou/.emacs.d/.cask
 /home/cassou/.gksu.lock
 /home/cassou/.gnupg/random_seed
+/home/cassou/.local/jetbrains-rider
 /home/cassou/.local/ruby/*/cache
 /home/cassou/.local/share/Steam
 /home/cassou/.local/share/Trash

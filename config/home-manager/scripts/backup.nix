@@ -18,6 +18,7 @@ let
      --exclude '**/node_modules/' \
      --exclude "/.cache" \
      --exclude "/.config/libvirt" \
+     --exclude "/.local/jetbrains-rider" \
      --exclude "/.local/share/containers" \
      --exclude "/.local/share/gnome-boxes" \
      --exclude "/.local/share/libvirt/images" \
