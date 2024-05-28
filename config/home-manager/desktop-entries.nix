@@ -15,8 +15,8 @@
 
     jetbrains-rider = {
       name = "JetBrains Rider";
-      exec = "/home/cassou/Downloads/rider/latest/bin/rider.sh %f";
-      icon = "/home/cassou/Downloads/rider/latest/bin/rider.svg";
+      exec = "/home/cassou/.local/jetbrains-rider/bin/rider.sh %f";
+      icon = "/home/cassou/.local/jetbrains-rider/bin/rider.svg";
       comment = "A cross-platform IDE for .NET";
       terminal = false;
       categories = [
