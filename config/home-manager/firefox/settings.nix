@@ -5,8 +5,6 @@
   # - https://arkenfox.github.io/gui/
   settings = {
     # Privacy
-    "dom.security.https_only_mode" = true;
-    "geo.enabled" = false; # disable localization
     "privacy.firstparty.isolate" = true;
     # Misc
     "services.sync.engine.passwords" = false;
