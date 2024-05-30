@@ -14,7 +14,8 @@ let
     Value = value;
     Status = "locked";
   };
-in {
+in
+{
   policies = {
     DownloadDirectory = "\${home}/Downloads";
     DisplayBookmarksToolbar = "always";
@@ -28,9 +29,15 @@ in {
       "Exceptions" = [ ];
     };
     Handlers = {
-      mimeTypes = { "application/pdf" = { action = "saveToDisk"; }; };
+      mimeTypes = {
+        "application/pdf" = {
+          action = "saveToDisk";
+        };
+      };
       schemes = {
-        mailto = { handlers = [ { } ]; };
+        mailto = {
+          handlers = [ { } ];
+        };
         slack = { };
       };
     };
@@ -42,11 +49,16 @@ in {
       Camera = { };
       Microphone = { };
       Location = { };
-      Notifications = { Block = [ "https://3.basecamp.com" ]; };
+      Notifications = {
+        Block = [ "https://3.basecamp.com" ];
+      };
       Autoplay = { };
     };
     Preferences = lib.mapAttrs convertSettingToPref settings;
-    RequestedLocales = [ "fr" "en-US" ];
+    RequestedLocales = [
+      "fr"
+      "en-US"
+    ];
     "3rdparty" = {
       Extensions = {
         "CookieAutoDelete@kennydo.com" = {
@@ -57,14 +69,16 @@ in {
             };
           };
           "lists" = {
-            "firefox-container-1" = [{
-              "expression" = "*.basecamp.com";
-              "listType" = "WHITE";
-              "storeId" = "firefox-container-1";
-              "cleanSiteData" = [ ];
-              "cookieNames" = [ ];
-              "id" = "ZhlmhpVRf";
-            }];
+            "firefox-container-1" = [
+              {
+                "expression" = "*.basecamp.com";
+                "listType" = "WHITE";
+                "storeId" = "firefox-container-1";
+                "cleanSiteData" = [ ];
+                "cookieNames" = [ ];
+                "id" = "ZhlmhpVRf";
+              }
+            ];
           };
         };
       };
