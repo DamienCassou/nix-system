@@ -8,6 +8,8 @@ let
     "browser.startup.page" = 0;
     "browser.tabs.closeWindowWithLastTab" = false;
     "intl.accept_languages" = "en-us,fr,en";
+    "widget.non-native-theme.scrollbar.style" = 1;
+    "widget.non-native-theme.scrollbar.size.override" = 8;
   };
 
   convertSettingToPref = _: value: {
