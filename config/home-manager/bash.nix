@@ -1,17 +1,20 @@
-{ lib, config, pkgs, ... }: {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   programs.bash = {
     historyControl = [ "erasedups" ];
     historyFile = "${config.xdg.dataHome}/bash/history";
     enable = true;
     shellAliases = {
-      "borgcheck" =
-        "borgmatic --verbosity 2 check --repair --progress  --force --only";
+      "borgcheck" = "borgmatic --verbosity 2 check --repair --progress  --force --only";
       "dnf-list" = "dnf repoquery --list";
       "dnf-provides" = "dnf repoquery --cacheonly --file";
       "hm" = "home-manager";
-      "youtube-dl-album" = "${
-          lib.getExe pkgs.yt-dlp
-        } --extract-audio --audio-format mp3 --audio-quality 0 --yes-playlist";
+      "youtube-dl-album" = "${lib.getExe pkgs.yt-dlp} --extract-audio --audio-format mp3 --audio-quality 0 --yes-playlist";
     };
     initExtra = ''
       function vterm_printf(){
@@ -43,7 +46,9 @@
 
   programs.readline = {
     enable = true;
-    variables = { bell-style = "none"; };
+    variables = {
+      bell-style = "none";
+    };
   };
 
   programs.powerline-go = {
@@ -65,8 +70,7 @@
       "termtitle"
     ];
     pathAliases = {
-      "\\~/Documents/projects/ftgp/monitor/monitor/Monitor.Web.Ui/Client" =
-        "monitor-client";
+      "\\~/Documents/projects/ftgp/monitor/monitor/Monitor.Web.Ui/Client" = "monitor-client";
       "\\~/Documents/projects/ftgp/monitor" = "monitor";
       "\\~/Documents/projects" = "prj";
     };
