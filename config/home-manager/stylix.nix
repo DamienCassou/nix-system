@@ -2,6 +2,7 @@
 
 {
   stylix = {
+    enable = true;
     image = ./wallpaper.jpg;
     base16Scheme = ./modus-operandi-theme.yaml;
     targets.emacs.enable = false;
