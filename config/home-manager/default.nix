@@ -250,6 +250,8 @@ in
       MAILDIR = "/home/cassou/Mail";
 
       FINSIT_GITHUB = "$(${lib.getExe pkgs.pass-show-password} api.github.com/DamienCassou^finsit-github)";
+
+      ESLINT_USE_FLAT_CONFIG = "true";
     };
 
     extraOutputsToInstall = [
