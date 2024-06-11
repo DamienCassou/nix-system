@@ -128,6 +128,7 @@ in
         unzip
         usbutils
         vlc
+        vscode-js-debug
         vscode-langservers-extracted
         wget
         wmname
