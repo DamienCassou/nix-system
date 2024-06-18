@@ -36,55 +36,57 @@ in
       };
     };
 
-    services.clipmenu = {
-      enable = true;
-      launcher = "rofi";
-    };
-
-    services.grobi = {
-      enable = true;
-      rules = [
-        {
-          name = "External screen";
-          outputs_connected = [ "HDMI-2" ];
-          configure_single = "HDMI-2";
-          primary = "HDMI-2";
-          atomic = true;
-        }
-        {
-          name = "External screen through hub";
-          outputs_connected = [ "DP-2" ];
-          configure_single = "DP-2";
-          primary = "DP-2";
-          atomic = true;
-        }
-        {
-          name = "Fallback";
-          configure_single = "eDP-1";
-          primary = "eDP-1";
-          atomic = true;
-        }
-      ];
-    };
-
-    services.screen-locker = {
-      enable = true;
-      xautolock = {
-        detectSleep = false; # lock screen when awaking laptop
+    services = {
+      clipmenu = {
+        enable = true;
+        launcher = "rofi";
       };
-      lockCmd =
-        # We don't specify the nixpkgs path here
-        # (${pkgs.i3lock}/bin/i3lock) to use the system's version if
-        # there is one (e.g., /usr/bin/i3lock). This is because of
-        # https://github.com/i3/i3lock/issues/286.
-        "i3lock --nofork --color=22529f --ignore-empty-password --show-failed-attempts";
-    };
 
-    services.redshift = {
-      enable = true;
-      package = pkgs.redshift.override { withGeolocation = false; };
-      duskTime = "19:00-20:45";
-      dawnTime = "05:00-06:45";
+      grobi = {
+        enable = true;
+        rules = [
+          {
+            name = "External screen";
+            outputs_connected = [ "HDMI-2" ];
+            configure_single = "HDMI-2";
+            primary = "HDMI-2";
+            atomic = true;
+          }
+          {
+            name = "External screen through hub";
+            outputs_connected = [ "DP-2" ];
+            configure_single = "DP-2";
+            primary = "DP-2";
+            atomic = true;
+          }
+          {
+            name = "Fallback";
+            configure_single = "eDP-1";
+            primary = "eDP-1";
+            atomic = true;
+          }
+        ];
+      };
+
+      screen-locker = {
+        enable = true;
+        xautolock = {
+          detectSleep = false; # lock screen when awaking laptop
+        };
+        lockCmd =
+          # We don't specify the nixpkgs path here
+          # (${pkgs.i3lock}/bin/i3lock) to use the system's version if
+          # there is one (e.g., /usr/bin/i3lock). This is because of
+          # https://github.com/i3/i3lock/issues/286.
+          "i3lock --nofork --color=22529f --ignore-empty-password --show-failed-attempts";
+      };
+
+      redshift = {
+        enable = true;
+        package = pkgs.redshift.override { withGeolocation = false; };
+        duskTime = "19:00-20:45";
+        dawnTime = "05:00-06:45";
+      };
     };
 
     xsession = {
