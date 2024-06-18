@@ -1,4 +1,4 @@
-{ }: {
+_: {
   containers = {
     "basecamp" = {
       id = 6;

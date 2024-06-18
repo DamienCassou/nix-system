@@ -1,4 +1,4 @@
-{ ... }:
+_:
 {
   # Reference links:
   # - https://restoreprivacy.com/firefox-privacy/

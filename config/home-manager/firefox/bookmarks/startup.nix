@@ -1,4 +1,4 @@
-{ ... }: {
+_: {
   bookmarks = [
     {
       name = "Local Syncthing";

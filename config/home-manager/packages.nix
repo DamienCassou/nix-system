@@ -10,7 +10,7 @@ let
         patches = [ ./patches/ledger-autosync-use-expense-account.patch ];
       });
   iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
-  nixGLIntel = (pkgs.callPackage ../../nixGL { }).nixGLIntel;
+  inherit ((pkgs.callPackage ../../nixGL { })) nixGLIntel;
 in
 {
   nixpkgs.overlays = [ (_: _: { inherit nixGLIntel; }) ];

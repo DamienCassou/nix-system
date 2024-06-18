@@ -1,4 +1,4 @@
-{ ... }: {
+_: {
   manual = {
     json.enable = true;
     html.enable = true;

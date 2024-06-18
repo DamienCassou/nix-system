@@ -29,7 +29,7 @@ in
             config.lib.stylix.sway.bar
             // {
               statusCommand = "${pkgs.i3status}/bin/i3status";
-              fonts = config.xsession.windowManager.i3.config.fonts;
+              inherit (config.xsession.windowManager.i3.config) fonts;
             }
           )
         ];
