@@ -11,7 +11,7 @@ let
   modifier = "Mod4";
 in
 {
-  modifier = modifier;
+  inherit modifier;
   defaultWorkspace = "workspace 1";
   focus.followMouse = false;
   fonts = {

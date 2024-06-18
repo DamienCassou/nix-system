@@ -12,7 +12,7 @@ let
       };
     };
   };
-  diskSpaceModules = (mkDiskSpaceModule "/" 5);
+  diskSpaceModules = mkDiskSpaceModule "/" 5;
 in
 {
   config = lib.mkIf config.my.window-management.enable {

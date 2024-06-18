@@ -1,4 +1,4 @@
-{ ... }: {
+_: {
   bookmarks = [
     {
       name = "Draw the Unicode character you want!";
