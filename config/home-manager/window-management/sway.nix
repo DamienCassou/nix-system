@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 let
   lockScreenCommand = "/usr/bin/swaylock";
   generatedSwayConfig = (import ./build-i3OrSway.nix) {
@@ -11,7 +16,8 @@ let
       exec "${pkgs.sway}/bin/swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway?' -B 'Yes, exit Sway' '${pkgs.sway}/bin/swaymsg exit'"
     '';
   };
-in {
+in
+{
   imports = [ ./waybar.nix ];
 
   wayland.windowManager.sway = {
@@ -28,62 +34,67 @@ in {
     };
   };
 
-  services.copyq.enable = true;
+  services = {
+    copyq.enable = true;
 
-  services.kanshi = {
-    enable = true;
-    profiles = {
-      # When both a Dell and the laptop screen are found, only turn on the Dell
-      home = {
-        outputs = [
-          { criteria = "HDMI-A-2"; }
-          {
-            criteria = "eDP-1";
-            status = "disable";
-          }
-        ];
+    kanshi = {
+      enable = true;
+      profiles = {
+        # When both a Dell and the laptop screen are found, only turn on the Dell
+        home = {
+          outputs = [
+            { criteria = "HDMI-A-2"; }
+            {
+              criteria = "eDP-1";
+              status = "disable";
+            }
+          ];
+        };
       };
     };
-  };
 
-  services.gammastep = {
-    enable = true;
-    package = pkgs.gammastep.override { withGeolocation = false; };
-    duskTime = "19:00-20:45";
-    dawnTime = "05:00-06:45";
-  };
+    gammastep = {
+      enable = true;
+      package = pkgs.gammastep.override { withGeolocation = false; };
+      duskTime = "19:00-20:45";
+      dawnTime = "05:00-06:45";
+    };
 
-  services.swayidle = {
-    enable = true;
-    extraArgs = [ "-d" ];
-    events = [
-      { # lock the screen before sleeping
-        event = "before-sleep";
-        command = "${lockScreenCommand} -f";
-      }
-      { # lock the screen when logind signals the session should
-        # be locked
-        event = "lock";
-        command = "${lockScreenCommand} -f";
-      }
-    ];
-    timeouts = [
-      { # lock screen after 3 minute
-        timeout = 180;
-        command = "${lockScreenCommand}";
-      }
-      { # turn off displays after 10 minutes
-        timeout = 600;
-        command = ''${pkgs.sway}/bin/swaymsg "output * dpms off"'';
-        resumeCommand = ''${pkgs.sway}/bin/swaymsg "output * dpms on"'';
-      }
-    ];
+    swayidle = {
+      enable = true;
+      extraArgs = [ "-d" ];
+      events = [
+        {
+          # lock the screen before sleeping
+          event = "before-sleep";
+          command = "${lockScreenCommand} -f";
+        }
+        {
+          # lock the screen when logind signals the session should
+          # be locked
+          event = "lock";
+          command = "${lockScreenCommand} -f";
+        }
+      ];
+      timeouts = [
+        {
+          # lock screen after 3 minute
+          timeout = 180;
+          command = "${lockScreenCommand}";
+        }
+        {
+          # turn off displays after 10 minutes
+          timeout = 600;
+          command = ''${pkgs.sway}/bin/swaymsg "output * dpms off"'';
+          resumeCommand = ''${pkgs.sway}/bin/swaymsg "output * dpms on"'';
+        }
+      ];
+    };
   };
 
   programs.kitty = {
     enable = true;
   };
-
 
   # Only start the Emacs daemon after sway. This is useful so Emacs
   # gets all sway's environment variables:

@@ -1,4 +1,10 @@
-{ lib, config, pkgs, ... }: {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   accounts.email = {
     maildirBasePath = "Mail";
 
@@ -10,8 +16,7 @@
       realName = "Damien Cassou";
 
       userName = "damien@cassou.me";
-      passwordCommand =
-        "${lib.getExe pkgs.pass-show-password} mail.reprendre.net/damien";
+      passwordCommand = "${lib.getExe pkgs.pass-show-password} mail.reprendre.net/damien";
 
       folders.inbox = "INBOX";
 
@@ -42,25 +47,28 @@
         enable = true;
 
         extraConfig.remote = {
-          folderfilter =
-            "lambda folder: folder in [ 'Sent', 'INBOX', 'Archive' ]";
+          folderfilter = "lambda folder: folder in [ 'Sent', 'INBOX', 'Archive' ]";
         };
       };
     };
   };
 
-  programs.offlineimap.enable = true;
-  programs.msmtp.enable = true;
+  programs = {
+    offlineimap.enable = true;
+    msmtp.enable = true;
 
-  programs.notmuch = {
-    enable = true;
-    new.tags = [ "unread" "inbox" ];
-    hooks.preNew = ''
-      ~/.local/bin/archive-emails.sh
-      ${lib.getExe pkgs.offlineimap}
-    '';
+    notmuch = {
+      enable = true;
+      new.tags = [
+        "unread"
+        "inbox"
+      ];
+      hooks.preNew = ''
+        ~/.local/bin/archive-emails.sh
+        ${lib.getExe pkgs.offlineimap}
+      '';
+    };
   };
 
-  home.file.".signature".text =
-    config.accounts.email.accounts.perso.signature.text;
+  home.file.".signature".text = config.accounts.email.accounts.perso.signature.text;
 }
