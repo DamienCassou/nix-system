@@ -30,6 +30,7 @@ in
           ]
         ))
         arandr
+        bash-language-server
         bc
         blobfuse
         blueman
@@ -86,7 +87,6 @@ in
         nixVersions.stable
         nixfmt-rfc-style
         nixpkgs-fmt # nix formatter for nixpkgs code base
-        nodePackages.bash-language-server
         nodePackages.node2nix
         nodePackages.typescript
         nodePackages.typescript-language-server
