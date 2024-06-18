@@ -11,7 +11,7 @@ in
 {
   imports = [ ./backup.nix ];
 
-  nixpkgs.overlays = [ (self: super: { inherit co2-sensor pass-show-password lint-system; }) ];
+  nixpkgs.overlays = [ (_: _: { inherit co2-sensor pass-show-password lint-system; }) ];
 
   home.packages = [
     co2-sensor

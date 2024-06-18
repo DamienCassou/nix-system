@@ -6,14 +6,14 @@ let
       useLedger = false;
       useHledger = true;
     }).overrideAttrs
-      (old: {
+      (_: {
         patches = [ ./patches/ledger-autosync-use-expense-account.patch ];
       });
   iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
   nixGLIntel = (pkgs.callPackage ../../nixGL { }).nixGLIntel;
 in
 {
-  nixpkgs.overlays = [ (self: super: { inherit nixGLIntel; }) ];
+  nixpkgs.overlays = [ (_: _: { inherit nixGLIntel; }) ];
 
   home.packages =
     [
