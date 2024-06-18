@@ -3,8 +3,7 @@
 let
   nodejs = pkgs.nodejs_20;
   # Adding libuuid to some node binaries are required by the
-  # "node-canvas" package (used by webdriver.io for visual testing for
-  # example)
+  # "node-canvas" package
   wrapWithMissingLibraries =
     binaryFile:
     pkgs.writeShellScriptBin (baseNameOf binaryFile) ''
