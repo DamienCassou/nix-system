@@ -38,7 +38,7 @@ in
 
   my.window-management.enable = true;
 
-  nixpkgs.overlays = [ (self: super: { nur = pkgs.callPackage ../../NUR { }; }) ];
+  nixpkgs.overlays = [ (_: _: { nur = pkgs.callPackage ../../NUR { }; }) ];
 
   systemd.user = {
     # Automatically start new services and stop old ones:
