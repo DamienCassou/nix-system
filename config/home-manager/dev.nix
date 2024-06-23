@@ -1,19 +1,5 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
-let
-  nodejs = pkgs.nodejs_20;
-  # Adding libuuid to some node binaries are required by the
-  # "node-canvas" package
-  wrapWithMissingLibraries =
-    binaryFile:
-    pkgs.writeShellScriptBin (baseNameOf binaryFile) ''
-      LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath [ pkgs.libuuid ]}";
-      export LD_LIBRARY_PATH
-      exec ${binaryFile} "$@";
-    '';
-  node = wrapWithMissingLibraries (lib.getExe nodejs);
-  yarn = wrapWithMissingLibraries (lib.getExe pkgs.yarn);
-in
 {
   imports = [
     ./bash.nix
@@ -27,8 +13,10 @@ in
     enable = true;
   };
 
-  home.packages = [
-    node
+  home.packages = with pkgs; [
+    jwt-cli
+    nodejs_20
     yarn
-  ] ++ (with pkgs; [ jwt-cli ]);
+  ];
+
 }
