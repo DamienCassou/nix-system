@@ -10,7 +10,6 @@
     libredirect
     multi-account-containers
     react-devtools
-    refined-github
     ublock-origin
     wallabagger
   ];
