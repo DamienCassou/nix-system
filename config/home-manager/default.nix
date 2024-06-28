@@ -241,6 +241,8 @@ in
       # So git finds the certificates on the woob clone:
       GIT_SSL_CAINFO = certificatesFile;
 
+      CLEAR_CONSOLE = "false";
+
       # Prevent .NET Core from sending usage statistics:
       DOTNET_CLI_TELEMETRY_OPTOUT = "true";
 
