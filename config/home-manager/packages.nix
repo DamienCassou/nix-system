@@ -121,7 +121,7 @@ in
         spice
         sqlite
         tor-browser
-        transmission-gtk
+        transmission_4-gtk
         umlet
         unar # universal unpacker
         unison
