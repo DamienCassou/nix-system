@@ -5,7 +5,9 @@
 
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs29-gtk3;
+    package = pkgs.emacs-git.overrideAttrs (old: {
+      patches = old.patches ++ [ ./patches/0001-Fix-treesit-range-rule-for-jsdoc.patch ];
+    });
     extraPackages =
       epkgs: with epkgs; [
         all-the-icons
