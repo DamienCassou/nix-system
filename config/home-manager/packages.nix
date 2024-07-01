@@ -89,7 +89,6 @@ in
         nixpkgs-fmt # nix formatter for nixpkgs code base
         nodePackages.node2nix
         nodePackages.typescript
-        nodePackages.typescript-language-server
         nodePackages.dockerfile-language-server-nodejs
         nodePackages.vscode-json-languageserver
         notmuch
@@ -122,6 +121,7 @@ in
         sqlite
         tor-browser
         transmission_4-gtk
+        typescript-language-server
         umlet
         unar # universal unpacker
         unison
