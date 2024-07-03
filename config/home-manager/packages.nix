@@ -50,7 +50,6 @@ in
         element-desktop
         eslint_d
         evince
-        feh
         ferdium
         ffmpeg-full # for ffplay, used by tmr-sound.el
         file
