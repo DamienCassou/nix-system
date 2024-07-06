@@ -139,7 +139,7 @@ in
   gtk = {
     enable = true;
     iconTheme = {
-      package = pkgs.gnome3.adwaita-icon-theme;
+      package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
     };
     gtk3 = {
