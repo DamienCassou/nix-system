@@ -48,6 +48,7 @@ in
         dot-language-server
         easytag
         element-desktop
+        eog
         eslint_d
         evince
         ferdium
@@ -58,7 +59,6 @@ in
         gimp
         gitAndTools.git-absorb
         gitAndTools.git-when-merged
-        gnome3.eog
         gnugrep
         gnumake
         gnused
