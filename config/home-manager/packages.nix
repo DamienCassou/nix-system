@@ -1,14 +1,6 @@
 { pkgs, ... }:
 
 let
-  ledger-autosync =
-    (pkgs.ledger-autosync.override {
-      useLedger = false;
-      useHledger = true;
-    }).overrideAttrs
-      (_: {
-        patches = [ ./patches/ledger-autosync-use-expense-account.patch ];
-      });
   iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
   inherit ((pkgs.callPackage ../../nixGL { })) nixGLIntel;
 in
@@ -16,10 +8,7 @@ in
   nixpkgs.overlays = [ (_: _: { inherit nixGLIntel; }) ];
 
   home.packages =
-    [
-      ledger-autosync
-      iosevka-aile
-    ]
+    [ iosevka-aile ]
     ++ (
       with pkgs;
       [
