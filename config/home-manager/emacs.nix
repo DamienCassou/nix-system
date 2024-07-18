@@ -5,7 +5,12 @@
 
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs-unstable;
+    package = pkgs.emacs-unstable.overrideAttrs (old: {
+      patches = old.patches ++ [
+        ./patches/0001-Handle-an-edge-case-in-c-ts-mode-filling-bug-72116.patch
+        ./patches/0001-Move-configuration-of-auto-mode-alist-out-of-js-ts-m.patch
+      ];
+    });
     extraPackages =
       epkgs: with epkgs; [
         all-the-icons
