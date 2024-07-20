@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
   programs.vdirsyncer = {
@@ -34,7 +39,7 @@
         enable = true;
       };
       local = {
-        path = "~/configuration/contacts/ninja";
+        path = "${config.home.homeDirectory}/configuration/contacts/ninja";
         type = "filesystem";
         fileExt = ".vcf";
       };
