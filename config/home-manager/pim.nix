@@ -1,7 +1,9 @@
 { pkgs, lib, ... }:
 
 {
-  programs.vdirsyncer = { enable = true; };
+  programs.vdirsyncer = {
+    enable = true;
+  };
 
   programs.khard = {
     enable = true;
@@ -28,18 +30,21 @@
         conflictResolution = [ "~/.local/bin/merge-vdirsyncer-conflicts.sh" ];
         collections = null;
       };
-      khard = { enable = true; };
+      khard = {
+        enable = true;
+      };
       local = {
         path = "~/configuration/contacts/ninja";
         type = "filesystem";
         fileExt = ".vcf";
       };
       remote = {
-        passwordCommand =
-          [ (lib.getExe pkgs.pass-show-password) "licorne.ninja" ];
+        passwordCommand = [
+          (lib.getExe pkgs.pass-show-password)
+          "licorne.ninja"
+        ];
         type = "carddav";
-        url =
-          "https://licorne.ninja/remote.php/dav/addressbooks/users/DamienCassou/contacts/";
+        url = "https://licorne.ninja/remote.php/dav/addressbooks/users/DamienCassou/contacts/";
         userName = "DamienCassou";
       };
     };
