@@ -108,6 +108,7 @@ in
         spice
         sqlite
         tor-browser
+        transmission_4-gtk
         typescript-language-server
         umlet
         unar # universal unpacker
