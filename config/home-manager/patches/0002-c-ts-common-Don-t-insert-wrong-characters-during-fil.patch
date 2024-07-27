@@ -1,0 +1,59 @@
+From cf14e3b25245dac98adcf90723e4a0c601f65528 Mon Sep 17 00:00:00 2001
+From: Damien Cassou <damien@cassou.me>
+Date: Sun, 21 Jul 2024 21:33:59 +0200
+Subject: [PATCH 2/2] c-ts-common: Don't insert wrong characters during filling
+
+* lisp/progmodes/c-ts-common.el (c-ts-common--fill-block-comment): If
+masking hasn't been done, don't unmask.
+---
+ lisp/progmodes/c-ts-common.el | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+diff --git a/lisp/progmodes/c-ts-common.el b/lisp/progmodes/c-ts-common.el
+index 3882a697c48..14dd29e07e2 100644
+--- a/lisp/progmodes/c-ts-common.el
++++ b/lisp/progmodes/c-ts-common.el
+@@ -151,7 +151,9 @@ c-ts-common--fill-block-comment
+          (orig-point (point-marker))
+          (start-marker (point-marker))
+          (end-marker nil)
+-         (end-len 0))
++         (end-len 0)
++         (start-mask-done nil)
++         (end-mask-done nil))
+     (move-marker start-marker start)
+     ;; We mask "/*" and the space before "*/" like
+     ;; `c-fill-paragraph' does.
+@@ -162,6 +164,7 @@ c-ts-common--fill-block-comment
+                             (group "/") "*"))
+         (goto-char (match-beginning 1))
+         (move-marker start-marker (point))
++        (setq start-mask-done t)
+         (replace-match " " nil nil nil 1))
+ 
+       ;; Include whitespaces before /*.
+@@ -179,6 +182,7 @@ c-ts-common--fill-block-comment
+         (goto-char (match-beginning 1))
+         (setq end-marker (point-marker))
+         (setq end-len (- (match-end 1) (match-beginning 1)))
++        (setq end-mask-done t)
+         (replace-match (make-string end-len ?x)
+                        nil nil nil 1))
+ 
+@@ -206,11 +210,11 @@ c-ts-common--fill-block-comment
+         (fill-region (max start-marker para-start) (min end para-end) arg))
+ 
+       ;; Unmask.
+-      (when start-marker
++      (when (and start-mask-done start-marker)
+         (goto-char start-marker)
+         (delete-char 1)
+         (insert "/"))
+-      (when end-marker
++      (when (and end-mask-done start-marker)
+         (goto-char end-marker)
+         (delete-region (point) (+ end-len (point)))
+         (insert (make-string end-len ?\s)))
+-- 
+2.45.2
+
