@@ -1,9 +1,15 @@
 { pkgs, ... }:
 
-let profileName = "home-manager";
-in {
+let
+  profileName = "home-manager";
+in
+{
   programs.firefox = {
     enable = true;
+    languagePacks = [
+      "en-US"
+      "fr-FR"
+    ];
     inherit ((pkgs.callPackage ./policies.nix { })) policies;
     profiles = {
       ${profileName} = {
