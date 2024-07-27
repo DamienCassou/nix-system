@@ -1,0 +1,29 @@
+From e444692026cae97dfaecebf5972507ae95f5e488 Mon Sep 17 00:00:00 2001
+From: Damien Cassou <damien@cassou.me>
+Date: Sun, 21 Jul 2024 21:32:34 +0200
+Subject: [PATCH 1/2] js-ts-mode: Make jsdoc's "description" block a comment
+
+* lisp/progmodes/js.el (js-ts-mode): Add "description" to
+`c-ts-common--comment-regexp'.
+---
+ lisp/progmodes/js.el | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/lisp/progmodes/js.el b/lisp/progmodes/js.el
+index f8140c14a49..75c8111035c 100644
+--- a/lisp/progmodes/js.el
++++ b/lisp/progmodes/js.el
+@@ -3946,7 +3946,9 @@ js-ts-mode
+                    :embed 'jsdoc
+                    :host 'javascript
+                    :local t
+-                   `(((comment) @capture (:match ,js--treesit-jsdoc-beginning-regexp @capture))))))
++                   `(((comment) @capture (:match ,js--treesit-jsdoc-beginning-regexp @capture)))))
++
++      (setq c-ts-common--comment-regexp (rx (or "comment" "line_comment" "block_comment" "description"))))
+ 
+     ;; Imenu
+     (setq-local treesit-simple-imenu-settings
+-- 
+2.45.2
+
