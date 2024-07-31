@@ -38,7 +38,6 @@ in
         easytag
         element-desktop
         eog
-        eslint_d
         evince
         ferdium
         ffmpeg-full # for ffplay, used by tmr-sound.el
