@@ -7,9 +7,9 @@
     enable = true;
     package = pkgs.emacs-unstable.overrideAttrs (old: {
       patches = old.patches ++ [
-        ./patches/0001-Handle-an-edge-case-in-c-ts-mode-filling-bug-72116.patch
-        ./patches/0001-js-ts-mode-Make-jsdoc-s-description-block-a-comment.patch
-        ./patches/0002-c-ts-common-Don-t-insert-wrong-characters-during-fil.patch
+        ./patches/emacs-0001-Handle-an-edge-case-in-c-ts-mode-filling-bug-72116.patch
+        ./patches/emacs-0002-Fix-filling-in-c-ts-mode-bug-72116.patch
+        ./patches/emacs-0010-js-ts-mode-Make-jsdoc-s-description-block-a-comment.patch
       ];
     });
     extraPackages =
