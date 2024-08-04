@@ -8,7 +8,6 @@
     package = pkgs.emacs-unstable.overrideAttrs (old: {
       patches = old.patches ++ [
         ./patches/emacs-0001-Handle-an-edge-case-in-c-ts-mode-filling-bug-72116.patch
-        ./patches/emacs-0002-Fix-filling-in-c-ts-mode-bug-72116.patch
         ./patches/emacs-0010-js-ts-mode-Make-jsdoc-s-description-block-a-comment.patch
       ];
     });
