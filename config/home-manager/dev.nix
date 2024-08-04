@@ -14,6 +14,7 @@
   };
 
   home.packages = with pkgs; [
+    eslint_d
     jwt-cli
     nodejs_20
     typescript # for eglot to work in JS project
