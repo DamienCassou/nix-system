@@ -13,21 +13,6 @@
       terminal = false;
     };
 
-    jetbrains-rider = {
-      name = "JetBrains Rider";
-      exec = "/home/cassou/.local/jetbrains-rider/bin/rider.sh %f";
-      icon = "/home/cassou/.local/jetbrains-rider/bin/rider.svg";
-      comment = "A cross-platform IDE for .NET";
-      terminal = false;
-      categories = [
-        "Development"
-        "IDE"
-      ];
-      settings = {
-        StartupWMClass = "jetbrains-rider";
-      };
-    };
-
     rofi-bluetooth = {
       name = "Rofi bluetooth";
       exec = "${lib.getExe pkgs.rofi-bluetooth}";
