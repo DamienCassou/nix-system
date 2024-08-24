@@ -52,6 +52,8 @@ let
       ${lib.getExe backup-rsync} /run/media/cassou/${name}/${backupDir}/
       backupStatusCode=$?
 
+      sync
+
       if [[ $backupStatusCode -eq 0 ]]; then
         notify-send --icon=${borgmaticIcon} "Backup succeeded" "The backup to \"${name}\" succeeded"
       else
