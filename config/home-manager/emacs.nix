@@ -15,6 +15,7 @@
         all-the-icons
         closql # for forge
         compat
+        editorconfig # because of bug#72790
         eglot
         epkg
         epkg-marginalia
