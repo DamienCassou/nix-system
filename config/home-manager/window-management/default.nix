@@ -34,7 +34,6 @@
         enable = true;
         settings = {
           General = {
-            checkForUpdates = false;
             disabledTrayIcon = true;
             savePathFixed = true;
             showStartupLaunchMessage = false;
