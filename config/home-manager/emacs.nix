@@ -6,9 +6,7 @@
   programs.emacs = {
     enable = true;
     package = pkgs.emacs-unstable.overrideAttrs (old: {
-      patches = old.patches ++ [
-        ./patches/emacs-0001-Handle-an-edge-case-in-c-ts-mode-filling-bug-72116.patch
-      ];
+      patches = old.patches ++ [ ];
     });
     extraPackages =
       epkgs: with epkgs; [
