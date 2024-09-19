@@ -252,6 +252,7 @@ in
       MAILDIR = "/home/cassou/Mail";
 
       FINSIT_GITHUB = "$(${lib.getExe pkgs.pass-show-password} api.github.com/DamienCassou^finsit-github)";
+      NPM_JFROG_TOKEN = "$(${lib.getExe pkgs.pass-show-password} wk/jfrog.io/token)";
 
       ESLINT_USE_FLAT_CONFIG = "true";
     };
