@@ -17,6 +17,7 @@
         eglot
         epkg
         epkg-marginalia
+        helm
         jinx
         org
         pdf-tools
