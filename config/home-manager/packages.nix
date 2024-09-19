@@ -63,6 +63,7 @@ in
         khard
         libreoffice
         lint-staged
+        mattermost-desktop
         mpc_cli
         msmtp
         multimarkdown # to preview markdown files
