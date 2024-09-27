@@ -10,7 +10,7 @@
       keyserver = "hkp://keys.gnupg.net";
     };
     scdaemonSettings = {
-      # Avoid conflicts with the global pcscd service:
+      # Read my emails "Problème avec ma Nitrokey depuis ce matin":
       # disable-ccid = true;
     };
   };
