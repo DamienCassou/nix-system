@@ -9,18 +9,18 @@
 
     fonts = {
       serif = {
-        package = pkgs.iosevka-comfy.comfy-motion-duo;
-        name = "Iosevka Comfy Motion Duo";
+        package = pkgs.gentium;
+        name = "Gentium book plus";
       };
 
       sansSerif = {
-        package = pkgs.iosevka-comfy.comfy-wide-duo;
-        name = "Iosevka Comfy Wide Duo";
+        package = pkgs.gentium;
+        name = "Gentium book plus";
       };
 
       monospace = {
-        package = pkgs.iosevka-comfy.comfy-wide;
-        name = "Iosevka Comfy Wide";
+        package = pkgs.jetbrains-mono;
+        name = "JetBrains Mono Medium";
       };
     };
   };
