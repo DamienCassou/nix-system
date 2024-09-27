@@ -70,5 +70,12 @@
       exec = "${pkgs.nixGLIntel}/bin/nixGLIntel ${lib.getExe config.programs.firefox.finalPackage} --name firefox %U";
       icon = "firefox";
     };
+
+    # Wrap into nixGLIntel
+    "Mattermost" = {
+      name = "Mattermost";
+      exec = "${pkgs.nixGLIntel}/bin/nixGLIntel ${lib.getExe pkgs.mattermost-desktop} %U";
+      icon = "${pkgs.mattermost-desktop}/share/mattermost-desktop/app_icon.png";
+    };
   };
 }
