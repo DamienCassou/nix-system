@@ -33,7 +33,9 @@ in
       { class = "^Element"; }
       { class = "^Signal$"; }
       { class = "^Slack$"; }
+      { class = "^Mattermost$"; }
       { class = "^teams-for-linux$"; }
+      { class = "^discord$"; }
     ];
     "3" = [
       { class = "^Gimp-2.10$"; }
