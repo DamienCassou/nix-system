@@ -9,13 +9,13 @@
 
     fonts = {
       serif = {
-        package = pkgs.gentium;
-        name = "Gentium book plus";
+        package = pkgs.atkinson-hyperlegible;
+        name = "Atkinson Hyperlegible";
       };
 
       sansSerif = {
-        package = pkgs.gentium;
-        name = "Gentium book plus";
+        package = pkgs.atkinson-hyperlegible;
+        name = "Atkinson Hyperlegible";
       };
 
       monospace = {
