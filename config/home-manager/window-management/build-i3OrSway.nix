@@ -39,6 +39,7 @@ in
     ];
     "3" = [
       { class = "^Gimp-2.10$"; }
+      { class = "^Gimp$"; }
       { class = "^Inkscape$"; }
       { class = "^Gnome-boxes$"; }
       { class = "^jetbrains-rider$"; }
