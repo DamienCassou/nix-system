@@ -112,7 +112,6 @@ in
         typescript-language-server
         umlet
         unar # universal unpacker
-        unison
         unzip
         usbutils
         vlc
