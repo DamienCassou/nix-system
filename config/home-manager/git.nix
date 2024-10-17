@@ -27,6 +27,15 @@ in
         );
       }
     ];
+    maintenance = {
+      enable = true;
+      # Large repositories that Git should cleanup regularly:
+      repositories = [
+        "/home/cassou/Documents/projects/nix-system/nixpkgs"
+        "/home/cassou/.emacs.d"
+        "/home/cassou/Documents/projects/ftgp/finsit/monitor"
+      ];
+    };
     extraConfig = {
       github = {
         user = "DamienCassou";
@@ -51,14 +60,6 @@ in
       };
       sendemail = {
         confirm = "auto";
-      };
-      maintenance = {
-        # Large repositories that Git should cleanup regularly:
-        repo = [
-          "/home/cassou/Documents/projects/nix-system/nixpkgs"
-          "/home/cassou/.emacs.d"
-          "/home/cassou/Documents/projects/ftgp/finsit/monitor"
-        ];
       };
       "diff \"elisp\"" = {
         xfuncname = "^(\\(.*)$";
