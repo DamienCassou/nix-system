@@ -26,6 +26,7 @@ in
         brightnessctl
         cachix
         calibre
+        copilot-node-server
         coreutils-full
         curl
         devenv
@@ -95,6 +96,7 @@ in
         psmisc # for killall
         pulseaudio
         python3Packages.woob
+        pynitrokey
         pwgen
         qpdf # to remove passwords from PDF
         racket # for SICP scheme implementation
