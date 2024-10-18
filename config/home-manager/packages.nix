@@ -71,6 +71,7 @@ in
         ncdu
         networkmanager # for nmcli
         nil # LSP server for Nix
+        nitrokey-app2
         niv
         nixGLIntel
         nixVersions.stable
