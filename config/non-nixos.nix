@@ -1,5 +1,7 @@
 # Notes for a new non-NixOS install:
 # - localectl set-x11-keymap us pc105 colemak ctrl:nocaps
+# - Install nitrokey udev rules
+#   https://docs.nitrokey.com/software/nitropy/linux/udev
 # - Deactivate SELINUX
 # - hostnamectl set-hostname luz5
 # - sudo usermod --append --groups dialout,docker,wheel,wireshark,vboxusers,adbusers cassou
