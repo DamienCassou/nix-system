@@ -99,6 +99,6 @@ in
       };
     };
 
-    home.packages = [ pkgs.rxvt_unicode ];
+    home.packages = [ pkgs.rxvt-unicode ];
   };
 }
