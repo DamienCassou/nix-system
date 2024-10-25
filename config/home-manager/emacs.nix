@@ -25,7 +25,6 @@
         queue
         request
         treesit-grammars.with-all-grammars
-        transient
         vterm
       ];
   };
