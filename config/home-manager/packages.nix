@@ -25,7 +25,6 @@ in
         blueman
         brightnessctl
         cachix
-        calibre
         copilot-node-server
         coreutils-full
         curl
