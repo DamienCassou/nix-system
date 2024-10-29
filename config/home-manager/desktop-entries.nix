@@ -56,26 +56,5 @@
       noDisplay = true;
       exec = "emacs %F";
     };
-
-    # Wrap into nixGLIntel
-    "calibre-gui" = {
-      name = "calibre";
-      exec = "${pkgs.nixGLIntel}/bin/nixGLIntel ${pkgs.calibre}/bin/calibre --detach %U";
-      icon = "calibre-gui";
-    };
-
-    # Wrap into nixGLIntel
-    "firefox" = {
-      name = "Firefox";
-      exec = "${pkgs.nixGLIntel}/bin/nixGLIntel ${lib.getExe config.programs.firefox.finalPackage} --name firefox %U";
-      icon = "firefox";
-    };
-
-    # Wrap into nixGLIntel
-    "Mattermost" = {
-      name = "Mattermost";
-      exec = "${pkgs.nixGLIntel}/bin/nixGLIntel ${lib.getExe pkgs.mattermost-desktop} %U";
-      icon = "${pkgs.mattermost-desktop}/share/mattermost-desktop/app_icon.png";
-    };
   };
 }

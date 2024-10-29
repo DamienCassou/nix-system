@@ -28,6 +28,7 @@ in
     ./documentation.nix
     ./email.nix
     ./nix-index-database.nix
+    ./nixGL.nix
     ./packages.nix
     ./pim.nix
     ./report-changes.nix

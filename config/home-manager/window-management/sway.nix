@@ -113,6 +113,6 @@ in
     # Make sure systemd services know about SSH_AUTH_SOCK:
     systemctl --user import-environment SSH_AUTH_SOCK
 
-    exec ${lib.getExe pkgs.nixGLIntel} ${lib.getExe pkgs.sway} "$@" 2>&1 > /tmp/sway.log
+    exec ${lib.getExe (config.lib.nixGL.wrap pkgs.sway)} "$@" 2>&1 > /tmp/sway.log
   '';
 }
