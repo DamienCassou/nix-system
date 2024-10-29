@@ -86,8 +86,8 @@ in
     "XF86MonBrightnessUp" = ''exec brightnessctl set "+5%"'';
 
     # Printscreen
-    "--release Print" = ''exec "${pkgs.nixGLIntel}/bin/nixGLIntel ${pkgs.flameshot}/bin/flameshot full --clipboard --path ~/Pictures"'';
-    "--release Shift+Print" = ''exec "${pkgs.nixGLIntel}/bin/nixGLIntel ${pkgs.flameshot}/bin/flameshot gui --clipboard --path ~/Pictures"'';
+    "--release Print" = ''exec "${lib.getExe (config.lib.nixGL.wrap pkgs.flameshot)} full --clipboard --path ~/Pictures"'';
+    "--release Shift+Print" = ''exec "${lib.getExe (config.lib.nixGL.wrap pkgs.flameshot)} gui --clipboard --path ~/Pictures"'';
 
     # Lockscreen
     "--release ${modifier}+l" = lockScreenCommand;

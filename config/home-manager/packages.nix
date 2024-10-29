@@ -1,12 +1,9 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
-  inherit ((pkgs.callPackage ../../nixGL { })) nixGLIntel;
 in
 {
-  nixpkgs.overlays = [ (_: _: { inherit nixGLIntel; }) ];
-
   home.packages =
     [ iosevka-aile ]
     ++ (
@@ -25,6 +22,7 @@ in
         blueman
         brightnessctl
         cachix
+        (config.lib.nixGL.wrap calibre)
         copilot-node-server
         coreutils-full
         curl
@@ -63,7 +61,7 @@ in
         khard
         libreoffice
         lint-staged
-        mattermost-desktop
+        (config.lib.nixGL.wrap mattermost-desktop)
         mpc_cli
         msmtp
         multimarkdown # to preview markdown files
@@ -72,7 +70,6 @@ in
         nil # LSP server for Nix
         nitrokey-app2
         niv
-        nixGLIntel
         nixVersions.stable
         nixfmt-rfc-style
         nixpkgs-fmt # nix formatter for nixpkgs code base
