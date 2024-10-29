@@ -24,6 +24,7 @@ in
     ./borg.nix
     ./dev.nix
     ./desktop-entries.nix
+    ./docker.nix
     ./documentation.nix
     ./email.nix
     ./nix-index-database.nix
