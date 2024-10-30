@@ -130,7 +130,7 @@ in
       ]
       ++ [
         # Unfree packages
-        slack
+        (config.lib.nixGL.wrap slack)
         teams-for-linux
         unrar
         zip
