@@ -80,7 +80,7 @@ in
         openssh
         p7zip
         pandoc
-        parabolic # download videos
+        (nixGLWrap parabolic) # download videos
         patch
         patchutils
         pavucontrol
@@ -111,7 +111,7 @@ in
         unar # universal unpacker
         unzip
         usbutils
-        vlc
+        (nixGLWrap vlc)
         vscode-js-debug
         vscode-langservers-extracted
         wget
