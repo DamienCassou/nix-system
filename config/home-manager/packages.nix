@@ -32,7 +32,6 @@ in
         direnv
         dmenu
         dmidecode
-        discord
         dot-language-server
         easytag
         element-desktop
@@ -62,7 +61,6 @@ in
         khard
         libreoffice
         lint-staged
-        (nixGLWrap mattermost-desktop)
         mpc_cli
         msmtp
         multimarkdown # to preview markdown files
