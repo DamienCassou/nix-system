@@ -95,7 +95,6 @@ in
         pwgen
         qpdf # to remove passwords from PDF
         racket # for SICP scheme implementation
-        remmina
         rofi
         rofi-bluetooth
         rofi-pulse-select
