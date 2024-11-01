@@ -36,6 +36,7 @@ in
       { class = "^Mattermost$"; }
       { class = "^teams-for-linux$"; }
       { class = "^discord$"; }
+      { class = "^Ferdium$"; }
     ];
     "3" = [
       { class = "^Gimp-2.10$"; }
