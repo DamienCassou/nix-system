@@ -2,6 +2,7 @@
 
 let
   iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
+  nixGLWrap = config.lib.nixGL.wrap;
 in
 {
   home.packages =
@@ -22,7 +23,7 @@ in
         blueman
         brightnessctl
         cachix
-        (config.lib.nixGL.wrap calibre)
+        (nixGLWrap calibre)
         copilot-node-server
         coreutils-full
         curl
@@ -61,7 +62,7 @@ in
         khard
         libreoffice
         lint-staged
-        (config.lib.nixGL.wrap mattermost-desktop)
+        (nixGLWrap mattermost-desktop)
         mpc_cli
         msmtp
         multimarkdown # to preview markdown files
@@ -130,7 +131,7 @@ in
       ]
       ++ [
         # Unfree packages
-        (config.lib.nixGL.wrap slack)
+        (nixGLWrap slack)
         teams-for-linux
         unrar
         zip
