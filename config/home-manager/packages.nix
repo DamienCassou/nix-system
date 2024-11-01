@@ -34,7 +34,6 @@ in
         dmidecode
         dot-language-server
         easytag
-        element-desktop
         eog
         evince
         (nixGLWrap ferdium) # for discord and mattermost
@@ -130,7 +129,6 @@ in
       ++ [
         # Unfree packages
         (nixGLWrap slack)
-        teams-for-linux
         unrar
         zip
       ]
