@@ -38,7 +38,7 @@ in
         element-desktop
         eog
         evince
-        ferdium
+        (nixGLWrap ferdium) # for discord and mattermost
         ffmpeg-full # for ffplay, used by tmr-sound.el
         file
         findutils
