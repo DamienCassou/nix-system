@@ -263,7 +263,16 @@ in
 
       MAILDIR = "/home/cassou/Mail";
 
-      FINSIT_GITHUB = "$(${lib.getExe pkgs.pass-show-password} api.github.com/DamienCassou^finsit-github)";
+      # I need this variable to be accessible from desktop
+      # applications, not only from shell sessions. Using
+      # pass-show-password doesn't seem to work for desktop
+      # applications, maybe because gpg isn't ready when the session
+      # variables are initially set.
+      # The error message I get is:
+      # > Value: gpg: public key decryption failed: No such file or directory
+      # > gpg: decryption failed: No such file or directory
+      FINSIT_GITHUB = "$(cat /home/cassou/Documents/projects/nix-system/secrets/FINSIT_GITHUB)";
+
       GITHUB_ACTOR = "DamienCassou"; # Used by C# nuget configuration
       NPM_JFROG_TOKEN = "$(${lib.getExe pkgs.pass-show-password} wk/jfrog.io/token)";
 
