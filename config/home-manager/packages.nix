@@ -34,6 +34,7 @@ in
         dmidecode
         dot-language-server
         easytag
+        (nixGLWrap element-desktop)
         eog
         evince
         (nixGLWrap ferdium) # for discord and mattermost
