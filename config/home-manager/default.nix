@@ -6,6 +6,7 @@
 }:
 
 let
+  home = config.home.homeDirectory;
   certificatesFile = "/etc/ssl/certs/ca-bundle.crt";
   systemdEmail = pkgs.writeShellScript "systemd-email.sh" ''
     ${pkgs.msmtp}/bin/sendmail -t <<ERRMAIL
@@ -94,7 +95,7 @@ in
       enable = true;
       package = pkgs.pass.withExtensions (exts: [ exts.pass-otp ]);
       settings = {
-        PASSWORD_STORE_DIR = "/home/cassou/.password-store";
+        PASSWORD_STORE_DIR = "${home}/.password-store";
       };
     };
 
@@ -146,13 +147,13 @@ in
     };
     gtk3 = {
       bookmarks = [
-        "file:///home/cassou/Documents"
-        "file:///home/cassou/Documents/projects/ftgp"
-        "file:///home/cassou/Documents/projects/ftgp/finsit/monitor/monitor/Monitor.Test/Helpers/Files/Sie"
-        "file:///home/cassou/Documents/projects/ftgp/finsit/monitor/monitor/Monitor.Web.Ui/Client"
-        "file:///home/cassou/Downloads"
-        "file:///home/cassou/Music"
-        "file:///home/cassou/Pictures"
+        "file://${home}/Documents"
+        "file://${home}/Documents/projects/ftgp"
+        "file://${home}/Documents/projects/ftgp/finsit/monitor/monitor/Monitor.Test/Helpers/Files/Sie"
+        "file://${home}/Documents/projects/ftgp/finsit/monitor/monitor/Monitor.Web.Ui/Client"
+        "file://${home}/Downloads"
+        "file://${home}/Music"
+        "file://${home}/Pictures"
         "file:///tmp"
       ];
     };
@@ -194,7 +195,7 @@ in
     enable = true;
     userDirs = {
       enable = true;
-      music = "/home/cassou/Music/son/";
+      music = "${home}/Music/son/";
     };
     configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
     mime.enable = true;
@@ -222,7 +223,7 @@ in
           type = "indirect";
         };
         to = {
-          path = "/home/cassou/Documents/projects/nix-system/nixpkgs";
+          path = "${home}/Documents/projects/nix-system/nixpkgs";
           type = "path";
         };
       };
@@ -243,13 +244,13 @@ in
     };
 
     sessionPath = [
-      "/home/cassou/.local/bin"
+      "${home}/.local/bin"
       config.home.sessionVariables.DOTNET_ROOT
       "${config.home.sessionVariables.DOTNET_ROOT}/tools"
     ];
 
     sessionVariables = {
-      LEDGER_FILE = "/home/cassou/configuration/ledger/accounting.hledger";
+      LEDGER_FILE = "${home}/configuration/ledger/accounting.hledger";
       # So git finds the certificates on the woob clone:
       GIT_SSL_CAINFO = certificatesFile;
 
@@ -259,9 +260,9 @@ in
       DOTNET_CLI_TELEMETRY_OPTOUT = "true";
 
       # Tell dotnet where to find the installations
-      DOTNET_ROOT = "/home/cassou/.dotnet";
+      DOTNET_ROOT = "${home}/.dotnet";
 
-      MAILDIR = "/home/cassou/Mail";
+      MAILDIR = "${home}/Mail";
 
       # I need this variable to be accessible from desktop
       # applications, not only from shell sessions. Using
@@ -271,7 +272,7 @@ in
       # The error message I get is:
       # > Value: gpg: public key decryption failed: No such file or directory
       # > gpg: decryption failed: No such file or directory
-      FINSIT_GITHUB = "$(cat /home/cassou/Documents/projects/nix-system/secrets/FINSIT_GITHUB)";
+      FINSIT_GITHUB = "$(cat ${home}/Documents/projects/nix-system/secrets/FINSIT_GITHUB)";
 
       GITHUB_ACTOR = "DamienCassou"; # Used by C# nuget configuration
       NPM_JFROG_TOKEN = "$(${lib.getExe pkgs.pass-show-password} wk/jfrog.io/token)";
