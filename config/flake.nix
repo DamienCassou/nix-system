@@ -53,7 +53,7 @@
     in
     {
       homeConfigurations = {
-        cassou = home-manager.lib.homeManagerConfiguration {
+        "cassou@luz5" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
           modules = [
