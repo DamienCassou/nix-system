@@ -16,7 +16,7 @@
         "dnf-list" = "dnf repoquery --list";
         "dnf-provides" = "dnf repoquery --cacheonly --file";
         "docker-cleanup" = "docker system prune --volumes";
-        "hm" = "home-manager";
+        "hmswitch" = "nh home switch ~/Documents/projects/nix-system/config";
         "nixpkgs-bump" = "nix-shell maintainers/scripts/update.nix --argstr package";
         "youtube-dl-album" = "${lib.getExe pkgs.yt-dlp} --extract-audio --audio-format mp3 --audio-quality 0 --yes-playlist";
       };
