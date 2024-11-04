@@ -28,8 +28,6 @@ in
     ./docker.nix
     ./documentation.nix
     ./email.nix
-    ./nix-index-database.nix
-    ./nixGL.nix
     ./packages.nix
     ./pim.nix
     ./report-changes.nix
@@ -40,8 +38,6 @@ in
   ];
 
   my.window-management.enable = true;
-
-  nixpkgs.overlays = [ (_: _: { nur = pkgs.callPackage ../../NUR { }; }) ];
 
   systemd.user = {
     # Automatically start new services and stop old ones:
@@ -81,7 +77,6 @@ in
 
     home-manager = {
       enable = true;
-      path = "$HOME/Documents/projects/nix-system/config/home-manager";
     };
 
     htop = {
@@ -90,6 +85,13 @@ in
         color_scheme = 6;
       };
     };
+
+    nh = {
+      enable = true;
+    };
+
+    nix-index-database.comma.enable = true;
+    nix-index.enableBashIntegration = true;
 
     password-store = {
       enable = true;

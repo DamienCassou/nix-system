@@ -1,4 +1,4 @@
-{ pkgs, ... }@args:
+{ pkgs, ... }:
 
 {
   stylix = {
@@ -24,6 +24,4 @@
       };
     };
   };
-
-  imports = [ ((import ../../stylix).homeManagerModules.stylix args) ];
 }

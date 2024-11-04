@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+  extensions = with pkgs.firefox-addons; [
     overview
     rsf-censorship-detector
     browserpass
