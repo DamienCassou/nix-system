@@ -86,6 +86,29 @@
         "url": "file:///home/cassou/Documents/projects/nix-system/emacs-overlay"
       }
     },
+    "firefox-addons": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "pkgs/firefox-addons",
+        "lastModified": 1730693000,
+        "narHash": "sha256-baSXoP6mctfc29ZzMS8AFJfJPnE6Vm4qZ0kjC/G3qs8=",
+        "owner": "rycee",
+        "repo": "nur-expressions",
+        "rev": "9c9f6b64926d03dba28f3088887699cc7f5da1f5",
+        "type": "gitlab"
+      },
+      "original": {
+        "dir": "pkgs/firefox-addons",
+        "owner": "rycee",
+        "repo": "nur-expressions",
+        "type": "gitlab"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -122,6 +145,21 @@
     },
     "flake-utils_2": {
       "locked": {
+        "lastModified": 1629284811,
+        "narHash": "sha256-JHgasjPR0/J1J3DRm4KxM4zTyAj4IOJY8vIl75v/kPI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c5d161cc0af116a2e17f54316f0bf43f0819785c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_3": {
+      "locked": {
         "lastModified": 1659877975,
         "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
         "owner": "numtide",
@@ -135,7 +173,7 @@
         "type": "github"
       }
     },
-    "flake-utils_3": {
+    "flake-utils_4": {
       "inputs": {
         "systems": [
           "stylix",
@@ -252,7 +290,7 @@
     },
     "nixGL": {
       "inputs": {
-        "flake-utils": "flake-utils_2",
+        "flake-utils": "flake-utils_3",
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -337,32 +375,12 @@
     "root": {
       "inputs": {
         "emacs-overlay": "emacs-overlay",
+        "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "nix-index-database": "nix-index-database",
         "nixGL": "nixGL",
         "nixpkgs": "nixpkgs_2",
-        "rycee-nur-expressions": "rycee-nur-expressions",
         "stylix": "stylix"
-      }
-    },
-    "rycee-nur-expressions": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1730715480,
-        "narHash": "sha256-8zGT7CgF6mBzA3U6N+y1MqtHP4bR4TuJLKbyYrNbkZw=",
-        "ref": "refs/heads/master",
-        "rev": "f651caffd891eb9389e5fc49177c92d3ceb70da5",
-        "revCount": 3894,
-        "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/rycee-nur-expressions"
-      },
-      "original": {
-        "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/rycee-nur-expressions"
       }
     },
     "stylix": {
@@ -372,7 +390,7 @@
         "base16-helix": "base16-helix",
         "base16-vim": "base16-vim",
         "flake-compat": "flake-compat",
-        "flake-utils": "flake-utils_3",
+        "flake-utils": "flake-utils_4",
         "gnome-shell": "gnome-shell",
         "home-manager": "home-manager_2",
         "nixpkgs": "nixpkgs_3",

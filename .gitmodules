@@ -14,6 +14,3 @@
 	path = stylix
 	url = git@github.com:danth/stylix.git
 	remote = "DamienCassou git@github.com:DamienCassou/stylix.git"
-[submodule "rycee-nur-expressions"]
-	path = rycee-nur-expressions
-	url = git@gitlab.com:rycee/nur-expressions.git
