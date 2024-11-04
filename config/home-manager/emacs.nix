@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  nixpkgs.overlays = [ (import ../../emacs-overlay) ];
-
   programs.emacs = {
     enable = true;
     package = pkgs.emacs-unstable.overrideAttrs (old: {

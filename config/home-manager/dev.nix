@@ -16,6 +16,7 @@
   home.packages = with pkgs; [
     eslint_d
     jwt-cli
+    git-crypt
     nodejs_20
     nodePackages.prettier
     typescript # for eglot to work in JS project
