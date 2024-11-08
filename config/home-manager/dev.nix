@@ -20,6 +20,7 @@
     nodejs_20
     nodePackages.prettier
     typescript # for eglot to work in JS project
+    vscode
     yarn
   ];
 
