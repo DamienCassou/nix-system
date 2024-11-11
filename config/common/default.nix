@@ -34,7 +34,6 @@ in
     ./scripts
     ./stylix.nix
     ./web.nix
-    ./window-management
   ];
 
   my.window-management.enable = true;
