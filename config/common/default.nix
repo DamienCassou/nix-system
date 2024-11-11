@@ -85,10 +85,6 @@ in
       };
     };
 
-    nh = {
-      enable = true;
-    };
-
     nix-index-database.comma.enable = true;
     nix-index.enableBashIntegration = true;
 
