@@ -61,6 +61,7 @@
             stylix.homeManagerModules.stylix
             ./non-nixos.nix
             ./linux-wm
+            ./common
             {
               nixGL = {
                 packages = nixGL.packages;
