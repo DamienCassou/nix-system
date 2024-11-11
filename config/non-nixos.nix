@@ -52,5 +52,5 @@
     export NIX_PATH="/home/cassou/Documents/projects/nix-system"
   '';
 
-  imports = [ ./home-manager ];
+  imports = [ ./common ];
 }
