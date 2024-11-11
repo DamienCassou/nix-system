@@ -7,6 +7,4 @@
   home.sessionVariablesExtra = ''
     export INFOPATH="/usr/share/info:${config.home.profileDirectory}/share/info:''${INFOPATH}"
   '';
-
-  imports = [ ./common ];
 }
