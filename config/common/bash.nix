@@ -13,8 +13,6 @@
       enable = true;
       shellAliases = {
         "borgcheck" = "borgmatic --verbosity 2 check --repair --progress  --force --only";
-        "dnf-list" = "dnf repoquery --list";
-        "dnf-provides" = "dnf repoquery --cacheonly --file";
         "docker-cleanup" = "docker system prune --volumes";
         "hmswitch" = "nh home switch ~/Documents/projects/nix-system/config";
         "nixpkgs-bump" = "nix-shell maintainers/scripts/update.nix --argstr package";
