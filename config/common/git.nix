@@ -6,6 +6,7 @@
 }:
 let
   emailAccount = config.accounts.email.accounts.perso;
+  home = config.home.homeDirectory;
 in
 {
   programs.git = {
@@ -31,9 +32,9 @@ in
       enable = true;
       # Large repositories that Git should cleanup regularly:
       repositories = [
-        "/home/cassou/Documents/projects/nix-system/nixpkgs"
-        "/home/cassou/.emacs.d"
-        "/home/cassou/Documents/projects/ftgp/finsit/monitor"
+        "${home}/Documents/projects/nix-system/nixpkgs"
+        "${home}/.emacs.d"
+        "${home}/Documents/projects/ftgp/finsit/monitor"
       ];
     };
     extraConfig = {
