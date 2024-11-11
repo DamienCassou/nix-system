@@ -219,6 +219,9 @@ in
 
   nix = {
     package = pkgs.nix;
+    nixPath = [ "${home}/Documents/projects/nix-system" ];
+    channels = { };
+    keepOldNixPath = false;
     settings = {
       experimental-features = [
         "flakes"
