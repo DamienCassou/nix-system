@@ -59,10 +59,10 @@
           modules = [
             nix-index-database.hmModules.nix-index
             stylix.homeManagerModules.stylix
-            ./common
-            ./non-nixos.nix
-            ./linux
-            ./linux-wm
+            ./config/common
+            ./config/non-nixos.nix
+            ./config/linux
+            ./config/linux-wm
             {
               nixGL = {
                 packages = nixGL.packages;
