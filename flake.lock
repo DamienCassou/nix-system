@@ -72,17 +72,19 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1731172058,
-        "narHash": "sha256-dn6EaE6IY8IgOnUTbapbhoyNp6n/jbmoV7o9praPNa0=",
+        "lastModified": 1731257787,
+        "narHash": "sha256-QmijaEOYVhmj8V1bUtCQUQyanEHZ2n9HMCcMXveJMuI=",
         "ref": "refs/heads/master",
-        "rev": "0c62adbb149571711cea2dbadb4c2a0652dfc266",
-        "revCount": 14545,
+        "rev": "10001900f78be46ab8642edde7455aa5f0d54a6a",
+        "revCount": 14553,
+        "shallow": true,
         "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/emacs-overlay"
+        "url": "file:./emacs-overlay"
       },
       "original": {
+        "shallow": true,
         "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/emacs-overlay"
+        "url": "file:./emacs-overlay"
       }
     },
     "firefox-addons": {
@@ -94,11 +96,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1731211414,
-        "narHash": "sha256-9TKyNZ7OD/lbToi4iY3xONHC5lC0c2CKCCpU+eQT+Dg=",
+        "lastModified": 1731297786,
+        "narHash": "sha256-YC+FPREQqPF2HNSu1PkvVps5mBzexxvCV6NXfTf/kQI=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "576dcf7f95fbb5f2846ff99c7200dd070cabe43d",
+        "rev": "85c8db7e7e901f656072b01f89c8fffcab26bfa6",
         "type": "gitlab"
       },
       "original": {
@@ -215,38 +217,19 @@
         ]
       },
       "locked": {
-        "lastModified": 1730837930,
-        "narHash": "sha256-0kZL4m+bKBJUBQse0HanewWO0g8hDdCvBhudzxgehqc=",
+        "lastModified": 1731235328,
+        "narHash": "sha256-NjavpgE9/bMe/ABvZpyHIUeYF1mqR5lhaep3wB79ucs=",
         "ref": "refs/heads/master",
-        "rev": "2f607e07f3ac7e53541120536708e824acccfaa8",
-        "revCount": 3834,
+        "rev": "60bb110917844d354f3c18e05450606a435d2d10",
+        "revCount": 3836,
+        "shallow": true,
         "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/home-manager"
+        "url": "file:./home-manager"
       },
       "original": {
+        "shallow": true,
         "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/home-manager"
-      }
-    },
-    "home-manager_2": {
-      "inputs": {
-        "nixpkgs": [
-          "stylix",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1724435763,
-        "narHash": "sha256-UNky3lJNGQtUEXT2OY8gMxejakSWPTfWKvpFkpFlAfM=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "c2cd2a52e02f1dfa1c88f95abeb89298d46023be",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
+        "url": "file:./home-manager"
       }
     },
     "nix-index-database": {
@@ -324,33 +307,19 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1730893237,
-        "narHash": "sha256-l6AV/nfY53+CMUkh2EZd7kiVZE6wpAXjYRkv5dFkbbo=",
+        "lastModified": 1731272752,
+        "narHash": "sha256-6+RGupMFqUV3FMUgzBEErBCNWiHz8Y6ZRS0soDgcMio=",
         "ref": "refs/heads/system",
-        "rev": "c6acb0b81c3182269631941f2e4c89535f550cae",
-        "revCount": 703933,
+        "rev": "575f28f12c3324ec4647188d06bd3737e80034aa",
+        "revCount": 705707,
+        "shallow": true,
         "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/nixpkgs"
+        "url": "file:./nixpkgs"
       },
       "original": {
+        "shallow": true,
         "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/nixpkgs"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1725194671,
-        "narHash": "sha256-tLGCFEFTB5TaOKkpfw3iYT9dnk4awTP/q4w+ROpMfuw=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b833ff01a0d694b910daca6e2ff4a3f26dee478c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "url": "file:./nixpkgs"
       }
     },
     "root": {
@@ -373,8 +342,12 @@
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils_3",
         "gnome-shell": "gnome-shell",
-        "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_3",
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "systems": "systems",
         "tinted-foot": "tinted-foot",
         "tinted-kitty": "tinted-kitty",
@@ -386,12 +359,14 @@
         "ref": "refs/heads/master",
         "rev": "6863412636c8f2cb3b7360f747fbd020fbfddf68",
         "revCount": 437,
+        "shallow": true,
         "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/stylix"
+        "url": "file:./stylix"
       },
       "original": {
+        "shallow": true,
         "type": "git",
-        "url": "file:///home/cassou/Documents/projects/nix-system/stylix"
+        "url": "file:./stylix"
       }
     },
     "systems": {

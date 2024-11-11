@@ -2,7 +2,7 @@
   description = "Home Manager configuration";
 
   inputs = {
-    emacs-overlay.url = "git+file:///home/cassou/Documents/projects/nix-system/emacs-overlay";
+    emacs-overlay.url = "git+file:./emacs-overlay?shallow=1";
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
@@ -10,7 +10,7 @@
     };
 
     home-manager = {
-      url = "git+file:///home/cassou/Documents/projects/nix-system/home-manager";
+      url = "git+file:./home-manager?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -24,9 +24,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs.url = "git+file:///home/cassou/Documents/projects/nix-system/nixpkgs";
+    nixpkgs.url = "git+file:./nixpkgs?shallow=1";
 
-    stylix.url = "git+file:///home/cassou/Documents/projects/nix-system/stylix";
+    stylix = {
+      url = "git+file:./stylix?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs =
