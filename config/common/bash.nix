@@ -15,7 +15,6 @@
         "borgcheck" = "borgmatic --verbosity 2 check --repair --progress  --force --only";
         "docker-cleanup" = "docker system prune --volumes";
         "hmswitch" = "nh home switch ~/Documents/projects/nix-system/config";
-        "nixpkgs-bump" = "nix-shell maintainers/scripts/update.nix --argstr package";
         "youtube-dl-album" = "${lib.getExe pkgs.yt-dlp} --extract-audio --audio-format mp3 --audio-quality 0 --yes-playlist";
       };
       initExtra = ''
