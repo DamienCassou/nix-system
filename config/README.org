@@ -1,0 +1,28 @@
+* My Nix config
+** Configure non-nixos Linux system
+- ~localectl set-x11-keymap us pc105 colemak ctrl:nocaps~
+- Install nitrokey udev rules
+  https://docs.nitrokey.com/software/nitropy/linux/udev
+- Deactivate SELINUX
+- ~hostnamectl set-hostname luz5~
+- ~sudo usermod --append --groups dialout,wheel cassou~
+- Install nix in multi-user mode: https://nixos.org/manual/nix/stable/#sect-multi-user-installation
+- Install home-manager: https://github.com/nix-community/home-manager/blob/master/README.md
+- ~home-manager --extra-experimental-features "nix-command flakes" --flake config/flake.nix -I nixpkgs=nixpkgs/ -I home-manager=home-manager/ -b bak1 switch~
+- For i3 desktop
+  - dnf install lightdm lightdm-gtk i3lock swaylock NetworkManager-strongswan
+  - systemctl disable gdm
+  - systemctl enable lightdm
+  - cp ./i3.desktop /usr/share/xsessions/default.desktop
+  - cp ./sway.desktop to /usr/share/wayland-sessions
+  - reboot
+  - in lightdm, choose the "Default Xsession" session from the menu in the top bar
+  - install i3lock # https://github.com/i3/i3lock/issues/286
+- install mono # https://www.mono-project.com/download/preview/
+  - ~dnf install mono-devel mono-complete xsp referenceassemblies-pcl msbuild~
+- install docker
+  - https://docs.docker.com/engine/install/fedora/#install-using-the-repository
+  - sudo usermod --append --groups docker cassou
+- Add "127.0.0.1  database.ftgp" and "127.0.0.1   rabbitmq" à /etc/hosts
+- Install dotnet ~/configuration/denote/20240619T111823--mettre-à-jour-dotnet__finsit_monitor.org
+- sudo usermod --append --groups wireshark,vboxusers,adbusers cassou
