@@ -81,3 +81,8 @@
       };
     };
 }
+
+# Local Variables:
+# eval: (my/eglot-format-on-save-mode)
+# eval: (my/eglot-ensure)
+# End:
