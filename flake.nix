@@ -2,7 +2,10 @@
   description = "Home Manager configuration";
 
   inputs = {
-    emacs-overlay.url = "git+file:./emacs-overlay?shallow=1";
+    emacs-overlay = {
+      url = "git+file:./emacs-overlay?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
