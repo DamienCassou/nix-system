@@ -74,11 +74,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1731811021,
-        "narHash": "sha256-MNBAEaFceE8IkNTn0YbxN6MmJsiBob7g/A1ATBTZ5CE=",
+        "lastModified": 1731981450,
+        "narHash": "sha256-2X6h3K09th+KBJ2nXrS5+rza+WV5oF+vivevxIuaPgY=",
         "ref": "refs/heads/master",
-        "rev": "e39c7cf39e1d2c31f8cce19ab3ecbb1e02d3bb65",
-        "revCount": 14614,
+        "rev": "e0427ea80cbbda144b5014fbe1facd9d49f6f49d",
+        "revCount": 14631,
         "shallow": true,
         "type": "git",
         "url": "file:./emacs-overlay"
@@ -98,11 +98,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1731816193,
-        "narHash": "sha256-Y/u1O6GpvOYRbGOnwGo0Gofg5jjfaHNGP9G7yGFFfzg=",
+        "lastModified": 1731989000,
+        "narHash": "sha256-jOXdFK0+BHuS/B8w0VDGEy2wxsKZlfLyML5sIugc56U=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "02c98c9ba4491db49ab759161fcc0ba9830d7aa0",
+        "rev": "23c5920be219c5e14b32bdb9987314be13941adf",
         "type": "gitlab"
       },
       "original": {
@@ -219,11 +219,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1731786860,
-        "narHash": "sha256-130gQ5k8kZlxjBEeLpE+SvWFgSOFgQFeZlqIik7KgtQ=",
+        "lastModified": 1731968878,
+        "narHash": "sha256-+hTCwETOE9N8voTAaF+IzdUZz28Ws3LDpH90FWADrEE=",
         "ref": "refs/heads/master",
-        "rev": "1bd5616e33c0c54d7a5b37db94160635a9b27aeb",
-        "revCount": 3849,
+        "rev": "a42fa14b53ceab66274a21da480c9f8e06204173",
+        "revCount": 3859,
         "shallow": true,
         "type": "git",
         "url": "file:./home-manager"
@@ -294,11 +294,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1731652201,
-        "narHash": "sha256-XUO0JKP1hlww0d7mm3kpmIr4hhtR4zicg5Wwes9cPMg=",
+        "lastModified": 1731797254,
+        "narHash": "sha256-df3dJApLPhd11AlueuoN0Q4fHo/hagP75LlM5K1sz9g=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c21b77913ea840f8bcf9adf4c41cecc2abffd38d",
+        "rev": "e8c38b73aeb218e27163376a2d617e61a2ad9b59",
         "type": "github"
       },
       "original": {
@@ -340,11 +340,11 @@
         "tinted-tmux": "tinted-tmux"
       },
       "locked": {
-        "lastModified": 1731657386,
-        "narHash": "sha256-Mm/JL8tFUS1SOmmZDPcswExUxzw0VpHcEyZI1h58CGA=",
+        "lastModified": 1731920923,
+        "narHash": "sha256-Pqe38TdvfyywhlhpR1WLJlD7uTOGXRRuzpHIh2edOz0=",
         "ref": "refs/heads/master",
-        "rev": "5ab1207b2fdeb5a022f2dd7cccf6be760f1b150f",
-        "revCount": 441,
+        "rev": "f8699483e46972f64b0dee5d5e41bf4bb142629b",
+        "revCount": 444,
         "shallow": true,
         "type": "git",
         "url": "file:./stylix"
