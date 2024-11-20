@@ -33,7 +33,11 @@
       url = "git+file:./stylix?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
+      inputs.base16.follows = "base16";
     };
+
+    # Workaround for https://github.com/SenchoPens/base16.nix/pull/19
+    base16.url = "github:Noodlez1232/base16.nix/slugify-fix";
   };
 
   outputs =

@@ -5,15 +5,16 @@
         "fromYaml": "fromYaml"
       },
       "locked": {
-        "lastModified": 1708890466,
-        "narHash": "sha256-LlrC09LoPi8OPYOGPXegD72v+//VapgAqhbOFS3i8sc=",
-        "owner": "SenchoPens",
+        "lastModified": 1732075760,
+        "narHash": "sha256-+R1BH5wHhfnycySb7Sy5KbYEaTJZWm1h+LW1OtyhiTs=",
+        "owner": "Noodlez1232",
         "repo": "base16.nix",
-        "rev": "665b3c6748534eb766c777298721cece9453fdae",
+        "rev": "5322a1628f1f038e1dd31a22370391cbdb50768a",
         "type": "github"
       },
       "original": {
-        "owner": "SenchoPens",
+        "owner": "Noodlez1232",
+        "ref": "slugify-fix",
         "repo": "base16.nix",
         "type": "github"
       }
@@ -310,6 +311,7 @@
     },
     "root": {
       "inputs": {
+        "base16": "base16",
         "emacs-overlay": "emacs-overlay",
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
@@ -321,7 +323,9 @@
     },
     "stylix": {
       "inputs": {
-        "base16": "base16",
+        "base16": [
+          "base16"
+        ],
         "base16-fish": "base16-fish",
         "base16-helix": "base16-helix",
         "base16-vim": "base16-vim",
