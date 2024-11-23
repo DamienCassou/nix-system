@@ -76,7 +76,6 @@ in
         nodePackages.typescript
         nodePackages.dockerfile-language-server-nodejs
         nodePackages.vscode-json-languageserver
-        notmuch
         omnisharp-roslyn # for C# development in Monitor
         openssh
         p7zip
