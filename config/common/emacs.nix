@@ -19,7 +19,9 @@
         jinx
         org
         pdf-tools
-        pkgs.notmuch.emacs
+        (pkgs.notmuch.overrideAttrs (old: {
+          patches = (old.patches or [ ]) ++ [ ./patches/0001-emacs-show-Only-recenter-interactively.patch ];
+        })).emacs
         queue
         request
         treesit-grammars.with-all-grammars
