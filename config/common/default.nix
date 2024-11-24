@@ -110,7 +110,10 @@ in
       enable = true;
       settings = {
         linux = {
-          home_manager_arguments = ["--flake" (lib.elemAt config.nix.nixPath 0)];
+          home_manager_arguments = [
+            "--flake"
+            (lib.elemAt config.nix.nixPath 0)
+          ];
         };
         misc = {
           assume_yes = true;
