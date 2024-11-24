@@ -33,6 +33,7 @@ in
     ./report-changes.nix
     ./scripts
     ./stylix.nix
+    ./syncthing.nix
     ./web.nix
   ];
 
@@ -177,7 +178,6 @@ in
       ];
     };
 
-    syncthing.enable = true;
     systembus-notify.enable = true;
 
     signaturepdf = {
