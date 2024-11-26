@@ -2,7 +2,7 @@ _: {
   bookmarks = [
     {
       name = "Project";
-      url = "https://3.basecamp.com/4201305/projects/35873484";
+      url = "https://3.basecamp.com/4201305/buckets/39969927/todosets/8037582701";
     }
     {
       name = "dev-doc";
