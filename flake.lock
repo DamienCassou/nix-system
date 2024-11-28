@@ -74,11 +74,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1732670452,
-        "narHash": "sha256-iD1di4nIZ7Ab1KYwYEnIaCAKxNBCfG63xUHTW/Z5ch0=",
+        "lastModified": 1732813964,
+        "narHash": "sha256-yz7vSHvlKMu5APs7lor5PyGTj5/QNmCEJs1T4tRiy5A=",
         "ref": "refs/heads/master",
-        "rev": "c459524b98ca355ef06f272034267cbe8f3e28f0",
-        "revCount": 14693,
+        "rev": "ceb935b70d456dffe6a8a2b7ffefc5b5be5a1818",
+        "revCount": 14704,
         "shallow": true,
         "type": "git",
         "url": "file:./emacs-overlay"
@@ -98,11 +98,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1732680201,
-        "narHash": "sha256-3PA+AlonG9xzJrT1NvnD0Id2dBvIVNrSijVwlIinzNo=",
+        "lastModified": 1732790791,
+        "narHash": "sha256-bx+ljzcUpVOKqu6k/HJGvij8x/sdFYkehGP8oPVqqRY=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "77e347b8897e917e99bf2929a7178d8caa6fd473",
+        "rev": "ac70253fea187562c44006f32ad2b480997e0866",
         "type": "gitlab"
       },
       "original": {
@@ -219,11 +219,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1732482255,
-        "narHash": "sha256-GUffLwzawz5WRVfWaWCg78n/HrBJrOG7QadFY6rtV8A=",
+        "lastModified": 1732793095,
+        "narHash": "sha256-6TrknJ8CpvSSF4gviQSeD+wyj3siRcMvdBKhOXkEMKU=",
         "ref": "refs/heads/master",
-        "rev": "a9953635d7f34e7358d5189751110f87e3ac17da",
-        "revCount": 3875,
+        "rev": "2f7739d01080feb4549524e8f6927669b61c6ee3",
+        "revCount": 3881,
         "shallow": true,
         "type": "git",
         "url": "file:./home-manager"
@@ -294,11 +294,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1731797254,
-        "narHash": "sha256-df3dJApLPhd11AlueuoN0Q4fHo/hagP75LlM5K1sz9g=",
+        "lastModified": 1732749044,
+        "narHash": "sha256-T38FQOg0BV5M8FN1712fovzNakSOENEYs+CSkg31C9Y=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e8c38b73aeb218e27163376a2d617e61a2ad9b59",
+        "rev": "0c5b4ecbed5b155b705336aa96d878e55acd8685",
         "type": "github"
       },
       "original": {
