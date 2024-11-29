@@ -74,11 +74,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1732813964,
-        "narHash": "sha256-yz7vSHvlKMu5APs7lor5PyGTj5/QNmCEJs1T4tRiy5A=",
+        "lastModified": 1732871643,
+        "narHash": "sha256-YrjBqjdNvOSGtYDR4ijVqQwDB6fwhLx//p162TlrkzM=",
         "ref": "refs/heads/master",
-        "rev": "ceb935b70d456dffe6a8a2b7ffefc5b5be5a1818",
-        "revCount": 14704,
+        "rev": "ca218dbd42ae4b16bc4378a06f5f1310b69a32af",
+        "revCount": 14709,
         "shallow": true,
         "type": "git",
         "url": "file:./emacs-overlay"
@@ -98,11 +98,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1732790791,
-        "narHash": "sha256-bx+ljzcUpVOKqu6k/HJGvij8x/sdFYkehGP8oPVqqRY=",
+        "lastModified": 1732885410,
+        "narHash": "sha256-2j7D78uvwmlK8pjrMlgLQ8TaeBanDh+XelecDIhYBuY=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "ac70253fea187562c44006f32ad2b480997e0866",
+        "rev": "9eee63f59ec8d181539d1920a0540094769706ac",
         "type": "gitlab"
       },
       "original": {
@@ -219,11 +219,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1732793095,
-        "narHash": "sha256-6TrknJ8CpvSSF4gviQSeD+wyj3siRcMvdBKhOXkEMKU=",
+        "lastModified": 1732884235,
+        "narHash": "sha256-r8j6R3nrvwbT1aUp4EPQ1KC7gm0pu9VcV1aNaB+XG6Q=",
         "ref": "refs/heads/master",
-        "rev": "2f7739d01080feb4549524e8f6927669b61c6ee3",
-        "revCount": 3881,
+        "rev": "819f682269f4e002884702b87e445c82840c68f2",
+        "revCount": 3882,
         "shallow": true,
         "type": "git",
         "url": "file:./home-manager"
