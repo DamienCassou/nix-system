@@ -16,7 +16,7 @@
       realName = "Damien Cassou";
 
       userName = "damien@cassou.me";
-      passwordCommand = "${lib.getExe pkgs.pass-show-password} mail.reprendre.net/damien";
+      passwordCommand = "pass-show-password mail.reprendre.net/damien";
 
       folders.inbox = "INBOX";
 
