@@ -149,7 +149,6 @@ in
         iosevka-comfy.comfy-motion-duo
         jetbrains-mono
         liberation_ttf
-        nerdfonts # for nano-modeline
         noto-fonts-emoji # recommended by Emacs
         roboto-mono
         ubuntu_font_family
