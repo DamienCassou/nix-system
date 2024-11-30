@@ -8,6 +8,18 @@ in
     key = "${secretsPath}/key.pem";
     cert = "${secretsPath}/cert.pem";
     settings = {
+      remoteIgnoredDevices = [
+        {
+          time = "2024-11-24T11:35:15.552Z";
+          deviceID = "O4YPJCR-WCE7TDF-35BVVYH-V4DF4J5-7AH3VOD-XAHMVKR-LTCIA2Y-Y3EWBAD";
+          name = "dany-desktop";
+        }
+        {
+          time = "2024-11-24T11:35:15.552Z";
+          deviceID = "MH4OL5B-TQFNW6O-GDHQCWO-XCPN5EU-7FHKT24-JIVB2NQ-FKPDROJ-XI6SEAO";
+          name = "dany-laptop";
+        }
+      ];
       options = {
         # Whether the user has accepted to submit anonymous usage data:
         urAccepted = 3;
