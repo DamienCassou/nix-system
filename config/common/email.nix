@@ -64,7 +64,7 @@
         "inbox"
       ];
       hooks.preNew = ''
-        ~/.local/bin/archive-emails.sh
+        ${./scripts/archive-emails.sh}
         ${lib.getExe pkgs.offlineimap}
       '';
     };
