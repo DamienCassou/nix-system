@@ -45,7 +45,7 @@
       };
       remote = {
         passwordCommand = [
-          (lib.getExe pkgs.pass-show-password)
+          "pass-show-password"
           "licorne.ninja"
         ];
         type = "carddav";

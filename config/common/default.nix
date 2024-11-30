@@ -22,6 +22,7 @@ let
 in
 {
   imports = [
+    ./bin.nix
     ./borg.nix
     ./dev.nix
     ./desktop-entries.nix
@@ -300,7 +301,7 @@ in
       FINSIT_GITHUB = "$(cat ${home}/Documents/projects/nix-system/secrets/FINSIT_GITHUB)";
 
       GITHUB_ACTOR = "DamienCassou"; # Used by C# nuget configuration
-      NPM_JFROG_TOKEN = "$(${lib.getExe pkgs.pass-show-password} wk/jfrog.io/token)";
+      NPM_JFROG_TOKEN = "$(pass-show-password wk/jfrog.io/token)";
 
       ESLINT_USE_FLAT_CONFIG = "true";
     };

@@ -1,12 +1,11 @@
 {
-  lib,
   config,
   pkgs,
   ...
 }:
 
 let
-  borg-pass-command = "${lib.getExe pkgs.pass-show-password} famille/lime2_borg";
+  borg-pass-command = "pass-show-password famille/lime2_borg";
   main-repository = "ssh://yrw00380@yrw00380.repo.borgbase.com/./repo";
 in
 {
