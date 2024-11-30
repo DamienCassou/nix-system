@@ -2,7 +2,7 @@
 
 let
   co2-sensor = pkgs.callPackage ./co2-sensor { };
-  lint-system = pkgs.writeShellScriptBin "lint-system" ./lint-system.sh;
+  lint-system = pkgs.callPackage ./lint-system { };
 in
 {
   imports = [ ./backup.nix ];

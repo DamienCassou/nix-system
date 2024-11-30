@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SCRIPTS=~/configuration/lint
+SCRIPTS=@modules@
 
 # Takes a hashmap mapping test names to their exit status and list the
 # test names whose exit status is not 0.
