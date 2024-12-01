@@ -52,8 +52,8 @@ ${home}/Documents/android/pixel7a/synced/backups
 ${home}/Documents/projects/javascript/cypress-hello-world/data
 ${home}/Documents/projects/sorry-cypress/sorry-cypress/data
 ${home}/Downloads
-${home}/Mail/.notmuch/xapian
-${home}/Mail/offlineimap-metadata
+${config.accounts.email.maildirBasePath}/.notmuch/xapian
+${config.accounts.email.maildirBasePath}/offlineimap-metadata
 ${home}/Nextcloud
 ${home}/go
 ${home}/misc
