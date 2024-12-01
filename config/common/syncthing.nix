@@ -97,7 +97,7 @@ in
         };
         liste-courses = {
           id = "h3l5h-usoqy";
-          path = "~/liste-courses";
+          path = "~/personal/listes";
           devices = [
             "damien-laptop"
             "damien-phone"
