@@ -33,7 +33,7 @@ in
     ./packages.nix
     ./pim
     ./report-changes.nix
-    ./stylix.nix
+    ./stylix
     ./syncthing.nix
     ./web.nix
   ];
