@@ -5,7 +5,7 @@
 }:
 
 let
-  borg-pass-command = "pass-show-password famille/lime2_borg";
+  borg-pass-command = "${pkgs.my-scripts}/bin/pass-show-password famille/lime2_borg";
   main-repository = "ssh://yrw00380@yrw00380.repo.borgbase.com/./repo";
 in
 {
