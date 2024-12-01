@@ -276,7 +276,7 @@ in
     ];
 
     sessionVariables = {
-      LEDGER_FILE = "${home}/configuration/ledger/accounting.hledger";
+      LEDGER_FILE = "${home}/personal/ledger/accounting.hledger";
       # So git finds the certificates on the woob clone:
       GIT_SSL_CAINFO = certificatesFile;
 

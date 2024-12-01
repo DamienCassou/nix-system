@@ -7,7 +7,7 @@
                  "--text"
                  "--brief"
                  "/tmp/accounting.clean.ledger"
-                 "/home/cassou/configuration/ledger/accounting.hledger")))
+                 (getenv "LEDGER_FILE"))))
     (kill-emacs
      (if (equal result 0)
          0

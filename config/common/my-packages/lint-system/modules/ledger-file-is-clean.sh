@@ -4,8 +4,7 @@ set -e
 
 CURRENT_SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-
-cp -f ~/configuration/ledger/accounting.hledger /tmp/accounting.clean.ledger
+cp -f "${LEDGER_FILE}" /tmp/accounting.clean.ledger
 
 exec emacs --batch --no-window-system \
      --no-init-file --no-site-file --no-splash \
