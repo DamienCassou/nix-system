@@ -157,7 +157,6 @@ in
         "file://${home}/Documents/projects/ftgp/finsit/monitor/monitor/Monitor.Test/Helpers/Files/Sie"
         "file://${home}/Documents/projects/ftgp/finsit/monitor/monitor/Monitor.Web.Ui/Client"
         "file://${home}/Downloads"
-        "file://${home}/Music"
         "file://${home}/Pictures"
         "file:///tmp"
       ];
