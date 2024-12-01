@@ -32,7 +32,7 @@ in
     ./email
     ./my-packages
     ./packages.nix
-    ./pim.nix
+    ./pim
     ./report-changes.nix
     ./stylix.nix
     ./syncthing.nix

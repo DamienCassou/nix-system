@@ -32,7 +32,7 @@
     ninja = {
       vdirsyncer = {
         enable = true;
-        conflictResolution = [ "${./scripts/merge-vdirsyncer-conflicts.sh}" ];
+        conflictResolution = [ "${./merge-vdirsyncer-conflicts.sh}" ];
         collections = null;
       };
       khard = {
