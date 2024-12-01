@@ -22,9 +22,8 @@ let
 in
 {
   imports = [
-    ./backup.nix
+    ./backup
     ./bin.nix
-    ./borg.nix
     ./dev.nix
     ./desktop-entries.nix
     ./docker.nix
