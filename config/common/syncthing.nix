@@ -39,9 +39,9 @@ in
         };
       };
       folders = {
-        damien-laptop-denote = {
-          id = "njstm-xif5j";
-          path = "~/configuration/denote";
+        damien-laptop-notes = {
+          id = "fwefy-w8ser";
+          path = "~/personal/notes";
           devices = [
             "damien-laptop"
             "damien-phone"
@@ -53,14 +53,6 @@ in
           devices = [
             "damien-laptop"
             "jenny-laptop"
-          ];
-        };
-        damien-laptop-org = {
-          id = "ejgrj-msukr";
-          path = "~/configuration/org";
-          devices = [
-            "damien-laptop"
-            "damien-phone"
           ];
         };
         damien-laptop-password-store = {
