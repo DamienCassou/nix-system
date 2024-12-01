@@ -5,8 +5,6 @@ let
   lint-system = pkgs.callPackage ./lint-system { };
 in
 {
-  imports = [ ./backup.nix ];
-
   nixpkgs.overlays = [ (_: _: { inherit co2-sensor lint-system; }) ];
 
   home.packages = [
