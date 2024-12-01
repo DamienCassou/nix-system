@@ -6,7 +6,7 @@
 }:
 
 let
-  borgmaticIcon = ./borgmatic.png;
+  borgmaticIcon = ./scripts/borgmatic.png;
   homeManagerFiles = lib.mapAttrsToList (_: file: file) config.home.file;
   homeManagerSymlinks = lib.filter (file: !file.recursive) homeManagerFiles;
   homeManagerRsyncExcludePatterns = map (file: ''--exclude "${file.target}"'') homeManagerSymlinks;

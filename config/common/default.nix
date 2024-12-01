@@ -22,6 +22,7 @@ let
 in
 {
   imports = [
+    ./backup.nix
     ./bin.nix
     ./borg.nix
     ./dev.nix
@@ -29,10 +30,10 @@ in
     ./docker.nix
     ./documentation.nix
     ./email.nix
+    ./my-packages
     ./packages.nix
     ./pim.nix
     ./report-changes.nix
-    ./scripts
     ./stylix.nix
     ./syncthing.nix
     ./web.nix
