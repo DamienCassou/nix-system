@@ -29,7 +29,7 @@ in
     ./desktop-entries.nix
     ./docker.nix
     ./documentation.nix
-    ./email.nix
+    ./email
     ./my-packages
     ./packages.nix
     ./pim.nix
