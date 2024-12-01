@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{ config, ... }:
 
 {
   programs.vdirsyncer = {
@@ -34,12 +29,13 @@
         enable = true;
         conflictResolution = [ "${./merge-vdirsyncer-conflicts.sh}" ];
         collections = null;
+        postHook = "git -C ${config.accounts.contact.accounts.ninja.local.path} commit --all --message='Update'";
       };
       khard = {
         enable = true;
       };
       local = {
-        path = "${config.home.homeDirectory}/configuration/contacts/ninja";
+        path = "${config.home.homeDirectory}/personal/contacts";
         type = "filesystem";
         fileExt = ".vcf";
       };
