@@ -299,7 +299,6 @@ in
       # > gpg: decryption failed: No such file or directory
       FINSIT_GITHUB = "$(cat ${home}/Documents/projects/nix-system/secrets/FINSIT_GITHUB)";
 
-      GITHUB_ACTOR = "DamienCassou"; # Used by C# nuget configuration
       NPM_JFROG_TOKEN = "$(pass-show-password wk/jfrog.io/token)";
 
       ESLINT_USE_FLAT_CONFIG = "true";
