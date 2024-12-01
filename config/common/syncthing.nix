@@ -79,9 +79,9 @@ in
             "jenny-laptop"
           ];
         };
-        famille-famille = {
+        famille = {
           id = "awvrs-da24x";
-          path = "~/famille";
+          path = "~/personal/famille";
           devices = [
             "damien-laptop"
             "jenny-laptop"
