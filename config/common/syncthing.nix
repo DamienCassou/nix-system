@@ -89,7 +89,7 @@ in
         };
         jenny-laptop-bureau = {
           id = "vpx44-y9zwk";
-          path = "~/Bureau";
+          path = "~/personal/jenny/Bureau";
           devices = [
             "damien-laptop"
             "jenny-laptop"
