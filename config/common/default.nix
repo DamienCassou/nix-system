@@ -287,7 +287,7 @@ in
       # Tell dotnet where to find the installations
       DOTNET_ROOT = "${home}/.dotnet";
 
-      MAILDIR = "${home}/Mail";
+      MAILDIR = "${config.accounts.email.maildirBasePath}";
 
       # I need this variable to be accessible from desktop
       # applications, not only from shell sessions. Using

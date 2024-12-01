@@ -6,7 +6,7 @@
 }:
 {
   accounts.email = {
-    maildirBasePath = "Mail";
+    maildirBasePath = "personal/emails";
 
     accounts.perso = {
       primary = true;
