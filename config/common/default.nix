@@ -198,7 +198,7 @@ in
     enable = true;
     userDirs = {
       enable = true;
-      music = "${home}/Music/son/";
+      music = "${home}/personal/music/damien/";
     };
     configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
     mime.enable = true;

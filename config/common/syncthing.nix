@@ -49,7 +49,7 @@ in
         };
         damien-laptop-music = {
           id = "po7wp-7mahf";
-          path = "~/Music";
+          path = "~/personal/music";
           devices = [
             "damien-laptop"
             "jenny-laptop"
