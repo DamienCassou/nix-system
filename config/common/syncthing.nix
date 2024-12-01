@@ -71,9 +71,9 @@ in
             "damien-phone"
           ];
         };
-        famille-configuration = {
-          id = "dt6n7-pzctx";
-          path = "~/configuration/";
+        ledger = {
+          id = "281i1-9821e";
+          path = "~/personal/ledger";
           devices = [
             "damien-laptop"
             "jenny-laptop"
