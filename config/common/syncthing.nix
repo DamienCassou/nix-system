@@ -87,7 +87,7 @@ in
             "jenny-laptop"
           ];
         };
-        jenny-laptop-bureau = {
+        jenny-bureau = {
           id = "vpx44-y9zwk";
           path = "~/personal/jenny/Bureau";
           devices = [
