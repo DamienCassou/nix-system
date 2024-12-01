@@ -74,11 +74,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1732957172,
-        "narHash": "sha256-m2ZPNfgRsC7JE2yZBdfSV8o5qq4sZkmS2f5m2yd0RX4=",
+        "lastModified": 1733072333,
+        "narHash": "sha256-Vo/TVzPi58W8dC2a0fzpfdL1U7HgvCGd0/Q67UoZ3CI=",
         "ref": "refs/heads/master",
-        "rev": "9538b0c14fad28b9a9edf69d34916f476699ad45",
-        "revCount": 14718,
+        "rev": "75b7551fea3c131628fdba2bc03d0a398f07c75a",
+        "revCount": 14733,
         "shallow": true,
         "type": "git",
         "url": "file:./emacs-overlay"
@@ -98,11 +98,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1732939398,
-        "narHash": "sha256-fz8GXwXgvRwFsKYb0TNungjbKv/KxpbMWFjWz/c0OlA=",
+        "lastModified": 1733083505,
+        "narHash": "sha256-UQC9rmZjv1kkK8FIZGwc1MNCEdmf1PEIX2PWJkzmrMI=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "63e16a9448014071e78224afe0d6157a47fe4f2b",
+        "rev": "8ec1cbaa2f0049104afd64437eab24a3d5b4d9f2",
         "type": "gitlab"
       },
       "original": {
@@ -219,11 +219,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1732884235,
-        "narHash": "sha256-r8j6R3nrvwbT1aUp4EPQ1KC7gm0pu9VcV1aNaB+XG6Q=",
+        "lastModified": 1733085484,
+        "narHash": "sha256-dVmNuUajnU18oHzBQWZm1BQtANCHaqNuxTHZQ+GN0r8=",
         "ref": "refs/heads/master",
-        "rev": "819f682269f4e002884702b87e445c82840c68f2",
-        "revCount": 3882,
+        "rev": "c1fee8d4a60b89cae12b288ba9dbc608ff298163",
+        "revCount": 3889,
         "shallow": true,
         "type": "git",
         "url": "file:./home-manager"
@@ -241,11 +241,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1732519917,
-        "narHash": "sha256-AGXhwHdJV0q/WNgqwrR2zriubLr785b02FphaBtyt1Q=",
+        "lastModified": 1733024876,
+        "narHash": "sha256-vy9Q41hBE7Zg0yakF79neVgb3i3PQMSMR7uHPpPywFE=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "f4a5ca5771ba9ca31ad24a62c8d511a405303436",
+        "rev": "6e0b7f81367069589a480b91603a10bcf71f3103",
         "type": "github"
       },
       "original": {
@@ -277,11 +277,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1732982064,
-        "narHash": "sha256-8PM+TFjjnWueQdtaYy443ww1Z2cQedaTqST5WiGrmb0=",
+        "lastModified": 1733087290,
+        "narHash": "sha256-SYX+LYf7NE5FReb6FuDX2HXNG91GcIExEcb9ezf45pE=",
         "ref": "refs/heads/system",
-        "rev": "1d97abbd475e385a23b7f671771a44be8d68d621",
-        "revCount": 713605,
+        "rev": "17d2dcd48e463cb1c06e44422982f4deca94f0b1",
+        "revCount": 713898,
         "shallow": true,
         "type": "git",
         "url": "file:./nixpkgs"
@@ -294,16 +294,16 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1732749044,
-        "narHash": "sha256-T38FQOg0BV5M8FN1712fovzNakSOENEYs+CSkg31C9Y=",
+        "lastModified": 1732981179,
+        "narHash": "sha256-F7thesZPvAMSwjRu0K8uFshTk3ZZSNAsXTIFvXBT+34=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0c5b4ecbed5b155b705336aa96d878e55acd8685",
+        "rev": "62c435d93bf046a5396f3016472e8f7c8e2aed65",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-24.05",
+        "ref": "nixos-24.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -340,11 +340,11 @@
         "tinted-tmux": "tinted-tmux"
       },
       "locked": {
-        "lastModified": 1732608183,
-        "narHash": "sha256-T5k5ill+PNIEW6KuS4CpUacMtZNJe2J2q5eBOF4xWuU=",
+        "lastModified": 1732993760,
+        "narHash": "sha256-t1J6wgzGjvvGNfdd0ei8HnZf9sTw+SpvCNAX0i6Qgwc=",
         "ref": "refs/heads/master",
-        "rev": "7689e621f87bce7b6ab1925dfd70ad1f4c80f334",
-        "revCount": 447,
+        "rev": "d13ffb381c83b6139b9d67feff7addf18f8408fe",
+        "revCount": 450,
         "shallow": true,
         "type": "git",
         "url": "file:./stylix"
