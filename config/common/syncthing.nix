@@ -39,7 +39,7 @@ in
         };
       };
       folders = {
-        damien-laptop-notes = {
+        notes = {
           id = "fwefy-w8ser";
           path = "~/personal/notes";
           devices = [
@@ -47,7 +47,7 @@ in
             "damien-phone"
           ];
         };
-        damien-laptop-music = {
+        music = {
           id = "po7wp-7mahf";
           path = "~/personal/music";
           devices = [
@@ -55,7 +55,7 @@ in
             "jenny-laptop"
           ];
         };
-        damien-laptop-password-store = {
+        password-store = {
           id = "ztfgz-hsa7j";
           path = "~/.password-store";
           devices = [
@@ -63,7 +63,7 @@ in
             "jenny-laptop"
           ];
         };
-        damien-pixel7a-storage = {
+        pixel7a-storage = {
           id = "jjzt2-exshh";
           path = "~/Documents/android/pixel7a/synced";
           devices = [
@@ -95,7 +95,7 @@ in
             "jenny-laptop"
           ];
         };
-        liste-courses = {
+        listes = {
           id = "h3l5h-usoqy";
           path = "~/personal/listes";
           devices = [
