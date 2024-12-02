@@ -17,7 +17,7 @@
     eslint_d
     jwt-cli
     git-crypt
-    nodejs_20
+    nodejs_22
     nodePackages.prettier
     typescript # for eglot to work in JS project
     vscode
