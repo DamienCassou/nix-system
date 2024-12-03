@@ -23,13 +23,13 @@ in
 {
   imports = [
     ./backup
-    ./bin.nix
     ./dev.nix
     ./desktop-entries.nix
     ./docker.nix
     ./documentation.nix
     ./email
     ./my-packages
+    ./my-scripts.nix
     ./packages.nix
     ./pim
     ./report-changes.nix
