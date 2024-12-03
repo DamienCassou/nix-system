@@ -2,7 +2,7 @@ _: {
   bookmarks = [
     {
       name = "Project";
-      url = "https://3.basecamp.com/4201305/buckets/39969927/todosets/8037582701";
+      url = "https://3.basecamp.com/4201305/projects/40131560";
     }
     {
       name = "dev-doc";
@@ -42,8 +42,29 @@ _: {
       url = "https://github.com/pulls?q=is%3Aopen+is%3Apr+review-requested%3ADamienCassou+archived%3Afalse";
     }
     {
-      name = "monitor";
-      url = "https://github.com/foretagsplatsen/monitor/pulls";
+      name = "Github";
+      bookmarks = [
+        {
+          name = "frontend";
+          url = "https://github.com/foretagsplatsen/frontend/pulls";
+        }
+        {
+          name = "monitor";
+          url = "https://github.com/foretagsplatsen/monitor/pulls";
+        }
+        {
+          name = "dev-doc";
+          url = "https://github.com/foretagsplatsen/dev-documentation/pulls";
+        }
+        {
+          name = "ReferentialApi";
+          url = "https://github.com/foretagsplatsen/ReferentialApi/pulls";
+        }
+        {
+          name = "ComputationApi";
+          url = "https://github.com/foretagsplatsen/ComputationApi/pulls";
+        }
+      ];
     }
   ];
 }
