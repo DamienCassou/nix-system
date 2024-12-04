@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{ pkgs, lib, ... }:
 
 {
   config.xdg.desktopEntries = {
@@ -16,12 +11,6 @@
     rofi-bluetooth = {
       name = "Rofi bluetooth";
       exec = "${lib.getExe pkgs.rofi-bluetooth}";
-      terminal = false;
-    };
-
-    rofi-vpn = {
-      name = "Rofi VPN";
-      exec = "${pkgs.rofi-vpn}/bin/rofi-vpn";
       terminal = false;
     };
 
