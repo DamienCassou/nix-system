@@ -1,9 +1,20 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 let
   my-scripts = pkgs.runCommandLocal "my-scripts" { } ''
-    for script in ${./bin}"/"*; do
+    for script in ${./my-scripts}"/"*; do
       install -D -m755 $script $out/bin/$(basename $script)
     done
+
+    substituteInPlace $out/bin/pass-show-password \
+      --subst-var-by path ${
+        lib.makeBinPath (
+          with pkgs;
+          [
+            coreutils
+            pass
+          ]
+        )
+      }
 
     patchShebangs $out/bin
   '';
