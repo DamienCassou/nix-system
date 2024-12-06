@@ -74,11 +74,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1733340018,
-        "narHash": "sha256-wLuZpNB2QC7+yG7qoYBazdE6gmKQg/fIkrzCwzxq0XQ=",
+        "lastModified": 1733502201,
+        "narHash": "sha256-hqNroABR/MHZwnSsNPFTsK0KtGHyIMPiGWsnAXjgaC0=",
         "ref": "refs/heads/master",
-        "rev": "d3342b2b1be90527b9cd54494e1c063613c6454c",
-        "revCount": 14752,
+        "rev": "b5d8ba006311a92e22d93e59086f888b24a17508",
+        "revCount": 14761,
         "shallow": true,
         "type": "git",
         "url": "file:./emacs-overlay"
@@ -219,11 +219,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1733342204,
-        "narHash": "sha256-MVgFAzk10tWV0SW3hV24/xeAxmkQ7peJYUUOi6cvVPM=",
+        "lastModified": 1733484277,
+        "narHash": "sha256-i5ay20XsvpW91N4URET/nOc0VQWOAd4c4vbqYtcH8Rc=",
         "ref": "refs/heads/master",
-        "rev": "1cd17a2f76f7711b06d5d59f1746cef602974498",
-        "revCount": 3908,
+        "rev": "d00c6f6d0ad16d598bf7e2956f52c1d9d5de3c3a",
+        "revCount": 3915,
         "shallow": true,
         "type": "git",
         "url": "file:./home-manager"
@@ -277,11 +277,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1733384986,
-        "narHash": "sha256-Gv5a2OCWJZxAiYfoA02uPryUx9CBrU4bxKeG69kdq/o=",
+        "lastModified": 1733511830,
+        "narHash": "sha256-YaQ9lwUnWtpBJE0H/cwN61mxe7M84FN07epymjjZjgk=",
         "ref": "refs/heads/system",
-        "rev": "5ddecadc49c562dad0acf7f7d951cdd0283a0a4b",
-        "revCount": 716004,
+        "rev": "f47b5b10ee2b2511b6a98ad5a9288ccee62425af",
+        "revCount": 717075,
         "shallow": true,
         "type": "git",
         "url": "file:./nixpkgs"
@@ -340,11 +340,11 @@
         "tinted-tmux": "tinted-tmux"
       },
       "locked": {
-        "lastModified": 1733262405,
-        "narHash": "sha256-/AT315It87ll6mlZLYcmfoe6Uogx9MjPBCCZZZTq8xY=",
+        "lastModified": 1733510476,
+        "narHash": "sha256-RH/8yIuo+fNLCjQ6e1mnXwmmxymjvfWC9JcbDuIA8TM=",
         "ref": "refs/heads/master",
-        "rev": "ffba1f1bab63ea49541f812c72a4fcf305461d67",
-        "revCount": 453,
+        "rev": "e309d64fe7f203274a7913e1d2b74307d15ba122",
+        "revCount": 461,
         "shallow": true,
         "type": "git",
         "url": "file:./stylix"
