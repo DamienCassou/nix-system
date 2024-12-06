@@ -74,11 +74,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1733105617,
-        "narHash": "sha256-6vSES2PCyHGl592M4MIHve3DTiyAJGG6+B+o79Yk9HU=",
+        "lastModified": 1733340018,
+        "narHash": "sha256-wLuZpNB2QC7+yG7qoYBazdE6gmKQg/fIkrzCwzxq0XQ=",
         "ref": "refs/heads/master",
-        "rev": "9a75ee9552e74f9652920cf2bbf8f1c9270876bf",
-        "revCount": 14737,
+        "rev": "d3342b2b1be90527b9cd54494e1c063613c6454c",
+        "revCount": 14752,
         "shallow": true,
         "type": "git",
         "url": "file:./emacs-overlay"
@@ -98,11 +98,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1733112202,
-        "narHash": "sha256-J8ULoEGyML8D15OFCIvmnWqGJDxMT40eLCHGzCr5pRM=",
+        "lastModified": 1733488732,
+        "narHash": "sha256-Evin/MkMF+U1zSFCpCcHsxJQg78ilouObSr7YGAH8v0=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "2f7e1822d85cf304fef0a6e34a5764ba9a2e06bd",
+        "rev": "656d7f28b05f70d132851c8655771f1a29e25a76",
         "type": "gitlab"
       },
       "original": {
@@ -198,16 +198,16 @@
     "gnome-shell": {
       "flake": false,
       "locked": {
-        "lastModified": 1713702291,
-        "narHash": "sha256-zYP1ehjtcV8fo+c+JFfkAqktZ384Y+y779fzmR9lQAU=",
+        "lastModified": 1732369855,
+        "narHash": "sha256-JhUWbcYPjHO3Xs3x9/Z9RuqXbcp5yhPluGjwsdE2GMg=",
         "owner": "GNOME",
         "repo": "gnome-shell",
-        "rev": "0d0aadf013f78a7f7f1dc984d0d812971864b934",
+        "rev": "dadd58f630eeea41d645ee225a63f719390829dc",
         "type": "github"
       },
       "original": {
         "owner": "GNOME",
-        "ref": "46.1",
+        "ref": "47.2",
         "repo": "gnome-shell",
         "type": "github"
       }
@@ -219,11 +219,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1733085484,
-        "narHash": "sha256-dVmNuUajnU18oHzBQWZm1BQtANCHaqNuxTHZQ+GN0r8=",
+        "lastModified": 1733342204,
+        "narHash": "sha256-MVgFAzk10tWV0SW3hV24/xeAxmkQ7peJYUUOi6cvVPM=",
         "ref": "refs/heads/master",
-        "rev": "c1fee8d4a60b89cae12b288ba9dbc608ff298163",
-        "revCount": 3889,
+        "rev": "1cd17a2f76f7711b06d5d59f1746cef602974498",
+        "revCount": 3908,
         "shallow": true,
         "type": "git",
         "url": "file:./home-manager"
@@ -277,11 +277,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1733122765,
-        "narHash": "sha256-ks/9fDjx672jbl7hIk7AMHfvsM4WsvnFycO+eek3prk=",
+        "lastModified": 1733384986,
+        "narHash": "sha256-Gv5a2OCWJZxAiYfoA02uPryUx9CBrU4bxKeG69kdq/o=",
         "ref": "refs/heads/system",
-        "rev": "64b81541f6fd16660e1c663b4b06dec202573164",
-        "revCount": 714769,
+        "rev": "5ddecadc49c562dad0acf7f7d951cdd0283a0a4b",
+        "revCount": 716004,
         "shallow": true,
         "type": "git",
         "url": "file:./nixpkgs"
@@ -294,11 +294,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1732981179,
-        "narHash": "sha256-F7thesZPvAMSwjRu0K8uFshTk3ZZSNAsXTIFvXBT+34=",
+        "lastModified": 1733261153,
+        "narHash": "sha256-eq51hyiaIwtWo19fPEeE0Zr2s83DYMKJoukNLgGGpek=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "62c435d93bf046a5396f3016472e8f7c8e2aed65",
+        "rev": "b681065d0919f7eb5309a93cea2cfa84dec9aa88",
         "type": "github"
       },
       "original": {
@@ -340,11 +340,11 @@
         "tinted-tmux": "tinted-tmux"
       },
       "locked": {
-        "lastModified": 1732993760,
-        "narHash": "sha256-t1J6wgzGjvvGNfdd0ei8HnZf9sTw+SpvCNAX0i6Qgwc=",
+        "lastModified": 1733262405,
+        "narHash": "sha256-/AT315It87ll6mlZLYcmfoe6Uogx9MjPBCCZZZTq8xY=",
         "ref": "refs/heads/master",
-        "rev": "d13ffb381c83b6139b9d67feff7addf18f8408fe",
-        "revCount": 450,
+        "rev": "ffba1f1bab63ea49541f812c72a4fcf305461d67",
+        "revCount": 453,
         "shallow": true,
         "type": "git",
         "url": "file:./stylix"
