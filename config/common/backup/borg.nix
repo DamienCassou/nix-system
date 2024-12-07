@@ -63,7 +63,8 @@ in
 
   services.borgmatic = {
     enable = true;
-    frequency = "hourly";
+    # Every other hour:
+    frequency = "00/2:00";
   };
 
   systemd.user.services.borgmatic.Unit.OnFailure = "status_email_user@%n.service";
