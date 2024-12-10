@@ -153,9 +153,8 @@ in
     gtk3 = {
       bookmarks = [
         "file://${home}/Documents"
-        "file://${home}/Documents/projects/ftgp"
-        "file://${home}/Documents/projects/ftgp/finsit/monitor/monitor/Monitor.Test/Helpers/Files/Sie"
-        "file://${home}/Documents/projects/ftgp/finsit/monitor/monitor/Monitor.Web.Ui/Client"
+        "file://${home}/work"
+        "file://${home}/work/setup/monitor/monitor/Monitor.Test/Helpers/Files/Sie"
         "file://${home}/Downloads"
         "file://${home}/Pictures"
         "file:///tmp"

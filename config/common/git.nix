@@ -34,7 +34,7 @@ in
       repositories = [
         "${home}/Documents/projects/nix-system/nixpkgs"
         "${home}/.emacs.d"
-        "${home}/Documents/projects/ftgp/finsit/monitor"
+        "${home}/work/setup/monitor"
       ];
     };
     extraConfig = {

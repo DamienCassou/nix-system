@@ -71,11 +71,6 @@
         "exit"
         "termtitle"
       ];
-      pathAliases = {
-        "\\~/Documents/projects/ftgp/monitor/monitor/Monitor.Web.Ui/Client" = "monitor-client";
-        "\\~/Documents/projects/ftgp/monitor" = "monitor";
-        "\\~/Documents/projects" = "prj";
-      };
       settings = {
         hostname-only-if-ssh = true;
         numeric-exit-codes = true;
