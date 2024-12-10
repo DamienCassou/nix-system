@@ -15,7 +15,8 @@
         "borgcheck" = "borgmatic --verbosity 2 check --repair --progress  --force --only";
         "docker-cleanup" = "docker system prune --volumes";
         "hm" = "home-manager --flake $NIX_PATH";
-        "youtube-dl-album" = "${lib.getExe pkgs.yt-dlp} --extract-audio --audio-format mp3 --audio-quality 0 --yes-playlist";
+        "youtube-dl-album" =
+          "${lib.getExe pkgs.yt-dlp} --extract-audio --audio-format mp3 --audio-quality 0 --yes-playlist";
       };
       initExtra = ''
         function vterm_printf(){
