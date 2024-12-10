@@ -298,7 +298,7 @@ in
       # > gpg: decryption failed: No such file or directory
       FINSIT_GITHUB = "$(cat ${home}/Documents/projects/nix-system/secrets/FINSIT_GITHUB)";
 
-      NPM_JFROG_TOKEN = "$(pass-show-password wk/jfrog.io/token)";
+      JFROG_API_KEY = "$(pass-show-password wk/jfrog.io/token)";
 
       ESLINT_USE_FLAT_CONFIG = "true";
     };
