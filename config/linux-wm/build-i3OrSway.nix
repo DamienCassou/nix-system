@@ -52,7 +52,8 @@ in
 
   keybindings = {
     # program launcher and window switcher
-    "--release ${modifier}+space" = ''exec "${pkgs.rofi}/bin/rofi -i -show combi -modi combi -show-icons -display-combi '?' -combi-modi window#drun -window-match-fields desktop#class"'';
+    "--release ${modifier}+space" =
+      ''exec "${pkgs.rofi}/bin/rofi -i -show combi -modi combi -show-icons -display-combi '?' -combi-modi window#drun -window-match-fields desktop#class"'';
 
     # Focus preferred windows:
     "Control+${modifier}+e" = ''[class = "^Emacs$"] focus'';
@@ -87,14 +88,17 @@ in
     "XF86MonBrightnessUp" = ''exec brightnessctl set "+5%"'';
 
     # Printscreen
-    "--release Print" = ''exec "${lib.getExe (config.lib.nixGL.wrap pkgs.flameshot)} full --clipboard --path ~/Pictures"'';
-    "--release Shift+Print" = ''exec "${lib.getExe (config.lib.nixGL.wrap pkgs.flameshot)} gui --clipboard --path ~/Pictures"'';
+    "--release Print" =
+      ''exec "${lib.getExe (config.lib.nixGL.wrap pkgs.flameshot)} full --clipboard --path ~/Pictures"'';
+    "--release Shift+Print" =
+      ''exec "${lib.getExe (config.lib.nixGL.wrap pkgs.flameshot)} gui --clipboard --path ~/Pictures"'';
 
     # Lockscreen
     "--release ${modifier}+l" = lockScreenCommand;
 
     # Emacs everywhere
-    "--release ${modifier}+u" = "exec ${config.programs.emacs.package}/bin/emacsclient --eval '(emacs-everywhere)'";
+    "--release ${modifier}+u" =
+      "exec ${config.programs.emacs.package}/bin/emacsclient --eval '(emacs-everywhere)'";
 
     # Change focus
     "${modifier}+n" = "focus left";
