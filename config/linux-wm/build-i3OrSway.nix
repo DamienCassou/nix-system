@@ -50,6 +50,7 @@ in
     "4" = [
       { instance = "^cypress$"; }
       { class = "^Org.gnome.Boxes$"; }
+      { class = "^.virt-manager-wrapped$"; }
     ];
   };
 
