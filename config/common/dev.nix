@@ -20,6 +20,7 @@
     nodejs_22
     nodePackages.prettier
     typescript # for eglot to work in JS project
+    virt-manager
     vscode
     yarn
   ];
