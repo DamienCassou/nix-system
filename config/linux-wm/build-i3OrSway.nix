@@ -47,7 +47,10 @@ in
       { class = "^org.remmina.Remmina$"; }
       { class = "^Virt-manager$"; }
     ];
-    "4" = [ { instance = "^cypress$"; } ];
+    "4" = [
+      { instance = "^cypress$"; }
+      { class = "^Org.gnome.Boxes$"; }
+    ];
   };
 
   keybindings = {

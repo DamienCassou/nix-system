@@ -25,7 +25,7 @@
   - sudo usermod --append --groups docker cassou
 - Add "127.0.0.1  database.ftgp" and "127.0.0.1   rabbitmq" à /etc/hosts
 - Install dotnet ~/configuration/denote/20240619T111823--mettre-à-jour-dotnet__finsit_monitor.org
-- sudo usermod --append --groups wireshark,vboxusers,adbusers cassou
+- sudo usermod --append --groups wireshark,vboxusers,adbusers,libvirt,kvm cassou
 ** Configure on darwin
 - install nix following the instructions of nix-darwin:
   https://daiderd.com/nix-darwin/
