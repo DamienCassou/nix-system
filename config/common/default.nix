@@ -24,7 +24,6 @@ in
   imports = [
     ./backup
     ./dev.nix
-    ./desktop-entries.nix
     ./docker.nix
     ./documentation.nix
     ./email
