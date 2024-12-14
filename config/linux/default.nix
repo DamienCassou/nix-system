@@ -1,13 +1,8 @@
 { pkgs, ... }:
-let
-  certificatesFile = "/etc/ssl/certs/ca-bundle.crt";
-in
 {
   imports = [
     ./desktop-entries.nix
   ];
-
-  accounts.email.certificatesFile = certificatesFile;
 
   home = {
     packages = with pkgs; [
@@ -27,10 +22,6 @@ in
       xorg.xset
     ];
 
-    sessionVariables = {
-      # So git finds the certificates on the woob clone:
-      GIT_SSL_CAINFO = certificatesFile;
-    };
   };
 
   programs.bash.shellAliases = {
