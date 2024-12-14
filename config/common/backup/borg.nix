@@ -67,8 +67,6 @@ in
     frequency = "00/2:00";
   };
 
-  systemd.user.services.borgmatic.Unit.OnFailure = "status_email_user@%n.service";
-
   home.sessionVariables = {
     BORG_PASSCOMMAND = borg-pass-command;
     BORG_REPO = main-repository;

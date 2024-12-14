@@ -7,17 +7,6 @@
 
 let
   home = config.home.homeDirectory;
-  systemdEmail = pkgs.writeShellScript "systemd-email.sh" ''
-    ${pkgs.msmtp}/bin/sendmail -t <<ERRMAIL
-    To: $1
-    From: systemd <root@$HOSTNAME>
-    Subject: $2
-    Content-Transfer-Encoding: 8bit
-    Content-Type: text/plain; charset=UTF-8
-
-    $(systemctl status --user --full "$2")
-    ERRMAIL
-  '';
 in
 {
   imports = [
@@ -46,18 +35,6 @@ in
   systemd.user = {
     # Automatically start new services and stop old ones:
     startServices = true;
-    services = {
-      # https://wiki.archlinux.org/title/Systemd/Timers#MAILTO
-      "status_email_user@" = {
-        Unit = {
-          Description = "status email for %i";
-        };
-        Service = {
-          Type = "oneshot";
-          ExecStart = "${systemdEmail} ${config.accounts.email.accounts.perso.address} %i";
-        };
-      };
-    };
   };
 
   programs = {
