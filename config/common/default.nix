@@ -31,11 +31,6 @@ in
     ./web.nix
   ];
 
-  systemd.user = {
-    # Automatically start new services and stop old ones:
-    startServices = true;
-  };
-
   programs = {
     bashmount = {
       enable = true;
