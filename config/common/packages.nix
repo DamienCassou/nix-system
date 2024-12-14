@@ -24,7 +24,7 @@ in
         (nixGLWrap ferdium) # for discord and mattermost
         (nixGLWrap parabolic) # download videos
         (nixGLWrap vlc)
-        bc
+        bc # calculator
         coreutils-full
         curl
         devenv
@@ -54,7 +54,6 @@ in
         ispell
         jq
         libreoffice
-        lint-staged
         multimarkdown # to preview markdown files
         ncdu
         nitrokey-app2
@@ -66,10 +65,7 @@ in
         pynitrokey
         qpdf # to remove passwords from PDF
         rofi
-        rofi-bluetooth
-        rofi-pulse-select
         rsync
-        shellcheck
         signal-desktop
         spice
         sqlite
