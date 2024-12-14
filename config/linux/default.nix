@@ -19,6 +19,8 @@ in
       pavucontrol
       pciutils
       pulseaudio
+      rofi-bluetooth
+      rofi-pulse-select
       xdg-utils
       xorg.xmodmap
       xorg.xrdb

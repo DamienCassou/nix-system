@@ -21,6 +21,7 @@
     eslint_d
     git-crypt
     jwt-cli
+    lint-staged
     nodePackages.prettier
     nodePackages.typescript
     nodePackages.vscode-json-languageserver
@@ -29,6 +30,7 @@
     patch
     patchutils
     racket # for SICP scheme implementation
+    shellcheck
     typescript # for eglot to work in JS project
     typescript-language-server
     virt-manager
