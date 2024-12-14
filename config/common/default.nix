@@ -7,7 +7,6 @@
 
 let
   home = config.home.homeDirectory;
-  certificatesFile = "/etc/ssl/certs/ca-bundle.crt";
   systemdEmail = pkgs.writeShellScript "systemd-email.sh" ''
     ${pkgs.msmtp}/bin/sendmail -t <<ERRMAIL
     To: $1
@@ -220,8 +219,6 @@ in
 
   fonts.fontconfig.enable = true;
 
-  accounts.email.certificatesFile = certificatesFile;
-
   nix = {
     package = pkgs.nix;
     nixPath = [ "${home}/personal/nix-system" ];
@@ -280,8 +277,6 @@ in
 
     sessionVariables = {
       LEDGER_FILE = "${home}/personal/ledger/accounting.hledger";
-      # So git finds the certificates on the woob clone:
-      GIT_SSL_CAINFO = certificatesFile;
 
       CLEAR_CONSOLE = "false";
 
