@@ -73,6 +73,10 @@
   home = {
     file.".signature".text = config.accounts.email.accounts.perso.signature.text;
 
+    packages = with pkgs; [
+      msmtp
+    ];
+
     sessionVariables.MAILDIR = "${config.accounts.email.maildirBasePath}";
   };
 }

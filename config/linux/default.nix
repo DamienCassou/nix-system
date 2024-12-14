@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 let
   certificatesFile = "/etc/ssl/certs/ca-bundle.crt";
 in
@@ -10,6 +10,21 @@ in
   accounts.email.certificatesFile = certificatesFile;
 
   home = {
+    packages = with pkgs; [
+      arandr
+      blueman
+      brightnessctl
+      dmidecode
+      networkmanager # for nmcli
+      pavucontrol
+      pciutils
+      pulseaudio
+      xdg-utils
+      xorg.xmodmap
+      xorg.xrdb
+      xorg.xset
+    ];
+
     sessionVariables = {
       # So git finds the certificates on the woob clone:
       GIT_SSL_CAINFO = certificatesFile;

@@ -9,6 +9,11 @@ let
   home = config.home.homeDirectory;
 in
 {
+  home.packages = with pkgs; [
+    gitAndTools.git-absorb
+    gitAndTools.git-when-merged
+  ];
+
   programs.git = {
     enable = true;
     userEmail = emailAccount.address;

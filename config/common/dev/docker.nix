@@ -1,7 +1,11 @@
 { lib, pkgs, ... }:
 {
   home = {
-    packages = [ pkgs.docker-credential-helpers ];
+    packages = with pkgs; [
+      docker-credential-helpers
+      nodePackages.dockerfile-language-server-nodejs
+    ];
+
     file = {
       ".docker/config.json".text = lib.strings.toJSON {
         credsStore = "pass";

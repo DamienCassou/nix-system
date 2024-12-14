@@ -15,14 +15,26 @@
   };
 
   home.packages = with pkgs; [
+    bash-language-server
+    blobfuse
+    copilot-node-server
     eslint_d
     git-crypt
     jwt-cli
     nodePackages.prettier
+    nodePackages.typescript
+    nodePackages.vscode-json-languageserver
     nodejs_22
+    omnisharp-roslyn # for C# development in Monitor
+    patch
+    patchutils
+    racket # for SICP scheme implementation
     typescript # for eglot to work in JS project
+    typescript-language-server
     virt-manager
     vscode
+    vscode-js-debug
+    vscode-langservers-extracted
     yarn
   ];
 

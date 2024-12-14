@@ -5,6 +5,16 @@
   ...
 }:
 {
+  home.packages = with pkgs; [
+    cachix
+    nil # LSP server for Nix
+    niv
+    nixVersions.stable
+    nixfmt-rfc-style
+    nixpkgs-fmt # nix formatter for nixpkgs code base
+    nodePackages.node2nix
+  ];
+
   nix = {
     package = pkgs.nix;
     nixPath = [ "${config.home.homeDirectory}/personal/nix-system" ];
