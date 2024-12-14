@@ -23,7 +23,7 @@ let
      --exclude "/.local/share/gnome-boxes" \
      --exclude "/.local/share/libvirt/images" \
      --exclude "/.local/share/Trash" \
-     --exclude "/Documents/android/pixel7a/synced" \
+     --exclude "/personal/android/pixel7a/synced" \
      ${homeManagerRsyncExclude} \
      --delete-excluded --delete --archive --progress  \
      ~/ \

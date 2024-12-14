@@ -65,7 +65,7 @@ in
         };
         pixel7a-storage = {
           id = "jjzt2-exshh";
-          path = "~/Documents/android/pixel7a/synced";
+          path = "~/personal/android/pixel7a/synced";
           devices = [
             "damien-laptop"
             "damien-phone"
