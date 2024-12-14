@@ -31,8 +31,6 @@ in
     ./web.nix
   ];
 
-  my.window-management.enable = true;
-
   systemd.user = {
     # Automatically start new services and stop old ones:
     startServices = true;
