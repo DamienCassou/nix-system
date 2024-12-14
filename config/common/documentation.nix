@@ -1,4 +1,6 @@
 _: {
+  home.extraOutputsToInstall = [ "doc" ];
+
   manual = {
     json.enable = true;
     html.enable = true;
