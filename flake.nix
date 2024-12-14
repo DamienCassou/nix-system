@@ -71,6 +71,8 @@
             ./config/linux
             ./config/linux-wm
             {
+              my.window-management.enable = true;
+
               nixGL = {
                 packages = nixGL.packages;
                 installScripts = [ "mesa" ];
