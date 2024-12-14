@@ -16,6 +16,11 @@ in
             fr
           ]
         ))
+        (nixGLWrap calibre)
+        (nixGLWrap element-desktop)
+        (nixGLWrap ferdium) # for discord and mattermost
+        (nixGLWrap parabolic) # download videos
+        (nixGLWrap vlc)
         arandr
         bash-language-server
         bc
@@ -23,7 +28,6 @@ in
         blueman
         brightnessctl
         cachix
-        (nixGLWrap calibre)
         copilot-node-server
         coreutils-full
         curl
@@ -34,10 +38,8 @@ in
         dmidecode
         dot-language-server
         easytag
-        (nixGLWrap element-desktop)
         eog
         evince
-        (nixGLWrap ferdium) # for discord and mattermost
         ffmpeg-full # for ffplay, used by tmr-sound.el
         file
         findutils
@@ -52,8 +54,8 @@ in
         haskellPackages.hledger_1_40
         hunspellDicts.en_US-large
         hunspellDicts.fr-any
-        hunspellDicts.fr-moderne
         hunspellDicts.fr-classique
+        hunspellDicts.fr-moderne
         imagemagick
         inkscape
         ispell
@@ -72,15 +74,14 @@ in
         nixVersions.stable
         nixfmt-rfc-style
         nixpkgs-fmt # nix formatter for nixpkgs code base
+        nodePackages.dockerfile-language-server-nodejs
         nodePackages.node2nix
         nodePackages.typescript
-        nodePackages.dockerfile-language-server-nodejs
         nodePackages.vscode-json-languageserver
         omnisharp-roslyn # for C# development in Monitor
         openssh
         p7zip
         pandoc
-        (nixGLWrap parabolic) # download videos
         patch
         patchutils
         pavucontrol
@@ -89,9 +90,9 @@ in
         process-compose
         psmisc # for killall
         pulseaudio
-        python3Packages.woob
-        pynitrokey
         pwgen
+        pynitrokey
+        python3Packages.woob
         qpdf # to remove passwords from PDF
         racket # for SICP scheme implementation
         rofi
@@ -109,11 +110,11 @@ in
         unar # universal unpacker
         unzip
         usbutils
-        (nixGLWrap vlc)
         vscode-js-debug
         vscode-langservers-extracted
         wget
         wmname
+        wofi
         xcape
         xdg-utils
         xorg.xmodmap
@@ -121,7 +122,6 @@ in
         xorg.xset
         yaml-language-server
         yarn-bash-completion
-        wofi
         zbar # to scan QR codes for pass-otp
       ]
       ++ [
