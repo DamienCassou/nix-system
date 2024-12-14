@@ -70,5 +70,7 @@
     };
   };
 
-  home.file.".signature".text = config.accounts.email.accounts.perso.signature.text;
+  home = {
+    file.".signature".text = config.accounts.email.accounts.perso.signature.text;
+  };
 }
