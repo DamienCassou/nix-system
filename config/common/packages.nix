@@ -1,21 +1,24 @@
 { config, pkgs, ... }:
 
 let
+  aspel = pkgs.aspellWithDicts (
+    dicts: with dicts; [
+      en
+      fr
+    ]
+  );
   iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
   nixGLWrap = config.lib.nixGL.wrap;
 in
 {
   home.packages =
-    [ iosevka-aile ]
+    [
+      aspel
+      iosevka-aile
+    ]
     ++ (
       with pkgs;
       [
-        (aspellWithDicts (
-          dicts: with dicts; [
-            en
-            fr
-          ]
-        ))
         (nixGLWrap calibre)
         (nixGLWrap element-desktop)
         (nixGLWrap ferdium) # for discord and mattermost
