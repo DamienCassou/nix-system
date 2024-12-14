@@ -13,7 +13,6 @@ in
     ./backup
     ./bash.nix
     ./dev
-    ./docker.nix
     ./documentation.nix
     ./emacs.nix
     ./email

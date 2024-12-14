@@ -6,6 +6,10 @@
 }:
 
 {
+  imports = [
+    ./docker.nix
+  ];
+
   programs.bun = {
     enable = true;
   };
