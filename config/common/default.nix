@@ -275,8 +275,6 @@ in
 
     sessionVariables = {
       LEDGER_FILE = "${home}/personal/ledger/accounting.hledger";
-
-      MAILDIR = "${config.accounts.email.maildirBasePath}";
     };
 
     extraOutputsToInstall = [ "doc" ];

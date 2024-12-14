@@ -72,5 +72,7 @@
 
   home = {
     file.".signature".text = config.accounts.email.accounts.perso.signature.text;
+
+    sessionVariables.MAILDIR = "${config.accounts.email.maildirBasePath}";
   };
 }
