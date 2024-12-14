@@ -55,7 +55,6 @@ in
         jq
         libreoffice
         lint-staged
-        mpc_cli
         multimarkdown # to preview markdown files
         ncdu
         nitrokey-app2
