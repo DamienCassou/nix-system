@@ -16,10 +16,10 @@
 
   home.packages = with pkgs; [
     eslint_d
-    jwt-cli
     git-crypt
-    nodejs_22
+    jwt-cli
     nodePackages.prettier
+    nodejs_22
     typescript # for eglot to work in JS project
     virt-manager
     vscode
