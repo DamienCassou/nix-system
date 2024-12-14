@@ -67,6 +67,7 @@
             nix-index-database.hmModules.nix-index
             stylix.homeManagerModules.stylix
             ./config/common
+            ./config/forbidden-at-work.nix
             ./config/non-nixos.nix
             ./config/linux
             ./config/linux-wm
