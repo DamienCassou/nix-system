@@ -18,6 +18,7 @@ in
     ./email
     ./git.nix
     ./gpg.nix
+    ./music.nix
     ./my-packages
     ./my-scripts.nix
     ./nix.nix
@@ -137,11 +138,6 @@ in
   };
 
   services = {
-    mpd = {
-      enable = true;
-      playlistDirectory = config.xdg.userDirs.music + "../playlists";
-    };
-
     poweralertd.enable = true;
 
     safeeyes.enable = true;
@@ -171,7 +167,6 @@ in
     enable = true;
     userDirs = {
       enable = true;
-      music = "${home}/personal/music/damien/";
     };
     configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
     mime.enable = true;
