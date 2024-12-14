@@ -23,15 +23,20 @@ in
 {
   imports = [
     ./backup
-    ./dev.nix
+    ./bash.nix
+    ./dev
     ./docker.nix
     ./documentation.nix
+    ./emacs.nix
     ./email
+    ./git.nix
+    ./gpg.nix
     ./my-packages
     ./my-scripts.nix
     ./packages.nix
     ./pim
     ./report-changes.nix
+    ./ssh.nix
     ./stylix
     ./syncthing.nix
     ./web.nix
