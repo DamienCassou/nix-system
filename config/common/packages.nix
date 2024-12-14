@@ -86,7 +86,6 @@ in
         pavucontrol
         pciutils
         peek # for screencasts
-        perl # for magit (magit-perl-executable)
         process-compose
         psmisc # for killall
         pulseaudio

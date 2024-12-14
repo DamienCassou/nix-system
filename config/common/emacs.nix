@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   programs.emacs = {
@@ -28,6 +28,10 @@
         vterm
       ];
   };
+
+  programs.emacs.extraConfig = ''
+    (setq magit-perl-executable "${lib.getExe pkgs.perl}")
+  '';
 
   home.packages = with pkgs; [
     emacs-all-the-icons-fonts
