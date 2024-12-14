@@ -253,7 +253,5 @@ in
     sessionVariables = {
       LEDGER_FILE = "${home}/personal/ledger/accounting.hledger";
     };
-
-    extraOutputsToInstall = [ "doc" ];
   };
 }
