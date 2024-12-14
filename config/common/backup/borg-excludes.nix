@@ -47,10 +47,8 @@ ${home}/.mozilla
 ${home}/.npm
 ${home}/.var/app
 ${home}/.xsession-errors
-${home}/Documents/*/Monitor.Web.Ui/logs
-${home}/Documents/android/pixel7a/synced/backups
-${home}/Documents/projects/javascript/cypress-hello-world/data
-${home}/Documents/projects/sorry-cypress/sorry-cypress/data
+${home}/*/Monitor.Web.Ui/logs
+${home}/personal/android/pixel7a/synced/backups
 ${home}/Downloads
 ${config.accounts.email.maildirBasePath}/.notmuch/xapian
 ${config.accounts.email.maildirBasePath}/offlineimap-metadata

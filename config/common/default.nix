@@ -132,7 +132,8 @@ in
         };
         commands = {
           "Emacs submodules" = "git -C ~/.emacs.d fetch --recurse-submodules -j 4";
-          "Nix-system submodules" = "git -C ~/Documents/projects/nix-system fetch --recurse-submodules -j 4";
+          "Nix-system submodules" =
+            "git -C ${lib.elemAt config.nix.nixPath 0} fetch --recurse-submodules -j 4";
           "Nix garbage collection" = "nix-collect-garbage --delete-older-than 10d";
           "Vdirsyncer" = "vdirsyncer sync";
         };
@@ -152,7 +153,7 @@ in
     };
     gtk3 = {
       bookmarks = [
-        "file://${home}/Documents"
+        "file://${home}/personal"
         "file://${home}/work"
         "file://${home}/work/setup/monitor/monitor/Monitor.Test/Helpers/Files/Sie"
         "file://${home}/Downloads"
@@ -219,7 +220,7 @@ in
 
   nix = {
     package = pkgs.nix;
-    nixPath = [ "${home}/Documents/projects/nix-system" ];
+    nixPath = [ "${home}/personal/nix-system" ];
     channels = { };
     keepOldNixPath = false;
     settings = {
@@ -247,7 +248,7 @@ in
           type = "indirect";
         };
         to = {
-          path = "${home}/Documents/projects/nix-system/nixpkgs";
+          path = "${lib.elemAt config.nix.nixPath 0}/nixpkgs";
           type = "path";
         };
       };
@@ -296,7 +297,7 @@ in
       # The error message I get is:
       # > Value: gpg: public key decryption failed: No such file or directory
       # > gpg: decryption failed: No such file or directory
-      FINSIT_GITHUB = "$(cat ${home}/Documents/projects/nix-system/secrets/FINSIT_GITHUB)";
+      FINSIT_GITHUB = "$(cat ${lib.elemAt config.nix.nixPath 0}/secrets/FINSIT_GITHUB)";
 
       JFROG_API_KEY = "$(pass-show-password wk/jfrog.io/token)";
 

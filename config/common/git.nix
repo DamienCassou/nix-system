@@ -32,7 +32,7 @@ in
       enable = true;
       # Large repositories that Git should cleanup regularly:
       repositories = [
-        "${home}/Documents/projects/nix-system/nixpkgs"
+        "${lib.elemAt config.nix.nixPath 0}/nixpkgs"
         "${home}/.emacs.d"
         "${home}/work/setup/monitor"
       ];
