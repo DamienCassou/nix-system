@@ -74,11 +74,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1734858647,
-        "narHash": "sha256-aNjb0mYepYrGQaXxOvZbV2O7pDJr6Vh9Ct7qmWtmufg=",
+        "lastModified": 1734944495,
+        "narHash": "sha256-pAW9SbQSJmL2ntnCfeSVT+S9078ErqVztKS1lrKLOhk=",
         "ref": "refs/heads/master",
-        "rev": "f1941db6f24f6a1ca138b373dd7c25ffd48530c3",
-        "revCount": 14895,
+        "rev": "49bd3fd75db9c063076c4b572778be5c96899570",
+        "revCount": 14904,
         "shallow": true,
         "type": "git",
         "url": "file:./emacs-overlay"
@@ -98,11 +98,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1734863027,
-        "narHash": "sha256-L2Yqu7PVbzlxp37kmTGTA3gOceu7VLRuebm1DHiKPg4=",
+        "lastModified": 1734943800,
+        "narHash": "sha256-T6tJ1fGRcVksmRqbDRsvYD3Qnw8AU3e2j0Im01twFcI=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "5a5aea6627a4c360ba030ddadeda63d1ad294125",
+        "rev": "2c702b4a038306dce64a90fc011c92ebabb82f63",
         "type": "gitlab"
       },
       "original": {
@@ -219,11 +219,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1734862405,
-        "narHash": "sha256-bXZJvUMJ2A6sIpYcCUAGjYCD5UDzmpmQCdmJSkPhleU=",
+        "lastModified": 1734942126,
+        "narHash": "sha256-4543MvF57F6lpQYaC0+TkVVgLJvEsIr7LlYdOKYAXnk=",
         "ref": "refs/heads/master",
-        "rev": "cb27edb5221d2f2920a03155f8becc502cf60e35",
-        "revCount": 3937,
+        "rev": "8bea1a2005c64a8c9c430d0dddb6b2e5db5f6f12",
+        "revCount": 3940,
         "shallow": true,
         "type": "git",
         "url": "file:./home-manager"
@@ -340,11 +340,11 @@
         "tinted-tmux": "tinted-tmux"
       },
       "locked": {
-        "lastModified": 1734822296,
-        "narHash": "sha256-zYGz8vgtyha4TsrSUPmcfPAb0IlYADZy4KjeXI9Z+u8=",
+        "lastModified": 1734885904,
+        "narHash": "sha256-NxA4JnLuXyle2/nUKDbW8vORwSd+Z20limIl7DhlZbs=",
         "ref": "refs/heads/master",
-        "rev": "4f489c63932f014be856475154bf342f8a40f5ff",
-        "revCount": 472,
+        "rev": "4d87b96ceca38532f39c1b7efd8a9235bfcee3d6",
+        "revCount": 476,
         "shallow": true,
         "type": "git",
         "url": "file:./stylix"
