@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   programs.browserpass = {
     enable = true;
@@ -10,7 +10,7 @@
 
   programs.chromium = {
     enable = true;
-    package = pkgs.ungoogled-chromium;
+    package = config.lib.nixGL.wrap pkgs.ungoogled-chromium;
     commandLineArgs = [
       # Necessary to install addons on ungoogled-chromium. See:
       # https://github.com/NeverDecaf/chromium-web-store?tab=readme-ov-file#chromium-web-store
