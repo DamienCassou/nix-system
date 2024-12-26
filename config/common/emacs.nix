@@ -31,6 +31,7 @@
 
   programs.emacs.extraConfig = ''
     (setq magit-perl-executable "${lib.getExe pkgs.perl}")
+    (setq copilot-install-dir "${pkgs.copilot-node-server}")
   '';
 
   home.packages = with pkgs; [

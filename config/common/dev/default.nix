@@ -17,7 +17,6 @@
   home.packages = with pkgs; [
     bash-language-server
     blobfuse
-    copilot-node-server
     eslint_d
     git-crypt
     jwt-cli
