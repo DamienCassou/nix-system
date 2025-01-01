@@ -50,17 +50,5 @@ in
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
     };
-    registry = {
-      "flakes" = {
-        from = {
-          id = "nixpkgs";
-          type = "indirect";
-        };
-        to = {
-          path = "${lib.elemAt config.nix.nixPath 0}/nixpkgs";
-          type = "path";
-        };
-      };
-    };
   };
 }
