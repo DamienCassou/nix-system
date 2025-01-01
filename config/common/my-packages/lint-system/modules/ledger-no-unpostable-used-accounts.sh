@@ -4,7 +4,7 @@ set -e
 
 # Used accounts are all marked with tag:postable
 
-invalidAccounts=$(hledger accounts --used "not:tag:postable")
+invalidAccounts=$(hledger accounts --auto --used "not:tag:postable")
 
 if [[ -z ${invalidAccounts} ]]; then
     exit 0;
