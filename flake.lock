@@ -74,19 +74,17 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1735697594,
-        "narHash": "sha256-sPRvW8DrpnVc9LfnMLmuhobBrZtVDv5o9nxD/SVe2nU=",
-        "ref": "refs/heads/master",
-        "rev": "f018d91651195552f17c5b922644b353179ba7a6",
-        "revCount": 14990,
-        "shallow": true,
-        "type": "git",
-        "url": "file:./emacs-overlay"
+        "lastModified": 1735722864,
+        "narHash": "sha256-fMOZzocD+7nl0346oyFmln+C3yq1OUU2n/kCSfp5j60=",
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "rev": "665b9fb1235c5cca2125623bd2078d19c8093d2e",
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "file:./emacs-overlay"
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "type": "github"
       }
     },
     "firefox-addons": {
@@ -219,19 +217,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1735381016,
-        "narHash": "sha256-CyCZFhMUkuYbSD6bxB/r43EdmDE7hYeZZPTCv0GudO4=",
-        "ref": "refs/heads/master",
-        "rev": "10e99c43cdf4a0713b4e81d90691d22c6a58bdf2",
-        "revCount": 3950,
-        "shallow": true,
-        "type": "git",
-        "url": "file:./home-manager"
+        "lastModified": 1735735907,
+        "narHash": "sha256-/AOGn9qJMjrZQyWYbObHTKmWDUP0q9+0TAXOJnq6ik0=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "59a4c43e9ba6db24698c112720a58a334117de83",
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "file:./home-manager"
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "nix-index-database": {
@@ -341,17 +337,15 @@
       "locked": {
         "lastModified": 1735664732,
         "narHash": "sha256-KoXLDDDT/nMBMl6VtoAGxJ58COvT+SWL5aiR+hUPBUo=",
-        "ref": "refs/heads/master",
+        "owner": "danth",
+        "repo": "stylix",
         "rev": "f48cab39ba162c5eaef3d975aaac467c20db402b",
-        "revCount": 495,
-        "shallow": true,
-        "type": "git",
-        "url": "file:./stylix"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "file:./stylix"
+        "owner": "danth",
+        "repo": "stylix",
+        "type": "github"
       }
     },
     "systems": {

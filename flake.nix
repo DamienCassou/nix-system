@@ -3,7 +3,7 @@
 
   inputs = {
     emacs-overlay = {
-      url = "git+file:./emacs-overlay?shallow=1";
+      url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -13,7 +13,7 @@
     };
 
     home-manager = {
-      url = "git+file:./home-manager?shallow=1";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -30,7 +30,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     stylix = {
-      url = "git+file:./stylix?shallow=1";
+      url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
