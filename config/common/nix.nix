@@ -4,19 +4,31 @@
   pkgs,
   ...
 }:
+let
+  # Issue: https://github.com/NixOS/nix/issues/9708
+  nix = pkgs.nixVersions.nix_2_24.overrideAttrs (old: rec {
+    version = "2.24.10";
+    src = pkgs.fetchFromGitHub {
+      owner = "NixOS";
+      repo = "nix";
+      rev = version;
+      hash = "sha256-XdeVy1/d6DEIYb3nOA6JIYF4fwMKNxtwJMgT3pHi+ko=";
+    };
+  });
+in
 {
   home.packages = with pkgs; [
     cachix
     nil # LSP server for Nix
     niv
-    nixVersions.stable
+    nix
     nixfmt-rfc-style
     nixpkgs-fmt # nix formatter for nixpkgs code base
     nodePackages.node2nix
   ];
 
   nix = {
-    package = pkgs.nix;
+    package = nix;
     nixPath = [ "${config.home.homeDirectory}/personal/nix-system" ];
     channels = { };
     keepOldNixPath = false;
