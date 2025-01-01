@@ -1,5 +1,16 @@
 { lib, pkgs, ... }:
 
+let
+  copilot-node-server = pkgs.copilot-node-server.overrideAttrs (old: rec {
+    version = "1.27.0";
+    src = pkgs.fetchFromGitHub {
+      owner = "jfcherng";
+      repo = "copilot-node-server";
+      rev = version;
+      hash = "sha256-Ds2agoO7LBXI2M1dwvifQyYJ3F9fm9eV2Kmm7WITgyo=";
+    };
+  });
+in
 {
   programs.emacs = {
     enable = true;
@@ -31,7 +42,7 @@
 
   programs.emacs.extraConfig = ''
     (setq magit-perl-executable "${lib.getExe pkgs.perl}")
-    (setq copilot-install-dir "${pkgs.copilot-node-server}")
+    (setq copilot-install-dir "${copilot-node-server}")
   '';
 
   home.packages = with pkgs; [
