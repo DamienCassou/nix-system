@@ -10,8 +10,16 @@
     ./docker.nix
   ];
 
-  programs.bun = {
-    enable = true;
+  programs = {
+    bun.enable = true;
+    ghostty = {
+      enable = true;
+      enableBashIntegration = true;
+      package = config.lib.nixGL.wrap pkgs.ghostty;
+      settings = {
+        theme = "Builtin Light";
+      };
+    };
   };
 
   home.packages = with pkgs; [
