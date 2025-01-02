@@ -5,6 +5,9 @@ let
       install -D -m755 $script $out/bin/$(basename $script)
     done
 
+    substituteInPlace $out/bin/nixpkgs-review.sh \
+      --subst-var-by nixpkgs-review ${lib.getExe pkgs.nixpkgs-review}
+
     substituteInPlace $out/bin/pass-show-password \
       --subst-var-by path ${
         lib.makeBinPath (
