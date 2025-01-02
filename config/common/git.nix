@@ -38,6 +38,7 @@ in
       # Large repositories that Git should cleanup regularly:
       repositories = [
         "${home}/.emacs.d"
+        "${home}/personal/projects/nix/nixpkgs"
         "${home}/work/setup/monitor"
       ];
     };
