@@ -28,9 +28,4 @@
     "dnf-list" = "dnf repoquery --list";
     "dnf-provides" = "dnf repoquery --cacheonly --file";
   };
-
-  systemd.user = {
-    # Automatically start new services and stop old ones:
-    startServices = true;
-  };
 }
