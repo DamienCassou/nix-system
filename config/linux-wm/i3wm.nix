@@ -98,7 +98,5 @@ in
         "URxvt.scrollBar" = false;
       };
     };
-
-    home.packages = [ pkgs.rxvt-unicode ];
   };
 }
