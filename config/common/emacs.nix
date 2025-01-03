@@ -39,7 +39,6 @@ in
       epkgs.editorconfig
       epkgs.eglot
       epkgs.elcouch
-      epkgs.emacs-everywhere
       epkgs.embark
       epkgs.embark-consult
       epkgs.embrace
