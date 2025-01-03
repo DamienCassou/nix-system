@@ -16,9 +16,6 @@
       enable = true;
       enableBashIntegration = true;
       package = config.lib.nixGL.wrap pkgs.ghostty;
-      settings = {
-        theme = "Builtin Light";
-      };
     };
   };
 
