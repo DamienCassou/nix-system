@@ -31,6 +31,7 @@
     nodePackages.vscode-json-languageserver
     nodejs_22
     omnisharp-roslyn # for C# development in Monitor
+    otel-desktop-viewer
     patch
     patchutils
     racket # for SICP scheme implementation
