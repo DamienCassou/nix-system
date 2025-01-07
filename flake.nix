@@ -27,8 +27,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs.url = "git+file:///home/cassou/personal/projects/nix/nixpkgs?ref=system";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "git+file:///home/cassou/personal/projects/nix/nixpkgs?ref=system";
 
     stylix = {
       url = "github:danth/stylix";
