@@ -22,7 +22,6 @@ in
             exclude_from = [
               (pkgs.writeText "borg-exclude.txt" (pkgs.callPackage ./borg-excludes.nix { inherit config; }))
             ];
-            borgmatic_source_directory = "${config.xdg.dataHome}/borgmatic";
             check_i_know_what_i_am_doing = true;
           };
         };
