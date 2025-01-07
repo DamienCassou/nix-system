@@ -26,6 +26,7 @@ in
       epkgs.conner
       epkgs.consult
       epkgs.copilot
+      epkgs.copilot-chat
       epkgs.csharp-mode
       epkgs.dape
       epkgs.denote
