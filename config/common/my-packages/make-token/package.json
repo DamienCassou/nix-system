@@ -6,6 +6,7 @@
     "prepare": "rm -rf node_modules/clipboardy/fallbacks"
   },
   "bin": {
+    "get-secret": "src/getSecret.js",
     "make-token": "src/makeToken.js"
   },
   "author": "",
