@@ -1,11 +1,14 @@
 import jwt from "jsonwebtoken";
-import { chooseTarget, readSecret } from "./utils.js";
+import { chooseTarget, readSecret, saveToClipboard } from "./utils.js";
 
 async function main() {
   const target = await chooseTarget();
   const secret = await readSecret({ target });
   const token = await makeToken({ secret });
 
+  await saveToClipboard(token);
+
+  console.error("Token saved to clipboard!");
   console.log(token);
 }
 

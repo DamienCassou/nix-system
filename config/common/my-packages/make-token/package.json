@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "rm -rf node_modules/clipboardy/fallbacks"
   },
   "bin": {
     "make-token": "src/makeToken.js"
@@ -13,6 +13,7 @@
   "description": "",
   "dependencies": {
     "@inquirer/prompts": "^7.2.1",
+    "clipboardy": "^4.0.0",
     "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {

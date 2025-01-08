@@ -1,3 +1,4 @@
+import clipboard from "clipboardy";
 import { select } from "@inquirer/prompts";
 import { readdir } from "node:fs/promises";
 import { promisify } from "node:util";
@@ -45,4 +46,8 @@ export async function readSecret({ target }) {
 
   // return the first line of output:
   return stdout.slice(0, stdout.indexOf("\n"));
+}
+
+export async function saveToClipboard(text) {
+  await clipboard.write(text);
 }
