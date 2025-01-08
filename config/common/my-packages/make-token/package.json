@@ -1,13 +1,12 @@
 {
   "name": "make-token",
   "version": "1.0.0",
-  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "make-token": "src/index.js"
+    "make-token": "src/makeToken.js"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
