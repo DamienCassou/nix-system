@@ -7,7 +7,12 @@ const execFile = promisify(execFileCallback);
 
 const TOKEN_SECRETS_DIR = `${process.env.PASSWORD_STORE_DIR}/ftgp/token-secrets`;
 
-export async function listTargets() {
+export async function chooseTarget() {
+  const targets = await listTargets();
+  return chooseTargetFromTargets({ targets });
+}
+
+async function listTargets() {
   const entries = await readdir(TOKEN_SECRETS_DIR, {
     withFileTypes: true,
   });
@@ -19,7 +24,7 @@ export async function listTargets() {
   return files.map((file) => file.name.replace(/\.gpg$/, ""));
 }
 
-export function chooseTarget({ targets }) {
+function chooseTargetFromTargets({ targets }) {
   return select(
     {
       message: "Select a target",

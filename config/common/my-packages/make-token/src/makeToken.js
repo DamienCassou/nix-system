@@ -1,9 +1,8 @@
 import jwt from "jsonwebtoken";
-import { listTargets, chooseTarget, readSecret } from "./utils.js";
+import { chooseTarget, readSecret } from "./utils.js";
 
 async function main() {
-  const targets = await listTargets();
-  const target = await chooseTarget({ targets });
+  const target = await chooseTarget();
   const secret = await readSecret({ target });
   const token = await makeToken({ secret });
 
