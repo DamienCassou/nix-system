@@ -6,7 +6,14 @@ pkgs.buildNpmPackage {
 
   src = ./.;
 
-  npmDepsHash = "sha256-ph+2+LJZ8yKUzi1xeqDTtT/Bdr93kFehy8REdueAhhM=";
+  npmDepsHash = "sha256-gSzdAviu1En13hHCmtLZbteHUOqaoRiqqnroPDMr3z0=";
 
   dontNpmBuild = true;
+
+  nativeBuildInputs = [ pkgs.makeWrapper ];
+
+  postInstall = ''
+    wrapProgram $out/bin/make-token --prefix PATH : ${pkgs.xsel}/bin
+    wrapProgram $out/bin/get-secret --prefix PATH : ${pkgs.xsel}/bin
+  '';
 }
