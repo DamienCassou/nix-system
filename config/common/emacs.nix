@@ -27,7 +27,6 @@ in
       epkgs.consult
       epkgs.copilot
       epkgs.copilot-chat
-      epkgs.csharp-mode
       epkgs.dape
       epkgs.denote
       epkgs.diff-hl
