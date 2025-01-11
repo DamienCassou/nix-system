@@ -1,14 +1,18 @@
 * My Nix config
 ** Configure non-nixos Linux system
-- ~localectl set-x11-keymap us pc105 colemak ctrl:nocaps~
+- configure keyboard
+  - on fedora
+    - ~localectl set-x11-keymap us pc105 colemak ctrl:nocaps~
+  - on debian
 - Install nitrokey udev rules
   https://docs.nitrokey.com/software/nitropy/linux/udev
-- Deactivate SELINUX
+- Deactivate SELINUX on fedora
 - ~hostnamectl set-hostname luz5~
 - ~sudo usermod --append --groups dialout,wheel cassou~
 - Install nix in multi-user mode: https://nixos.org/manual/nix/stable/#sect-multi-user-installation
+- Install binary cache of nix-community: https://app.cachix.org/cache/nix-community
 - Install home-manager: https://github.com/nix-community/home-manager/blob/master/README.md
-- ~home-manager --extra-experimental-features "nix-command flakes" --flake config/flake.nix -I nixpkgs=nixpkgs/ -I home-manager=home-manager/ -b bak1 switch~
+  - ~nix run home-manager/master --extra-experimental-features "nix-command flakes" switch --flake ~/personal/nix-system -b distrib~
 - For i3 desktop
   - dnf install lightdm lightdm-gtk i3lock swaylock NetworkManager-strongswan
   - systemctl disable gdm
@@ -19,7 +23,7 @@
   - in lightdm, choose the "Default Xsession" session from the menu in the top bar
   - install i3lock # https://github.com/i3/i3lock/issues/286
 - install mono # https://www.mono-project.com/download/preview/
-  - ~dnf install mono-devel mono-complete xsp referenceassemblies-pcl msbuild~
+  - ~dnf install mono-devel mono-complete xsp4 referenceassemblies-pcl msbuild~
 - install docker
   - https://docs.docker.com/engine/install/fedora/#install-using-the-repository
   - sudo usermod --append --groups docker cassou
