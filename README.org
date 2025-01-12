@@ -25,8 +25,9 @@
 - install mono # https://www.mono-project.com/download/preview/
   - ~dnf install mono-devel mono-complete xsp4 referenceassemblies-pcl msbuild~
 - install docker
-  - https://docs.docker.com/engine/install/fedora/#install-using-the-repository
-  - sudo usermod --append --groups docker cassou
+  - debian: https://docs.docker.com/engine/install/debian/#install-using-the-repository
+  - fedora: https://docs.docker.com/engine/install/fedora/#install-using-the-repository
+  - ~sudo usermod --append --groups docker cassou~
 - Add "127.0.0.1  database.ftgp" and "127.0.0.1   rabbitmq" à /etc/hosts
 - Install dotnet ~/configuration/denote/20240619T111823--mettre-à-jour-dotnet__finsit_monitor.org
 - sudo usermod --append --groups wireshark,vboxusers,adbusers,libvirt,kvm cassou
