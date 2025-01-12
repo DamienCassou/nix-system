@@ -12,6 +12,7 @@ in
   home.packages = with pkgs; [
     gitAndTools.git-absorb
     gitAndTools.git-when-merged
+    git-crypt
   ];
 
   programs.git = {
