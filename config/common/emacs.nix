@@ -36,6 +36,7 @@ in
       epkgs.dotenv-mode
       epkgs.drag-stuff
       epkgs.dumb-jump
+      epkgs.dwim-shell-command
       epkgs.editorconfig
       epkgs.eglot
       epkgs.elcouch
