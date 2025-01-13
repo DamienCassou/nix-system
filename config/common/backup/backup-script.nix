@@ -47,7 +47,7 @@ let
       # requires a system's service running:
       udisksctl unlock --block-device /dev/disk/by-uuid/${uuid}
       udisksctl mount --block-device /dev/mapper/luks-${uuid}
-      ${lib.getExe backup-rsync} /run/media/cassou/${name}/${backupDir}/
+      ${lib.getExe backup-rsync} /media/cassou/${name}/${backupDir}/
       backupStatusCode=$?
 
       sync
