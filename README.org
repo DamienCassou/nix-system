@@ -4,6 +4,11 @@
   - on fedora
     - ~localectl set-x11-keymap us pc105 colemak ctrl:nocaps~
   - on debian
+    #+begin_src sh
+      sudo dpkg-reconfigure keyboard-configuration
+      sudo update-initramfs -u -k all
+      sudo reboot
+    #+end_src
 - Install nitrokey udev rules
   https://docs.nitrokey.com/software/nitropy/linux/udev
 - Deactivate SELINUX on fedora
