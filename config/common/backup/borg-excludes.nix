@@ -28,6 +28,7 @@ ${home}/.config/teams-for-linux
 ${home}/.config/skypeforlinux
 ${home}/.config/syncthing/*.db
 ${home}/.config/teams
+${home}/.dotnet
 ${home}/.emacs.d/.cask
 ${home}/.gksu.lock
 ${home}/.gnupg/random_seed
@@ -45,6 +46,7 @@ ${home}/.local/share/mpd
 ${home}/.local/share/recently-used.xbel
 ${home}/.mozilla
 ${home}/.npm
+${home}/.nuget
 ${home}/.var/app
 ${home}/.xsession-errors
 ${home}/*/Monitor.Web.Ui/logs
