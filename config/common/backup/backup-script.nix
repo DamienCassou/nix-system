@@ -53,9 +53,9 @@ let
       sync
 
       if [[ $backupStatusCode -eq 0 ]]; then
-        notify-send --icon=${borgmaticIcon} "Backup succeeded" "The backup to \"${name}\" succeeded"
+        ${lib.getExe pkgs.libnotify} --icon=${borgmaticIcon} "Backup succeeded" "The backup to \"${name}\" succeeded"
       else
-        notify-send --urgency=critical --icon=${borgmaticIcon} "Backup failed" "The backup to \"${name}\" failed"
+        ${lib.getExe pkgs.libnotify} --urgency=critical --icon=${borgmaticIcon} "Backup failed" "The backup to \"${name}\" failed"
       fi
     '';
   backup-lacie = makeBackupScript "lacie" "ec4f10e9-b690-4623-a054-ad7e13a43452" "rsync-damien";
