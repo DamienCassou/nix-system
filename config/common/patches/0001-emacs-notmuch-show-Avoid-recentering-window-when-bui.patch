@@ -1,0 +1,40 @@
+From 3243b8ec0a56a1f7046e4ec8f759f2015933f8f7 Mon Sep 17 00:00:00 2001
+From: Damien Cassou <damien@cassou.me>
+Date: Thu, 16 Jan 2025 20:59:19 +0100
+Subject: [PATCH] emacs/notmuch-show: Avoid recentering window when building
+ imenu
+
+Several Emacs' notmuch-show commands recenter the window by calling
+`notmuch-show-message-adjust`. This is fine when these commands are
+called interactively but not when used inside non-interactive
+functions. An example of the problem is when `which-func-mode` is
+activated: each time the user moves the point to a different line, the
+window is recentered. This happens because `which-func-mode` calls
+`imenu` which calls `notmuch-show-imenu-prev-index-position-function`
+which calls `notmuch-show-previous-message` which recenters the
+window.
+
+This patch removes the calls to interactive commands from
+`notmuch-show-imenu-prev-index-position-function`.
+---
+ emacs/notmuch-show.el | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/emacs/notmuch-show.el b/emacs/notmuch-show.el
+index 14e3c698..921c0ef1 100644
+--- a/emacs/notmuch-show.el
++++ b/emacs/notmuch-show.el
+@@ -2686,7 +2686,9 @@ (defun notmuch-show-imenu-prev-index-position-function ()
+ `imenu-prev-index-position-function'."
+   (if (bobp)
+       nil
+-    (notmuch-show-previous-message)
++    (if (eobp)
++	(notmuch-show-move-to-message-top)
++      (notmuch-show-goto-message-previous))
+     t))
+ 
+ (defun notmuch-show-imenu-extract-index-name-function ()
+-- 
+2.47.0
+

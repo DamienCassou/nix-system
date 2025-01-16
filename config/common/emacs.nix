@@ -3,7 +3,9 @@
 let
   notmuch-emacs =
     (pkgs.notmuch.overrideAttrs (old: {
-      patches = (old.patches or [ ]) ++ [ ./patches/0001-emacs-show-Only-recenter-interactively.patch ];
+      patches = (old.patches or [ ]) ++ [
+        ./patches/0001-emacs-notmuch-show-Avoid-recentering-window-when-bui.patch
+      ];
     })).emacs;
 in
 {
