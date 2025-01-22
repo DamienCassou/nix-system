@@ -36,7 +36,7 @@
 - Add "127.0.0.1  database.ftgp" and "127.0.0.1   rabbitmq" à /etc/hosts
 - Install dotnet ~/configuration/denote/20240619T111823--mettre-à-jour-dotnet__finsit_monitor.org
 - ~sudo usermod --append --groups wireshark,vboxusers,adbusers,libvirt,kvm cassou~
-- ~echo fs.inotify.max_user_watches= 131070 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p~
+- ~echo fs.inotify.max_user_watches=1048576 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p~
 ** Configure on darwin
 - install nix following the instructions of nix-darwin:
   https://daiderd.com/nix-darwin/
