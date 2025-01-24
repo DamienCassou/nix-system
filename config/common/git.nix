@@ -122,6 +122,8 @@ in
       # Direnv
       ".envrc"
       ".direnv/"
+      # Syncthing
+      ".stfolder"
     ];
   };
 }
