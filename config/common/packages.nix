@@ -27,7 +27,6 @@ in
         bc # calculator
         coreutils-full
         curl
-        devenv
         diffutils
         direnv
         dmenu

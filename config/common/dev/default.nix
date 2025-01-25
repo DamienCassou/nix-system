@@ -22,6 +22,7 @@
   home.packages = with pkgs; [
     bash-language-server
     blobfuse
+    devenv
     eslint_d
     git-crypt
     jwt-cli
