@@ -105,6 +105,7 @@ in
       epkgs.vertico
       epkgs.vterm
       epkgs.vundo
+      epkgs.webpaste
       epkgs.wgrep
       epkgs.ws-butler
       epkgs.xref
