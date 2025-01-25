@@ -43,7 +43,7 @@ in
         gnumake
         gnused
         graphviz
-        haskellPackages.hledger_1_40
+        haskellPackages.hledger
         hunspellDicts.en_US-large
         hunspellDicts.fr-any
         hunspellDicts.fr-classique
