@@ -57,6 +57,7 @@ in
       epkgs.forge
       epkgs.git-timemachine
       epkgs.graphviz-dot-mode
+      epkgs.htmlize
       epkgs.imenu-list
       epkgs.jinx
       epkgs.js2-mode
@@ -85,6 +86,7 @@ in
       epkgs.orderless
       epkgs.org
       epkgs.org-caldav
+      epkgs.ox-linuxmag-fr
       epkgs.package-lint
       epkgs.package-lint-flymake
       epkgs.paredit
