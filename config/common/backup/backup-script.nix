@@ -24,6 +24,7 @@ let
      --exclude "/.local/share/libvirt/images" \
      --exclude "/.local/share/Trash" \
      --exclude "/personal/android/pixel7a/synced" \
+     --exclude "/tmp" \
      ${homeManagerRsyncExclude} \
      --delete-excluded --delete --archive --progress  \
      ~/ \

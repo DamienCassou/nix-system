@@ -57,4 +57,5 @@ ${config.accounts.email.maildirBasePath}/offlineimap-metadata
 ${home}/Nextcloud
 ${home}/go
 ${home}/misc
+${home}/tmp
 "
