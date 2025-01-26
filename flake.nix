@@ -5,6 +5,7 @@
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-stable.follows = "nixpkgs-stable";
     };
 
     firefox-addons = {
@@ -30,6 +31,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs.url = "git+file:///home/cassou/personal/projects/nix/nixpkgs?ref=system";
 
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +48,7 @@
       nix-index-database,
       nixGL,
       nixpkgs,
+      nixpkgs-stable,
       stylix,
       ...
     }:
@@ -53,6 +57,12 @@
       overlays = [
         emacs-overlay.overlay
         (_: _: { firefox-addons = firefox-addons.packages.${system}; })
+        (_: _: {
+          stable = import nixpkgs-stable {
+            inherit system overlays;
+            config.allowUnfree = true;
+          };
+        })
       ];
       pkgs = import nixpkgs {
         inherit system overlays;
