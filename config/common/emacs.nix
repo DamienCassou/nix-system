@@ -16,6 +16,7 @@ in
     });
     extraPackages = epkgs: [
       epkgs.ace-window
+      epkgs.adaptive-wrap
       epkgs.aggressive-indent
       epkgs.alert
       epkgs.all-the-icons-dired
