@@ -1,12 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    # cachix
+    cachix
     nil # LSP server for Nix
     niv
     nixfmt-rfc-style
