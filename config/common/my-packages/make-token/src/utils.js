@@ -18,11 +18,13 @@ async function listTargets() {
     withFileTypes: true,
   });
 
-  const files = entries.filter(
-    (entry) => entry.isFile() && entry.name.endsWith(".foretagsplatsen.se.gpg"),
-  );
+  const files = entries.filter(isValidTargetEntry);
 
   return files.map((file) => file.name.replace(/\.gpg$/, ""));
+}
+
+function isValidTargetEntry(entry) {
+  return entry.isFile() && entry.name.endsWith(".foretagsplatsen.se.gpg");
 }
 
 function chooseTargetFromTargets({ targets }) {
