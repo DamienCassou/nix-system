@@ -24,7 +24,9 @@ async function listTargets() {
 }
 
 function isValidTargetEntry(entry) {
-  return entry.isFile() && entry.name.endsWith(".foretagsplatsen.se.gpg");
+  if(!entry.isFile) return false
+
+  return entry.name.endsWith(".foretagsplatsen.se.gpg") || entry.name === "localhost.gpg";
 }
 
 function chooseTargetFromTargets({ targets }) {
