@@ -38,7 +38,6 @@ in
 
     direnv = {
       enable = true;
-      enableBashIntegration = true;
       nix-direnv.enable = true;
     };
 
@@ -62,7 +61,6 @@ in
     };
 
     nix-index-database.comma.enable = true;
-    nix-index.enableBashIntegration = true;
 
     password-store = {
       enable = true;
