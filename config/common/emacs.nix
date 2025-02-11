@@ -40,6 +40,7 @@ in
       epkgs.drag-stuff
       epkgs.dumb-jump
       epkgs.dwim-shell-command
+      epkgs.edit-indirect
       epkgs.editorconfig
       epkgs.eglot
       epkgs.elcouch
