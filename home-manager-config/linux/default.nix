@@ -69,7 +69,19 @@ in
   };
 
   services = {
-    gpg-agent.pinentryPackage = pkgs.pinentry-gnome3;
+    emacs = {
+      enable = true;
+      defaultEditor = true;
+      socketActivation.enable = true;
+      startWithUserSession = "graphical";
+    };
+
+    gpg-agent = {
+      enable = true;
+      enableSshSupport = true;
+      pinentryPackage = pkgs.pinentry-gnome3;
+    };
+
     poweralertd.enable = true;
     safeeyes.enable = true;
 

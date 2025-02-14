@@ -7,6 +7,19 @@
 
   nixpkgs.hostPlatform = "aarch64-darwin";
 
+  programs = {
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+  };
+
+  services = {
+    emacs = {
+      enable = true;
+    };
+  };
+
   system = {
     defaults.dock.autohide = true;
     stateVersion = 6;
