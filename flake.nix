@@ -80,7 +80,7 @@
       darwinConfigurations = {
         macbook = darwin.lib.darwinSystem {
           modules = [
-            ./config/nix-darwin
+            ./nix-darwin-config
             home-manager.darwinModules.home-manager
             {
               system.configurationRevision = self.rev or self.dirtyRev or null;
