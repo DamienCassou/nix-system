@@ -10,7 +10,6 @@
   ];
 
   nix = {
-    package = pkgs.nix;
     nixPath = [ "${config.home.homeDirectory}/personal/nix-system" ];
     channels = { };
     keepOldNixPath = false;

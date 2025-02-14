@@ -136,20 +136,6 @@ in
   };
 
   services = {
-    poweralertd.enable = true;
-
-    safeeyes.enable = true;
-    snixembed = {
-      enable = true;
-
-      beforeUnits = [
-        # https://github.com/slgobinath/SafeEyes/wiki/How-to-install-backend-for-Safe-Eyes-tray-icon
-        "safeeyes.service"
-      ];
-    };
-
-    systembus-notify.enable = true;
-
     signaturepdf = {
       enable = true;
       port = 9292;

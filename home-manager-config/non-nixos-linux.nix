@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   systemd.user.systemctlPath = "/usr/bin/systemctl";
@@ -10,4 +10,6 @@
       export INFOPATH="/usr/share/info:${config.home.profileDirectory}/share/info:''${INFOPATH}"
     '';
   };
+
+  nix.package = pkgs.nix;
 }

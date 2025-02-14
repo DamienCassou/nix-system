@@ -72,26 +72,37 @@
       ];
     in
     {
-      darwinConfigurations = {
-        macbook = darwin.lib.darwinSystem {
-          modules = [
-            ./nix-darwin-config
-            home-manager.darwinModules.home-manager
-            {
-              system.configurationRevision = self.rev or self.dirtyRev or null;
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users."cassou" = {
-                imports = [
-                  nix-index-database.hmModules.nix-index
-                  stylix.homeManagerModules.stylix
-                  ./home-manager-config/common
-                ];
-              };
-            }
-          ];
+      darwinConfigurations =
+        let
+          system = "aarch64-darwin";
+          overlays = makeOverlays system;
+          pkgs = import nixpkgs {
+            inherit system overlays;
+            config.allowUnfree = true;
+          };
+        in
+        {
+          macbook = darwin.lib.darwinSystem {
+            inherit pkgs;
+
+            modules = [
+              ./nix-darwin-config
+              home-manager.darwinModules.home-manager
+              {
+                system.configurationRevision = self.rev or self.dirtyRev or null;
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users."cassou" = {
+                  imports = [
+                    nix-index-database.hmModules.nix-index
+                    stylix.homeManagerModules.stylix
+                    ./home-manager-config/common
+                  ];
+                };
+              }
+            ];
+          };
         };
-      };
 
       homeConfigurations =
         let
