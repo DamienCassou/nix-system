@@ -107,7 +107,7 @@
             stylix.homeManagerModules.stylix
             ./home-manager-config/common
             ./home-manager-config/forbidden-at-work.nix
-            ./home-manager-config/non-nixos.nix
+            ./home-manager-config/non-nixos-linux.nix
             ./home-manager-config/linux
             ./home-manager-config/linux-wm
             {
