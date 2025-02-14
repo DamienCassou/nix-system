@@ -21,6 +21,7 @@ in
       blueman
       brightnessctl
       dmidecode
+      eog
       libreoffice
       networkmanager # for nmcli
       nitrokey-app2

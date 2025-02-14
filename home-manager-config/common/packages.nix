@@ -28,7 +28,6 @@ in
         dmenu
         dot-language-server
         easytag
-        eog
         evince
         ffmpeg-full # for ffplay, used by tmr-sound.el
         file
