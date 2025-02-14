@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./borg.nix
     ./desktop-entries.nix
   ];
 
