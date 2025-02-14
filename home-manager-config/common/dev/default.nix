@@ -29,7 +29,6 @@
     otel-desktop-viewer
     patch
     patchutils
-    racket # for SICP scheme implementation
     shellcheck
     typescript # for eglot to work in JS project
     typescript-language-server
