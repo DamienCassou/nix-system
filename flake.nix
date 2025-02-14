@@ -89,10 +89,6 @@
               home-manager.users."cassou" = {
                 home = {
                   stateVersion = "24.11";
-
-                  file.".ssh/authorized_keys".text = ''
-                    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPNt/RcAiO+zgCvPUBXGHwPRr1qpufb/+tZlSab5D0cM cardno:000F_F29888AB
-                  '';
                 };
               };
             }
