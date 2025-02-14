@@ -8,6 +8,7 @@ in
     ./borg.nix
     ./desktop-entries.nix
     ./music.nix
+    ./web
   ];
 
   home = {
