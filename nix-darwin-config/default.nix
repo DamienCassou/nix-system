@@ -5,9 +5,13 @@
     trusted-users = [ "cassou" ];
   };
 
-  system.stateVersion = 6;
   nixpkgs.hostPlatform = "aarch64-darwin";
-  system.defaults.dock.autohide = true;
+
+  system = {
+    defaults.dock.autohide = true;
+    stateVersion = 6;
+  };
+
   users.users.cassou = {
     home = "/Users/cassou";
     openssh.authorizedKeys.keys = [
