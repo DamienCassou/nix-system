@@ -60,21 +60,16 @@
       ...
     }:
     let
-      system = "x86_64-linux";
-      overlays = [
+      makeOverlays = system: [
         emacs-overlay.overlay
         (_: _: { firefox-addons = firefox-addons.packages.${system}; })
         (_: _: {
           stable = import nixpkgs-stable {
-            inherit system overlays;
+            inherit system;
             config.allowUnfree = true;
           };
         })
       ];
-      pkgs = import nixpkgs {
-        inherit system overlays;
-        config.allowUnfree = true;
-      };
     in
     {
       darwinConfigurations = {
@@ -98,34 +93,43 @@
         };
       };
 
-      homeConfigurations = {
-        "cassou@luz5" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+      homeConfigurations =
+        let
+          system = "x86_64-linux";
+          overlays = makeOverlays system;
+          pkgs = import nixpkgs {
+            inherit system overlays;
+            config.allowUnfree = true;
+          };
+        in
+        {
+          "cassou@luz5" = home-manager.lib.homeManagerConfiguration {
+            inherit pkgs;
 
-          modules = [
-            nix-index-database.hmModules.nix-index
-            stylix.homeManagerModules.stylix
-            ./home-manager-config/common
-            ./home-manager-config/forbidden-at-work.nix
-            ./home-manager-config/non-nixos-linux.nix
-            ./home-manager-config/linux
-            ./home-manager-config/linux-wm
-            {
-              home = {
-                homeDirectory = "/home/cassou";
-                username = "cassou";
-              };
+            modules = [
+              nix-index-database.hmModules.nix-index
+              stylix.homeManagerModules.stylix
+              ./home-manager-config/common
+              ./home-manager-config/forbidden-at-work.nix
+              ./home-manager-config/non-nixos-linux.nix
+              ./home-manager-config/linux
+              ./home-manager-config/linux-wm
+              {
+                home = {
+                  homeDirectory = "/home/cassou";
+                  username = "cassou";
+                };
 
-              my.window-management.enable = true;
+                my.window-management.enable = true;
 
-              nixGL = {
-                packages = nixGL.packages;
-                installScripts = [ "mesa" ];
-              };
-            }
-          ];
+                nixGL = {
+                  packages = nixGL.packages;
+                  installScripts = [ "mesa" ];
+                };
+              }
+            ];
+          };
         };
-      };
     };
 }
 
