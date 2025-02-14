@@ -1,6 +1,10 @@
 { ... }:
 {
-  nix.settings.experimental-features = "nix-command flakes";
+  nix.settings = {
+    experimental-features = "nix-command flakes";
+    trusted-users = [ "cassou" ];
+  };
+
   system.stateVersion = 6;
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.defaults.dock.autohide = true;
