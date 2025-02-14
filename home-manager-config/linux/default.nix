@@ -25,9 +25,16 @@
 
   };
 
-  programs.bash.shellAliases = {
-    "dnf-list" = "dnf repoquery --list";
-    "dnf-provides" = "dnf repoquery --cacheonly --file";
+  programs = {
+    bash.shellAliases = {
+      "dnf-list" = "dnf repoquery --list";
+      "dnf-provides" = "dnf repoquery --cacheonly --file";
+    };
+
+    rofi = {
+      enable = true;
+      cycle = true;
+    };
   };
 
   services = {
@@ -44,5 +51,20 @@
     };
 
     systembus-notify.enable = true;
+  };
+
+  xdg = {
+    mime.enable = true;
+    mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "x-scheme-handler/mailto" = "emacsclient-mail.desktop";
+        "x-scheme-handler/msteams" = "teams-for-linux.desktop";
+        "x-scheme-handler/magnet" = "transmission-gtk.desktop";
+        "x-scheme-handler/http" = "firefox.desktop";
+        "x-scheme-handler/https" = "firefox.desktop";
+      };
+    };
+    userDirs.enable = true;
   };
 }

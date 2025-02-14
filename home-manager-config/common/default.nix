@@ -74,11 +74,6 @@ in
       enable = true;
     };
 
-    rofi = {
-      enable = true;
-      cycle = true;
-    };
-
     topgrade = {
       enable = true;
       settings = {
@@ -149,21 +144,7 @@ in
 
   xdg = {
     enable = true;
-    userDirs = {
-      enable = true;
-    };
     configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
-    mime.enable = true;
-    mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "x-scheme-handler/mailto" = "emacsclient-mail.desktop";
-        "x-scheme-handler/msteams" = "teams-for-linux.desktop";
-        "x-scheme-handler/magnet" = "transmission-gtk.desktop";
-        "x-scheme-handler/http" = "firefox.desktop";
-        "x-scheme-handler/https" = "firefox.desktop";
-      };
-    };
   };
 
   fonts.fontconfig.enable = true;
