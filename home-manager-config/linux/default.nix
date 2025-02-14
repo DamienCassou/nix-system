@@ -60,6 +60,7 @@ in
   };
 
   services = {
+    gpg-agent.pinentryPackage = pkgs.pinentry-gnome3;
     poweralertd.enable = true;
     safeeyes.enable = true;
 
