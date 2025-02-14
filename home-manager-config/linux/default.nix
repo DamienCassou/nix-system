@@ -1,4 +1,8 @@
 { config, pkgs, ... }:
+
+let
+  nixGLWrap = config.lib.nixGL.wrap;
+in
 {
   imports = [
     ./borg.nix
@@ -8,16 +12,27 @@
 
   home = {
     packages = with pkgs; [
+      (nixGLWrap calibre)
+      (nixGLWrap ferdium) # for discord and mattermost
+      (nixGLWrap parabolic) # download videos
+      (nixGLWrap vlc)
       arandr
       blueman
       brightnessctl
       dmidecode
+      libreoffice
       networkmanager # for nmcli
+      nitrokey-app2
       pavucontrol
       pciutils
+      peek # for screencasts
+      psmisc # for killall
       pulseaudio
+      pynitrokey
+      rofi
       rofi-bluetooth
       rofi-pulse-select
+      usbutils
       xdg-utils
       xorg.xmodmap
       xorg.xrdb

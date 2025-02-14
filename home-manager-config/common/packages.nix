@@ -19,11 +19,7 @@ in
     ++ (
       with pkgs;
       [
-        (nixGLWrap calibre)
         (nixGLWrap element-desktop)
-        (nixGLWrap ferdium) # for discord and mattermost
-        (nixGLWrap parabolic) # download videos
-        (nixGLWrap vlc)
         bc # calculator
         coreutils-full
         curl
@@ -52,18 +48,12 @@ in
         inkscape
         ispell
         jq
-        libreoffice
         multimarkdown # to preview markdown files
         ncdu
-        nitrokey-app2
         p7zip
         pandoc
-        peek # for screencasts
-        psmisc # for killall
         pwgen
-        pynitrokey
         qpdf # to remove passwords from PDF
-        rofi
         rsync
         signal-desktop
         spice
@@ -71,7 +61,6 @@ in
         umlet
         unar # universal unpacker
         unzip
-        usbutils
         wget
         wmname
         wofi
