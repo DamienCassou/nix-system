@@ -1,5 +1,13 @@
 { ... }:
 {
+  environment = {
+    extraOutputsToInstall = [
+      "devdoc"
+      "doc"
+      "info"
+    ];
+  };
+
   nix.settings = {
     experimental-features = "nix-command flakes";
     trusted-users = [ "cassou" ];
@@ -12,6 +20,10 @@
       enable = true;
       enableSSHSupport = true;
     };
+  };
+
+  security = {
+    pam.enableSudoTouchIdAuth = true;
   };
 
   services = {
