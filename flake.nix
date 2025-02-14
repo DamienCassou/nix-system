@@ -90,7 +90,7 @@
                 imports = [
                   nix-index-database.hmModules.nix-index
                   stylix.homeManagerModules.stylix
-                  ./config/common
+                  ./home-manager-config/common
                 ];
               };
             }
@@ -105,11 +105,11 @@
           modules = [
             nix-index-database.hmModules.nix-index
             stylix.homeManagerModules.stylix
-            ./config/common
-            ./config/forbidden-at-work.nix
-            ./config/non-nixos.nix
-            ./config/linux
-            ./config/linux-wm
+            ./home-manager-config/common
+            ./home-manager-config/forbidden-at-work.nix
+            ./home-manager-config/non-nixos.nix
+            ./home-manager-config/linux
+            ./home-manager-config/linux-wm
             {
               home = {
                 homeDirectory = "/home/cassou";
