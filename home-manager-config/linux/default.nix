@@ -3,6 +3,7 @@
   imports = [
     ./borg.nix
     ./desktop-entries.nix
+    ./music.nix
   ];
 
   home = {
