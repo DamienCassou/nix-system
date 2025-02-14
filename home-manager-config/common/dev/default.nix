@@ -12,10 +12,6 @@
 
   programs = {
     bun.enable = true;
-    ghostty = {
-      enable = true;
-      package = config.lib.nixGL.wrap pkgs.ghostty;
-    };
   };
 
   home.packages = with pkgs; [

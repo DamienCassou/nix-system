@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   imports = [
     ./borg.nix
@@ -30,6 +30,11 @@
     bash.shellAliases = {
       "dnf-list" = "dnf repoquery --list";
       "dnf-provides" = "dnf repoquery --cacheonly --file";
+    };
+
+    ghostty = {
+      enable = true;
+      package = config.lib.nixGL.wrap pkgs.ghostty;
     };
 
     rofi = {
