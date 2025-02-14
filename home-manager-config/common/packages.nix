@@ -63,7 +63,6 @@ in
         unzip
         wget
         wmname
-        xcape
         yaml-language-server
         yarn-bash-completion
         zbar # to scan QR codes for pass-otp
