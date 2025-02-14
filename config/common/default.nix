@@ -186,9 +186,6 @@ in
     stateVersion = "24.11";
     enableNixpkgsReleaseCheck = false;
 
-    homeDirectory = "/home/cassou";
-    username = "cassou";
-
     keyboard = {
       layout = "us";
       variant = "colemak";

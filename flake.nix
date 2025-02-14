@@ -87,9 +87,11 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users."cassou" = {
-                home = {
-                  stateVersion = "24.11";
-                };
+                imports = [
+                  nix-index-database.hmModules.nix-index
+                  stylix.homeManagerModules.stylix
+                  ./config/common
+                ];
               };
             }
           ];
@@ -109,6 +111,11 @@
             ./config/linux
             ./config/linux-wm
             {
+              home = {
+                homeDirectory = "/home/cassou";
+                username = "cassou";
+              };
+
               my.window-management.enable = true;
 
               nixGL = {
