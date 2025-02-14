@@ -63,7 +63,6 @@ in
         unzip
         wget
         wmname
-        wofi
         xcape
         yaml-language-server
         yarn-bash-completion
