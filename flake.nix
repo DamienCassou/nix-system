@@ -2,6 +2,11 @@
   description = "Home Manager configuration";
 
   inputs = {
+    darwin = {
+      url = "github:lnl7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,6 +47,8 @@
 
   outputs =
     {
+      self,
+      darwin,
       emacs-overlay,
       firefox-addons,
       home-manager,
@@ -70,6 +77,25 @@
       };
     in
     {
+      darwinConfigurations = {
+        macbook = darwin.lib.darwinSystem {
+          modules = [
+            ./nix-darwin
+            home-manager.darwinModules.home-manager
+            {
+              system.configurationRevision = self.rev or self.dirtyRev or null;
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users."damien.cassou" = {
+                home.file.".ssh/authorized_keys" = ''
+                  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPNt/RcAiO+zgCvPUBXGHwPRr1qpufb/+tZlSab5D0cM cardno:000F_F29888AB
+                '';
+              };
+            }
+          ];
+        };
+      };
+
       homeConfigurations = {
         "cassou@luz5" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
