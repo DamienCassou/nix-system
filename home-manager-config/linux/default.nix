@@ -49,6 +49,14 @@ in
       "dnf-provides" = "dnf repoquery --cacheonly --file";
     };
 
+    freetube = {
+      enable = true;
+      settings = {
+        checkForUpdates = false;
+        defaultQuality = "480";
+      };
+    };
+
     ghostty = {
       enable = true;
       package = config.lib.nixGL.wrap pkgs.ghostty;

@@ -39,14 +39,6 @@ in
       nix-direnv.enable = true;
     };
 
-    freetube = {
-      enable = true;
-      settings = {
-        checkForUpdates = false;
-        defaultQuality = "480";
-      };
-    };
-
     home-manager = {
       enable = true;
     };
