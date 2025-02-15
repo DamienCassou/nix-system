@@ -26,12 +26,6 @@
     pam.enableSudoTouchIdAuth = true;
   };
 
-  services = {
-    emacs = {
-      enable = true;
-    };
-  };
-
   system = {
     defaults.dock.autohide = true;
     stateVersion = 6;
