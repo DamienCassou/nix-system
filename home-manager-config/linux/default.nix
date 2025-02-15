@@ -16,6 +16,7 @@ in
       (nixGLWrap calibre)
       (nixGLWrap ferdium) # for discord and mattermost
       (nixGLWrap parabolic) # download videos
+      (nixGLWrap teams-for-linux)
       (nixGLWrap vlc)
       arandr
       blueman

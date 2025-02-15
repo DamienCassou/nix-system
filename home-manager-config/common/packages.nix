@@ -68,7 +68,6 @@ in
       ]
       ++ [
         # Unfree packages
-        (nixGLWrap teams-for-linux)
         (nixGLWrap slack)
         unrar
         zip
