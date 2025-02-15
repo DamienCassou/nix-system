@@ -10,18 +10,18 @@
 
     fonts = {
       serif = {
-        package = pkgs.atkinson-hyperlegible;
-        name = "Atkinson Hyperlegible";
+        package = pkgs.aporetic;
+        name = "Aporetic Serif";
       };
 
       sansSerif = {
-        package = pkgs.atkinson-hyperlegible;
-        name = "Atkinson Hyperlegible";
+        package = pkgs.aporetic;
+        name = "Aporetic Sans";
       };
 
       monospace = {
-        package = pkgs.jetbrains-mono;
-        name = "JetBrains Mono Medium";
+        package = pkgs.aporetic;
+        name = "Aporetic Sans Mono";
       };
     };
   };

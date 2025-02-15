@@ -75,6 +75,7 @@ in
       ]
       ++ [
         # Fonts
+        aporetic
         cantarell-fonts
         dejavu_fonts
         fira
@@ -85,10 +86,6 @@ in
         gentium-book-basic
         inconsolata
         iosevka-bin
-        iosevka-comfy.comfy
-        iosevka-comfy.comfy-duo
-        iosevka-comfy.comfy-motion
-        iosevka-comfy.comfy-motion-duo
         jetbrains-mono
         liberation_ttf
         noto-fonts-emoji # recommended by Emacs
