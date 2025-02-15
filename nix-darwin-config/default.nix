@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   environment = {
     extraOutputsToInstall = [
@@ -6,6 +6,8 @@
       "doc"
       "info"
     ];
+
+    shells = [ pkgs.bashInteractive ];
   };
 
   nix.settings = {
@@ -16,6 +18,10 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   programs = {
+    bash = {
+      enable = true;
+      completion.enable = true;
+    };
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -36,5 +42,6 @@
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPNt/RcAiO+zgCvPUBXGHwPRr1qpufb/+tZlSab5D0cM cardno:000F_F29888AB"
     ];
+    shell = pkgs.bashInteractive;
   };
 }
