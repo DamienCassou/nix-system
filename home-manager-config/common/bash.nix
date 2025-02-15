@@ -42,10 +42,6 @@
         # https://stackoverflow.com/questions/5076127/bash-update-terminal-title-by-running-a-second-command
         trap 'echo -ne "\033]2;$(history 1 | ${pkgs.gnused}/bin/sed "s/^[ ]*[0-9]*[ ]*//g")\007"' DEBUG
       '';
-      profileExtra = ''
-        # Deactivate the audible bell in X
-        xset -b
-      '';
     };
 
     readline = {

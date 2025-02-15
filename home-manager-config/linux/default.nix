@@ -44,9 +44,16 @@ in
   };
 
   programs = {
-    bash.shellAliases = {
-      "dnf-list" = "dnf repoquery --list";
-      "dnf-provides" = "dnf repoquery --cacheonly --file";
+    bash = {
+      profileExtra = ''
+        # Deactivate the audible bell in X
+        xset -b
+      '';
+
+      shellAliases = {
+        "dnf-list" = "dnf repoquery --list";
+        "dnf-provides" = "dnf repoquery --cacheonly --file";
+      };
     };
 
     freetube = {
