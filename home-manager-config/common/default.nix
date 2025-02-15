@@ -27,6 +27,7 @@ in
     ./ssh.nix
     ./stylix
     ./syncthing.nix
+    ./web
   ];
 
   programs = {

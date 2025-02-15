@@ -6,7 +6,6 @@ in
 {
   programs.firefox = {
     enable = true;
-    package = config.lib.nixGL.wrap pkgs.firefox;
     languagePacks = [
       "en-US"
       "fr-FR"
