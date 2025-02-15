@@ -19,7 +19,7 @@
     };
 
     home-manager = {
-      url = "github:DamienCassou/home-manager/signaturepdf-fix-xdg";
+      url = "github:DamienCassou/home-manager/system";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

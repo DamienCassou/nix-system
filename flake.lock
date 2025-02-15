@@ -304,16 +304,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1739540591,
-        "narHash": "sha256-cU2icT5o+Zt7gwf5uCG7LC+r/GfHThxXt8viAVSppoc=",
+        "lastModified": 1739631019,
+        "narHash": "sha256-ffergdjPDVFnTmi4Zrl7Kz0TQmt1VGsGlLPbN91x2BQ=",
         "owner": "DamienCassou",
         "repo": "home-manager",
-        "rev": "66841ffa00bd5a93831463b5cf5ad1f10aa0a8d6",
+        "rev": "28c616dbb9d5006f84ff91d7303310de186fe9cc",
         "type": "github"
       },
       "original": {
         "owner": "DamienCassou",
-        "ref": "signaturepdf-fix-xdg",
+        "ref": "system",
         "repo": "home-manager",
         "type": "github"
       }
