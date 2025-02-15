@@ -131,7 +131,6 @@
                   username = "cassou";
                 };
 
-                services.syncthing.enable = true;
                 my.window-management.enable = true;
 
                 nixGL = {
