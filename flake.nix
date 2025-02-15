@@ -99,6 +99,10 @@
                 home-manager.users."cassou" = {
                   programs.firefox.package = pkgs.firefox-bin;
                   services.syncthing.enable = true;
+                  home.file.".gnupg/gpg-agent.conf".text = ''
+                    enable-ssh-support
+                    pinentry-program ${pkgs.lib.getExe pkgs.pinentry_mac}
+                  '';
                   imports = [
                     nix-index-database.hmModules.nix-index
                     stylix.homeManagerModules.stylix
