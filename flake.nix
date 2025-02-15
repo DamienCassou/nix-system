@@ -36,6 +36,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs.url = "git+file:///home/cassou/personal/projects/nix/nixpkgs?ref=system";
 
+    nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
+
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
 
     stylix = {
@@ -55,6 +57,7 @@
       nix-index-database,
       nixGL,
       nixpkgs,
+      nixpkgs-firefox-darwin,
       nixpkgs-stable,
       stylix,
       ...
@@ -62,6 +65,7 @@
     let
       makeOverlays = system: [
         emacs-overlay.overlay
+        nixpkgs-firefox-darwin.overlay
         (_: _: { firefox-addons = firefox-addons.packages.${system}; })
         (_: _: {
           stable = import nixpkgs-stable {
@@ -93,6 +97,8 @@
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.users."cassou" = {
+                  programs.firefox.package = pkgs.firefox-bin;
+                  services.syncthing.enable = true;
                   imports = [
                     nix-index-database.hmModules.nix-index
                     stylix.homeManagerModules.stylix
