@@ -93,7 +93,6 @@
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.users."cassou" = {
-                  services.syncthing.enable = pkgs.lib.mkForce false;
                   imports = [
                     nix-index-database.hmModules.nix-index
                     stylix.homeManagerModules.stylix
@@ -132,6 +131,7 @@
                   username = "cassou";
                 };
 
+                services.syncthing.enable = true;
                 my.window-management.enable = true;
 
                 nixGL = {

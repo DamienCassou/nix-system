@@ -4,7 +4,6 @@ let
 in
 {
   services.syncthing = {
-    enable = true;
     key = "${secretsPath}/key.pem";
     cert = "${secretsPath}/cert.pem";
     settings = {
