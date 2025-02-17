@@ -103,6 +103,8 @@
                     enable-ssh-support
                     pinentry-program ${pkgs.lib.getExe pkgs.pinentry_mac}
                   '';
+                  home.sessionPath = [ "/opt/homebrew/bin" ];
+
                   imports = [
                     nix-index-database.hmModules.nix-index
                     stylix.homeManagerModules.stylix

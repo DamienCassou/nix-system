@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   environment = {
     extraOutputsToInstall = [
@@ -8,6 +8,48 @@
     ];
 
     shells = [ pkgs.bashInteractive ];
+  };
+
+  homebrew = {
+    enable = true;
+    brews = [
+      {
+        name = "colima";
+        start_service = true;
+      }
+      "docker"
+
+    ];
+    casks = [
+      "jetbrains-toolbox"
+      "rectangle"
+      "eloston-chromium"
+    ];
+  };
+
+  launchd.user = {
+    agents.damien.serviceConfig =
+      let
+        vars = {
+          HOMEBREW_PREFIX = "/opt/homebrew";
+          HOMEBREW_CELLAR = "/opt/homebrew/Cellar";
+          HOMEBREW_REPOSITORY = "/opt/homebrew";
+        };
+      in
+      {
+        ProgramArguments =
+          [
+            "launchctl"
+            "setenv"
+          ]
+          ++ (lib.flatten (
+            lib.mapAttrsToList (varName: varValue: [
+              varName
+              varValue
+            ]) vars
+          ));
+        RunAtLoad = true;
+      };
   };
 
   nix.settings = {
