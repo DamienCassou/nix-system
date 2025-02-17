@@ -18,6 +18,7 @@
         start_service = true;
       }
       "docker"
+      "docker-buildx"
       "docker-compose"
     ];
     casks = [
