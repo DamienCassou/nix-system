@@ -18,7 +18,7 @@
         start_service = true;
       }
       "docker"
-
+      "docker-compose"
     ];
     casks = [
       "jetbrains-toolbox"
