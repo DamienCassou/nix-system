@@ -22,6 +22,7 @@ in
       brightnessctl
       dmidecode
       eog
+      evince
       libreoffice
       networkmanager # for nmcli
       nitrokey-app2
