@@ -121,18 +121,6 @@ in
     };
   };
 
-  services = {
-    signaturepdf = {
-      enable = true;
-      port = 9292;
-      extraConfig = {
-        upload_max_filesize = "200M";
-        post_max_size = "200M";
-        max_file_uploads = "200";
-      };
-    };
-  };
-
   xdg = {
     enable = true;
     configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;

@@ -92,6 +92,16 @@ in
     poweralertd.enable = true;
     safeeyes.enable = true;
 
+    signaturepdf = {
+      enable = true;
+      port = 9292;
+      extraConfig = {
+        upload_max_filesize = "200M";
+        post_max_size = "200M";
+        max_file_uploads = "200";
+      };
+    };
+
     snixembed = {
       enable = true;
 
