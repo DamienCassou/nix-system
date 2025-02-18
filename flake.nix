@@ -98,18 +98,11 @@
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.users."cassou" = {
-                  programs.firefox.package = pkgs.firefox-bin;
-                  services.syncthing.enable = true;
-                  home.file.".gnupg/gpg-agent.conf".text = ''
-                    enable-ssh-support
-                    pinentry-program ${pkgs.lib.getExe pkgs.pinentry_mac}
-                  '';
-                  home.sessionPath = [ "/opt/homebrew/bin" ];
-
                   imports = [
                     nix-index-database.hmModules.nix-index
                     stylix.homeManagerModules.stylix
                     ./home-manager-config/common
+                    ./home-manager-config/darwin.nix
                   ];
                 };
               }
