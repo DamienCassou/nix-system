@@ -29,7 +29,7 @@
   };
 
   launchd.user = {
-    agents.damien.serviceConfig =
+    agents.setenv.serviceConfig =
       let
         vars = {
           HOMEBREW_PREFIX = "/opt/homebrew";
