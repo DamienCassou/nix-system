@@ -1,10 +1,12 @@
 { pkgs, ... }:
 {
   home = {
-    file.".gnupg/gpg-agent.conf".text = ''
-      enable-ssh-support
-      pinentry-program ${pkgs.lib.getExe pkgs.pinentry_mac}
-    '';
+    file = {
+      ".gnupg/gpg-agent.conf".text = ''
+        enable-ssh-support
+        pinentry-program ${pkgs.lib.getExe pkgs.pinentry_mac}
+      '';
+    };
 
     sessionPath = [ "/opt/homebrew/bin" ];
   };
