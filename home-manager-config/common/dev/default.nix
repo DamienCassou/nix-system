@@ -64,9 +64,8 @@
       # The error message I get is:
       # > Value: gpg: public key decryption failed: No such file or directory
       # > gpg: decryption failed: No such file or directory
-      FINSIT_GITHUB = "$(cat ${lib.elemAt config.nix.nixPath 0}/secrets/FINSIT_GITHUB)";
-
-      JFROG_API_KEY = "$(pass-show-password wk/jfrog.io/token)";
+      FINSIT_GITHUB = builtins.readFile ../../../secrets/FINSIT_GITHUB;
+      JFROG_API_KEY = builtins.readFile ../../../secrets/JFROG_API_KEY;
 
       ESLINT_USE_FLAT_CONFIG = "true";
     };
