@@ -18,6 +18,7 @@ in
     ./email
     ./git.nix
     ./gpg.nix
+    ./music.nix
     ./my-packages
     ./my-scripts.nix
     ./nix.nix

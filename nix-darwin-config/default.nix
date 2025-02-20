@@ -20,6 +20,10 @@
       "docker"
       "docker-buildx"
       "docker-compose"
+      {
+        name = "mpd";
+        start_service = true;
+      }
     ];
     casks = [
       "jetbrains-toolbox"

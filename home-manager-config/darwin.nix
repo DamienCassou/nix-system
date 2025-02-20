@@ -43,5 +43,7 @@
 
   programs.firefox.package = pkgs.firefox-bin;
 
-  services.syncthing.enable = true;
+  services = {
+    mpd.musicDirectory = "${config.home.homeDirectory}/personal/music/damien";
+    syncthing.enable = true;};
 }
