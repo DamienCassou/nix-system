@@ -26,9 +26,10 @@
       }
     ];
     casks = [
+      "eloston-chromium"
+      "ferdium"
       "jetbrains-toolbox"
       "rectangle"
-      "eloston-chromium"
     ];
   };
 
