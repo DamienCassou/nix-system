@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  extensions = with pkgs.firefox-addons; [
+  extensions.packages = with pkgs.firefox-addons; [
     overview
     rsf-censorship-detector
     browserpass
