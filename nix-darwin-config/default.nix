@@ -26,6 +26,7 @@
       }
     ];
     casks = [
+      "alfred"
       "eloston-chromium"
       "ferdium"
       "jetbrains-toolbox"
