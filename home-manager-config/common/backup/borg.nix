@@ -5,7 +5,7 @@
 }:
 
 let
-  borg-pass-command = "${pkgs.my-scripts}/bin/pass-show-password famille/lime2_borg";
+  borg-pass-command = "pass-show-password famille/lime2_borg";
   main-repository = "ssh://yrw00380@yrw00380.repo.borgbase.com/./repo";
 in
 {
@@ -61,7 +61,7 @@ in
   };
 
   services.borgmatic = {
-    enable = true;
+    enable = false;
     # Every other hour:
     frequency = "00/2:00";
   };

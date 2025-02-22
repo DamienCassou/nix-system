@@ -304,18 +304,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1740033048,
-        "narHash": "sha256-B5cqM0U1ltYrv0DJU5kDHXa7cMQLKuZfPe7eWIa57Us=",
-        "owner": "DamienCassou",
-        "repo": "home-manager",
-        "rev": "63d151a292ea09fe3661d009d4ffc08b6143de75",
-        "type": "github"
+        "lastModified": 1740234577,
+        "narHash": "sha256-JYnO56zj0tZPlC+XUrdMNtJ1uVNvE3Cmpu9lyM2x5m0=",
+        "ref": "system",
+        "rev": "80f2e2e6d5a41955031d8403bdcc61924b353810",
+        "revCount": 4175,
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
       },
       "original": {
-        "owner": "DamienCassou",
         "ref": "system",
-        "repo": "home-manager",
-        "type": "github"
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
       }
     },
     "nix-index-database": {

@@ -6,13 +6,13 @@
       nodePackages.dockerfile-language-server-nodejs
     ];
 
-    file = {
-      ".docker/config.json".text = lib.strings.toJSON {
-        credsStore = "pass";
-        auths = {
-          "ghcr.io" = { };
-        };
-      };
-    };
+    # file = {
+    #   ".docker/config.json".text = lib.strings.toJSON {
+    #     credsStore = "pass";
+    #     auths = {
+    #       "ghcr.io" = { };
+    #     };
+    #   };
+    # };
   };
 }
