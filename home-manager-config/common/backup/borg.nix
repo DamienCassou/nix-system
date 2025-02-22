@@ -61,9 +61,8 @@ in
   };
 
   services.borgmatic = {
-    enable = false;
-    # Every other hour:
-    frequency = "00/2:00";
+    enable = true;
+    frequency = "hourly";
   };
 
   home.sessionVariables = {
