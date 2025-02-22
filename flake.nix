@@ -102,7 +102,7 @@
                     nix-index-database.hmModules.nix-index
                     stylix.homeManagerModules.stylix
                     ./home-manager-config/common
-                    ./home-manager-config/darwin.nix
+                    ./home-manager-config/darwin
                   ];
                 };
               }
