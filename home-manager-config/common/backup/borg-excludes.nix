@@ -54,6 +54,8 @@ ${home}/personal/android/pixel7a/synced/backups
 ${home}/Downloads
 ${config.accounts.email.maildirBasePath}/.notmuch/xapian
 ${config.accounts.email.maildirBasePath}/offlineimap-metadata
+${home}/Library/Application Support
+${home}/Library/Caches
 ${home}/Nextcloud
 ${home}/go
 ${home}/misc
