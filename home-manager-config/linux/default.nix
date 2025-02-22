@@ -5,7 +5,6 @@ let
 in
 {
   imports = [
-    ./borg.nix
     ./desktop-entries.nix
   ];
 
