@@ -52,4 +52,25 @@
     mpd.musicDirectory = "${config.home.homeDirectory}/personal/music/damien";
     syncthing.enable = true;
   };
+
+  targets.darwin = {
+    defaults = {
+      NSGlobalDomain = {
+        AppleShowAllExtensions = true;
+      };
+      "com.apple.controlcenter".BatteryShowPercentage = true;
+      "com.apple.desktopservices" = {
+        DSDontWriteNetworkStores = true;
+        DSDontWriteUSBStores = true;
+      };
+      "com.apple.dock" = {
+        autohide = true;
+      };
+      "com.apple.finder" = {
+        AppleShowAllFiles = true;
+        ShowPathBar = true;
+      };
+    };
+    search = "DuckDuckGo";
+  };
 }
