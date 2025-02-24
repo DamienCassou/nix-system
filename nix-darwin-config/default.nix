@@ -26,6 +26,7 @@
       "eloston-chromium"
       "ferdium"
       "jetbrains-toolbox"
+      "libreoffice"
       "rectangle"
       "slack"
     ];
