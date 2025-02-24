@@ -11,6 +11,7 @@ in
   home = {
     packages = with pkgs; [
       (nixGLWrap calibre)
+      (nixGLWrap element-desktop)
       (nixGLWrap ferdium) # for discord and mattermost
       (nixGLWrap parabolic) # download videos
       (nixGLWrap slack)
@@ -22,6 +23,8 @@ in
       dmidecode
       eog
       evince
+      gimp
+      inkscape
       libreoffice
       networkmanager # for nmcli
       nitrokey-app2
@@ -35,12 +38,12 @@ in
       rofi-bluetooth
       rofi-pulse-select
       usbutils
+      vscode
       xdg-utils
       xorg.xmodmap
       xorg.xrdb
       xorg.xset
     ];
-
   };
 
   programs = {

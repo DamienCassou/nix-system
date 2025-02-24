@@ -19,7 +19,6 @@ in
     ++ (
       with pkgs;
       [
-        (nixGLWrap element-desktop)
         bc # calculator
         coreutils-full
         curl
@@ -32,7 +31,6 @@ in
         file
         findutils
         gawk
-        gimp
         gnugrep
         gnumake
         gnused
@@ -43,7 +41,6 @@ in
         hunspellDicts.fr-classique
         hunspellDicts.fr-moderne
         imagemagick
-        inkscape
         ispell
         jq
         multimarkdown # to preview markdown files
