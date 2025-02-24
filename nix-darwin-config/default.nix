@@ -27,6 +27,7 @@
       "ferdium"
       "jetbrains-toolbox"
       "rectangle"
+      "slack"
     ];
   };
 

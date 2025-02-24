@@ -67,7 +67,6 @@ in
       ]
       ++ [
         # Unfree packages
-        (nixGLWrap slack)
         unrar
         zip
       ]
