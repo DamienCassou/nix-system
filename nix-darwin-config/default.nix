@@ -12,15 +12,6 @@
 
   homebrew = {
     enable = true;
-    brews = [
-      {
-        name = "colima";
-        start_service = true;
-      }
-      "docker"
-      "docker-buildx"
-      "docker-compose"
-    ];
     casks = [
       "alfred"
       "eloston-chromium"
