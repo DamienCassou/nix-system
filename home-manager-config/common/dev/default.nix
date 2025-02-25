@@ -33,7 +33,6 @@
     typescript # for eglot to work in JS project
     typescript-language-server
     virt-manager
-    vscode
     vscode-js-debug
     vscode-langservers-extracted
     yarn

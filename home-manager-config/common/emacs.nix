@@ -65,6 +65,7 @@ in
       epkgs.js2-refactor
       epkgs.khardel
       epkgs.know-your-http-well
+      epkgs.launchctl
       epkgs.ledger-mode
       epkgs.libbcel
       epkgs.ligature

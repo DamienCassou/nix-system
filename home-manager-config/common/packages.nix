@@ -50,7 +50,6 @@ in
         pwgen
         qpdf # to remove passwords from PDF
         rsync
-        signal-desktop
         spice
         sqlite
         umlet
