@@ -1,5 +1,7 @@
 { lib, pkgs, ... }:
 {
+  imports = [ ./homebrew.nix ];
+
   environment = {
     extraOutputsToInstall = [
       "devdoc"
@@ -8,25 +10,6 @@
     ];
 
     shells = [ pkgs.bashInteractive ];
-  };
-
-  homebrew = {
-    enable = true;
-    casks = [
-      "alfred"
-      "eloston-chromium"
-      "element"
-      "ferdium"
-      "gimp"
-      "inkscape"
-      "jetbrains-toolbox"
-      "launchcontrol"
-      "libreoffice"
-      "rectangle"
-      "signal"
-      "slack"
-      "visual-studio-code"
-    ];
   };
 
   launchd.user = {
