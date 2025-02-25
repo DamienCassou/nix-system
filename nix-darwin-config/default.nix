@@ -54,6 +54,14 @@
       };
   };
 
+  networking = {
+    extraHosts = ''
+      127.0.0.1	monitor2.localhost
+      127.0.0.1	database.ftgp
+      127.0.0.1	rabbitmq
+    '';
+  };
+
   nix.settings = {
     experimental-features = "nix-command flakes";
     trusted-users = [ "cassou" ];
@@ -73,7 +81,9 @@
   };
 
   security = {
-    pam.enableSudoTouchIdAuth = true;
+    pam.services.sudo_local = {
+      touchIdAuth = true;
+    };
   };
 
   system = {
