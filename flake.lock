@@ -325,11 +325,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1740489611,
-        "narHash": "sha256-/H21F/LDhNlyouEFRLIh8o5xueLjo83CFCAybr8W1rg=",
+        "lastModified": 1740555498,
+        "narHash": "sha256-vj+XfwbVqUqn8nrssJv7eSwMs92gb8OR67CiB8NnMnc=",
         "ref": "system",
-        "rev": "ea1538a4e501fd2cab659c5886eccbbd07eb6b84",
-        "revCount": 4224,
+        "rev": "388d0b3aa8fe99df5016bfa636f7fb3ca692f224",
+        "revCount": 4227,
         "type": "git",
         "url": "file:///Users/cassou/personal/projects/nix/home-manager"
       },
