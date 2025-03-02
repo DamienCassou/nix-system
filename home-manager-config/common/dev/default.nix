@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -32,7 +27,6 @@
     shellcheck
     typescript # for eglot to work in JS project
     typescript-language-server
-    virt-manager
     vscode-js-debug
     vscode-langservers-extracted
     yarn

@@ -38,6 +38,7 @@ in
       rofi-bluetooth
       rofi-pulse-select
       usbutils
+      virt-manager
       vscode
       xdg-utils
       xorg.xmodmap
