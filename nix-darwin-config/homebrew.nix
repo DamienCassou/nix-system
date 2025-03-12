@@ -14,6 +14,7 @@
       "jetbrains-toolbox"
       "launchcontrol"
       "libreoffice"
+      "microsoft-azure-storage-explorer"
       "rectangle"
       "signal"
       "slack"
