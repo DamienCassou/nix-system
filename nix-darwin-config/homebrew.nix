@@ -4,6 +4,7 @@
     enable = true;
     casks = [
       "alfred"
+      "alt-tab"
       # https://github.com/CtrlSpice/homebrew-otel-desktop-viewer/issues/2
       # "DamienCassou/otel-desktop-viewer/otel-desktop-viewer"
       "eloston-chromium"
