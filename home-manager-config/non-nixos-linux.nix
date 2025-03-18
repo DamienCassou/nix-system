@@ -6,9 +6,10 @@
   targets.genericLinux.enable = true;
 
   home = {
-    sessionVariablesExtra = ''
-      export INFOPATH="/usr/share/info:${config.home.profileDirectory}/share/info:''${INFOPATH}"
-    '';
+    sessionSearchVariables.INFOPATH = [
+      "/usr/share/info"
+      "${config.home.profileDirectory}/share/info"
+    ];
   };
 
   nix.package = pkgs.nix;
