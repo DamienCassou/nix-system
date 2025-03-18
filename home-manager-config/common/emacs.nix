@@ -78,6 +78,7 @@ in
       epkgs.mpdel-embark
       epkgs.multiple-cursors
       epkgs.nameless
+      epkgs.nginx-mode
       epkgs.nix-mode
       epkgs.nix-ts-mode
       epkgs.no-littering
