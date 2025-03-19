@@ -52,6 +52,16 @@ in
       };
       branch = {
         autosetuprebase = "always";
+        sort = "-committerdate";
+      };
+      column = {
+        ui = "auto";
+      };
+      diff = {
+        algorithm = "histogram";
+        colorMoved = "plain";
+        mnemonicPrefix = true;
+        renames = true;
       };
       log = {
         follow = true;
@@ -61,12 +71,24 @@ in
       };
       fetch = {
         prune = true;
+        pruneTags = true;
+        all = true;
+      };
+      help = {
+        autocorrect = "prompt";
       };
       pull = {
         rebase = true;
       };
+      push = {
+        autoSetupRemote = true;
+        followTags = true;
+      };
       sendemail = {
         confirm = "auto";
+      };
+      tag = {
+        sort = "version:refname";
       };
       "diff \"elisp\"" = {
         xfuncname = "^(\\(.*)$";
