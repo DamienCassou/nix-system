@@ -97,11 +97,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742311820,
-        "narHash": "sha256-35Rkoka7A/UT5gJwQm/7+ojj2BFKZzybJEL9QAL72y8=",
+        "lastModified": 1742317536,
+        "narHash": "sha256-z4BKMFoBT9RR7UVnOxmxtqlgKv193Suu6gLEEGImVP8=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "91c89f41cb7c5a8804a7970cdfdaf9c401db6164",
+        "rev": "ad79b25bb65446895c811ccf348b961583649a16",
         "type": "github"
       },
       "original": {
@@ -119,11 +119,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1742307335,
-        "narHash": "sha256-p9WcPGTOzJ7zFZKBxyE1TgJGfJ1Una9UO6oMhzvtBJY=",
+        "lastModified": 1742327995,
+        "narHash": "sha256-cvqCqT7op8uRCIPUYK8CPJbRRmKytFtOzHqomMyO7u8=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "c77680350f9f04040448ec36e0589ba2ac69d717",
+        "rev": "d91a2ea080804c3a9213d6e460e8cff68cfacf8d",
         "type": "gitlab"
       },
       "original": {
@@ -325,11 +325,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742036387,
-        "narHash": "sha256-sb2/BV307XMIWs36kdP2e6nrkP0aa33kCtbVGj5tLtg=",
+        "lastModified": 1742327550,
+        "narHash": "sha256-YjJlRVHk9jMXexP8dPBIoVM1ka7gJxTNv030afqOLZ0=",
         "ref": "system",
-        "rev": "63a0c7a2e6045462d758bfdf3b86ff2cc2654c00",
-        "revCount": 4317,
+        "rev": "56587e20d87e2f78fc9512d9747f899571854333",
+        "revCount": 4327,
         "type": "git",
         "url": "file:///Users/cassou/personal/projects/nix/home-manager"
       },
