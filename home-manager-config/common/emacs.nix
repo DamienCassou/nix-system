@@ -106,6 +106,7 @@ in
       epkgs.treesit-grammars.with-all-grammars
       epkgs.typescript-mode
       epkgs.unify-opening
+      epkgs.verb
       epkgs.vertico
       epkgs.vterm
       epkgs.vundo
