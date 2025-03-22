@@ -1,4 +1,9 @@
-{ lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   notmuch-emacs =
@@ -123,6 +128,7 @@ in
 
   programs.emacs.extraConfig = ''
     (setq magit-perl-executable "${lib.getExe pkgs.perl}")
+    (setq libmpdel-music-directory "${config.xdg.userDirs.music}")
   '';
 
   home.packages = with pkgs; [
