@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ config, ... }:
 
 let
   mkDiskSpaceModule = path: position: {
@@ -15,7 +15,7 @@ let
   diskSpaceModules = mkDiskSpaceModule "/" 5;
 in
 {
-  config = lib.mkIf config.my.window-management.enable {
+  config = {
     programs.i3status = {
       enable = true;
       enableDefault = false;

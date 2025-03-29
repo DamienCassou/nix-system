@@ -139,8 +139,6 @@
 
                 services.syncthing.enable = true;
 
-                #   my.window-management.enable = true;
-
                 nixGL = {
                   packages = nixGL.packages;
                   installScripts = [ "mesa" ];

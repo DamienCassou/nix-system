@@ -20,7 +20,7 @@ let
   };
 in
 {
-  config = lib.mkIf config.my.window-management.enable {
+  config = {
     xsession.windowManager.i3 = {
       enable = true;
       config = generatedI3Config // {

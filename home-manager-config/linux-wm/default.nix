@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ ... }:
 {
 
   imports = [
@@ -7,11 +7,7 @@
     # ./sway.nix
   ];
 
-  options.my.window-management = with lib; {
-    enable = mkEnableOption "Window management";
-  };
-
-  config = lib.mkIf config.my.window-management.enable {
+  config = {
     services = {
       dunst = {
         enable = true;
