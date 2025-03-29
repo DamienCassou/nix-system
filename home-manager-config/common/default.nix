@@ -26,7 +26,7 @@ in
     ./pim
     ./report-changes.nix
     ./ssh.nix
-    ./stylix
+    # ./stylix
     ./syncthing.nix
     ./web
   ];

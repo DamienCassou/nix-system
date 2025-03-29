@@ -25,5 +25,5 @@ in
     };
   };
 
-  stylix.targets.firefox.profileNames = [ profileName ];
+  # stylix.targets.firefox.profileNames = [ profileName ];
 }

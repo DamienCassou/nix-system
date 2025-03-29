@@ -125,7 +125,7 @@
 
             modules = [
               nix-index-database.hmModules.nix-index
-              stylix.homeManagerModules.stylix
+              # stylix.homeManagerModules.stylix
               ./home-manager-config/common
               ./home-manager-config/forbidden-at-work.nix
               ./home-manager-config/non-nixos-linux.nix
