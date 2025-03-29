@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   aspel = pkgs.aspellWithDicts (
@@ -8,7 +8,6 @@ let
     ]
   );
   iosevka-aile = pkgs.iosevka-bin.override { variant = "Aile"; };
-  nixGLWrap = config.lib.nixGL.wrap;
 in
 {
   home.packages =
