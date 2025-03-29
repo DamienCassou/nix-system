@@ -7,6 +7,7 @@
   services = {
     mpd = {
       enable = true;
+      musicDirectory = config.xdg.userDirs.music;
       playlistDirectory = config.xdg.userDirs.music + "../playlists";
     };
   };
