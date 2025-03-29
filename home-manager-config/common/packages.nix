@@ -53,6 +53,7 @@ in
         sqlite
         umlet
         unar # universal unpacker
+        util-linux
         unzip
         wget
         wmname
