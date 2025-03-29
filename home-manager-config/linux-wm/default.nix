@@ -46,6 +46,20 @@
         enable = true;
       };
       caffeine.enable = true;
+
+      poweralertd.enable = true;
+      safeeyes.enable = false;
+
+      snixembed = {
+        enable = true;
+
+        beforeUnits = [
+          # https://github.com/slgobinath/SafeEyes/wiki/How-to-install-backend-for-Safe-Eyes-tray-icon
+          "safeeyes.service"
+        ];
+      };
+
+      systembus-notify.enable = true;
     };
   };
 }

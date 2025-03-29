@@ -93,9 +93,6 @@ in
       pinentryPackage = pkgs.pinentry-gnome3;
     };
 
-    poweralertd.enable = true;
-    safeeyes.enable = true;
-
     signaturepdf = {
       enable = true;
       port = 9292;
@@ -105,17 +102,6 @@ in
         max_file_uploads = "200";
       };
     };
-
-    snixembed = {
-      enable = true;
-
-      beforeUnits = [
-        # https://github.com/slgobinath/SafeEyes/wiki/How-to-install-backend-for-Safe-Eyes-tray-icon
-        "safeeyes.service"
-      ];
-    };
-
-    systembus-notify.enable = true;
   };
 
   xdg = {
