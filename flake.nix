@@ -130,14 +130,16 @@
               ./home-manager-config/forbidden-at-work.nix
               ./home-manager-config/non-nixos-linux.nix
               ./home-manager-config/linux
-              ./home-manager-config/linux-wm
+              # ./home-manager-config/linux-wm
               {
                 home = {
                   homeDirectory = "/home/cassou";
                   username = "cassou";
                 };
 
-                my.window-management.enable = true;
+                services.syncthing.enable = true;
+
+                #   my.window-management.enable = true;
 
                 nixGL = {
                   packages = nixGL.packages;

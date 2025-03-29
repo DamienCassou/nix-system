@@ -12,6 +12,7 @@ ${home}/.cabal/store
 ${home}/.cache
 ${home}/.cargo
 ${home}/.ccache
+${home}/.colima
 ${home}/.com.lunii.luniistore.loader.MainApp
 ${home}/.config/Cypress
 ${home}/.config/Element
