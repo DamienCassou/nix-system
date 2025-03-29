@@ -4,7 +4,6 @@
   imports = [
     ./i3status.nix
     ./i3wm.nix
-    # ./sway.nix
   ];
 
   config = {

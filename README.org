@@ -19,11 +19,10 @@
 - Install home-manager: https://github.com/nix-community/home-manager/blob/master/README.md
   - ~nix run home-manager/master --extra-experimental-features "nix-command flakes" switch --flake ~/personal/nix-system -b distrib~
 - For i3 desktop
-  - dnf install lightdm lightdm-gtk i3lock swaylock NetworkManager-strongswan
+  - dnf install lightdm lightdm-gtk i3lock NetworkManager-strongswan
   - systemctl disable gdm
   - systemctl enable lightdm
   - cp ./i3.desktop /usr/share/xsessions/default.desktop
-  - cp ./sway.desktop to /usr/share/wayland-sessions
   - reboot
   - in lightdm, choose the "Default Xsession" session from the menu in the top bar
   - install i3lock # https://github.com/i3/i3lock/issues/286
