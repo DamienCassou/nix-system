@@ -3,17 +3,23 @@
 - configure keyboard
   - on fedora
     - ~localectl set-x11-keymap us pc105 colemak ctrl:nocaps~
+    - ~sudo usermod --append --groups dialout,wheel cassou~
   - on debian
     #+begin_src sh
       sudo dpkg-reconfigure keyboard-configuration
       sudo update-initramfs -u -k all
-      sudo reboot
+      sudo usermod --append --groups dialout,adm,systemd-journal,sudo cassou
+      sudo apt install curl rsync pcscd pcsc-tools scdaemon
+      sudo systemctl enable pcscd
+      sudo systemctl start pcscd
     #+end_src
+- Activate gnupg card by fetching its public key
+  - ~gpg --edit-card~
+  - ~fetch~ (to)
 - Install nitrokey udev rules
   https://docs.nitrokey.com/software/nitropy/linux/udev
 - Deactivate SELINUX on fedora
 - ~hostnamectl set-hostname luz5~
-- ~sudo usermod --append --groups dialout,wheel cassou~
 - Install nix in multi-user mode: https://nixos.org/manual/nix/stable/#sect-multi-user-installation
 - Install binary cache of nix-community: https://app.cachix.org/cache/nix-community
 - Install home-manager: https://github.com/nix-community/home-manager/blob/master/README.md
