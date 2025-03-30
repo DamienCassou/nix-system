@@ -27,6 +27,7 @@ in
       epkgs.auto-compile
       epkgs.avy
       epkgs.beginend
+      epkgs.buttercup
       epkgs.cape
       epkgs.casual
       epkgs.compat
