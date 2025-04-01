@@ -33,7 +33,7 @@
   - in lightdm, choose the "Default Xsession" session from the menu in the top bar
   - install i3lock # https://github.com/i3/i3lock/issues/286
 - install mono # https://www.mono-project.com/download/preview/
-  - ~dnf install mono-devel mono-complete xsp4 referenceassemblies-pcl msbuild~
+  - ~dnf install mono-devel mono-complete mono-xsp4 referenceassemblies-pcl msbuild~
 - install docker
   - debian: https://docs.docker.com/engine/install/debian/#install-using-the-repository
   - fedora: https://docs.docker.com/engine/install/fedora/#install-using-the-repository
