@@ -129,7 +129,8 @@ in
 
   programs.emacs.extraConfig = ''
     (setq magit-perl-executable "${lib.getExe pkgs.perl}")
-    (setq libmpdel-music-directory "${config.xdg.userDirs.music}")
+    (setq libmpdel-music-directory "${config.services.mpd.musicDirectory}")
+    (setq copilot-server-executable "${lib.getExe pkgs.copilot-language-server}")
   '';
 
   home.packages = with pkgs; [
