@@ -19,7 +19,7 @@
     };
 
     home-manager = {
-      url = "git+file:///home/cassou/personal/projects/nix/home-manager?ref=system";
+      url = "git+file:///Users/cassou/personal/projects/nix/home-manager?ref=system";
       # url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -35,7 +35,7 @@
     };
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "git+file:///home/cassou/personal/projects/nix/nixpkgs?ref=system";
+    # nixpkgs.url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
 
     nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
 
@@ -133,7 +133,7 @@
               # ./home-manager-config/linux-wm
               {
                 home = {
-                  homeDirectory = "/home/cassou";
+                  homeDirectory = "/Users/cassou";
                   username = "cassou";
                 };
 
