@@ -15,8 +15,6 @@
 
     packages = with pkgs; [
       maccy
-      wireguard-go
-      wireguard-tools
     ];
     sessionPath = [ "/opt/homebrew/bin" ];
   };
