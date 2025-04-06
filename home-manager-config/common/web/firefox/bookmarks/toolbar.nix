@@ -1,33 +1,25 @@
-_: {
+_:
+let
+  repos = [
+    "Api.Lib"
+    "AuditApi"
+    "ComputationApi"
+    "frontend"
+    "ImportApi"
+    "IntegrationApi"
+    "LedgerApi"
+    "monitor"
+    "PublicApi"
+    "ReferentialApi"
+    "ReportApi"
+    "UsageApi"
+  ];
+in
+{
   bookmarks = [
     {
       name = "Project";
-      url = "https://3.basecamp.com/4201305/projects/41405997";
-    }
-    {
-      name = "dev-doc";
-      url = "https://github.com/foretagsplatsen/dev-documentation/";
-    }
-    {
-      name = "Basecamp";
-      bookmarks = [
-        {
-          name = "🤘 Cycle";
-          url = "https://3.basecamp.com/4201305/buckets/11533543/messages/6833162108";
-        }
-        {
-          name = "Client todos";
-          url = "https://3.basecamp.com/4201305/buckets/15549487/todosets/2378332609";
-        }
-        {
-          name = "Client-side tools";
-          url = "https://3.basecamp.com/4201305/projects/32129139";
-        }
-        {
-          name = "finsit schedule";
-          url = "https://3.basecamp.com/4201305/buckets/11533543/schedules/1692242166";
-        }
-      ];
+      url = "https://jira.wolterskluwer.io/jira/browse/FIN-84";
     }
     {
       name = "mergeable";
@@ -42,29 +34,28 @@ _: {
       url = "https://github.com/pulls?q=is%3Aopen+is%3Apr+review-requested%3ADamienCassou+archived%3Afalse";
     }
     {
-      name = "Github";
+      name = "Confluence / Jira";
       bookmarks = [
         {
-          name = "frontend";
-          url = "https://github.com/foretagsplatsen/frontend/pulls";
+          name = "finsit";
+          url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/645662150/TAAE+Finsit";
         }
         {
-          name = "monitor";
-          url = "https://github.com/foretagsplatsen/monitor/pulls";
+          name = "Bugs";
+          url = "https://jira.wolterskluwer.io/jira/browse/FIN-80";
         }
         {
-          name = "dev-doc";
-          url = "https://github.com/foretagsplatsen/dev-documentation/pulls";
-        }
-        {
-          name = "ReferentialApi";
-          url = "https://github.com/foretagsplatsen/ReferentialApi/pulls";
-        }
-        {
-          name = "ComputationApi";
-          url = "https://github.com/foretagsplatsen/ComputationApi/pulls";
+          name = "My tasks";
+          url = "https://jira.wolterskluwer.io/jira/browse/FIN-150?jql=project%20%3D%20FIN%20AND%20issuetype%20in%20subTaskIssueTypes()%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Waiting%2C%20%22Pull%20Request%22)%20AND%20assignee%20in%20(currentUser())%20order%20by%20lastViewed%20DESC";
         }
       ];
+    }
+    {
+      name = "Github";
+      bookmarks = map (repo: {
+        name = repo;
+        url = "https://github.com/foretagsplatsen/${repo}/pulls";
+      }) repos;
     }
   ];
 }
