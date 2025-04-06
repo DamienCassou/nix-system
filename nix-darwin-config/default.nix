@@ -62,7 +62,11 @@
   };
 
   system = {
-    defaults.dock.autohide = true;
+    defaults = {
+      NSGlobalDomain.AppleShowAllExtensions = true;
+      NSGlobalDomain.AppleShowAllFiles = true;
+      dock.autohide = true;
+    };
     stateVersion = 6;
   };
 
