@@ -45,6 +45,10 @@ in
           url = "https://jira.wolterskluwer.io/jira/browse/FIN-80";
         }
         {
+          name = "LHF";
+          url = "https://jira.wolterskluwer.io/jira/browse/FIN-67";
+        }
+        {
           name = "My tasks";
           url = "https://jira.wolterskluwer.io/jira/browse/FIN-150?jql=project%20%3D%20FIN%20AND%20issuetype%20in%20subTaskIssueTypes()%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Waiting%2C%20%22Pull%20Request%22)%20AND%20assignee%20in%20(currentUser())%20order%20by%20lastViewed%20DESC";
         }
