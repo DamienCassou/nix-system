@@ -6,8 +6,6 @@ let
   make-token = pkgs.callPackage ./make-token { };
 in
 {
-  nixpkgs.overlays = [ (_: _: { inherit co2-sensor lint-system; }) ];
-
   home.packages = [
     co2-sensor
     lint-system
