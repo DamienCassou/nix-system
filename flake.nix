@@ -64,17 +64,19 @@
       ...
     }:
     let
-      makeOverlays = system: [
-        emacs-overlay.overlay
-        nixpkgs-firefox-darwin.overlay
-        (_: _: { firefox-addons = firefox-addons.packages.${system}; })
-        (_: _: {
-          stable = import nixpkgs-stable {
-            inherit system;
-            config.allowUnfree = true;
-          };
-        })
-      ];
+      makeOverlays =
+        system:
+        (import ./overlays.nix {
+          inherit
+            system
+            emacs-overlay
+            firefox-addons
+            nixpkgs-firefox-darwin
+            nixpkgs-stable
+            ;
+          pkgs = import nixpkgs { inherit system; };
+          lib = nixpkgs.lib;
+        });
     in
     {
       darwinConfigurations =
