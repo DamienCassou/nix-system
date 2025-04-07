@@ -20,7 +20,6 @@ in
     ./gpg.nix
     ./music.nix
     ./my-packages
-    ./my-scripts.nix
     ./nix.nix
     ./packages.nix
     ./pim
@@ -138,6 +137,10 @@ in
       variant = "colemak";
       options = [ "ctrl:nocaps" ];
     };
+
+    packages = [
+      (import ./my-scripts.nix { inherit lib pkgs; })
+    ];
 
     sessionPath = [
       "${home}/.local/bin"
