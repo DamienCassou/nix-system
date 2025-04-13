@@ -45,3 +45,4 @@
 ** Configure on darwin
 - install nix following the instructions of nix-darwin:
   https://daiderd.com/nix-darwin/
+- turn on night shift in the settings
