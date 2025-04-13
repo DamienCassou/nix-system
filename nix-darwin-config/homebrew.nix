@@ -5,6 +5,7 @@
     casks = [
       "alfred"
       "alt-tab"
+      "calibre"
       # https://github.com/CtrlSpice/homebrew-otel-desktop-viewer/issues/2
       # "DamienCassou/otel-desktop-viewer/otel-desktop-viewer"
       "eloston-chromium"
@@ -13,6 +14,7 @@
       "gimp"
       "inkscape"
       "jetbrains-toolbox"
+      "jordanbaird-ice"
       "launchcontrol"
       "libreoffice"
       "microsoft-azure-storage-explorer"
