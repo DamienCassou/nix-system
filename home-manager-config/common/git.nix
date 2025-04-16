@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }:
 let
@@ -24,16 +23,6 @@ in
       key = config.programs.gpg.settings.encrypt-to;
       signByDefault = true;
     };
-    includes = [
-      {
-        condition = "hasconfig:remote.*.url:git@github.com:foretagsplatsen/**";
-        path = pkgs.writeText "finsitGitConfig" (
-          lib.generators.toGitINI {
-            user.email = "damien.cassou@wolterskluwer.com";
-          }
-        );
-      }
-    ];
     maintenance = {
       enable = true;
       # Large repositories that Git should cleanup regularly:

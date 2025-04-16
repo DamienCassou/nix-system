@@ -26,6 +26,7 @@ in
     ./report-changes.nix
     ./ssh.nix
     # ./stylix
+    ../../secrets/home-manager.nix
     ./syncthing.nix
     ./web
   ];
