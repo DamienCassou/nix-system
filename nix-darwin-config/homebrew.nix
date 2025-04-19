@@ -3,7 +3,6 @@
   homebrew = {
     enable = true;
     casks = [
-      "alfred"
       "alt-tab"
       "calibre"
       "eloston-chromium"
@@ -20,8 +19,10 @@
       "signal"
       "slack"
       "visual-studio-code"
+      "wox"
     ];
     taps = [
+      "wox-launcher/wox"
     ];
   };
 }
