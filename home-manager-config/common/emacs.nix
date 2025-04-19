@@ -16,10 +16,6 @@ in
 {
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs-unstable.override {
-      # Workaround for https://github.com/NixOS/nixpkgs/issues/395169
-      withNativeCompilation = false;
-    };
     extraPackages = epkgs: [
       epkgs.ace-window
       epkgs.aggressive-indent
