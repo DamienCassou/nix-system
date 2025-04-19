@@ -3,7 +3,6 @@
   homebrew = {
     enable = true;
     casks = [
-      "alt-tab"
       "calibre"
       "eloston-chromium"
       "element"
