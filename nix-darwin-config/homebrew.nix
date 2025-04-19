@@ -24,5 +24,9 @@
     taps = [
       "wox-launcher/wox"
     ];
+    onActivation = {
+      cleanup = "uninstall";
+      extraFlags = [ "--verbose" ];
+    };
   };
 }
