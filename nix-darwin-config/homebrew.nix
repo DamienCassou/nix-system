@@ -2,6 +2,9 @@
 {
   homebrew = {
     enable = true;
+    brews = [
+      "node" # for Wox
+    ];
     casks = [
       "calibre"
       "eloston-chromium"
