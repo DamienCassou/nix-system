@@ -24,6 +24,7 @@
     otel-desktop-viewer
     patch
     patchutils
+    pnpm
     shellcheck
     typescript # for eglot to work in JS project
     typescript-language-server
