@@ -366,18 +366,18 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1744932701,
-        "narHash": "sha256-fusHbZCyv126cyArUwwKrLdCkgVAIaa/fQJYFlCEqiU=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b024ced1aac25639f8ca8fdfc2f8c4fbd66c48ef",
-        "type": "github"
+        "lastModified": 1745179629,
+        "narHash": "sha256-5NLkeSo9Ub71N15oUmHcbXBbQS2Cs+hloJPZrpQKK4Y=",
+        "ref": "system",
+        "rev": "c7bed90424b03277e0f1a5db63ae357dee9644bf",
+        "revCount": 785699,
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/nixpkgs"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "ref": "system",
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/nixpkgs"
       }
     },
     "nixpkgs-firefox-darwin": {
