@@ -5,14 +5,6 @@
   ...
 }:
 
-let
-  notmuch-emacs =
-    (pkgs.notmuch.overrideAttrs (old: {
-      patches = (old.patches or [ ]) ++ [
-        ./patches/0001-emacs-notmuch-show-Avoid-recentering-window-when-bui.patch
-      ];
-    })).emacs;
-in
 {
   programs.emacs = {
     enable = true;
@@ -120,7 +112,7 @@ in
       epkgs.xref-js2
       epkgs.yasnippet
       epkgs.ytdl
-      notmuch-emacs
+      pkgs.notmuch.emacs
     ];
   };
 
