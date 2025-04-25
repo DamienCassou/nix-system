@@ -16,7 +16,6 @@
     packages = with pkgs; [
       maccy
     ];
-    sessionPath = [ "/opt/homebrew/bin" ];
   };
 
   launchd = {
