@@ -22,6 +22,7 @@
       epkgs.compat
       epkgs.conner
       epkgs.consult
+      epkgs.copilot
       epkgs.copilot-chat
       epkgs.dape
       epkgs.denote
@@ -119,7 +120,6 @@
   programs.emacs.extraConfig = ''
     (setq magit-perl-executable "${lib.getExe pkgs.perl}")
     (setq libmpdel-music-directory "${config.services.mpd.musicDirectory}")
-    (setq copilot-server-executable "${lib.getExe pkgs.copilot-language-server}")
   '';
 
   home.packages = with pkgs; [
