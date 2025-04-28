@@ -5,7 +5,6 @@
     nil # LSP server for Nix
     niv
     nixfmt-rfc-style
-    nixpkgs-fmt # nix formatter for nixpkgs code base
     nodePackages.node2nix
   ];
 
