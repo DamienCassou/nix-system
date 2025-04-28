@@ -48,8 +48,6 @@
     };
   };
 
-  programs.firefox.package = pkgs.firefox-bin;
-
   services = {
     syncthing.enable = true;
   };
