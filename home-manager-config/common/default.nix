@@ -87,7 +87,7 @@ in
             "git_repos"
             "bun"
           ];
-          remote_topgrades = [ "librem14" ];
+          remote_topgrades = [ "framework" ];
         };
         commands = {
           "Emacs submodules" = "git -C ~/.emacs.d fetch --recurse-submodules -j 4";
