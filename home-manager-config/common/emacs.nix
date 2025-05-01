@@ -49,7 +49,7 @@
       epkgs.flymake-eslint
       epkgs.flymake-hledger
       epkgs.fontaine
-      epkgs.forge
+      epkgs.melpaStablePackages.forge
       epkgs.git-timemachine
       epkgs.graphviz-dot-mode
       epkgs.htmlize
