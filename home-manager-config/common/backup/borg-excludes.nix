@@ -48,6 +48,7 @@ ${home}/.local/share/recently-used.xbel
 ${home}/.mozilla
 ${home}/.npm
 ${home}/.nuget
+${home}/.Trash
 ${home}/.var/app
 ${home}/.xsession-errors
 ${home}/*/Monitor.Web.Ui/logs
