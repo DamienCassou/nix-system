@@ -25,7 +25,9 @@
         enable = true;
         config =
           let
-            vars = config.home.sessionVariables;
+            vars = config.home.sessionVariables // {
+              SSH_AUTH_SOCK = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
+            };
             # List of variable names and values looking like (VAR1 VAL1
             # VAR2 VAL2 …):
             variableAndValues = (
