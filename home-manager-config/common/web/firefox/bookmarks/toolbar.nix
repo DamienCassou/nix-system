@@ -19,7 +19,7 @@ in
   bookmarks = [
     {
       name = "Project";
-      url = "https://jira.wolterskluwer.io/jira/browse/FIN-302";
+      url = "https://jira.wolterskluwer.io/jira/browse/FIN-57";
     }
     {
       name = "mergeable";
