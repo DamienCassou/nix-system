@@ -23,6 +23,7 @@ in
               (pkgs.writeText "borg-exclude.txt" (pkgs.callPackage ./borg-excludes.nix { inherit config; }))
             ];
             check_i_know_what_i_am_doing = true;
+            verbosity = 1;
           };
         };
         storage = {
