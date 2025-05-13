@@ -13,6 +13,7 @@
     bash-language-server
     devenv
     eslint_d
+    inetutils
     git-crypt
     jwt-cli
     lint-staged
