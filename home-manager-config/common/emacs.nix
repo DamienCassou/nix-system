@@ -22,7 +22,6 @@
       epkgs.compat
       epkgs.conner
       epkgs.consult
-      epkgs.copilot
       epkgs.copilot-chat
       epkgs.dape
       epkgs.denote
