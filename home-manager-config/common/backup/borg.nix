@@ -1,5 +1,6 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }:
@@ -70,4 +71,23 @@ in
     BORG_PASSCOMMAND = borg-pass-command;
     BORG_REPO = main-repository;
   };
+
+  launchd.agents.borgmatic.config.StartCalendarInterval = lib.mkForce [
+    {
+      Minute = 0;
+      Hour = 8;
+    }
+    {
+      Minute = 0;
+      Hour = 12;
+    }
+    {
+      Minute = 0;
+      Hour = 16;
+    }
+    {
+      Minute = 0;
+      Hour = 20;
+    }
+  ];
 }
