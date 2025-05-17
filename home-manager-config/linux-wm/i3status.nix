@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 
 let
   mkDiskSpaceModule = path: position: {
@@ -23,9 +23,6 @@ in
       general = {
         colors = true;
         interval = 5;
-        color_good = config.lib.stylix.colors.withHashtag.base05;
-        color_degraded = config.lib.stylix.colors.withHashtag.base08;
-        color_bad = config.lib.stylix.colors.withHashtag.base0D;
       };
 
       modules = {

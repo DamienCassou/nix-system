@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   profileName = "home-manager";
@@ -24,6 +24,4 @@ in
       };
     };
   };
-
-  # stylix.targets.firefox.profileNames = [ profileName ];
 }

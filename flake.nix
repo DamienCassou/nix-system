@@ -3,7 +3,7 @@
 
   inputs = {
     darwin = {
-      url = "github:lnl7/nix-darwin";
+      url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -40,12 +40,6 @@
     nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
 
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
-
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
   };
 
   outputs =
@@ -60,7 +54,6 @@
       nixpkgs,
       nixpkgs-firefox-darwin,
       nixpkgs-stable,
-      stylix,
       ...
     }:
     let
@@ -102,7 +95,6 @@
                 home-manager.users."cassou" = {
                   imports = [
                     nix-index-database.hmModules.nix-index
-                    stylix.homeManagerModules.stylix
                     ./home-manager-config/common
                     ./home-manager-config/darwin
                   ];
@@ -127,7 +119,6 @@
 
             modules = [
               nix-index-database.hmModules.nix-index
-              # stylix.homeManagerModules.stylix
               ./home-manager-config/common
               ./home-manager-config/forbidden-at-work.nix
               ./home-manager-config/non-nixos-linux.nix

@@ -25,13 +25,10 @@ in
       enable = true;
       config = generatedI3Config // {
         bars = [
-          (
-            config.lib.stylix.sway.bar
-            // {
-              statusCommand = "${pkgs.i3status}/bin/i3status";
-              inherit (config.xsession.windowManager.i3.config) fonts;
-            }
-          )
+          {
+            statusCommand = "${pkgs.i3status}/bin/i3status";
+            inherit (config.xsession.windowManager.i3.config) fonts;
+          }
         ];
       };
     };
