@@ -67,6 +67,7 @@
       NSGlobalDomain.AppleShowAllFiles = true;
       dock.autohide = true;
     };
+    primaryUser = "cassou";
     stateVersion = 6;
   };
 
