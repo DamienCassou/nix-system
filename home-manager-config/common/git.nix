@@ -33,6 +33,12 @@ in
       ];
     };
     extraConfig = {
+      core = {
+        # Improves performance, see GIT-STATUS(1)
+        untrackedCache = true;
+        # Improves performance, see GIT-STATUS(1)
+        fsmonitor = true;
+      };
       github = {
         user = "DamienCassou";
       };
