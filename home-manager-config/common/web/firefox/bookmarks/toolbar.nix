@@ -37,7 +37,7 @@ in
       name = "Confluence / Jira";
       bookmarks = [
         {
-          name = "finsit";
+          name = "finsit's confluence";
           url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/645662150/TAAE+Finsit";
         }
         {
