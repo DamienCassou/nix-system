@@ -30,11 +30,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747671942,
-        "narHash": "sha256-zgzWTq6CU2gM90UxJodJ7FGd6/asYDZWWAUIXRCcQzM=",
+        "lastModified": 1747715157,
+        "narHash": "sha256-8I9ZZBiYL+nAzPB7wb9lz5GgS8D8c0Pf0+VhJcME23I=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "61324f118f2ba0a2e3244c1bffbc7954670d2af3",
+        "rev": "3cc961f94c5db4e2cdfb498f2d6f02e3511b4991",
         "type": "github"
       },
       "original": {
@@ -51,11 +51,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1747627410,
-        "narHash": "sha256-iRJOiy0ELTcpv+nV790s5vCEpXbzJ4wkJyBCoksGSEE=",
+        "lastModified": 1747729513,
+        "narHash": "sha256-VZbReaqQ7V9iaiX7FboESQ6dqp7qa3aHJX0Li+UUBIc=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "9663730d3789f4e6aaf77226c951f63d25d064e9",
+        "rev": "efc877d7497ac06bd8c63778129b3740615d88be",
         "type": "gitlab"
       },
       "original": {
@@ -87,11 +87,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747439237,
-        "narHash": "sha256-5rCGrnkglKKj4cav1U3HC+SIUNJh08pqOK4spQv9RjA=",
+        "lastModified": 1747726508,
+        "narHash": "sha256-1hON/obEO+UpvwjWxIM3a1nLsNHuKUBlAq6P5B8xyMA=",
         "ref": "system",
-        "rev": "ae755329092c87369b9e9a1510a8cf1ce2b1c708",
-        "revCount": 4760,
+        "rev": "e23a4c6ed750090cd15ac821cd308b67e801ccde",
+        "revCount": 4769,
         "type": "git",
         "url": "file:///Users/cassou/personal/projects/nix/home-manager"
       },
@@ -163,11 +163,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1747616918,
-        "narHash": "sha256-9NfugpmYUtlLQsnntHV5+MbtPeiMZqSg4y1+knBhTTc=",
+        "lastModified": 1747703195,
+        "narHash": "sha256-5ah4oBCCbHRnXmlv6ITFq1q+LmTK2NbEvfqTFPYW5GA=",
         "owner": "bandithedoge",
         "repo": "nixpkgs-firefox-darwin",
-        "rev": "419e2e2f3dcd214e6bbb768c35cff3ea0fcba52b",
+        "rev": "e00ea8268ffa482ad3b31b9fd9c2f5b4b2560264",
         "type": "github"
       },
       "original": {
