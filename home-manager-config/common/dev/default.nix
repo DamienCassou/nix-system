@@ -16,6 +16,7 @@
     inetutils
     git-crypt
     jwt-cli
+    keep-sorted
     lint-staged
     nodePackages.prettier
     nodePackages.typescript
@@ -27,6 +28,7 @@
     patchutils
     pnpm
     shellcheck
+    treefmt
     typescript # for eglot to work in JS project
     typescript-language-server
     vscode-js-debug
