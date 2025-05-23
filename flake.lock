@@ -87,18 +87,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1747726508,
-        "narHash": "sha256-1hON/obEO+UpvwjWxIM3a1nLsNHuKUBlAq6P5B8xyMA=",
-        "ref": "system",
-        "rev": "e23a4c6ed750090cd15ac821cd308b67e801ccde",
-        "revCount": 4769,
-        "type": "git",
-        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
+        "lastModified": 1747834438,
+        "narHash": "sha256-AHJt79W8wADzur2htCx1U8FtEk4XjvrHb9/3iDfNedI=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "6c2eb1e24cd0e76d88bdd633ef4c50d6286586e0",
+        "type": "github"
       },
       "original": {
-        "ref": "system",
-        "type": "git",
-        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "nix-index-database": {
