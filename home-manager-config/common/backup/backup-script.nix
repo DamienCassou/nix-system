@@ -26,7 +26,7 @@ let
      --exclude "/personal/android/pixel7a/synced" \
      --exclude "/tmp" \
      ${homeManagerRsyncExclude} \
-     --delete-excluded --delete --archive --progress  \
+     --delete-excluded --delete --archive --progress --stats \
      ~/ \
      "$1"
   '';
