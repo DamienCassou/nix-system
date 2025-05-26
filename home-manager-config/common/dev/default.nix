@@ -11,6 +11,7 @@
 
   home.packages = with pkgs; [
     bash-language-server
+    couchdb-dump
     devenv
     eslint_d
     inetutils
