@@ -53,6 +53,8 @@
       enable = true;
       enableSSHSupport = true;
     };
+    info.enable = true;
+    man.enable = true;
   };
 
   security = {
