@@ -52,7 +52,6 @@
       epkgs.git-timemachine
       epkgs.graphviz-dot-mode
       epkgs.htmlize
-      epkgs.hungry-delete
       epkgs.imenu-list
       epkgs.jinx
       epkgs.js2-mode
