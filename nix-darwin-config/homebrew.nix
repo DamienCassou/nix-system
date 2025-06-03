@@ -17,6 +17,7 @@
       "launchcontrol"
       "libreoffice"
       "microsoft-azure-storage-explorer"
+      "mongodb-compass"
       "rectangle"
       "signal"
       "slack"
