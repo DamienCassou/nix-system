@@ -33,6 +33,10 @@ in
       ];
     };
     extraConfig = {
+      absorb = {
+        oneFixupPerCommit = true;
+        forceAuthor = true;
+      };
       core = {
         # Improves performance, see GIT-STATUS(1)
         untrackedCache = true;
