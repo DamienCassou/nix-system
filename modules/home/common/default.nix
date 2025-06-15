@@ -25,7 +25,7 @@ in
     ./pim
     ./report-changes.nix
     ./ssh.nix
-    ../../secrets/home-manager.nix
+    ../../../secrets/home-manager.nix
     ./syncthing.nix
     ./web
   ];

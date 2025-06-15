@@ -1,5 +1,9 @@
-{ config, pkgs, ... }:
+{ config, flake, pkgs, ... }:
 {
+  imports = [
+    flake.inputs.nix-index-database.hmModules.nix-index
+  ];
+
   home.packages = with pkgs; [
     cachix
     nil # LSP server for Nix

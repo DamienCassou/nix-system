@@ -11,11 +11,5 @@ in
     self.homeModules.darwin
   ];
 
-  me = {
-    username = "cassou";
-    fullname = "Damien Cassou";
-    email = "damien@cassou.me";
-  };
-
   home.stateVersion = "24.11";
 }

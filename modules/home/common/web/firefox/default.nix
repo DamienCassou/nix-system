@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ flake, pkgs, ... }:
 
 let
   profileName = "home-manager";
@@ -18,7 +18,7 @@ in
         inherit ((pkgs.callPackage ./bookmarks { })) bookmarks;
         inherit ((pkgs.callPackage ./containers.nix { })) containers;
         containersForce = true;
-        inherit ((pkgs.callPackage ./extensions.nix { })) extensions;
+        inherit ((pkgs.callPackage ./extensions.nix { inherit flake; })) extensions;
         inherit ((pkgs.callPackage ./search.nix { })) search;
         inherit ((pkgs.callPackage ./settings.nix { })) settings;
       };

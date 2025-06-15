@@ -1,1 +1,1 @@
-../../secrets/ssh.nix
+../../../secrets/ssh.nix
