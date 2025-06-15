@@ -1,3 +1,5 @@
+# This is nix-darwin's configuration.
+# For home configuration, see /modules/home/*
 { lib, pkgs, ... }:
 {
   imports = [ ./homebrew.nix ];

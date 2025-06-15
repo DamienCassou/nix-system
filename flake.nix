@@ -2,7 +2,7 @@
   description = "Home Manager configuration";
 
   inputs = {
-    darwin = {
+    nix-darwin = {
       url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -17,6 +17,8 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
 
     home-manager = {
       # url = "git+file:///Users/cassou/personal/projects/nix/home-manager?ref=system";
@@ -34,6 +36,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixos-unified.url = "github:srid/nixos-unified";
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs.url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
 
@@ -43,107 +47,9 @@
   };
 
   outputs =
-    {
-      self,
-      darwin,
-      emacs-overlay,
-      firefox-addons,
-      home-manager,
-      nix-index-database,
-      nixGL,
-      nixpkgs,
-      nixpkgs-firefox-darwin,
-      nixpkgs-stable,
-      ...
-    }:
-    let
-      makeOverlays =
-        system:
-        (import ./overlays.nix {
-          inherit
-            system
-            emacs-overlay
-            firefox-addons
-            nixpkgs-firefox-darwin
-            nixpkgs-stable
-            ;
-          pkgs = import nixpkgs { inherit system; };
-          lib = nixpkgs.lib;
-        });
-    in
-    {
-      darwinConfigurations =
-        let
-          system = "aarch64-darwin";
-          overlays = makeOverlays system;
-          pkgs = import nixpkgs {
-            inherit system overlays;
-            config.allowUnfree = true;
-          };
-        in
-        {
-          macbook = darwin.lib.darwinSystem {
-            inherit pkgs;
-
-            modules = [
-              ./nix-darwin-config
-              home-manager.darwinModules.home-manager
-              {
-                system.configurationRevision = self.rev or self.dirtyRev or null;
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users."cassou" = {
-                  imports = [
-                    nix-index-database.hmModules.nix-index
-                    ./home-manager-config/common
-                    ./home-manager-config/darwin
-                  ];
-                };
-              }
-            ];
-          };
-        };
-
-      homeConfigurations =
-        let
-          system = "x86_64-linux";
-          overlays = makeOverlays system;
-          pkgs = import nixpkgs {
-            inherit system overlays;
-            config.allowUnfree = true;
-          };
-        in
-        {
-          "cassou" = home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
-
-            modules = [
-              nix-index-database.hmModules.nix-index
-              ./home-manager-config/common
-              ./home-manager-config/forbidden-at-work.nix
-              ./home-manager-config/non-nixos-linux.nix
-              ./home-manager-config/linux
-              # ./home-manager-config/linux-wm
-              {
-                home = {
-                  homeDirectory = "/Users/cassou";
-                  username = "cassou";
-                };
-
-                services.syncthing.enable = true;
-
-                nixGL = {
-                  packages = nixGL.packages;
-                  installScripts = [ "mesa" ];
-                };
-              }
-            ];
-          };
-        };
+    inputs:
+    inputs.nixos-unified.lib.mkFlake {
+      inherit inputs;
+      root = ./.;
     };
 }
-
-# Local Variables:
-# eval: (my/eglot-format-on-save-mode)
-# eval: (my/eglot-ensure)
-# End:
