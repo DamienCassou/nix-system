@@ -52,7 +52,7 @@
     };
 
     powerline-go = {
-      enable = true;
+      enable = false;
       extraUpdatePS1 = ''
         # Let vterm detect the end of the prompt:
         PS1=$PS1'\[$(vterm_prompt_end)\]'

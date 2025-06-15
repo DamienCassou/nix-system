@@ -1,8 +1,13 @@
 # This is nix-darwin's configuration.
 # For home configuration, see /modules/home/*
-{ lib, pkgs, ... }:
+{ flake, lib, pkgs, ... }:
+
+let
+  inherit (flake) inputs;
+  inherit (inputs) self;
+in
 {
-  imports = [ ./homebrew.nix ];
+  imports = [ ./homebrew.nix ./users.nix ];
 
   environment = {
     extraOutputsToInstall = [
@@ -44,7 +49,13 @@
     trusted-users = [ "cassou" ];
   };
 
-  nixpkgs.hostPlatform = "aarch64-darwin";
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      overlays = lib.attrValues self.overlays;
+    };
+    hostPlatform = "aarch64-darwin";
+  };
 
   programs = {
     bash = {

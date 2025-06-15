@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ flake, pkgs,system, ... }:
 {
-  extensions.packages = with pkgs.firefox-addons; [
+  extensions.packages = with flake.inputs.firefox-addons.packages.${system}; [
     overview
     rsf-censorship-detector
     browserpass
