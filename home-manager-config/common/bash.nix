@@ -53,7 +53,7 @@
     };
 
     powerline-go = {
-      enable = true;
+      enable = false;
       extraUpdatePS1 = ''
         # Let vterm detect the end of the prompt:
         PS1=$PS1'\[$(vterm_prompt_end)\]'
@@ -76,6 +76,25 @@
         cwd-max-depth = 7;
       };
     };
-  };
 
+    starship = {
+      enable = true;
+      settings = {
+        add_newline = true;
+        status = {
+          disabled = false;
+        };
+        directory = {
+          truncation_length = 7;
+          truncate_to_repo = false;
+        };
+        git_commit = {
+          disabled = true;
+        };
+        git_status = {
+          disabled = true;
+        };
+      };
+    };
+  };
 }
