@@ -6,7 +6,6 @@
 }:
 
 let
-  borgmaticIcon = ./borgmatic.png;
   homeManagerFiles = lib.mapAttrsToList (_: file: file) config.home.file;
   homeManagerSymlinks = lib.filter (file: !file.recursive) homeManagerFiles;
   homeManagerRsyncExcludePatterns = map (file: ''--exclude "${file.target}"'') homeManagerSymlinks;
@@ -16,8 +15,13 @@ let
     exec rsync \
      --exclude '*.vdi' \
      --exclude '**/node_modules/' \
+     --exclude "/.Trash" \
+     --exclude "/OneDrive - Wolters Kluwer" \
+     --exclude "/java_error_in_rider.hprof" \
      --exclude "/.cache" \
+     --exclude "/.config/colima" \
      --exclude "/.config/libvirt" \
+     --exclude "/.colima" \
      --exclude "/.local/jetbrains-rider" \
      --exclude "/.local/share/containers" \
      --exclude "/.local/share/gnome-boxes" \
@@ -30,40 +34,9 @@ let
      ~/ \
      "$1"
   '';
-  makeBackupScript =
-    name: uuid: backupDir:
-    pkgs.writeShellScriptBin "backup-${name}" ''
-      set -e
-
-      function eject() {
-        sync
-        udisksctl unmount --block-device /dev/mapper/luks-${uuid}
-        udisksctl lock --block-device /dev/disk/by-uuid/${uuid}
-        udisksctl power-off --block-device /dev/disk/by-uuid/${uuid}
-      }
-
-      trap eject EXIT
-
-      # Use system's udisksctl instead of nixpkgs one because it
-      # requires a system's service running:
-      udisksctl unlock --block-device /dev/disk/by-uuid/${uuid}
-      udisksctl mount --block-device /dev/mapper/luks-${uuid}
-      ${lib.getExe backup-rsync} /media/cassou/${name}/${backupDir}/
-      backupStatusCode=$?
-
-      sync
-
-      if [[ $backupStatusCode -eq 0 ]]; then
-        ${lib.getExe pkgs.libnotify} --icon=${borgmaticIcon} "Backup succeeded" "The backup to \"${name}\" succeeded"
-      else
-        ${lib.getExe pkgs.libnotify} --urgency=critical --icon=${borgmaticIcon} "Backup failed" "The backup to \"${name}\" failed"
-      fi
-    '';
-  backup-lacie = makeBackupScript "lacie" "ec4f10e9-b690-4623-a054-ad7e13a43452" "rsync-damien";
 in
 {
   home.packages = [
     backup-rsync
-    backup-lacie
   ];
 }
