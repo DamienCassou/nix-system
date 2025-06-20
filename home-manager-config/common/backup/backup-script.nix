@@ -27,6 +27,7 @@ let
      --exclude "/.local/share/gnome-boxes" \
      --exclude "/.local/share/libvirt/images" \
      --exclude "/.local/share/Trash" \
+     --exclude "/Library/Containers/com.docker.docker/Data" \
      --exclude "/personal/android/pixel7a/synced" \
      --exclude "/tmp" \
      ${homeManagerRsyncExclude} \
