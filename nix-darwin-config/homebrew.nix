@@ -7,6 +7,7 @@
     ];
     casks = [
       "calibre"
+      "discord"
       "eloston-chromium"
       "element"
       "ferdium"
