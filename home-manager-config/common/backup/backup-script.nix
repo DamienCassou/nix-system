@@ -15,6 +15,8 @@ let
     exec rsync \
      --exclude '*.vdi' \
      --exclude '**/node_modules/' \
+     --exclude '**/bin/Debug/' \
+     --exclude '**/bin/Release/' \
      --exclude "/.Trash" \
      --exclude "/OneDrive - Wolters Kluwer" \
      --exclude "/java_error_in_rider.hprof" \
@@ -27,7 +29,10 @@ let
      --exclude "/.local/share/gnome-boxes" \
      --exclude "/.local/share/libvirt/images" \
      --exclude "/.local/share/Trash" \
+     --exclude "/Library/Caches/Homebrew" \
      --exclude "/Library/Containers/com.docker.docker/Data" \
+     --exclude "/Library/Application Support/Slack" \
+     --exclude "/Library/Application Support/discord" \
      --exclude "/personal/android/pixel7a/synced" \
      --exclude "/tmp" \
      ${homeManagerRsyncExclude} \
