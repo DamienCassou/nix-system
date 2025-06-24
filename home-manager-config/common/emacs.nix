@@ -107,7 +107,7 @@
       epkgs.vundo
       epkgs.webpaste
       epkgs.wgrep
-      epkgs.ws-butler
+      epkgs.melpaPackages.ws-butler
       epkgs.xref
       epkgs.xref-js2
       epkgs.yasnippet
