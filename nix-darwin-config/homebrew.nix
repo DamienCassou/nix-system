@@ -3,6 +3,7 @@
   homebrew = {
     enable = true;
     brews = [
+      "k6"
       "node" # for Wox
     ];
     casks = [
@@ -23,6 +24,7 @@
       "signal"
       "slack"
       "visual-studio-code"
+      "wireshark"
       "wox"
     ];
     taps = [
