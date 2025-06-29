@@ -24,7 +24,6 @@
       "signal"
       "slack"
       "visual-studio-code"
-      "wireshark"
       "wox"
     ];
     taps = [
