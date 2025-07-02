@@ -7,35 +7,41 @@
 
 let
   homeManagerFiles = lib.mapAttrsToList (_: file: file) config.home.file;
-  homeManagerSymlinks = lib.filter (file: !file.recursive) homeManagerFiles;
-  excludePatterns = map (file: ''--exclude "${file.target}"'') homeManagerSymlinks;
+  homeManagerSymlinks = lib.map (file: file.target) (
+    lib.filter (file: !file.recursive) homeManagerFiles
+  );
+  personalExcludedFilenames = [
+    "*.vdi"
+    "**/node_modules/"
+    "**/bin/Debug/"
+    "**/bin/Release/"
+    "/.Trash"
+    "/OneDrive - Wolters Kluwer"
+    "/java_error_in_rider.hprof"
+    "/.cache"
+    "/.config/colima"
+    "/.config/libvirt"
+    "/.colima"
+    "/.local/jetbrains-rider"
+    "/.local/share/containers"
+    "/.local/share/gnome-boxes"
+    "/.local/share/libvirt/images"
+    "/.local/share/Trash"
+    "/Library/Application Support/discord"
+    "/Library/Application Support/Slack"
+    "/Library/Caches/Homebrew"
+    "/Library/Containers/com.docker.docker/Data"
+    "/Library/Containers/com.microsoft.teams2/"
+    "/personal/android/pixel7a/synced"
+    "/tmp"
+  ];
+  excludePatterns = map (filename: ''--exclude "${filename}"'') (
+    homeManagerSymlinks ++ personalExcludedFilenames
+  );
   excludeString = lib.concatStringsSep " \\\n" excludePatterns;
   backup-rsync = pkgs.writeShellScriptBin "backup-rsync" ''
     cd ~
     exec rsync \
-     --exclude '*.vdi' \
-     --exclude '**/node_modules/' \
-     --exclude '**/bin/Debug/' \
-     --exclude '**/bin/Release/' \
-     --exclude "/.Trash" \
-     --exclude "/OneDrive - Wolters Kluwer" \
-     --exclude "/java_error_in_rider.hprof" \
-     --exclude "/.cache" \
-     --exclude "/.config/colima" \
-     --exclude "/.config/libvirt" \
-     --exclude "/.colima" \
-     --exclude "/.local/jetbrains-rider" \
-     --exclude "/.local/share/containers" \
-     --exclude "/.local/share/gnome-boxes" \
-     --exclude "/.local/share/libvirt/images" \
-     --exclude "/.local/share/Trash" \
-     --exclude "/Library/Application Support/discord" \
-     --exclude "/Library/Application Support/Slack" \
-     --exclude "/Library/Caches/Homebrew" \
-     --exclude "/Library/Containers/com.docker.docker/Data" \
-     --exclude "/Library/Containers/com.microsoft.teams2/" \
-     --exclude "/personal/android/pixel7a/synced" \
-     --exclude "/tmp" \
      ${excludeString} \
      --delete-excluded --delete --archive --progress --stats \
      ~/ \
