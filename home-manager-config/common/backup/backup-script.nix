@@ -8,8 +8,8 @@
 let
   homeManagerFiles = lib.mapAttrsToList (_: file: file) config.home.file;
   homeManagerSymlinks = lib.filter (file: !file.recursive) homeManagerFiles;
-  homeManagerRsyncExcludePatterns = map (file: ''--exclude "${file.target}"'') homeManagerSymlinks;
-  homeManagerRsyncExclude = lib.concatStringsSep " \\\n" homeManagerRsyncExcludePatterns;
+  excludePatterns = map (file: ''--exclude "${file.target}"'') homeManagerSymlinks;
+  excludeString = lib.concatStringsSep " \\\n" excludePatterns;
   backup-rsync = pkgs.writeShellScriptBin "backup-rsync" ''
     cd ~
     exec rsync \
@@ -36,7 +36,7 @@ let
      --exclude "/Library/Containers/com.microsoft.teams2/" \
      --exclude "/personal/android/pixel7a/synced" \
      --exclude "/tmp" \
-     ${homeManagerRsyncExclude} \
+     ${excludeString} \
      --delete-excluded --delete --archive --progress --stats \
      ~/ \
      "$1"
