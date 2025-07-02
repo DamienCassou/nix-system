@@ -29,10 +29,11 @@ let
      --exclude "/.local/share/gnome-boxes" \
      --exclude "/.local/share/libvirt/images" \
      --exclude "/.local/share/Trash" \
+     --exclude "/Library/Application Support/discord" \
+     --exclude "/Library/Application Support/Slack" \
      --exclude "/Library/Caches/Homebrew" \
      --exclude "/Library/Containers/com.docker.docker/Data" \
-     --exclude "/Library/Application Support/Slack" \
-     --exclude "/Library/Application Support/discord" \
+     --exclude "/Library/Containers/com.microsoft.teams2/" \
      --exclude "/personal/android/pixel7a/synced" \
      --exclude "/tmp" \
      ${homeManagerRsyncExclude} \
