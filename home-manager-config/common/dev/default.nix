@@ -21,7 +21,6 @@
     lint-staged
     nodePackages.prettier
     nodePackages.typescript
-    nodePackages.vscode-json-languageserver
     nodejs_22
     omnisharp-roslyn # for C# development in Monitor
     otel-desktop-viewer
@@ -33,7 +32,6 @@
     typescript # for eglot to work in JS project
     typescript-language-server
     vscode-js-debug
-    vscode-langservers-extracted
     yarn
   ];
 
