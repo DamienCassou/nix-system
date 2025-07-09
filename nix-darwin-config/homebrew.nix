@@ -9,7 +9,6 @@
     casks = [
       "calibre"
       "discord"
-      "eloston-chromium"
       "element"
       "gimp"
       "inkscape"
@@ -23,6 +22,7 @@
       "rectangle"
       "signal"
       "slack"
+      "ungoogled-chromium"
       "visual-studio-code"
       "wox"
     ];
