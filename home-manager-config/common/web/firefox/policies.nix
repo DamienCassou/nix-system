@@ -44,7 +44,6 @@ in
       };
     };
     NetworkPrediction = false; # some more privacy
-    NoDefaultBookmarks = true;
     OfferToSaveLogins = false;
     PasswordManagerEnabled = false;
     Permissions = {
