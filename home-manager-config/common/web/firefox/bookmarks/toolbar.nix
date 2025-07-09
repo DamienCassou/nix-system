@@ -18,8 +18,12 @@ in
 {
   bookmarks = [
     {
-      name = "Project";
-      url = "https://jira.wolterskluwer.io/jira/browse/FIN-57";
+      name = "Project (jira)";
+      url = "https://jira.wolterskluwer.io/jira/browse/FIN-302";
+    }
+    {
+      name = "Project (confluence)";
+      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/845714815/Merge+EY+agencies+into+one+agency+only";
     }
     {
       name = "mergeable";
@@ -37,7 +41,7 @@ in
       name = "Confluence / Jira";
       bookmarks = [
         {
-          name = "finsit's confluence";
+          name = "finsit (confluence)";
           url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/645662150/TAAE+Finsit";
         }
         {
