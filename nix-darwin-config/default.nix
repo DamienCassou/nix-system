@@ -57,12 +57,6 @@
     man.enable = true;
   };
 
-  security = {
-    pam.services.sudo_local = {
-      touchIdAuth = true;
-    };
-  };
-
   system = {
     defaults = {
       NSGlobalDomain.AppleShowAllExtensions = true;
