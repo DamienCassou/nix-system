@@ -45,6 +45,10 @@ in
           url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/645662150/TAAE+Finsit";
         }
         {
+          name = "Tickets of the current cycle";
+          url = "https://jira.wolterskluwer.io/jira/secure/RapidBoard.jspa?rapidView=6800&view=planning&selectedIssue=FIN-908&epics=visible&issueLimit=100#";
+        }
+        {
           name = "Bugs";
           url = "https://jira.wolterskluwer.io/jira/browse/FIN-80";
         }
