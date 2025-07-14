@@ -97,7 +97,7 @@
                 home-manager.useUserPackages = true;
                 home-manager.users."cassou" = {
                   imports = [
-                    nix-index-database.hmModules.nix-index
+                    nix-index-database.homeModules.nix-index
                     ./home-manager-config/common
                     ./home-manager-config/darwin
                   ];
@@ -121,7 +121,7 @@
             inherit pkgs;
 
             modules = [
-              nix-index-database.hmModules.nix-index
+              nix-index-database.homeModules.nix-index
               ./home-manager-config/common
               ./home-manager-config/forbidden-at-work.nix
               ./home-manager-config/non-nixos-linux.nix
