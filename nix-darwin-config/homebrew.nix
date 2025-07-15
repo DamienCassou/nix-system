@@ -7,6 +7,7 @@
       "node" # for Wox
     ];
     casks = [
+      "android-platform-tools"
       "calibre"
       "discord"
       "element"
