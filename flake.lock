@@ -30,17 +30,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1753089309,
-        "narHash": "sha256-ewCHpdXkEF5kXRA04qPJUmrTBkIPblvulFbpexNlXjQ=",
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "rev": "2a54b26bae8366c15757f417d5f92c4c2a759481",
-        "type": "github"
+        "lastModified": 1753117416,
+        "narHash": "sha256-md2Z4Y0paWN6eRwAWhfBnppeVZ421kbZJz/0CExoZl4=",
+        "ref": "system",
+        "rev": "2d9f9985248e6bb0950d9bc6907fa063ee3d8e16",
+        "revCount": 16763,
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/emacs-overlay"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "type": "github"
+        "ref": "system",
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/emacs-overlay"
       }
     },
     "firefox-addons": {
@@ -146,18 +147,18 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1752900028,
-        "narHash": "sha256-dPALCtmik9Wr14MGqVXm+OQcv7vhPBXcWNIOThGnB/Q=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "6b4955211758ba47fac850c040a27f23b9b4008f",
-        "type": "github"
+        "lastModified": 1753116853,
+        "narHash": "sha256-aEqfj7NnIZirCS/EAzu5KTW0UwUFX/yLzM89jsOJV8E=",
+        "ref": "system",
+        "rev": "1431c7ad58206b894a7e386aa997dfc0c8c656c7",
+        "revCount": 832221,
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/nixpkgs"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "ref": "system",
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/nixpkgs"
       }
     },
     "nixpkgs-firefox-darwin": {
