@@ -9,7 +9,6 @@
     i-dont-care-about-cookies
     libredirect
     multi-account-containers
-    react-devtools
     ublock-origin
     wallabagger
   ];
