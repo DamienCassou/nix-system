@@ -23,6 +23,7 @@
       "rectangle"
       "signal"
       "slack"
+      "stretchly"
       "ungoogled-chromium"
       "visual-studio-code"
       "wox"
