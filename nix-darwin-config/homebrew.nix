@@ -5,6 +5,7 @@
     brews = [
       "k6"
       "node" # for Wox
+      "wireguard-tools"
     ];
     casks = [
       "android-platform-tools"
