@@ -30,11 +30,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753350446,
-        "narHash": "sha256-ABJepsQoCuatzndvdMR5xjR/xa2hDO5I2xtwMYGqLx8=",
+        "lastModified": 1753599607,
+        "narHash": "sha256-gG8dRl2DltfArQNeyll4uOLJMKZTS+IDtkxSEZOGrN8=",
         "ref": "system",
-        "rev": "b75201be9a5c71b09c2b757b46bca49cd2410cad",
-        "revCount": 16787,
+        "rev": "413bd8eeac2bbc5165ea506c8257fafbed4a9b65",
+        "revCount": 16811,
         "type": "git",
         "url": "file:///Users/cassou/personal/projects/nix/emacs-overlay"
       },
@@ -147,11 +147,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1753350423,
-        "narHash": "sha256-eFb39E35KPzYfbq5BbYGM4zTZvIWggC4BfJTNcimdNg=",
+        "lastModified": 1753599589,
+        "narHash": "sha256-8LUuGNYaO82DDS2c0CEHPQ4CffWfptWl1NYKhmN1FEM=",
         "ref": "system",
-        "rev": "58566e07fcc43ebc6e40ffd4e4e2d199173fb66d",
-        "revCount": 833753,
+        "rev": "188714f3df18b7f02fe5750ca862b86bd3a2ad39",
+        "revCount": 834673,
         "type": "git",
         "url": "file:///Users/cassou/personal/projects/nix/nixpkgs"
       },
