@@ -82,6 +82,7 @@
       epkgs.orderless
       epkgs.org
       epkgs.org-caldav
+      epkgs.outli
       epkgs.ox-linuxmag-fr
       epkgs.package-lint
       epkgs.package-lint-flymake
@@ -107,7 +108,7 @@
       epkgs.vundo
       epkgs.webpaste
       epkgs.wgrep
-      epkgs.melpaPackages.ws-butler
+      epkgs.ws-butler
       epkgs.xref
       epkgs.xref-js2
       epkgs.yasnippet
