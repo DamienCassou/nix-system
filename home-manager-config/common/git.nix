@@ -18,7 +18,11 @@ in
     enable = true;
     userEmail = emailAccount.address;
     userName = emailAccount.realName;
-    package = pkgs.gitAndTools.gitFull;
+    package = pkgs.git.override {
+      sendEmailSupport = true;
+      withSsh = true;
+      withLibsecret = !pkgs.stdenv.hostPlatform.isDarwin;
+    };
     signing = {
       key = config.programs.gpg.settings.encrypt-to;
       signByDefault = true;
