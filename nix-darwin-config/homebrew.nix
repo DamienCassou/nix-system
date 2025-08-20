@@ -4,10 +4,10 @@
     enable = true;
     brews = [
       "k6"
-      "node" # for Wox
       "wireguard-tools"
     ];
     casks = [
+      "alfred"
       "android-platform-tools"
       "calibre"
       "discord"
@@ -27,10 +27,6 @@
       "stretchly"
       "ungoogled-chromium"
       "visual-studio-code"
-      "wox"
-    ];
-    taps = [
-      "wox-launcher/wox"
     ];
     onActivation = {
       cleanup = "uninstall";
