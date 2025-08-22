@@ -13,6 +13,7 @@
       "discord"
       "element"
       "gimp"
+      "halloy"
       "inkscape"
       "jetbrains-toolbox"
       "jordanbaird-ice"
