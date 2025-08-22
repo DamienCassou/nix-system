@@ -12,10 +12,6 @@
         pinentry-program ${pkgs.lib.getExe pkgs.pinentry_mac}
       '';
     };
-
-    packages = with pkgs; [
-      maccy
-    ];
   };
 
   launchd = {
@@ -43,7 +39,8 @@
             ProgramArguments = [
               "launchctl"
               "setenv"
-            ] ++ variableAndValues;
+            ]
+            ++ variableAndValues;
             RunAtLoad = true;
           };
       };
