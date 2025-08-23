@@ -108,7 +108,13 @@
       epkgs.vundo
       epkgs.webpaste
       epkgs.wgrep
-      epkgs.ws-butler
+      (epkgs.ws-butler.overrideAttrs {
+        src = pkgs.fetchFromSavannah {
+          repo = "emacs/nongnu";
+          rev = "67c49cfdf5a5a9f28792c500c8eb0017cfe74a3a";
+          hash = "sha256-maOhnDkG3GibrbI1EuPRY+Ej4AZJgbFheu6lC72vZ4w=";
+        };
+      })
       epkgs.xref
       epkgs.xref-js2
       epkgs.yasnippet
