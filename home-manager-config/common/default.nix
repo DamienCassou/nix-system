@@ -90,8 +90,6 @@ in
         };
         commands = {
           "Emacs submodules" = "git -C ~/.emacs.d fetch --recurse-submodules -j 4";
-          "Nix-system submodules" =
-            "git -C ${lib.elemAt config.nix.nixPath 0} fetch --recurse-submodules -j 4";
           "Nix garbage collection" = "nix-collect-garbage --delete-older-than 10d";
           "Vdirsyncer" = "vdirsyncer sync";
         };
