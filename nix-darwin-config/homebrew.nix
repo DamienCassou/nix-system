@@ -13,10 +13,10 @@
       "discord"
       "element"
       "gimp"
-      "halloy"
+      "halloy" # Client IRC
       "inkscape"
       "jetbrains-toolbox"
-      "jordanbaird-ice"
+      "jordanbaird-ice" # Simplifies macOS menu bar
       "launchcontrol"
       "libreoffice"
       "mattermost"
@@ -25,7 +25,7 @@
       "rectangle"
       "signal"
       "slack"
-      "stretchly"
+      "stretchly" # Force taking regular breaks
       "ungoogled-chromium"
       "visual-studio-code"
     ];
