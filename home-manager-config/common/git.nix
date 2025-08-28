@@ -41,6 +41,9 @@ in
         oneFixupPerCommit = true;
         forceAuthor = true;
       };
+      advice = {
+        skippedCherryPicks = false;
+      };
       core = {
         # Improves performance, see GIT-STATUS(1)
         untrackedCache = true;
