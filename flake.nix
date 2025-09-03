@@ -8,8 +8,8 @@
     };
 
     emacs-overlay = {
-      url = "github:nix-community/emacs-overlay";
       # url = "git+file:///Users/cassou/personal/projects/nix/emacs-overlay?ref=system";
+      url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs-stable";
     };
@@ -35,8 +35,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    # nixpkgs.url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
+    nixpkgs = {
+      # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
+      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    };
 
     nixpkgs-firefox-darwin = {
       url = "github:bandithedoge/nixpkgs-firefox-darwin";
