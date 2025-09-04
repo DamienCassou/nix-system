@@ -32,6 +32,7 @@
     typescript # for eglot to work in JS project
     typescript-language-server
     vscode-js-debug
+    xz
     yarn
   ];
 
