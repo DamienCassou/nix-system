@@ -33,7 +33,6 @@ in
       peek # for screencasts
       psmisc # for killall
       pulseaudio
-      pynitrokey
       rofi
       rofi-bluetooth
       rofi-pulse-select
