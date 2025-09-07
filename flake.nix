@@ -131,7 +131,7 @@
               ./home-manager-config/linux
               {
                 home = {
-                  homeDirectory = "/Users/cassou";
+                  homeDirectory = "/home/cassou";
                   username = "cassou";
                 };
 
