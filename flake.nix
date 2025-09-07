@@ -120,7 +120,7 @@
           };
         in
         {
-          "cassou" = home-manager.lib.homeManagerConfiguration {
+          "cassou@luz4" = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
 
             modules = [
@@ -129,14 +129,11 @@
               ./home-manager-config/forbidden-at-work.nix
               ./home-manager-config/non-nixos-linux.nix
               ./home-manager-config/linux
-              # ./home-manager-config/linux-wm
               {
                 home = {
                   homeDirectory = "/Users/cassou";
                   username = "cassou";
                 };
-
-                services.syncthing.enable = true;
 
                 nixGL = {
                   packages = nixGL.packages;
