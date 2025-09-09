@@ -17,6 +17,7 @@
       "inkscape"
       "jetbrains-toolbox"
       "jordanbaird-ice" # Simplifies macOS menu bar
+      "krita"
       "launchcontrol"
       "libreoffice"
       "mattermost"
