@@ -108,6 +108,7 @@
       epkgs.vundo
       epkgs.webpaste
       epkgs.wgrep
+      epkgs.whole-line-or-region
       (epkgs.ws-butler.overrideAttrs {
         src = pkgs.fetchFromSavannah {
           repo = "emacs/nongnu";
