@@ -43,7 +43,7 @@ let
     cd ~
     exec rsync \
      ${excludeString} \
-     --delete-excluded --delete --archive --progress --stats --ignore-errors \
+     --delete-excluded --delete --archive --progress --stats --ignore-errors --human-readable \
      ~/ \
      "$1"
   '';
