@@ -3,6 +3,7 @@
   pkgs,
   system,
   emacs-overlay,
+  emacs-darwin,
   firefox-addons,
   nixpkgs-firefox-darwin,
   nixpkgs-stable,
@@ -13,7 +14,8 @@ let
   my-scripts = import ./home-manager-config/common/my-scripts.nix { inherit lib pkgs; };
 in
 [
-  emacs-overlay.overlay
+  emacs-overlay.overlays.package
+  emacs-darwin.overlays.emacs
   nixpkgs-firefox-darwin.overlay
   (_: _: {
     inherit my-scripts;
@@ -26,7 +28,7 @@ in
   (
     _: super:
     let
-      emacs = super.emacs-unstable.override { withNativeCompilation = false; };
+      emacs = super.emacs-30;
     in
     {
       inherit emacs;

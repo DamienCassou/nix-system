@@ -14,6 +14,12 @@
       inputs.nixpkgs-stable.follows = "nixpkgs-stable";
     };
 
+    emacs-darwin = {
+      # url = "git+file:///Users/cassou/personal/projects/nix/nix-darwin-emacs";
+      url = "github:nix-giant/nix-darwin-emacs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -53,6 +59,7 @@
       self,
       darwin,
       emacs-overlay,
+      emacs-darwin,
       firefox-addons,
       home-manager,
       nix-index-database,
@@ -69,6 +76,7 @@
           inherit
             system
             emacs-overlay
+            emacs-darwin
             firefox-addons
             nixpkgs-firefox-darwin
             nixpkgs-stable
