@@ -22,17 +22,16 @@
         };
       in
       {
-        ProgramArguments =
-          [
-            "launchctl"
-            "setenv"
-          ]
-          ++ (lib.flatten (
-            lib.mapAttrsToList (varName: varValue: [
-              varName
-              varValue
-            ]) vars
-          ));
+        ProgramArguments = [
+          "launchctl"
+          "setenv"
+        ]
+        ++ (lib.flatten (
+          lib.mapAttrsToList (varName: varValue: [
+            varName
+            varValue
+          ]) vars
+        ));
         RunAtLoad = true;
       };
   };
@@ -59,8 +58,11 @@
 
   system = {
     defaults = {
-      NSGlobalDomain.AppleShowAllExtensions = true;
-      NSGlobalDomain.AppleShowAllFiles = true;
+      NSGlobalDomain = {
+        AppleShowAllExtensions = true;
+        AppleShowAllFiles = true;
+      };
+
       dock.autohide = true;
     };
     primaryUser = "cassou";
