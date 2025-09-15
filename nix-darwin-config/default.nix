@@ -60,6 +60,15 @@
     man.enable = true;
   };
 
+  security = {
+    pam.services.sudo_local = {
+      touchIdAuth = true;
+    };
+    sudo = {
+      extraConfig = "Defaults timestamp_timeout=10";
+    };
+  };
+
   system = {
     defaults = {
       ActivityMonitor = {
