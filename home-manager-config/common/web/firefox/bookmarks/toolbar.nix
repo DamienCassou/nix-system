@@ -19,11 +19,11 @@ in
   bookmarks = [
     {
       name = "Project (jira)";
-      url = "https://jira.wolterskluwer.io/jira/browse/FIN-70";
+      url = "https://jira.wolterskluwer.io/jira/browse/FIN-302";
     }
     {
       name = "Project (confluence)";
-      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/831904174/MongoDB+migration";
+      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/845714815/Merge+EY+agencies+into+one+agency+only";
     }
     {
       name = "mergeable";

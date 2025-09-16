@@ -6,16 +6,8 @@ _: {
       tags = [ "syncthing" ];
     }
     {
-      name = "Azure DevOps";
-      url = "https://dev.azure.com/finsit#pin";
-    }
-    {
-      name = "Outlook";
-      url = "https://outlook.office.com#pin";
-    }
-    {
-      name = "Basecamp";
-      url = "https://launchpad.37signals.com/signin#pin";
+      name = "MyApps";
+      url = "https://myapps.microsoft.com";
     }
   ];
 }
