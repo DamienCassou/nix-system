@@ -15,8 +15,6 @@ let
 in
 [
   emacs-overlay.overlays.package
-  emacs-darwin.overlays.emacs
-  nixpkgs-firefox-darwin.overlay
   (_: _: {
     inherit my-scripts;
     firefox-addons = firefox-addons.packages.${system};
@@ -25,6 +23,12 @@ in
       config.allowUnfree = true;
     };
   })
+]
+++ (lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
+  nixpkgs-firefox-darwin.overlay
+  emacs-darwin.overlays.emacs
+])
+++ [
   (
     _: super:
     let
