@@ -102,7 +102,7 @@
       epkgs.treesit-grammars.with-all-grammars
       epkgs.typescript-mode
       epkgs.unify-opening
-      epkgs.uuid
+      epkgs.uuidgen
       epkgs.verb
       epkgs.vertico
       epkgs.vterm
