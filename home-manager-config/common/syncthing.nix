@@ -19,8 +19,11 @@
         urAccepted = 3;
       };
       devices = {
-        damien-laptop = {
+        damien-macbook = {
           id = "ALY3FSC-DRDYHIE-KK7EIMM-4Z3ZAQ5-722OYQC-LAKHV2F-UWCMWX7-CQ7NNQX";
+        };
+        damien-luz5 = {
+          id = "HZQCAZ3-UDIZWNV-3MQ4LUD-ADC5ZY6-JD237ON-6XA3HQL-XT27X6Y-54D7DA3";
         };
         damien-phone = {
           id = "FKEGOYD-TVGWVEI-7C76YTJ-J5QKU5Z-GJ7SLUA-LRVCO7B-JQHJS6M-SWT3IAV";
@@ -30,73 +33,6 @@
         };
         jenny-phone = {
           id = "OMTRTDA-6PW7LTK-LTLQK4E-UM4GCNW-JWHO3G6-5GZPAIX-JUW6UBO-4XH4IQ5";
-        };
-      };
-      folders = {
-        notes = {
-          id = "fwefy-w8ser";
-          path = "~/personal/notes";
-          devices = [
-            "damien-laptop"
-            "damien-phone"
-          ];
-        };
-        music = {
-          id = "po7wp-7mahf";
-          path = "~/personal/music";
-          devices = [
-            "damien-laptop"
-            "jenny-laptop"
-          ];
-        };
-        password-store = {
-          id = "ztfgz-hsa7j";
-          path = "~/.password-store";
-          devices = [
-            "damien-laptop"
-            "jenny-laptop"
-          ];
-        };
-        pixel7a-storage = {
-          id = "jjzt2-exshh";
-          path = "~/personal/android/pixel7a/synced";
-          devices = [
-            "damien-laptop"
-            "damien-phone"
-          ];
-        };
-        ledger = {
-          id = "281i1-9821e";
-          path = "~/personal/ledger";
-          devices = [
-            "damien-laptop"
-            "jenny-laptop"
-          ];
-        };
-        famille = {
-          id = "awvrs-da24x";
-          path = "~/personal/famille";
-          devices = [
-            "damien-laptop"
-            "jenny-laptop"
-          ];
-        };
-        jenny-bureau = {
-          id = "vpx44-y9zwk";
-          path = "~/personal/jenny/Bureau";
-          devices = [
-            "damien-laptop"
-            "jenny-laptop"
-          ];
-        };
-        listes = {
-          id = "h3l5h-usoqy";
-          path = "~/personal/listes";
-          devices = [
-            "damien-laptop"
-            "damien-phone"
-            "jenny-phone"
-          ];
         };
       };
     };
