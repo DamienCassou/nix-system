@@ -1,9 +1,9 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 {
   home = {
     packages = with pkgs; [
       docker-credential-helpers
-      nodePackages.dockerfile-language-server
+      dockerfile-language-server
     ];
 
     # file = {
