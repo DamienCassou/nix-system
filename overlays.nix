@@ -32,7 +32,14 @@ in
   (
     _: super:
     let
-      emacs = super.emacs-30;
+
+      emacs =
+        if pkgs.stdenv.hostPlatform.isDarwin then
+          # From emacs-darwin overlay:
+          super.emacs-30
+        else
+          # From nixpkgs:
+          super.emacs30;
     in
     {
       inherit emacs;
