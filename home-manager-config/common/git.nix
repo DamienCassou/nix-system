@@ -154,4 +154,16 @@ in
       ".stfolder"
     ];
   };
+
+  programs.gh = {
+    enable = true;
+    hosts = {
+      "github.com" = {
+        user = "DamienCassou";
+      };
+    };
+    settings = {
+      git_protocol = "ssh";
+    };
+  };
 }
