@@ -5,6 +5,7 @@
   emacs-overlay,
   emacs-darwin,
   firefox-addons,
+  nixGL,
   nixpkgs-firefox-darwin,
   nixpkgs-stable,
   ...
@@ -14,6 +15,7 @@ let
   my-scripts = import ./home-manager-config/common/my-scripts.nix { inherit lib pkgs; };
 in
 [
+  nixGL.overlay
   emacs-overlay.overlays.package
   (_: _: {
     inherit my-scripts;

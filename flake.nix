@@ -78,6 +78,7 @@
             emacs-overlay
             emacs-darwin
             firefox-addons
+            nixGL
             nixpkgs-firefox-darwin
             nixpkgs-stable
             ;
