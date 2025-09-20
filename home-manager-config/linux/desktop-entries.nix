@@ -2,12 +2,6 @@
 
 {
   config.xdg.desktopEntries = {
-    "co2Sensor" = {
-      name = "co2Sensor";
-      exec = "${lib.getExe pkgs.co2-sensor}";
-      terminal = false;
-    };
-
     rofi-bluetooth = {
       name = "Rofi bluetooth";
       exec = "${lib.getExe pkgs.rofi-bluetooth}";
