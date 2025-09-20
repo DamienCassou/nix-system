@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
     cachix
@@ -9,7 +9,6 @@
   ];
 
   nix = {
-    nixPath = [ "${config.home.homeDirectory}/personal/nix-system" ];
     channels = { };
     keepOldNixPath = false;
     settings = {
