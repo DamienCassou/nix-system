@@ -3,7 +3,7 @@
   home = {
     packages = with pkgs; [
       docker-credential-helpers
-      nodePackages.dockerfile-language-server-nodejs
+      nodePackages.dockerfile-language-server
     ];
 
     # file = {
