@@ -48,10 +48,6 @@
     };
   };
 
-  services = {
-    syncthing.enable = true;
-  };
-
   targets.darwin = {
     defaults = {
       NSGlobalDomain = {

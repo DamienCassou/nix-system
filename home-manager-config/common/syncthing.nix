@@ -1,11 +1,6 @@
-{ lib, config, ... }:
-let
-  secretsPath = "${lib.elemAt config.nix.nixPath 0}/secrets/syncthing";
-in
+{ ... }:
 {
   services.syncthing = {
-    key = "${secretsPath}/key.pem";
-    cert = "${secretsPath}/cert.pem";
     settings = {
       remoteIgnoredDevices = [
         {
