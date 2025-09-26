@@ -32,6 +32,7 @@ let
     "/Library/Application Support/Slack"
     "/Library/Application Support/Steam"
     "/Library/Caches/"
+    "/Library/CloudStorage/"
     "/Library/Containers/com.docker.docker/Data"
     "/Library/Containers/com.microsoft.teams2/"
     "/personal/android/pixel7a/synced"
