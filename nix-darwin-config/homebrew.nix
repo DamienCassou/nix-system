@@ -11,7 +11,6 @@
       "android-platform-tools"
       "bluesnooze" # deactivate bluetooth while the computer sleeps
       "calibre"
-      "discord"
       "element"
       "gimp"
       "halloy" # Client IRC
