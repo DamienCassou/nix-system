@@ -15,7 +15,6 @@ in
       (nixGLWrap ferdium) # for discord and mattermost
       (nixGLWrap parabolic) # download videos
       (nixGLWrap slack)
-      (nixGLWrap teams-for-linux)
       (nixGLWrap vlc)
       arandr
       blueman
@@ -109,7 +108,6 @@ in
       enable = true;
       defaultApplications = {
         "x-scheme-handler/mailto" = "emacsclient-mail.desktop";
-        "x-scheme-handler/msteams" = "teams-for-linux.desktop";
         "x-scheme-handler/magnet" = "transmission-gtk.desktop";
         "x-scheme-handler/http" = "firefox.desktop";
         "x-scheme-handler/https" = "firefox.desktop";

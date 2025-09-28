@@ -34,7 +34,6 @@ in
       { class = "^Signal$"; }
       { class = "^Slack$"; }
       { class = "^Mattermost$"; }
-      { class = "^teams-for-linux$"; }
       { class = "^discord$"; }
       { class = "^Ferdium$"; }
     ];

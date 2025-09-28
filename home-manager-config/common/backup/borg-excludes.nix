@@ -25,7 +25,6 @@ ${home}/.config/google-chrome
 ${home}/.config/karma-runner
 ${home}/.config/libvirt
 ${home}/.config/pulse
-${home}/.config/teams-for-linux
 ${home}/.config/skypeforlinux
 ${home}/.config/syncthing/*.db
 ${home}/.config/teams
