@@ -104,8 +104,6 @@ in
     gtk3 = {
       bookmarks = [
         "file://${home}/personal"
-        "file://${home}/work"
-        "file://${home}/work/setup/monitor/monitor/Monitor.Test/Helpers/Files/Sie"
         "file://${home}/Downloads"
         "file://${home}/Pictures"
         "file:///tmp"
