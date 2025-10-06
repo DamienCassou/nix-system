@@ -45,6 +45,7 @@ in
       ncdu
       p7zip
       pandoc
+      poppler-utils # PDF manipulation tools (e.g., pdfseparate and pdfunite)
       pwgen
       qpdf # to remove passwords from PDF
       rsync
