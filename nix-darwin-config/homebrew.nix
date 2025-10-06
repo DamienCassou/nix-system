@@ -26,7 +26,11 @@
       "rectangle"
       "signal"
       "slack"
-      "stretchly" # Force taking regular breaks
+      {
+        # Force taking regular breaks
+        name = "stretchly";
+        args = "no-quarantine"; # app isn't signed
+      }
       "ungoogled-chromium"
       "visual-studio-code"
     ];
