@@ -40,9 +40,11 @@
       };
   };
 
-  nix.settings = {
-    experimental-features = "nix-command flakes";
-    trusted-users = [ "cassou" ];
+  nix = {
+    settings = {
+      experimental-features = "nix-command flakes";
+      trusted-users = [ "cassou" ];
+    };
   };
 
   nixpkgs.hostPlatform = "aarch64-darwin";
