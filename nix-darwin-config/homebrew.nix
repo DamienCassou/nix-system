@@ -29,7 +29,9 @@
       {
         # Force taking regular breaks
         name = "stretchly";
-        args = "no-quarantine"; # app isn't signed
+        args = {
+          "no_quarantine" = true;
+        };
       }
       "ungoogled-chromium"
       "visual-studio-code"
