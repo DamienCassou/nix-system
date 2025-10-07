@@ -4,6 +4,7 @@
   inputs = {
     darwin = {
       url = "github:nix-darwin/nix-darwin";
+      # url = "git+file:///Users/cassou/personal/projects/nix/nix-darwin?ref=master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
