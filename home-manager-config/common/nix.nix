@@ -10,6 +10,10 @@
 
   nix = {
     channels = { };
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 7d";
+    };
     keepOldNixPath = false;
     settings = {
       experimental-features = [
