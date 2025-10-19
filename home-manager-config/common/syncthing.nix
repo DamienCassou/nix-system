@@ -34,6 +34,9 @@
         jenny-phone = {
           id = "OMTRTDA-6PW7LTK-LTLQK4E-UM4GCNW-JWHO3G6-5GZPAIX-JUW6UBO-4XH4IQ5";
         };
+        raspberrypi = {
+          id = "5DN4N3V-76PNQHO-MPVKVIR-7PEDJWW-FGG6RZD-3R633U2-BW3MVJ4-IOH4QAT";
+        };
       };
     };
     extraOptions = [ ];
