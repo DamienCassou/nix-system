@@ -86,57 +86,46 @@
           pkgs = import nixpkgs { inherit system; };
           lib = nixpkgs.lib;
         });
+      makePkgs =
+        system:
+        import nixpkgs {
+          inherit system;
+          overlays = makeOverlays system;
+          config.allowUnfree = true;
+        };
     in
     {
-      darwinConfigurations =
-        let
-          system = "aarch64-darwin";
-          overlays = makeOverlays system;
-          pkgs = import nixpkgs {
-            inherit system overlays;
-            config.allowUnfree = true;
-          };
-        in
-        {
-          macbook = darwin.lib.darwinSystem {
-            inherit pkgs;
+      darwinConfigurations = {
+        macbook = darwin.lib.darwinSystem {
+          pkgs = makePkgs "aarch64-darwin";
 
-            modules = [
-              ./nix-darwin-config
-              home-manager.darwinModules.home-manager
-              {
-                system.configurationRevision = self.rev or self.dirtyRev or null;
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users."cassou" = {
-                  imports = [
-                    nix-index-database.homeModules.nix-index
-                    ./machines/macbook
-                  ];
-                };
-              }
-            ];
-          };
+          modules = [
+            ./nix-darwin-config
+            home-manager.darwinModules.home-manager
+            {
+              system.configurationRevision = self.rev or self.dirtyRev or null;
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users."cassou" = {
+                imports = [
+                  nix-index-database.homeModules.nix-index
+                  ./machines/macbook
+                ];
+              };
+            }
+          ];
         };
+      };
 
-      homeConfigurations =
-        let
-          system = "x86_64-linux";
-          overlays = makeOverlays system;
-          pkgs = import nixpkgs {
-            inherit system overlays;
-            config.allowUnfree = true;
-          };
-        in
-        {
-          "cassou@luz5" = home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
+      homeConfigurations = {
+        "cassou@luz5" = home-manager.lib.homeManagerConfiguration {
+          pkgs = makePkgs "x86_64-linux";
 
-            modules = [
-              nix-index-database.homeModules.nix-index
-              ./machines/luz5
-            ];
-          };
+          modules = [
+            nix-index-database.homeModules.nix-index
+            ./machines/luz5
+          ];
         };
+      };
     };
 }
