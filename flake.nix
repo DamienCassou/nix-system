@@ -126,6 +126,13 @@
             ./machines/luz5
           ];
         };
+        "cassou@raspberrypi" = home-manager.lib.homeManagerConfiguration {
+          pkgs = makePkgs "aarch64-linux";
+          modules = [
+            nix-index-database.homeModules.nix-index
+            ./machines/raspberrypi
+          ];
+        };
       };
     };
 }
