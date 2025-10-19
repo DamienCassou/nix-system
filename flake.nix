@@ -118,6 +118,14 @@
       };
 
       homeConfigurations = {
+        "cassou@framework" = home-manager.lib.homeManagerConfiguration {
+          pkgs = makePkgs "x86_64-linux";
+
+          modules = [
+            nix-index-database.homeModules.nix-index
+            ./machines/framework
+          ];
+        };
         "cassou@luz5" = home-manager.lib.homeManagerConfiguration {
           pkgs = makePkgs "x86_64-linux";
 
