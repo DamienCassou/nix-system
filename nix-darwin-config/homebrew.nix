@@ -12,6 +12,7 @@
       "bluesnooze" # deactivate bluetooth while the computer sleeps
       "calibre"
       "element"
+      "ghostty"
       "gimp"
       "halloy" # Client IRC
       "hp-easy-start" # configure HP printers
