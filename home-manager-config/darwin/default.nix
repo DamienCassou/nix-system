@@ -11,7 +11,6 @@
         enable-ssh-support
         pinentry-program ${pkgs.lib.getExe pkgs.pinentry_mac}
       '';
-      "Library/KeyBindings/DefaultKeyBinding.dict".source = ./DefaultKeyBinding.dict;
     };
   };
 
