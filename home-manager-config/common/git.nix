@@ -16,8 +16,6 @@ in
 
   programs.git = {
     enable = true;
-    userEmail = emailAccount.address;
-    userName = emailAccount.realName;
     package = pkgs.git.override {
       sendEmailSupport = true;
       withSsh = true;
@@ -96,6 +94,8 @@ in
       tag = {
         sort = "version:refname";
       };
+      userEmail = emailAccount.address;
+      userName = emailAccount.realName;
       "diff \"elisp\"" = {
         xfuncname = "^(\\(.*)$";
       };
