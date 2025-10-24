@@ -34,7 +34,7 @@ in
         "${home}/work/setup/monitor"
       ];
     };
-    extraConfig = {
+    settings = {
       absorb = {
         oneFixupPerCommit = true;
         forceAuthor = true;
@@ -94,8 +94,10 @@ in
       tag = {
         sort = "version:refname";
       };
-      userEmail = emailAccount.address;
-      userName = emailAccount.realName;
+      user = {
+        email = emailAccount.address;
+        name = emailAccount.realName;
+      };
       "diff \"elisp\"" = {
         xfuncname = "^(\\(.*)$";
       };
