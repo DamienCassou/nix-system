@@ -41,7 +41,6 @@
       epkgs.embark-consult
       epkgs.embrace
       epkgs.epkg
-      epkgs.epkg-marginalia
       epkgs.eslint-disable-rule
       epkgs.expand-region
       epkgs.flymake
