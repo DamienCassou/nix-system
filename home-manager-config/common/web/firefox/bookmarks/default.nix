@@ -12,6 +12,11 @@
         toolbar = true;
         inherit ((pkgs.callPackage ./toolbar.nix { })) bookmarks;
       }
-    ] ++ (pkgs.callPackage ./normal.nix { }).bookmarks;
+      {
+        name = "Nix";
+        inherit ((pkgs.callPackage ./nix.nix { })) bookmarks;
+      }
+    ]
+    ++ (pkgs.callPackage ./normal.nix { }).bookmarks;
   };
 }
