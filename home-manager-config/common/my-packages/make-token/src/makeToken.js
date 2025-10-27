@@ -16,7 +16,8 @@ function makeToken({ secret }) {
   const payload = {
     IsTemporaryUser: true,
     MonitorUserType: "BackOffice",
-    CountryId: "SV",
+    MonitorUserEmail: "damien.cassou@wolterskluwer.com",
+    MonitorName: "Damien Cassou"
   };
 
   const options = {
