@@ -24,6 +24,7 @@
       "launchcontrol"
       "libreoffice"
       "mattermost"
+      "medis" # Redis client
       "microsoft-azure-storage-explorer"
       "mongodb-compass"
       "rectangle"
