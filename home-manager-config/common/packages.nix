@@ -81,9 +81,9 @@ in
       iosevka-bin
       jetbrains-mono
       liberation_ttf
-      noto-fonts-emoji # recommended by Emacs
+      noto-fonts-color-emoji # recommended by Emacs
       roboto-mono
-      ubuntu_font_family
+      ubuntu-classic
       xorg.fontmiscmisc
     ]
   );
