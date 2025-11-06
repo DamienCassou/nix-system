@@ -23,7 +23,6 @@
       epkgs.conner
       epkgs.consult
       epkgs.copilot-chat
-      epkgs.dape
       epkgs.denote
       epkgs.diff-hl
       epkgs.dired-imenu
