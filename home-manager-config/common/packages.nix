@@ -59,7 +59,7 @@ in
       wmname
       yaml-language-server
       yarn-bash-completion
-      zbar # to scan QR codes for pass-otp
+      # zbar # to scan QR codes for pass-otp
     ]
     ++ [
       # Unfree packages
