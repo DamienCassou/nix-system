@@ -21,7 +21,7 @@
     lint-staged
     nodePackages.prettier
     nodePackages.typescript
-    nodejs_22
+    nodejs_24
     omnisharp-roslyn # for C# development in Monitor
     otel-desktop-viewer
     patch
