@@ -56,6 +56,7 @@
       epkgs.js2-refactor
       epkgs.khardel
       epkgs.know-your-http-well
+      epkgs.kotlin-ts-mode
       epkgs.launchctl
       epkgs.ledger-mode
       epkgs.libbcel
