@@ -30,7 +30,7 @@
               lib.flatten (
                 lib.mapAttrsToList (varName: varValue: [
                   varName
-                  varValue
+                  (builtins.toString varValue)
                 ]) vars
               )
             );
