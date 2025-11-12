@@ -133,6 +133,13 @@
     emacs-all-the-icons-fonts
   ];
 
+  services.emacs = {
+    enable = true;
+    defaultEditor = true;
+    socketActivation.enable = true;
+    startWithUserSession = "graphical";
+  };
+
   xresources = {
     properties = {
       "emacs*menuBar" = false;

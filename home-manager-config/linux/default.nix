@@ -78,13 +78,6 @@ in
   };
 
   services = {
-    emacs = {
-      enable = true;
-      defaultEditor = true;
-      socketActivation.enable = true;
-      startWithUserSession = "graphical";
-    };
-
     gpg-agent = {
       enable = true;
       enableSshSupport = true;
