@@ -23,7 +23,7 @@ in
     }
     {
       name = "Project (confluence)";
-      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/814725250/Report+PBC";
+      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/974202316/Reporting+PBC+Project";
     }
     {
       name = "mergeable";
