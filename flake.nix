@@ -43,8 +43,8 @@
     };
 
     nixpkgs = {
-      url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
-      # url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+      # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
+      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
 
     nixpkgs-firefox-darwin = {
