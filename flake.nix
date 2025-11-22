@@ -9,8 +9,8 @@
     };
 
     emacs-overlay = {
-      # url = "git+file:///Users/cassou/personal/projects/nix/emacs-overlay?ref=system";
-      url = "github:nix-community/emacs-overlay";
+      url = "git+file:///Users/cassou/personal/projects/nix/emacs-overlay?ref=system";
+      # url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs-stable";
     };

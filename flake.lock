@@ -51,17 +51,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1763802616,
-        "narHash": "sha256-NAM5+fVkVZVG9jKJIASrim7vWnvTBuiQE6jNGrBZ/+o=",
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "rev": "11685793fdec8620af31ededc13d4fbb9880b3cf",
-        "type": "github"
+        "lastModified": 1763833665,
+        "narHash": "sha256-CGXBx7/t6kcPli2saZQliaAyDsFS1ZxHH07Fq204kHc=",
+        "ref": "system",
+        "rev": "23071dabbf9a77893feba96bed5c0e2c86d24252",
+        "revCount": 17736,
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/emacs-overlay"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "type": "github"
+        "ref": "system",
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/emacs-overlay"
       }
     },
     "firefox-addons": {
