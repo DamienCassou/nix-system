@@ -44,7 +44,7 @@
 
     nixpkgs = {
       # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
-      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+      url = "github:NixOS/nixpkgs/nixos-25.11";
     };
 
     nixpkgs-firefox-darwin = {
