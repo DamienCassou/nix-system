@@ -75,6 +75,7 @@
       # > gpg: decryption failed: No such file or directory
       FINSIT_GITHUB = builtins.readFile ../../../secrets/FINSIT_GITHUB;
       JFROG_API_KEY = builtins.readFile ../../../secrets/JFROG_API_KEY;
+      ARTIFACTORY_TOKEN = builtins.readFile ../../../secrets/ARTIFACTORY_TOKEN;
 
       ESLINT_USE_FLAT_CONFIG = "true";
     };
