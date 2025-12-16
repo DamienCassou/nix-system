@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   home.packages = with pkgs; [
     cachix
@@ -16,6 +16,7 @@
     };
     keepOldNixPath = false;
     settings = {
+      access-tokens = "github.com=${config.home.sessionVariables.FINSIT_GITHUB}";
       experimental-features = [
         "flakes"
         "nix-command"
