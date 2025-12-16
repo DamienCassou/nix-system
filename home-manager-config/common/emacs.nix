@@ -52,6 +52,7 @@
       epkgs.htmlize
       epkgs.imenu-list
       epkgs.jinx
+      epkgs.jq-ts-mode
       epkgs.js2-mode
       epkgs.js2-refactor
       epkgs.khardel
