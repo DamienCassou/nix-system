@@ -79,6 +79,7 @@ in
             "gem"
             "git_repos"
             "bun"
+            "rubygems"
           ];
           remote_topgrades = [ "framework" ];
         };
