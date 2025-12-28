@@ -25,6 +25,7 @@
       epkgs.copilot-chat
       epkgs.denote
       epkgs.diff-hl
+      epkgs.difftastic
       epkgs.dired-imenu
       epkgs.dired-rsync
       epkgs.docker
@@ -121,6 +122,7 @@
   programs.emacs.extraConfig = ''
     (setq magit-perl-executable "${lib.getExe pkgs.perl}")
     (setq libmpdel-music-directory "${config.services.mpd.musicDirectory}")
+    (setq difftastic-executable "${lib.getExe pkgs.difftastic}")
   '';
 
   home.packages = with pkgs; [
