@@ -15,7 +15,6 @@
     devenv
     eslint_d
     inetutils
-    git-crypt
     jwt-cli
     keep-sorted
     lint-staged
