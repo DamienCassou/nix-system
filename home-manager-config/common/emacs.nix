@@ -79,6 +79,7 @@
       epkgs.nix-ts-mode
       epkgs.no-littering
       epkgs.nov
+      epkgs.ol-notmuch
       epkgs.olivetti
       epkgs.orderless
       epkgs.org
