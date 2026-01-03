@@ -22,6 +22,7 @@
 
   home.packages = with pkgs; [
     borgbackup
+    git-crypt
     hledger
     jq
     nix
@@ -40,6 +41,10 @@
       shellAliases = {
         "hm" = "home-manager";
       };
+    };
+
+    git = {
+      enable = true;
     };
 
     topgrade = {
