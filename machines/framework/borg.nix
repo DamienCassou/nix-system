@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   main-repository = "ssh://ujhegv10@ujhegv10.repo.borgbase.com/./repo";
@@ -57,7 +62,18 @@ in
     frequency = "hourly";
   };
 
-  systemd.user.services.borgmatic.Unit.OnFailure = "status_email_user@%n.service";
+  systemd.user.services.borgmatic = {
+    # Overwrite ExecStart to avoid systemd-inhibit:
+    Service.ExecStart = lib.mkForce ''
+      ${config.programs.borgmatic.package}/bin/borgmatic \
+           --stats \
+           --verbosity -1 \
+           --list \
+           --syslog-verbosity 1
+    '';
+
+    Unit.OnFailure = "status_email_user@%n.service";
+  };
 
   home.sessionVariables = {
     BORG_PASSCOMMAND = borg-pass-command;
