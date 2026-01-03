@@ -17,6 +17,9 @@
 
   targets.genericLinux.enable = true;
 
+  # Allow running latest home-manager on top of stable nixpkgs:
+  home.enableNixpkgsReleaseCheck = false;
+
   home.packages = with pkgs; [
     borgbackup
     hledger
