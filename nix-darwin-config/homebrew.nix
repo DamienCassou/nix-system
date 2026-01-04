@@ -15,6 +15,7 @@
       "ghostty"
       "gimp"
       "halloy" # Client IRC
+      "hammerspoon" # for nohzafk/emacs-anywhere
       "hp-easy-start" # configure HP printers
       "inkscape"
       "jetbrains-toolbox"
