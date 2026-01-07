@@ -137,6 +137,12 @@
     startWithUserSession = "graphical";
   };
 
+  # Deactivate the darwin agent for emacs client because it is
+  # automatically killed each time Emacs is updated which is super
+  # annoying. Also, I didn't manage to get a nice icon for Emacs
+  # client frames.
+  launchd.agents.emacs.enable = lib.mkForce false;
+
   xresources = {
     properties = {
       "emacs*menuBar" = false;
