@@ -36,5 +36,9 @@ _: {
       name = "Météo Brest";
       url = "https://meteofrance.com/previsions-meteo-france/brest/29200";
     }
+    {
+      name = "Freebox OS";
+      url = "http://192.168.1.254";
+    }
   ];
 }
