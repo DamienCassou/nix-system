@@ -20,4 +20,16 @@
   };
 
   programs.home-manager.enable = true;
+
+  services = {
+    mpd = {
+      enable = true;
+      musicDirectory = "/media/cassou/lacie/rsync-macbook/personal/music/son";
+      playlistDirectory = "/media/cassou/lacie/rsync-macbook/personal/music/playlists";
+      network = {
+        listenAddress = "any";
+      };
+    };
+  };
+
 }
