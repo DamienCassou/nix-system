@@ -126,14 +126,6 @@
             ./machines/framework
           ];
         };
-        "cassou@luz5" = home-manager.lib.homeManagerConfiguration {
-          pkgs = makePkgs "x86_64-linux";
-
-          modules = [
-            nix-index-database.homeModules.nix-index
-            ./machines/luz5/home-manager.nix
-          ];
-        };
         "cassou@raspberrypi" = home-manager.lib.homeManagerConfiguration {
           pkgs = makePkgs "aarch64-linux";
           modules = [
@@ -141,6 +133,30 @@
             ./machines/raspberrypi
           ];
         };
+      };
+
+      nixosConfigurations = {
+        "luz5" = nixpkgs.lib.nixosSystem {
+          pkgs = makePkgs "x86_64-linux";
+
+          modules = [
+            ./machines/luz5/nixos
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.cassou =
+                { ... }:
+                {
+                  imports = [
+                    nix-index-database.homeModules.nix-index
+                    ./machines/luz5/home-manager.nix
+                  ];
+                };
+            }
+          ];
+        };
+
       };
     };
 }
