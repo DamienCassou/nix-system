@@ -1,5 +1,12 @@
 * My Nix config
 ** Configure non-nixos Linux system
+- Deactivate SELINUX on fedora
+  - https://linuxcapable.com/how-to-disable-selinux-on-fedora-linux/
+- Install SSH server
+  - on fedora (requires disabling SELINUX)
+    #+begin_src sh
+      sudo systemctl enable --now sshd
+    #+end_src
 - configure keyboard
   - on fedora
     - ~localectl set-x11-keymap us pc105 colemak ctrl:nocaps~
@@ -18,12 +25,11 @@
   - ~fetch~ (to)
 - Install nitrokey udev rules
   https://docs.nitrokey.com/software/nitropy/linux/udev
-- Deactivate SELINUX on fedora
 - ~hostnamectl set-hostname luz5~
 - Install nix in multi-user mode: https://nixos.org/manual/nix/stable/#sect-multi-user-installation
 - Install binary cache of nix-community: https://app.cachix.org/cache/nix-community
 - Install home-manager: https://github.com/nix-community/home-manager/blob/master/README.md
-  - ~nix run home-manager/master --extra-experimental-features "nix-command flakes" switch --flake ~/personal/nix-system -b distrib~
+  - ~nix run home-manager/master --extra-experimental-features "nix-command flakes" -- switch --flake ~/personal/nix-system -b distrib~
 - For i3 desktop
   - dnf install lightdm lightdm-gtk i3lock NetworkManager-strongswan
   - systemctl disable gdm
