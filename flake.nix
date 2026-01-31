@@ -131,7 +131,7 @@
 
           modules = [
             nix-index-database.homeModules.nix-index
-            ./machines/luz5
+            ./machines/luz5/home-manager.nix
           ];
         };
         "cassou@raspberrypi" = home-manager.lib.homeManagerConfiguration {
