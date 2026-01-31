@@ -12,9 +12,7 @@ in
     packages = with pkgs; [
       (nixGLWrap calibre)
       (nixGLWrap element-desktop)
-      (nixGLWrap ferdium) # for discord and mattermost
       (nixGLWrap parabolic) # download videos
-      (nixGLWrap slack)
       (nixGLWrap vlc)
       arandr
       blueman
