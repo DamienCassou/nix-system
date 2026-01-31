@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   imports = [
     ../../home-manager-config/common
@@ -11,10 +11,5 @@
   home = {
     homeDirectory = "/home/cassou";
     username = "cassou";
-  };
-
-  nixGL = {
-    packages = pkgs.nixgl;
-    installScripts = [ "mesa" ];
   };
 }
