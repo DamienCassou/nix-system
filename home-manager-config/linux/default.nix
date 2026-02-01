@@ -37,19 +37,11 @@ in
       virt-manager
       vscode
       xdg-utils
-      xorg.xmodmap
-      xorg.xrdb
-      xorg.xset
     ];
   };
 
   programs = {
     bash = {
-      profileExtra = ''
-        # Deactivate the audible bell in X
-        xset -b
-      '';
-
       shellAliases = {
         "dnf-list" = "dnf repoquery --list";
         "dnf-provides" = "dnf repoquery --cacheonly --file";
