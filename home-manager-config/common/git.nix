@@ -31,7 +31,6 @@ in
       repositories = [
         "${home}/.emacs.d"
         "${home}/personal/projects/nix/nixpkgs"
-        "${home}/work/setup/monitor"
       ];
     };
     settings = {
