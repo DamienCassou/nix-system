@@ -55,6 +55,12 @@
     variant = "colemak";
   };
 
+  console = {
+    # Make sure colemak is used while entering my LUKS pass phrase
+    earlySetup = true;
+    useXkbConfig = true;
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
