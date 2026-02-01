@@ -109,10 +109,13 @@
   #   enableSSHSupport = true;
   # };
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    trusted-users = [ "@wheel" ];
+  };
 
   # List services that you want to enable:
 
