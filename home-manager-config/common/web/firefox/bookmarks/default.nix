@@ -8,11 +8,6 @@
         inherit ((pkgs.callPackage ./startup.nix { })) bookmarks;
       }
       {
-        name = "Bookmarks Toolbar";
-        toolbar = true;
-        inherit ((pkgs.callPackage ./toolbar.nix { })) bookmarks;
-      }
-      {
         name = "Nix";
         inherit ((pkgs.callPackage ./nix.nix { })) bookmarks;
       }
