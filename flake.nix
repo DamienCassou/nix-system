@@ -42,6 +42,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     nixpkgs = {
       url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
       # url = "github:NixOS/nixpkgs/nixpkgs-25.11-darwin";
@@ -65,6 +67,7 @@
       home-manager,
       nix-index-database,
       nixGL,
+      nixos-hardware,
       nixpkgs,
       nixpkgs-firefox-darwin,
       nixpkgs-stable,
@@ -141,6 +144,7 @@
 
           modules = [
             ./machines/luz5/nixos
+            nixos-hardware.nixosModules.lenovo-thinkpad-t490
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
