@@ -18,7 +18,7 @@ in
   bookmarks = [
     {
       name = "Project (jira)";
-      url = "https://jira.wolterskluwer.io/jira/browse/FIN-1707?jql=labels%20%3D%20TAA-Reporting-PBC";
+      url = "https://jira.wolterskluwer.io/jira/browse/FIN-2202?jql=labels%20%3D%20TAA-Reporting-PBC";
     }
     {
       name = "Project (confluence)";
