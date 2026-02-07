@@ -154,7 +154,7 @@
                 {
                   imports = [
                     nix-index-database.homeModules.nix-index
-                    ./machines/luz5/home-manager.nix
+                    ./machines/luz5/home-manager
                   ];
                 };
             }
