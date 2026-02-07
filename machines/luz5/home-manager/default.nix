@@ -10,7 +10,10 @@
 
   home = {
     homeDirectory = "/home/cassou";
-    packages = with pkgs; [ signal-desktop ];
+    packages = with pkgs; [
+      mattermost-desktop
+      signal-desktop
+    ];
     username = "cassou";
   };
 }
