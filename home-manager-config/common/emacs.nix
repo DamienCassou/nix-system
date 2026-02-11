@@ -158,12 +158,4 @@
   # annoying. Also, I didn't manage to get a nice icon for Emacs
   # client frames.
   launchd.agents.emacs.enable = lib.mkForce false;
-
-  xresources = {
-    properties = {
-      "emacs*menuBar" = false;
-      "emacs*toolBar" = false;
-      "emacs*verticalScrollBars" = false;
-    };
-  };
 }
