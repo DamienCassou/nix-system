@@ -11,6 +11,7 @@ let
     "monitor"
     "PublicApi"
     "ReferentialApi"
+    "setup"
     "UsageApi"
   ];
 in
