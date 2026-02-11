@@ -13,6 +13,7 @@
     packages = with pkgs; [
       mattermost-desktop
       signal-desktop
+      ungoogled-chromium
     ];
     username = "cassou";
   };
