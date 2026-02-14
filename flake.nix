@@ -160,7 +160,27 @@
             }
           ];
         };
+        "raspberrypi" = nixpkgs.lib.nixosSystem {
+          pkgs = makePkgs "aarch64-linux";
 
+          modules = [
+            ./machines/raspberrypi/nixos
+            nixos-hardware.nixosModules.raspberry-pi-4
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.cassou =
+                { ... }:
+                {
+                  imports = [
+                    nix-index-database.homeModules.nix-index
+                    ./machines/raspberrypi/home-manager
+                  ];
+                };
+            }
+          ];
+        };
       };
     };
 }
