@@ -45,8 +45,8 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     nixpkgs = {
-      url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
-      # url = "github:NixOS/nixpkgs/nixpkgs-25.11-darwin";
+      # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
+      url = "github:NixOS/nixpkgs/nixpkgs-25.11-darwin";
     };
 
     nixpkgs-firefox-darwin = {
