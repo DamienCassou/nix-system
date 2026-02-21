@@ -137,22 +137,6 @@
     startWithUserSession = "graphical";
   };
 
-  home.file = {
-    ".hammerspoon/init.lua".text = ''
-      -- Required for Emacs callback
-      require("hs.ipc")
-
-      -- Load and configure EmacsAnywhere
-      hs.loadSpoon("EmacsAnywhere")
-      spoon.EmacsAnywhere:bindHotkeys({
-          toggle = {{"ctrl"}, "f8"}  -- Ctrl+F8
-      })
-
-      spoon.EmacsAnywhere.emacsclient = "${config.programs.emacs.package}/bin/emacsclient"
-    '';
-    ".hammerspoon/Spoons/EmacsAnywhere.spoon".source = pkgs.emacs-anywhere;
-  };
-
   # Deactivate the darwin agent for emacs client because it is
   # automatically killed each time Emacs is updated which is super
   # annoying. Also, I didn't manage to get a nice icon for Emacs
