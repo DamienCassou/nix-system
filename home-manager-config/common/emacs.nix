@@ -43,6 +43,7 @@
       epkgs.epkg
       epkgs.eslint-disable-rule
       epkgs.expand-region
+      epkgs.flash
       epkgs.flymake
       epkgs.flymake-eslint
       epkgs.flymake-hledger
@@ -100,6 +101,7 @@
       epkgs.rjsx-mode
       epkgs.runner
       epkgs.spacious-padding
+      epkgs.spatial-window
       epkgs.tmr
       epkgs.treesit-grammars.with-all-grammars
       epkgs.typescript-mode
