@@ -47,7 +47,7 @@
         enable = true;
 
         extraConfig.remote = {
-          folderfilter = "lambda folder: folder in [ 'Sent', 'INBOX', 'Archive' ]";
+          folderfilter = "lambda folder: folder in [ 'Sent', 'INBOX', 'Archive' 'Junk' ]";
         };
       };
     };
