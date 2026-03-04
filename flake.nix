@@ -99,7 +99,7 @@
     in
     {
       darwinConfigurations = {
-        macbook = darwin.lib.darwinSystem {
+        ancizan = darwin.lib.darwinSystem {
           pkgs = makePkgs "aarch64-darwin";
 
           modules = [
