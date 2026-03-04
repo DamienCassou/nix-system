@@ -18,6 +18,7 @@ let
     "/.Trash"
     "/OneDrive - Wolters Kluwer"
     "/java_error_in_rider.hprof"
+    "/.nuget/packages"
     "/.cache"
     "/.config/.android/avd"
     "/.config/colima"
