@@ -14,13 +14,11 @@
       "element"
       "ghostty"
       "gimp"
-      "halloy" # Client IRC
       "hp-easy-start" # configure HP printers
       "inkscape"
       "jetbrains-toolbox"
       "jordanbaird-ice" # Simplifies macOS menu bar
       "karabiner-elements"
-      "krita"
       "launchcontrol"
       "libreoffice"
       "mattermost"
