@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../../../home-manager-config/common/syncthing.nix
@@ -14,6 +14,8 @@
       variant = "colemak";
       options = [ "ctrl:nocaps" ];
     };
+
+    packages = with pkgs; [ git ];
 
     stateVersion = "25.11";
     username = "cassou";
@@ -36,5 +38,4 @@
       passwordFile = ../../../secrets/syncthing/raspberrypi/password;
     };
   };
-
 }
