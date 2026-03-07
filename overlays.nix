@@ -38,7 +38,7 @@ in
       emacs =
         if pkgs.stdenv.hostPlatform.isDarwin then
           # From emacs-darwin overlay:
-          super.emacs-30
+          super.emacs-unstable
         else
           # From nixpkgs:
           super.emacs30;
