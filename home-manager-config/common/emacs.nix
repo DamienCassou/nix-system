@@ -42,7 +42,7 @@
       epkgs.embrace
       epkgs.epkg
       epkgs.eslint-disable-rule
-      epkgs.expand-region
+      epkgs.expreg
       epkgs.flash
       epkgs.flymake
       epkgs.flymake-eslint
