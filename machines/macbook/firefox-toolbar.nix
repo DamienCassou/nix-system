@@ -19,11 +19,11 @@ in
   bookmarks = [
     {
       name = "Project (jira)";
-      url = "https://jira.wolterskluwer.io/jira/browse/FIN-2202?jql=labels%20%3D%20TAA-Reporting-PBC";
+      url = "https://jira.wolterskluwer.io/jira/browse/FIN-1298";
     }
     {
       name = "Project (confluence)";
-      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/974202316/Reporting+PBC+Project";
+      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/939900705/Capego+hybrid+integration+MVP";
     }
     {
       name = "mergeable";
