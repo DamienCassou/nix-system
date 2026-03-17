@@ -11,6 +11,7 @@
       "android-platform-tools"
       "bluesnooze" # deactivate bluetooth while the computer sleeps
       "calibre"
+      "copilot-cli"
       "element"
       "ghostty"
       "gimp"
