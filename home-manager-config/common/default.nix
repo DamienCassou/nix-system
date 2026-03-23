@@ -110,6 +110,7 @@ in
         "file:///tmp"
       ];
     };
+    gtk4.theme = null; # only needed before home manager 26.05
   };
 
   xdg = {
