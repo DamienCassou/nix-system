@@ -15,7 +15,10 @@
       options = [ "ctrl:nocaps" ];
     };
 
-    packages = with pkgs; [ git ];
+    packages = with pkgs; [
+      git
+      ncdu
+    ];
 
     stateVersion = "25.11";
     username = "cassou";
