@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./filesystem.nix
     ./hardware-configuration.nix
     ./lacie.nix
   ];
