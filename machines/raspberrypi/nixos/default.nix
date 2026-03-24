@@ -33,11 +33,6 @@
     };
   };
 
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "colemak";
-  };
-
   console.useXkbConfig = true; # use xkb setup in tty.
 
   security.rtkit.enable = true;
@@ -76,7 +71,14 @@
     trusted-users = [ "@wheel" ];
   };
 
-  services.openssh.enable = true;
+  services = {
+    openssh.enable = true;
+
+    xserver.xkb = {
+      layout = "us";
+      variant = "colemak";
+    };
+  };
 
   system.stateVersion = "25.11";
 
