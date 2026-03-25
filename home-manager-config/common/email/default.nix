@@ -67,6 +67,9 @@
         ${./archive-emails.sh}
         ${lib.getExe pkgs.offlineimap}
       '';
+
+      # By default, emails with tags "spam" or "deleted" are invisible. I want all emails to be visible instead
+      search.excludeTags = [ ];
     };
   };
 
