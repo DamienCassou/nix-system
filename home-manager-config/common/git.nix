@@ -161,6 +161,8 @@ in
     hosts = {
       "github.com" = {
         user = "DamienCassou";
+        users = [ { "DamienCassou" = { }; } ];
+        git_protocol = "ssh";
       };
     };
     settings = {
