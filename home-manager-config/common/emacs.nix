@@ -102,6 +102,7 @@
       epkgs.runner
       epkgs.spacious-padding
       epkgs.spatial-window
+      epkgs.terraform-mode
       epkgs.tmr
       epkgs.treesit-grammars.with-all-grammars
       epkgs.typescript-mode
