@@ -9,7 +9,7 @@
   ];
 
   home = {
-    homeDirectory = "/home/cassou";
+    homeDirectory = "/Users/cassou";
     packages = with pkgs; [
       mattermost-desktop
       signal-desktop
