@@ -42,8 +42,10 @@
       "visual-studio-code"
     ];
     onActivation = {
+      autoUpdate = true;
       cleanup = "uninstall";
       extraFlags = [ "--verbose" ];
+      upgrade = true;
     };
   };
 }
