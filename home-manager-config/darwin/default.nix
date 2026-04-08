@@ -1,19 +1,5 @@
+{ config, lib, ... }:
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-{
-  home = {
-    file = {
-      ".gnupg/gpg-agent.conf".text = ''
-        enable-ssh-support
-        pinentry-program ${pkgs.lib.getExe pkgs.pinentry_mac}
-      '';
-    };
-  };
-
   launchd = {
     enable = true;
     agents = {
@@ -21,9 +7,7 @@
         enable = true;
         config =
           let
-            vars = config.home.sessionVariables // {
-              SSH_AUTH_SOCK = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
-            };
+            vars = config.home.sessionVariables;
             # List of variable names and values looking like (VAR1 VAL1
             # VAR2 VAL2 …):
             variableAndValues = (

@@ -10,4 +10,9 @@
       keyserver = "hkp://keys.gnupg.net";
     };
   };
+
+  services.gpg-agent = {
+    enable = true;
+    enableSshSupport = true;
+  };
 }
