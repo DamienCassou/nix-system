@@ -19,7 +19,7 @@ in
   bookmarks = [
     {
       name = "Project (jira)";
-      url = "https://jira.wolterskluwer.io/jira/browse/FIN-1298";
+      url = "https://jira.wolterskluwer.io/jira/browse/FIN-2989?jql=labels%20%3D%20capego-hybrid-integration";
     }
     {
       name = "Project (confluence)";
