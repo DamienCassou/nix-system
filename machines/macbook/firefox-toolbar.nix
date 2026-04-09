@@ -26,8 +26,16 @@ in
       url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/939900705/Capego+hybrid+integration+MVP";
     }
     {
-      name = "PRs";
+      name = "mergeable";
+      url = "https://github.com/pulls/2270075?q=is%3Aopen+is%3Apr+archived%3Afalse+label%3Amergeable+user%3Aforetagsplatsen+";
+    }
+    {
+      name = "mine";
       url = "https://github.com/pulls";
+    }
+    {
+      name = "reviews";
+      url = "https://github.com/pulls/reviews";
     }
     {
       name = "Confluence / Jira";
