@@ -79,7 +79,6 @@ in
       gentium-book-basic
       inconsolata
       iosevka-bin
-      jetbrains-mono
       liberation_ttf
       noto-fonts-color-emoji # recommended by Emacs
       roboto-mono
