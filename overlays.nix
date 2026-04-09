@@ -49,3 +49,11 @@ in
     }
   )
 ]
+++ [
+  (_: super: {
+    # Workaround for https://github.com/NixOS/nixpkgs/issues/507531
+    direnv = super.direnv.overrideAttrs (_: {
+      doCheck = false;
+    });
+  })
+]
