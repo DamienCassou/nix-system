@@ -9,7 +9,6 @@
   programs.emacs = {
     enable = true;
     extraPackages = epkgs: [
-      epkgs.ace-window
       epkgs.aggressive-indent
       epkgs.alert
       epkgs.all-the-icons-dired
