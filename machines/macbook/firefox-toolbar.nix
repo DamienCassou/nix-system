@@ -49,6 +49,10 @@ in
           url = "https://jira.wolterskluwer.io/jira/secure/RapidBoard.jspa?rapidView=6800&view=planning&selectedIssue=FIN-908&epics=visible&issueLimit=100#";
         }
         {
+          name = "Kanban";
+          url = "https://jira.wolterskluwer.io/jira/secure/RapidBoard.jspa?rapidView=8506&view=detail&selectedIssue=FIN-3163#";
+        }
+        {
           name = "Bugs";
           url = "https://jira.wolterskluwer.io/jira/browse/FIN-80";
         }
