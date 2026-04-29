@@ -31,7 +31,7 @@ in
     }
     {
       name = "mine";
-      url = "https://github.com/pulls";
+      url = "https://github.com/pulls/authored";
     }
     {
       name = "reviews";
@@ -76,10 +76,17 @@ in
     }
     {
       name = "Github";
-      bookmarks = map (repo: {
-        name = repo;
-        url = "https://github.com/foretagsplatsen/${repo}/pulls";
-      }) repos;
+      bookmarks =
+        (map (repo: {
+          name = repo;
+          url = "https://github.com/foretagsplatsen/${repo}/pulls";
+        }) repos)
+        ++ [
+          {
+            name = "wktaasc-finsit-ai-tools";
+            url = "https://github.com/wk-taa/wktaasc-finsit-ai-tools";
+          }
+        ];
     }
   ];
 }
