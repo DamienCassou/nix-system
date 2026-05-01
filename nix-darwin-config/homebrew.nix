@@ -27,7 +27,6 @@
       "microsoft-azure-storage-explorer"
       "mongodb-compass"
       "nextcloud"
-      "rectangle"
       "signal"
       "slack"
       {

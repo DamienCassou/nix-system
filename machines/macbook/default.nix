@@ -21,4 +21,8 @@ in
   programs.git.maintenance.repositories = [
     "${home}/work/setup/monitor"
   ];
+
+  programs.rectangle = {
+    enable = true;
+  };
 }
