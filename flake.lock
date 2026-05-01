@@ -204,16 +204,16 @@
       "locked": {
         "lastModified": 1777491810,
         "narHash": "sha256-T6uORiq8WYEMk4Arz+aiqRVFFAmxDmhnCzY+09DQfpE=",
-        "ref": "system",
+        "owner": "DamienCassou",
+        "repo": "nixpkgs",
         "rev": "25898f862d3e8e043d1c27548d180db97c8ffac9",
-        "revCount": 911624,
-        "type": "git",
-        "url": "file:///Users/cassou/personal/projects/nix/nixpkgs"
+        "type": "github"
       },
       "original": {
+        "owner": "DamienCassou",
         "ref": "system",
-        "type": "git",
-        "url": "file:///Users/cassou/personal/projects/nix/nixpkgs"
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nixpkgs-firefox-darwin": {
