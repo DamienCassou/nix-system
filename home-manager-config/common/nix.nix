@@ -5,7 +5,6 @@
     nil # LSP server for Nix
     niv
     nixfmt-rfc-style
-    nodePackages.node2nix
   ];
 
   nix = {

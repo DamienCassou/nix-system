@@ -18,14 +18,13 @@
     jwt-cli
     keep-sorted
     lint-staged
-    nodePackages.prettier
-    nodePackages.typescript
     nodejs_24
     omnisharp-roslyn # for C# development in Monitor
     otel-desktop-viewer
     patch
     patchutils
     pnpm
+    prettier
     shellcheck
     treefmt
     typescript # for eglot to work in JS project
