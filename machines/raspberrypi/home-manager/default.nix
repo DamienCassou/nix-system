@@ -38,7 +38,6 @@
 
     syncthing = {
       guiAddress = "0.0.0.0:8384";
-      passwordFile = ../../../secrets/syncthing/raspberrypi/password;
     };
   };
 }
