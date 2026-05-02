@@ -6,6 +6,7 @@
     ./hardware-configuration.nix
     ./lacie.nix
     ../../../nixos-config
+    ../../../secrets/syncthing/raspberrypi
   ];
 
   networking = {
@@ -34,10 +35,6 @@
       };
       startWhenNeeded = true;
       user = "cassou";
-    };
-
-    syncthing = {
-      guiAddress = "0.0.0.0:8384";
     };
   };
 }
