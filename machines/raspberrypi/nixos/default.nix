@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   imports = [
@@ -11,7 +11,7 @@
   networking = {
     hostName = "raspberrypi";
     firewall.allowedTCPPorts = [
-      6600 # mpd
+      config.services.mpd.network.port
       8384 # syncthing
     ];
   };
@@ -22,5 +22,22 @@
 
   hardware = {
     enableRedistributableFirmware = true;
+  };
+
+  services = {
+    mpd = {
+      enable = true;
+      musicDirectory = "/run/media/lacie/rsync-macbook/personal/music/son";
+      playlistDirectory = "/run/media/lacie/rsync-macbook/personal/music/playlists";
+      network = {
+        listenAddress = "any";
+      };
+      startWhenNeeded = true;
+      user = "cassou";
+    };
+
+    syncthing = {
+      guiAddress = "0.0.0.0:8384";
+    };
   };
 }

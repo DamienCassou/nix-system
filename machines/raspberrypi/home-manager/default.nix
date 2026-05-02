@@ -27,15 +27,6 @@
   programs.home-manager.enable = true;
 
   services = {
-    mpd = {
-      enable = true;
-      musicDirectory = "/run/media/lacie/rsync-macbook/personal/music/son";
-      playlistDirectory = "/run/media/lacie/rsync-macbook/personal/music/playlists";
-      network = {
-        listenAddress = "any";
-      };
-    };
-
     syncthing = {
       guiAddress = "0.0.0.0:8384";
     };
