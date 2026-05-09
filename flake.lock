@@ -132,15 +132,15 @@
       "locked": {
         "lastModified": 1777518431,
         "narHash": "sha256-SwgiG2T5pbyo33Vz7/vUCAhEMgwCK8Pa2nDSx5a6/WE=",
-        "owner": "nix-community",
-        "repo": "home-manager",
+        "ref": "refs/heads/master",
         "rev": "2e54a938cdd4c8e414b2518edc3d82308027c670",
-        "type": "github"
+        "revCount": 6645,
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
       }
     },
     "nix-index-database": {
@@ -202,11 +202,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1777491810,
-        "narHash": "sha256-T6uORiq8WYEMk4Arz+aiqRVFFAmxDmhnCzY+09DQfpE=",
+        "lastModified": 1778333273,
+        "narHash": "sha256-FsBI1XsPyvsPoEaF7GVDkF6Q2Hq25Q/keMSNy+US2O4=",
         "owner": "DamienCassou",
         "repo": "nixpkgs",
-        "rev": "25898f862d3e8e043d1c27548d180db97c8ffac9",
+        "rev": "3a370d4809fa441d701ae722724bccee26d8d632",
         "type": "github"
       },
       "original": {
