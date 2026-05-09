@@ -36,7 +36,6 @@
           "no_quarantine" = true;
         };
       }
-      "tageditor" # for id3 tags
       "ungoogled-chromium"
       "visual-studio-code"
     ];
