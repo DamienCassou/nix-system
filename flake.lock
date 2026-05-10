@@ -132,16 +132,16 @@
       "locked": {
         "lastModified": 1777518431,
         "narHash": "sha256-SwgiG2T5pbyo33Vz7/vUCAhEMgwCK8Pa2nDSx5a6/WE=",
-        "ref": "system",
+        "owner": "DamienCassou",
+        "repo": "home-manager",
         "rev": "2e54a938cdd4c8e414b2518edc3d82308027c670",
-        "revCount": 6645,
-        "type": "git",
-        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
+        "type": "github"
       },
       "original": {
+        "owner": "DamienCassou",
         "ref": "system",
-        "type": "git",
-        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "nix-index-database": {
@@ -203,18 +203,18 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1778346317,
-        "narHash": "sha256-tJJHzofMCKMv31sInx81ihbC0IVbvDz14TS8NXa+ykQ=",
-        "ref": "system",
-        "rev": "dfc110ce92af7fd407e740a50968f183e730725e",
-        "revCount": 912360,
-        "type": "git",
-        "url": "file:///Users/cassou/personal/projects/nix/nixpkgs"
+        "lastModified": 1778346700,
+        "narHash": "sha256-l13wsbqNLvv9LAGilkRz+v12L2uBRG6cXFXBUOP2ItU=",
+        "owner": "DamienCassou",
+        "repo": "nixpkgs",
+        "rev": "37681bf63bcd066dd688eacd87e3476338d0ebf2",
+        "type": "github"
       },
       "original": {
+        "owner": "DamienCassou",
         "ref": "system",
-        "type": "git",
-        "url": "file:///Users/cassou/personal/projects/nix/nixpkgs"
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nixpkgs-firefox-darwin": {
