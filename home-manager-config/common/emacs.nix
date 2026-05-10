@@ -8,6 +8,11 @@
 {
   programs.emacs = {
     enable = true;
+    extraConfig = ''
+      (setq magit-perl-executable "${lib.getExe pkgs.perl}")
+      (setq libmpdel-music-directory "${config.services.mpd.musicDirectory}")
+      (setq difftastic-executable "${lib.getExe pkgs.difftastic}")
+    '';
     extraPackages = epkgs: [
       epkgs.aggressive-indent
       epkgs.alert
@@ -122,12 +127,6 @@
       pkgs.notmuch.emacs
     ];
   };
-
-  programs.emacs.extraConfig = ''
-    (setq magit-perl-executable "${lib.getExe pkgs.perl}")
-    (setq libmpdel-music-directory "${config.services.mpd.musicDirectory}")
-    (setq difftastic-executable "${lib.getExe pkgs.difftastic}")
-  '';
 
   home.packages = with pkgs; [
     emacs-all-the-icons-fonts
