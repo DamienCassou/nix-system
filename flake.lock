@@ -29,11 +29,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778326455,
-        "narHash": "sha256-aSKuCWvP+hEzdzd25A/Yk/A6epLwiPB12/povQ0HniA=",
+        "lastModified": 1778388055,
+        "narHash": "sha256-g7yMnzWNIQhQ4b1YPliDlJ3bSjmxhLcvEJwpbAKJKQI=",
         "owner": "nix-giant",
         "repo": "nix-darwin-emacs",
-        "rev": "b4c0512308d82e33be2841ca1c6a654098d5b521",
+        "rev": "f5b9cb7978e0bd453a56ccebd6f6387958c5556e",
         "type": "github"
       },
       "original": {
@@ -130,18 +130,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1777518431,
-        "narHash": "sha256-SwgiG2T5pbyo33Vz7/vUCAhEMgwCK8Pa2nDSx5a6/WE=",
-        "owner": "DamienCassou",
-        "repo": "home-manager",
-        "rev": "2e54a938cdd4c8e414b2518edc3d82308027c670",
-        "type": "github"
+        "lastModified": 1778515639,
+        "narHash": "sha256-2ExWAov4UeMjuKtF2myhofzF9GqoIAg5OrtSWmwfSXY=",
+        "ref": "system",
+        "rev": "e83414275945586a43a848a2021c8c17fd4a7e98",
+        "revCount": 6646,
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
       },
       "original": {
-        "owner": "DamienCassou",
         "ref": "system",
-        "repo": "home-manager",
-        "type": "github"
+        "type": "git",
+        "url": "file:///Users/cassou/personal/projects/nix/home-manager"
       }
     },
     "nix-index-database": {
