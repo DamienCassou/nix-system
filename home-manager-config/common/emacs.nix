@@ -73,7 +73,6 @@
       epkgs.magit
       epkgs.magit-tbdiff
       epkgs.marginalia
-      epkgs.markdown-mode
       epkgs.minions
       epkgs.mpdel
       epkgs.mpdel-embark
