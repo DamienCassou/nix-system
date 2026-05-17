@@ -20,6 +20,7 @@
       "jetbrains-toolbox"
       "jordanbaird-ice" # Simplifies macOS menu bar
       "karabiner-elements"
+      "kid3" # id3 editor
       "launchcontrol"
       "libreoffice"
       "mattermost"
