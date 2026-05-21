@@ -51,6 +51,48 @@
         };
       };
     };
+
+    accounts.booking = {
+      primary = false;
+
+      maildir.path = "Booking";
+      address = "booking@lacantine-brest.net";
+      realName = "Booking";
+
+      userName = "booking@lacantine-brest.net";
+      passwordCommand = "pass-show-password ssl0.ovh.net";
+
+      folders.inbox = "Inbox";
+
+      imap = {
+        host = "ssl0.ovh.net";
+        port = 993;
+      };
+
+      smtp = {
+        host = "ssl0.ovh.net";
+        port = 465;
+      };
+
+      signature = {
+        showSignature = "append";
+        text = ''
+          Damien Cassou
+          https://www.lacantine-brest.net/
+        '';
+      };
+
+      msmtp.enable = true;
+      notmuch.enable = true;
+
+      offlineimap = {
+        enable = true;
+
+        extraConfig.remote = {
+          folderfilter = "lambda folder: folder in [ 'INBOX.Sent', 'INBOX', 'INBOX.archives', 'INBOX.Spam' ]";
+        };
+      };
+    };
   };
 
   programs = {

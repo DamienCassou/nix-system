@@ -11,13 +11,21 @@
 # Executed as a notmuch hook (see man notmuch-hooks)
 
 tmp=$(mktemp --tmpdir 'notmuch-hook-pre-new-XXXXXXXX')
-notmuch search --format=text0 --output=files '(NOT tag:inbox) AND (folder:Perso/INBOX)' | grep -z 'INBOX/\(cur\|new\)' > $tmp
+notmuch search --format=text0 --output=files '(NOT tag:inbox) AND (folder:Perso/INBOX OR folder:Booking/INBOX)' | grep -z 'INBOX/\(cur\|new\)' > $tmp
 
 # Declares a new table
 archived=()
 
 while read -r -d '' mail; do
-    dest=$(dirname $mail)/../../Archive/cur/
+
+    base="$(dirname "$mail")/../.."
+    for candidateDestination in "$base/INBOX.archives/cur/" "$base/Archive/cur/"; do
+        if [[ -d "$candidateDestination" ]]; then
+            dest="$candidateDestination"
+            break
+        fi
+    done
+
     if [[ ! -d $dest ]]; then
         echo "Non existing $dest" >&2
         echo "Can't move $mail there!"
