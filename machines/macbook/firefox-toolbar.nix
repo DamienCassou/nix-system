@@ -88,5 +88,9 @@ in
           }
         ];
     }
+    {
+      name = "FAB L3 Onboarding";
+      url = "https://confluence.wolterskluwer.io/spaces/FOUNDATIONANDBEYOND/pages/1070897689/2026-05-22+Onboarding+FAB+Developer+Damien+Cassou";
+    }
   ];
 }
