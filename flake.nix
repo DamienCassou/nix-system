@@ -47,7 +47,7 @@
 
     nixpkgs = {
       # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
-      url = "github:NixOS/nixpkgs/master";
+      url = "github:NixOS/nixpkgs/release-26.05";
       # url = "github:DamienCassou/nixpkgs/system";
     };
 
