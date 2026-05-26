@@ -33,6 +33,10 @@
     };
   };
 
+  programs.bash.shellAliases = {
+    copilot = "/opt/homebrew/bin/safehouse /opt/homebrew/bin/copilot --allow-all-paths";
+  };
+
   targets.darwin = {
     defaults = {
       NSGlobalDomain = {

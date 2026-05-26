@@ -5,8 +5,10 @@
   homebrew = {
     enable = true;
     brews = [
+      "eugene1g/safehouse/agent-safehouse"
       "k6"
       "wireguard-tools"
+      "wrkflw" # to test github action workflows locally
     ];
     casks = [
       "alfred"
