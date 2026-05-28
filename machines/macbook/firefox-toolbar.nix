@@ -35,7 +35,7 @@ in
     }
     {
       name = "reviews";
-      url = "https://github.com/pulls/reviews";
+      url = "https://github.com/pulls/reviews?q=is%3Apr+review-requested%3A%40me+state%3Aopen+archived%3Afalse+sort%3Aupdated-desc+draft%3Afalse";
     }
     {
       name = "Confluence / Jira";
@@ -89,8 +89,8 @@ in
         ];
     }
     {
-      name = "FAB L3 Onboarding";
-      url = "https://confluence.wolterskluwer.io/spaces/FOUNDATIONANDBEYOND/pages/1070897689/2026-05-22+Onboarding+FAB+Developer+Damien+Cassou";
+      name = "Workday learning";
+      url = "https://wd3.myworkday.com/wk/learning/mylearning";
     }
   ];
 }
