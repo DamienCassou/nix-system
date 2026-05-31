@@ -148,7 +148,7 @@
     };
 
     primaryUser = "cassou";
-    stateVersion = 6;
+    stateVersion = 7;
   };
 
   time = {
