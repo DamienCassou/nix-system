@@ -12,7 +12,6 @@
   networking = {
     hostName = "raspberrypi";
     firewall.allowedTCPPorts = [
-      config.services.mpd.network.port
       8384 # syncthing
     ];
   };
@@ -29,6 +28,7 @@
     mpd = {
       enable = true;
       musicDirectory = "/run/media/lacie/rsync-macbook/personal/music/son";
+      openFirewall = true;
       playlistDirectory = "/run/media/lacie/rsync-macbook/personal/music/playlists";
       network = {
         listenAddress = "any";
