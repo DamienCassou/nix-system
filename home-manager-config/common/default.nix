@@ -121,7 +121,7 @@ in
   fonts.fontconfig.enable = true;
 
   home = {
-    stateVersion = "25.11";
+    stateVersion = "26.05";
     enableNixpkgsReleaseCheck = false;
 
     keyboard = {
