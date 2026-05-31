@@ -4,7 +4,7 @@
     cachix
     nil # LSP server for Nix
     niv
-    nixfmt-rfc-style
+    nixfmt
   ];
 
   nix = {

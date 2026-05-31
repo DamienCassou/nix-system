@@ -75,6 +75,7 @@ in
       fira-code
       fira-mono
       font-awesome
+      font-misc-misc
       gentium
       gentium-book-basic
       inconsolata
@@ -83,7 +84,6 @@ in
       noto-fonts-color-emoji # recommended by Emacs
       roboto-mono
       ubuntu-classic
-      xorg.fontmiscmisc
     ]
   );
 }
