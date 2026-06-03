@@ -27,9 +27,9 @@
   services = {
     mpd = {
       enable = true;
-      musicDirectory = "/run/media/lacie/rsync-macbook/personal/music/son";
+      music_directory = "/run/media/lacie/rsync-macbook/personal/music/son";
       openFirewall = true;
-      playlistDirectory = "/run/media/lacie/rsync-macbook/personal/music/playlists";
+      playlist_directory = "/run/media/lacie/rsync-macbook/personal/music/playlists";
       network = {
         listenAddress = "any";
       };
