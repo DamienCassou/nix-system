@@ -14,6 +14,8 @@
     ];
 
     shells = [ pkgs.bashInteractive ];
+
+    systemPath = [ "/Library/Frameworks/Mono.framework/Versions/Current/bin" ];
   };
 
   launchd.user = {
