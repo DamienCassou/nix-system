@@ -65,6 +65,10 @@ in
           url = "https://jira.wolterskluwer.io/jira/browse/FIN-202";
         }
         {
+          name = "My open LHF stories";
+          url = "https://jira.wolterskluwer.io/jira/browse/FIN-598?jql=type%20in%20(Story)%20AND%20%22Epic%20Link%22%20in%20(FIN-67)%20AND%20reporter%20in%20(damien.cassou)%20AND%20status%20not%20in%20(Done)";
+        }
+        {
           name = "My tasks";
           url = "https://jira.wolterskluwer.io/jira/browse/FIN-417?jql=project%20%3D%20FIN%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Waiting%2C%20%22Pull%20Request%22)%20AND%20assignee%20in%20(currentUser())%20order%20by%20lastViewed%20DESC";
         }
