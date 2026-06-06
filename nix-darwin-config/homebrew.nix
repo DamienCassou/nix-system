@@ -48,7 +48,10 @@
     onActivation = {
       autoUpdate = true;
       cleanup = "uninstall";
-      extraFlags = [ "--verbose" ];
+      extraFlags = [
+        "--verbose"
+        "--force-cleanup"
+      ];
       upgrade = true;
     };
   };
