@@ -183,6 +183,14 @@
             }
           ];
         };
+        "pepite" = nixpkgs.lib.nixosSystem {
+          pkgs = makePkgs "x86_64-linux";
+
+          modules = [
+            ./machines/pepite/nixos
+            nixos-hardware.nixosModules.lenovo-thinkpad-t480s
+          ];
+        };
       };
     };
 }
