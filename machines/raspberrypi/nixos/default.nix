@@ -16,8 +16,6 @@
     ];
   };
 
-  security.rtkit.enable = true;
-
   system.stateVersion = "26.05";
 
   hardware = {
@@ -27,9 +25,9 @@
   services = {
     mpd = {
       enable = true;
-      music_directory = "/run/media/lacie/rsync-macbook/personal/music/son";
+      musicDirectory = "/run/media/lacie/rsync-macbook/personal/music/son";
       openFirewall = true;
-      playlist_directory = "/run/media/lacie/rsync-macbook/personal/music/playlists";
+      playlistDirectory = "/run/media/lacie/rsync-macbook/personal/music/playlists";
       network = {
         listenAddress = "any";
       };

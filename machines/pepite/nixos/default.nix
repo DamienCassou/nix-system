@@ -1,8 +1,9 @@
-{ ... }:
+{ lib, pkgs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
+    ../../../nixos-config
   ];
 
   boot = {
@@ -15,12 +16,9 @@
 
   networking = {
     hostName = "pepite";
-    networkmanager.enable = true;
   };
 
-  time.timeZone = "Europe/Paris";
-
-  i18n = {
+  i18n = lib.mkForce {
     defaultLocale = "fr_FR.UTF-8";
 
     extraLocaleSettings = {
@@ -37,8 +35,6 @@
   };
 
   services = {
-    openssh.enable = true;
-
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -51,24 +47,39 @@
       desktopManager.gnome.enable = true;
       displayManager.gdm.enable = true;
 
-      xkb = {
+      xkb = lib.mkForce {
         layout = "us";
         variant = "intl";
       };
     };
   };
 
-  console.keyMap = "us-acentos";
+  # console.keyMap = "us-acentos";
 
-  security.rtkit.enable = true;
+  users = {
+    users = {
+      sarah = {
+        isNormalUser = true;
+        home = "/Users/sarah";
 
-  users.users."cassou" = {
-    isNormalUser = true;
-    description = "Damien Cassou";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
+        # use mkpasswd to generate a hashedPassword:
+        hashedPassword = "$y$j9T$eDPipTfmeL9gDhG4PCRUg1$lKetU63O6XfUPqYggN3m.DjcvIlapYC8btU3ClyFSo1";
+
+        uid = 1001;
+        description = "Sarah Cassou";
+        extraGroups = [
+          "audio"
+          "cassou"
+          "networkmanager"
+        ];
+
+        packages = with pkgs; [
+          firefox
+          libreoffice
+          signal-desktop
+        ];
+      };
+    };
   };
 
   system.stateVersion = "26.05";
