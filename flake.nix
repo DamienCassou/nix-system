@@ -3,7 +3,7 @@
 
   inputs = {
     darwin = {
-      url = "github:nix-darwin/nix-darwin/master";
+      url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
       # url = "git+file:///Users/cassou/personal/projects/nix/nix-darwin?ref=master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
