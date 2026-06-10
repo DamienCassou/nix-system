@@ -15,26 +15,25 @@
     hostName = "luz5";
   };
 
-  services.xserver.enable = true;
+  services = {
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
+    gnome.gcr-ssh-agent.enable = false;
 
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
 
-  services.gnome.gcr-ssh-agent.enable = false;
+    printing.enable = true;
+    pulseaudio.enable = false;
+    xserver.enable = true;
+  };
 
   console = {
     earlySetup = true;
-  };
-
-  services.printing.enable = true;
-
-  services.pulseaudio.enable = false;
-
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
   };
 
   system.stateVersion = "26.05";
