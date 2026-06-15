@@ -6,6 +6,7 @@
     enable = true;
     brews = [
       "k6"
+      "powershell"
       "wireguard-tools"
       "wrkflw" # to test github action workflows locally
     ];
