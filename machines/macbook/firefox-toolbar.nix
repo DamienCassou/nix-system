@@ -19,11 +19,11 @@ in
   bookmarks = [
     {
       name = "Project (jira)";
-      url = "https://jira.wolterskluwer.io/jira/browse/FIN-2989?jql=labels%20%3D%20capego-hybrid-integration";
+      url = "https://jira.wolterskluwer.io/jira/browse/FIN-3516";
     }
     {
       name = "Project (confluence)";
-      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/939900705/Capego+hybrid+integration+MVP";
+      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/1076051022/Capego+web+PDF+export+and+print";
     }
     {
       name = "mergeable";
