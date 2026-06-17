@@ -37,17 +37,23 @@
   home = {
     extraOutputsToInstall = [ "devdoc" ];
 
-    file = {
-      ".nuget/NuGet/NuGet.Config".text = ''
-        <?xml version="1.0" encoding="utf-8"?>
-        <configuration>
-          <packageSources>
-            <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
-            <add key="local-macbook" value="file://${config.home.homeDirectory}/.nuget/own-packages/" allowInsecureConnections="True" disableTLSCertificateValidation="True" />
-          </packageSources>
-        </configuration>
-      '';
-    };
+    file =
+      let
+        nugetFileContent = ''
+          <?xml version="1.0" encoding="utf-8"?>
+          <configuration>
+            <packageSources>
+              <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+              <add key="local-macbook" value="file://${config.home.homeDirectory}/.nuget/own-packages/" allowInsecureConnections="True" disableTLSCertificateValidation="True" />
+              <add key="github" value="https://nuget.pkg.github.com/wk-taa/index.json" />
+            </packageSources>
+          </configuration>
+        '';
+      in
+      {
+        ".nuget/NuGet/NuGet.Config".text = nugetFileContent;
+        ".config/NuGet/NuGet.Config".text = nugetFileContent;
+      };
 
     sessionPath = [
       config.home.sessionVariables.DOTNET_ROOT
