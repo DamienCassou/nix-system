@@ -45,8 +45,14 @@
             <packageSources>
               <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
               <add key="local-macbook" value="file://${config.home.homeDirectory}/.nuget/own-packages/" allowInsecureConnections="True" disableTLSCertificateValidation="True" />
-              <add key="github" value="https://nuget.pkg.github.com/wk-taa/index.json" />
+              <add key="wktaa" value="https://nuget.pkg.github.com/wk-taa/index.json" />
             </packageSources>
+            <packageSourceCredentials>
+             <wktaa>
+               <add key="Username" value="%WKLUSERNAME%" />
+               <add key="ClearTextPassword" value="%WK_GITHUB%" />
+             </wktaa>
+           </packageSourceCredentials>
           </configuration>
         '';
       in
