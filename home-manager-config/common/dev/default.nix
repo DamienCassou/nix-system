@@ -10,6 +10,7 @@
   };
 
   home.packages = with pkgs; [
+    azure-cli
     bash-language-server
     couchdb-dump
     devenv
