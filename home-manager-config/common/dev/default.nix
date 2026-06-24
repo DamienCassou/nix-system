@@ -7,13 +7,13 @@
 
   programs = {
     bun.enable = true;
+    devenv.enable = true;
   };
 
   home.packages = with pkgs; [
     azure-cli
     bash-language-server
     couchdb-dump
-    devenv
     eslint_d
     inetutils
     jwt-cli
