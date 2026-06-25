@@ -48,6 +48,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixpkgs-stable = {
+      url = "github:NixOS/nixpkgs/nixos-24.11";
+    };
+
     nixpkgs = {
       # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
       url = "github:NixOS/nixpkgs/release-26.05";
@@ -59,7 +63,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
 
   outputs =
