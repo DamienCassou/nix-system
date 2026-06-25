@@ -5,64 +5,71 @@
     darwin = {
       url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
       # url = "git+file:///Users/cassou/personal/projects/nix/nix-darwin?ref=master";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable-darwin";
     };
 
     emacs-overlay = {
       # url = "git+file:///Users/cassou/personal/projects/nix/emacs-overlay?ref=system";
       url = "github:nix-community/emacs-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.nixpkgs-stable.follows = "nixpkgs-stable";
     };
 
     emacs-darwin = {
       # url = "git+file:///Users/cassou/personal/projects/nix/nix-darwin-emacs";
       url = "github:nix-giant/nix-darwin-emacs";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     home-manager = {
       # url = "git+file:///Users/cassou/personal/projects/nix/home-manager?ref=system";
       url = "github:nix-community/home-manager";
       # url = "github:DamienCassou/home-manager/system";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     nixGL = {
       url = "github:nix-community/nixGL";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware/master";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     nixpkgs-stable = {
-      url = "github:NixOS/nixpkgs/nixos-24.11";
-    };
-
-    nixpkgs = {
       # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
       url = "github:NixOS/nixpkgs/release-26.05";
       # url = "github:DamienCassou/nixpkgs/system";
     };
 
-    nixpkgs-firefox-darwin = {
-      url = "github:bandithedoge/nixpkgs-firefox-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs-stable-darwin = {
+      # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
+      url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
+      # url = "github:DamienCassou/nixpkgs/system";
     };
 
+    nixpkgs-unstable = {
+      # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+      # url = "github:DamienCassou/nixpkgs/system";
+    };
+
+    nixpkgs-firefox-darwin = {
+      url = "github:bandithedoge/nixpkgs-firefox-darwin";
+      inputs.nixpkgs.follows = "nixpkgs-stable-darwin";
+    };
   };
 
   outputs =
@@ -76,14 +83,14 @@
       nix-index-database,
       nixGL,
       nixos-hardware,
-      nixpkgs,
       nixpkgs-firefox-darwin,
       nixpkgs-stable,
+      nixpkgs-stable-darwin,
       ...
     }:
     let
       makeOverlays =
-        system:
+        nixpkgs: system:
         (import ./overlays.nix {
           inherit
             system
@@ -98,17 +105,17 @@
           lib = nixpkgs.lib;
         });
       makePkgs =
-        system:
+        nixpkgs: system:
         import nixpkgs {
           inherit system;
-          overlays = makeOverlays system;
+          overlays = makeOverlays nixpkgs-stable system;
           config.allowUnfree = true;
         };
     in
     {
       darwinConfigurations = {
         ancizan = darwin.lib.darwinSystem {
-          pkgs = makePkgs "aarch64-darwin";
+          pkgs = makePkgs nixpkgs-stable-darwin "aarch64-darwin";
 
           modules = [
             ./nix-darwin-config
@@ -130,25 +137,18 @@
 
       homeConfigurations = {
         "cassou@framework" = home-manager.lib.homeManagerConfiguration {
-          pkgs = makePkgs "x86_64-linux";
+          pkgs = makePkgs nixpkgs-stable "x86_64-linux";
 
           modules = [
             nix-index-database.homeModules.nix-index
             ./machines/framework
           ];
         };
-        "cassou@raspberrypi" = home-manager.lib.homeManagerConfiguration {
-          pkgs = makePkgs "aarch64-linux";
-          modules = [
-            nix-index-database.homeModules.nix-index
-            ./machines/raspberrypi
-          ];
-        };
       };
 
       nixosConfigurations = {
-        "luz5" = nixpkgs.lib.nixosSystem {
-          pkgs = makePkgs "x86_64-linux";
+        "luz5" = nixpkgs-stable.lib.nixosSystem {
+          pkgs = makePkgs nixpkgs-stable "x86_64-linux";
 
           modules = [
             ./machines/luz5/nixos
@@ -168,12 +168,12 @@
             }
           ];
         };
-        "raspberrypi" = nixpkgs.lib.nixosSystem {
-          pkgs = makePkgs "aarch64-linux";
+        "raspberrypi" = nixpkgs-stable.lib.nixosSystem {
+          pkgs = makePkgs nixpkgs-stable "aarch64-linux";
 
           modules = [
             ./machines/raspberrypi/nixos
-            nixos-hardware.nixosModules.raspberry-pi-4
+            # nixos-hardware.nixosModules.raspberry-pi-4
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
@@ -189,8 +189,8 @@
             }
           ];
         };
-        "pepite" = nixpkgs.lib.nixosSystem {
-          pkgs = makePkgs "x86_64-linux";
+        "pepite" = nixpkgs-stable.lib.nixosSystem {
+          pkgs = makePkgs nixpkgs-stable "x86_64-linux";
 
           modules = [
             ./machines/pepite/nixos
