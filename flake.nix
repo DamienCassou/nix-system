@@ -43,7 +43,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixpkgs = {
       # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
