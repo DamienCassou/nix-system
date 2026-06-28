@@ -24,7 +24,6 @@
     otel-desktop-viewer
     patch
     patchutils
-    pnpm
     prettier
     shellcheck
     treefmt
