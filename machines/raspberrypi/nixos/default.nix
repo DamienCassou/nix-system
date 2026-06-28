@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 
 {
   imports = [
@@ -25,11 +25,11 @@
   services = {
     mpd = {
       enable = true;
-      musicDirectory = "/run/media/lacie/rsync-macbook/personal/music/son";
       openFirewall = true;
-      playlistDirectory = "/run/media/lacie/rsync-macbook/personal/music/playlists";
-      network = {
-        listenAddress = "any";
+      settings = {
+        bind_to_address = "any";
+        music_directory = "/run/media/lacie/rsync-macbook/personal/music/son";
+        playlist_directory = "/run/media/lacie/rsync-macbook/personal/music/playlists";
       };
       startWhenNeeded = true;
       user = "cassou";
