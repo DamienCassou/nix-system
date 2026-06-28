@@ -11,7 +11,6 @@
   home = {
     homeDirectory = "/Users/cassou";
     packages = with pkgs; [
-      mattermost-desktop
       signal-desktop
       ungoogled-chromium
     ];
