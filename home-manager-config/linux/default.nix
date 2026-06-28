@@ -10,7 +10,6 @@ in
 
   home = {
     packages = with pkgs; [
-      (nixGLWrap calibre)
       (nixGLWrap element-desktop)
       (nixGLWrap parabolic) # download videos
       (nixGLWrap vlc)
