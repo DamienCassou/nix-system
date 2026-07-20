@@ -14,6 +14,7 @@
     azure-cli
     bash-language-server
     couchdb-dump
+    dapr-cli
     eslint_d
     inetutils
     jwt-cli
