@@ -89,7 +89,6 @@
       epkgs.org
       epkgs.org-caldav
       epkgs.outli
-      epkgs.ox-linuxmag-fr
       epkgs.package-lint
       epkgs.package-lint-flymake
       epkgs.paredit
