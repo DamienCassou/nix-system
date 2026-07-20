@@ -23,7 +23,7 @@ in
     }
     {
       name = "Project (confluence)";
-      url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/1076051022/Capego+web+PDF+export+and+print";
+      url = "https://wk-dxg.atlassian.net/wiki/spaces/TAAEFINSIT/pages/454992429/Capego+web+PDF+export+and+print";
     }
     {
       name = "mergeable";
@@ -42,7 +42,7 @@ in
       bookmarks = [
         {
           name = "finsit (confluence)";
-          url = "https://confluence.wolterskluwer.io/spaces/TAAEFINSIT/pages/645662150/TAAE+Finsit";
+          url = "https://wk-dxg.atlassian.net/wiki/spaces/TAAEFINSIT/overview?homepageId=454950914";
         }
         {
           name = "Tickets of the current cycle";
@@ -74,7 +74,7 @@ in
         }
         {
           name = "Tech debt finsit";
-          url = "https://confluence.wolterskluwer.io/spaces/TAAEARC/pages/452000353/Tech+Debt+Finsit";
+          url = "https://wk-dxg.atlassian.net/wiki/spaces/TAAEARC/pages/378307608/Tech+Debt+Finsit";
         }
       ];
     }
