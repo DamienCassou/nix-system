@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 
 {
   imports = [
@@ -10,29 +15,33 @@
     devenv.enable = true;
   };
 
-  home.packages = with pkgs; [
-    azure-cli
-    bash-language-server
-    dapr-cli
-    eslint_d
-    inetutils
-    jwt-cli
-    keep-sorted
-    lint-staged
-    nodejs_24
-    omnisharp-roslyn # for C# development in Monitor
-    otel-desktop-viewer
-    patch
-    patchutils
-    prettier
-    shellcheck
-    treefmt
-    typescript # for eglot to work in JS project
-    typescript-language-server
-    vscode-js-debug
-    xz
-    yarn
-  ];
+  home.packages =
+    with pkgs;
+    [
+      azure-cli
+      bash-language-server
+      eslint_d
+      inetutils
+      jwt-cli
+      keep-sorted
+      lint-staged
+      nodejs_24
+      omnisharp-roslyn # for C# development in Monitor
+      otel-desktop-viewer
+      patch
+      patchutils
+      prettier
+      shellcheck
+      treefmt
+      typescript # for eglot to work in JS project
+      typescript-language-server
+      vscode-js-debug
+      xz
+      yarn
+    ]
+    ++ (with pkgs-unstable; [
+      dapr-cli
+    ]);
 
   home = {
     extraOutputsToInstall = [ "devdoc" ];

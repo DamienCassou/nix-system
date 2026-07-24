@@ -86,6 +86,7 @@
       nixpkgs-firefox-darwin,
       nixpkgs-stable,
       nixpkgs-stable-darwin,
+      nixpkgs-unstable,
       ...
     }:
     let
@@ -124,6 +125,9 @@
               system.configurationRevision = self.rev or self.dirtyRev or null;
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                pkgs-unstable = makePkgs nixpkgs-unstable "aarch64-darwin";
+              };
               home-manager.users."cassou" = {
                 imports = [
                   nix-index-database.homeModules.nix-index
