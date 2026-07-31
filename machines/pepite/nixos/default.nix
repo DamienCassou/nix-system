@@ -77,6 +77,7 @@
           firefox
           libreoffice
           signal-desktop
+          vlc
         ];
       };
     };
