@@ -34,6 +34,8 @@
     };
   };
 
+  nix.settings.allowed-users = [ "sarah" ];
+
   services = {
     pipewire = {
       enable = true;
