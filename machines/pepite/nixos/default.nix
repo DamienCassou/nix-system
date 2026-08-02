@@ -54,8 +54,6 @@
     };
   };
 
-  # console.keyMap = "us-acentos";
-
   users = {
     users = {
       sarah = {
