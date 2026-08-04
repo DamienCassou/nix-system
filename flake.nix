@@ -159,6 +159,9 @@
             nixos-hardware.nixosModules.lenovo-thinkpad-t490
             home-manager.nixosModules.home-manager
             {
+              home-manager.extraSpecialArgs = {
+                pkgs-unstable = makePkgs nixpkgs-unstable "aarch64-darwin";
+              };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.cassou =
