@@ -40,5 +40,9 @@ _: {
       name = "Freebox OS";
       url = "http://192.168.1.254";
     }
+    {
+      name = "Andor Trail missing quests and places";
+      url = "https://andorstrail.com/static/AT_checkPlaces.html";
+    }
   ];
 }
