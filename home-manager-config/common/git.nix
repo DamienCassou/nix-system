@@ -160,8 +160,11 @@ in
     enable = true;
     hosts = {
       "github.com" = {
-        user = "DamienCassou";
-        users = [ { "DamienCassou" = { }; } ];
+        user = "Damien-Cassou_wkl";
+        users = [
+          { "Damien-Cassou_wkl" = { }; }
+          { "DamienCassou" = { }; }
+        ];
         git_protocol = "ssh";
       };
     };
