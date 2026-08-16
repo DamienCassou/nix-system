@@ -55,8 +55,8 @@
     };
 
     nixpkgs-stable-darwin = {
-      # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
-      url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
+      url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=nixpkgs-26.05-darwin";
+      # url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
       # url = "github:DamienCassou/nixpkgs/system";
     };
 
