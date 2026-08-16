@@ -47,6 +47,10 @@ _: {
           name = "Andor Trail missing quests and places";
           url = "https://andorstrail.com/static/AT_checkPlaces.html";
         }
+        {
+          name = "Andor Trail secrets";
+          url = "https://andorstrail-directory.github.io";
+        }
       ];
     }
     {
