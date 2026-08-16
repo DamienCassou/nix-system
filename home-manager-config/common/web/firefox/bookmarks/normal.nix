@@ -44,5 +44,15 @@ _: {
       name = "Andor Trail missing quests and places";
       url = "https://andorstrail.com/static/AT_checkPlaces.html";
     }
+    {
+      name = "Nix";
+      bookmarks = [
+        {
+          name = "PR tracker";
+          url = "https://nixpk.gs/pr-tracker.html?pr=449689";
+          tags = [ "nixpr" ];
+        }
+      ];
+    }
   ];
 }
