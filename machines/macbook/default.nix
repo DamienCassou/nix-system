@@ -7,7 +7,6 @@ in
   imports = [
     ../../home-manager-config/common
     ../../home-manager-config/darwin
-    ../../secrets/syncthing/macbook
   ];
 
   programs.firefox.profiles.home-manager.bookmarks.settings = [

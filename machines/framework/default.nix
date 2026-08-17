@@ -4,8 +4,6 @@
   imports = [
     ./borg.nix
     ./backup.nix
-    ../../home-manager-config/common/syncthing.nix
-    ../../secrets/syncthing/framework
   ];
 
   nixpkgs.overlays = [
