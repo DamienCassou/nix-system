@@ -25,6 +25,7 @@
     git-crypt
     hledger
     jq
+    nextcloud-client
     nix
     ponymix
     rofi
