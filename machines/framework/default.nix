@@ -30,6 +30,7 @@
     signal-desktop
     thunderbird
     topgrade
+    unison
     vlc
     wl-clipboard
   ];

@@ -53,6 +53,7 @@ in
       sqlite
       umlet
       unar # universal unpacker
+      unison
       util-linux
       unzip
       wget
