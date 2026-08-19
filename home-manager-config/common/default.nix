@@ -139,7 +139,7 @@ in
     ];
 
     sessionVariables = {
-      LEDGER_FILE = "${home}/personal/ledger/accounting.hledger";
+      LEDGER_FILE = "${home}/personal/NextCloud/licorne.ninja/ledger/accounting.hledger";
     };
   };
 }
