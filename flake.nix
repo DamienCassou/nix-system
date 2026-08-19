@@ -131,7 +131,7 @@
               home-manager.users."cassou" = {
                 imports = [
                   nix-index-database.homeModules.nix-index
-                  ./machines/macbook
+                  ./machines/macbook/home-manager
                 ];
               };
             }

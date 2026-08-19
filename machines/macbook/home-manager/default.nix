@@ -5,8 +5,8 @@ let
 in
 {
   imports = [
-    ../../home-manager-config/common
-    ../../home-manager-config/darwin
+    ../../../home-manager-config/common
+    ../../../home-manager-config/darwin
   ];
 
   programs.firefox.profiles.home-manager.bookmarks.settings = [
