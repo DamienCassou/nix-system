@@ -8,6 +8,9 @@
         config =
           let
             vars = config.home.sessionVariables // {
+              HOMEBREW_PREFIX = "/opt/homebrew";
+              HOMEBREW_CELLAR = "/opt/homebrew/Cellar";
+              HOMEBREW_REPOSITORY = "/opt/homebrew";
               SSH_AUTH_SOCK = "${config.home.homeDirectory}/.gnupg/S.gpg-agent.ssh";
             };
             # List of variable names and values looking like (VAR1 VAL1
