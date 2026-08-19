@@ -27,6 +27,7 @@
       "kid3" # id3 editor
       "launchcontrol"
       "libreoffice"
+      "macdroid" # File transfer with Android
       "mattermost"
       "medis" # Redis client
       "microsoft-azure-storage-explorer"
