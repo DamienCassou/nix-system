@@ -13,6 +13,7 @@
     packages = with pkgs; [
       git
       ncdu
+      unison
     ];
 
     stateVersion = "26.05";
