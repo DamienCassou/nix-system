@@ -55,5 +55,8 @@ in
     direnv = super.direnv.overrideAttrs (_: {
       doCheck = false;
     });
+    pimsync = super.pimsync.overrideAttrs (_: {
+      doCheck = false;
+    });
   })
 ]
