@@ -9,9 +9,10 @@
   programs.emacs = {
     enable = true;
     extraConfig = ''
-      (setq magit-perl-executable "${lib.getExe pkgs.perl}")
-      (setq libmpdel-music-directory "${config.services.mpd.musicDirectory}")
-      (setq difftastic-executable "${lib.getExe pkgs.difftastic}")
+      (setopt magit-perl-executable "${lib.getExe pkgs.perl}")
+      (setopt libmpdel-music-directory "${config.services.mpd.musicDirectory}")
+      (setopt difftastic-executable "${lib.getExe pkgs.difftastic}")
+      (setopt doc-view-djvused-program "${pkgs.djvulibre}/bin/djvused")
     '';
     extraPackages = epkgs: [
       epkgs.aggressive-indent
@@ -128,6 +129,7 @@
 
   home.packages = with pkgs; [
     emacs-all-the-icons-fonts
+    mupdf # for imenu support in PDF files
   ];
 
   services.emacs = {
