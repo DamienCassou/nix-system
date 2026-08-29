@@ -12,6 +12,7 @@ in
     git-absorb
     git-when-merged
     git-crypt
+    gh
   ];
 
   programs.git = {
@@ -154,22 +155,5 @@ in
       # Syncthing
       ".stfolder"
     ];
-  };
-
-  programs.gh = {
-    enable = true;
-    hosts = {
-      "github.com" = {
-        user = "Damien-Cassou_wkl";
-        users = [
-          { "Damien-Cassou_wkl" = { }; }
-          { "DamienCassou" = { }; }
-        ];
-        git_protocol = "ssh";
-      };
-    };
-    settings = {
-      git_protocol = "ssh";
-    };
   };
 }
