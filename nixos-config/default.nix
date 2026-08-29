@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   console.useXkbConfig = true; # use xkb setup in tty.
 
@@ -72,6 +72,10 @@
       ];
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPNt/RcAiO+zgCvPUBXGHwPRr1qpufb/+tZlSab5D0cM cardno:000F_956772F4"
+      ];
+      packages = with pkgs; [
+        git
+        htop
       ];
     };
   };
