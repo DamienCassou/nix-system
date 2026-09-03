@@ -86,7 +86,7 @@ in
         commands = {
           "Emacs submodules" = "git -C ~/.emacs.d fetch --recurse-submodules -j 4";
           "Nix garbage collection" = "nix-collect-garbage --delete-older-than 10d";
-          "Vdirsyncer" = "vdirsyncer sync";
+          "pimsync" = "pimsync sync";
         };
       };
     };
