@@ -33,12 +33,25 @@
       };
       pimsync = {
         enable = true;
+        extraPairDirectives = [
+          {
+            name = "collection";
+            params = [ "contacts" ];
+          }
+          {
+            name = "conflict_resolution";
+            params = [
+              "cmd"
+              "${./merge-vdirsyncer-conflicts.sh}"
+            ];
+          }
+        ];
       };
       khard = {
         enable = true;
       };
       local = {
-        path = "${config.home.homeDirectory}/personal/contacts";
+        path = "${config.home.homeDirectory}/personal";
         type = "filesystem";
         fileExt = ".vcf";
       };
