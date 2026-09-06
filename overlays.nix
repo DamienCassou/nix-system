@@ -7,7 +7,6 @@
   firefox-addons,
   nixGL,
   nixpkgs-firefox-darwin,
-  nixpkgs-stable,
   ...
 }:
 
@@ -20,10 +19,6 @@ in
   (_: _: {
     inherit my-scripts;
     firefox-addons = firefox-addons.packages.${system};
-    stable = import nixpkgs-stable {
-      inherit system;
-      config.allowUnfree = true;
-    };
   })
 ]
 ++ (lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
