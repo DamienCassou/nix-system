@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  pkgs-unstable,
   system,
   emacs-overlay,
   emacs-darwin,
@@ -34,14 +35,7 @@ in
   (
     _: super:
     let
-
-      emacs =
-        if pkgs.stdenv.hostPlatform.isDarwin then
-          # From emacs-darwin overlay:
-          super.emacs-31
-        else
-          # From nixpkgs:
-          super.emacs30;
+      emacs = pkgs-unstable.emacs31;
     in
     {
       inherit emacs;

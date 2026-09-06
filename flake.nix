@@ -103,6 +103,7 @@
             nixpkgs-stable
             ;
           pkgs = import nixpkgs { inherit system; };
+          pkgs-unstable = import nixpkgs-unstable { inherit system; };
           lib = nixpkgs.lib;
         });
       makePkgs =
