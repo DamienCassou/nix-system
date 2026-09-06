@@ -4,7 +4,6 @@
   pkgs-unstable,
   system,
   emacs-overlay,
-  emacs-darwin,
   firefox-addons,
   nixGL,
   nixpkgs-firefox-darwin,
@@ -29,7 +28,6 @@ in
 ]
 ++ (lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
   nixpkgs-firefox-darwin.overlay
-  emacs-darwin.overlays.emacs
 ])
 ++ [
   (
