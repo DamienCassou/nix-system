@@ -35,6 +35,8 @@
       patchutils
       prettier
       shellcheck
+      terraform
+      terraform-ls # LSP for terraform
       treefmt
       typescript # for eglot to work in JS project
       typescript-language-server
