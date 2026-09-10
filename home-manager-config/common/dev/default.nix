@@ -12,7 +12,10 @@
 
   programs = {
     bun.enable = true;
-    devenv.enable = true;
+    devenv = {
+      enable = true;
+      package = pkgs-unstable.devenv; # workaround for https://github.com/cachix/devenv/issues/2842
+    };
   };
 
   home.packages =
