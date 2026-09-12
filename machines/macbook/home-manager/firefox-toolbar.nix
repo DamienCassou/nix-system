@@ -70,7 +70,7 @@ in
         }
         {
           name = "My tasks";
-          url = "https://jira.wolterskluwer.io/jira/browse/FIN-417?jql=project%20%3D%20FIN%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Waiting%2C%20%22Pull%20Request%22)%20AND%20assignee%20in%20(currentUser())%20order%20by%20lastViewed%20DESC";
+          url = "https://jira.wolterskluwer.io/jira/browse/FIN-4306?jql=project%20%3D%20FIN%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Waiting%2C%20%22Pull%20Request%22)%20AND%20(assignee%20in%20(currentUser())%20OR%20labels%20in%20(DamienCassou))%20order%20by%20lastViewed%20DESC";
         }
         {
           name = "Tech debt finsit";
