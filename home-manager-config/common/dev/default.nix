@@ -46,6 +46,7 @@
     ]
     ++ (with pkgs-unstable; [
       dapr-cli
+      openspec
     ]);
 
   home = {
