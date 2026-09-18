@@ -56,4 +56,6 @@
       upgrade = true;
     };
   };
+
+  environment.variables.CHROME_BIN = "/Applications/Chromium.app/Contents/MacOS/Chromium";
 }
