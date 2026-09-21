@@ -19,7 +19,7 @@ in
   bookmarks = [
     {
       name = "Project (jira)";
-      url = "https://jira.wolterskluwer.io/jira/browse/FIN-3516";
+      url = "https://wk-dxg.atlassian.net/browse/FIN-3516";
     }
     {
       name = "Project (confluence)";
@@ -46,31 +46,31 @@ in
         }
         {
           name = "Tickets of the current cycle";
-          url = "https://jira.wolterskluwer.io/jira/secure/RapidBoard.jspa?rapidView=6800&view=planning&selectedIssue=FIN-908&epics=visible&issueLimit=100#";
+          url = "https://wk-dxg.atlassian.net/secure/RapidBoard.jspa?rapidView=6800&view=planning&selectedIssue=FIN-908&epics=visible&issueLimit=100#";
         }
         {
           name = "Kanban";
-          url = "https://jira.wolterskluwer.io/jira/secure/RapidBoard.jspa?rapidView=8506&view=detail&selectedIssue=FIN-3163#";
+          url = "https://wk-dxg.atlassian.net/secure/RapidBoard.jspa?rapidView=8506&view=detail&selectedIssue=FIN-3163#";
         }
         {
           name = "Bugs";
-          url = "https://jira.wolterskluwer.io/jira/browse/FIN-80";
+          url = "https://wk-dxg.atlassian.net/browse/FIN-80";
         }
         {
           name = "LHF";
-          url = "https://jira.wolterskluwer.io/jira/browse/FIN-67";
+          url = "https://wk-dxg.atlassian.net/browse/FIN-67";
         }
         {
           name = "Security";
-          url = "https://jira.wolterskluwer.io/jira/browse/FIN-202";
+          url = "https://wk-dxg.atlassian.net/browse/FIN-202";
         }
         {
           name = "My open LHF stories";
-          url = "https://jira.wolterskluwer.io/jira/browse/FIN-598?jql=type%20in%20(Story)%20AND%20%22Epic%20Link%22%20in%20(FIN-67)%20AND%20reporter%20in%20(damien.cassou)%20AND%20status%20not%20in%20(Done)";
+          url = "https://wk-dxg.atlassian.net/browse/FIN-598?jql=type%20in%20(Story)%20AND%20%22Epic%20Link%22%20in%20(FIN-67)%20AND%20reporter%20in%20(damien.cassou)%20AND%20status%20not%20in%20(Done)";
         }
         {
           name = "My tasks";
-          url = "https://jira.wolterskluwer.io/jira/browse/FIN-4306?jql=project%20%3D%20FIN%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Waiting%2C%20%22Pull%20Request%22)%20AND%20(assignee%20in%20(currentUser())%20OR%20labels%20in%20(DamienCassou))%20order%20by%20lastViewed%20DESC";
+          url = "https://wk-dxg.atlassian.net/browse/FIN-4306?jql=project%20%3D%20FIN%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Waiting%2C%20%22Pull%20Request%22)%20AND%20(assignee%20in%20(currentUser())%20OR%20labels%20in%20(DamienCassou))%20order%20by%20lastViewed%20DESC";
         }
         {
           name = "Tech debt finsit";
