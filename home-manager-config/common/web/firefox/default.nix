@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 let
   profileName = "home-manager";
@@ -6,6 +6,7 @@ in
 {
   programs.firefox = {
     enable = true;
+    package = pkgs-unstable.firefox; # remove this line when switching to stateVersion=26.11
     languagePacks = [
       "en-US"
       "fr-FR"

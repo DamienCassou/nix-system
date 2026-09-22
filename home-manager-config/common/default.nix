@@ -121,7 +121,7 @@ in
   fonts.fontconfig.enable = true;
 
   home = {
-    stateVersion = "26.05";
+    stateVersion = "26.05"; # search the repo for "26.11" after changing this
     enableNixpkgsReleaseCheck = false;
 
     keyboard = {

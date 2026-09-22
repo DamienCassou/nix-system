@@ -56,4 +56,7 @@
     };
     search = "DuckDuckGo";
   };
+
+  # Remove this line when switching to stateVersion=26.11:
+  programs.firefox.configPath = "Library/Application Support/org.nixos.firefox";
 }
