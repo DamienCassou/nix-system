@@ -45,6 +45,7 @@
       yarn
     ]
     ++ (with pkgs-unstable; [
+      apm-cli
       dapr-cli
       openspec
     ]);
