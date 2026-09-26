@@ -153,7 +153,7 @@
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = {
-                pkgs-unstable = makePkgs nixpkgs-unstable "aarch64-darwin";
+                pkgs-unstable = makePkgs nixpkgs-unstable "x86_64-linux";
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
