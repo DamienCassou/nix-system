@@ -44,19 +44,19 @@
 
     nixpkgs-stable = {
       # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
-      url = "github:NixOS/nixpkgs/release-26.05";
+      url = "https://channels.nixos.org/nixos-26.05/nixexprs.tar.zst";
       # url = "github:DamienCassou/nixpkgs/system";
     };
 
     nixpkgs-stable-darwin = {
-      url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=nixpkgs-26.05-darwin";
-      # url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
+      # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=nixpkgs-26.05-darwin";
+      url = "https://channels.nixos.org/nixpkgs-26.05-darwin/nixexprs.tar.zst";
       # url = "github:DamienCassou/nixpkgs/system";
     };
 
     nixpkgs-unstable = {
       # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
-      url = "github:NixOS/nixpkgs/nixos-unstable";
+      url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
       # url = "github:DamienCassou/nixpkgs/system";
     };
 
