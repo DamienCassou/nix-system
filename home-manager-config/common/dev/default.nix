@@ -48,6 +48,7 @@
       apm-cli
       dapr-cli
       openspec
+      spec-kit
     ]);
 
   home = {
