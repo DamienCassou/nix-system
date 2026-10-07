@@ -101,17 +101,18 @@
 
     notmuch = {
       enable = true;
-      new.tags = [
-        "unread"
-        "inbox"
-      ];
       hooks.preNew = ''
         ${./archive-emails.sh}
         ${lib.getExe pkgs.offlineimap}
       '';
-
-      # By default, emails with tags "spam" or "deleted" are invisible. I want all emails to be visible instead
-      search.excludeTags = [ ];
+      settings = {
+        new.tags = [
+          "unread"
+          "inbox"
+        ];
+        # By default, emails with tags "spam" or "deleted" are invisible. I want all emails to be visible instead
+        search.exclude_tags = [ ];
+      };
     };
   };
 
