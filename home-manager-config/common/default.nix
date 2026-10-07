@@ -71,15 +71,15 @@ in
         misc = {
           assume_yes = true;
           disable = [
-            "nix"
+            "bun"
             "emacs"
-            "pipx"
-            "stack"
-            "node"
             "gem"
             "git_repos"
-            "bun"
+            "nix"
+            "node"
+            "pipx"
             "ruby_gems"
+            "stack"
           ];
           remote_topgrades = [ "framework" ];
         };
