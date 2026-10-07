@@ -14,31 +14,8 @@ in
     enable = true;
     backups = {
       main = {
-        location = {
-          sourceDirectories = [ config.home.homeDirectory ];
-          repositories = [ main-repository ];
-          excludeHomeManagerSymlinks = true;
-          extraConfig = {
-            one_file_system = true;
-            exclude_from = [
-              (pkgs.writeText "borg-exclude.txt" (pkgs.callPackage ./borg-excludes.nix { inherit config; }))
-            ];
-            check_i_know_what_i_am_doing = true;
-            verbosity = 1;
-          };
-        };
-        storage = {
-          encryptionPasscommand = borg-pass-command;
-        };
-        retention = {
-          keepWithin = "2d";
-          keepHourly = 2;
-          keepDaily = 7;
-          keepWeekly = 4;
-          keepMonthly = 6;
-          keepYearly = -1;
-        };
-        consistency = {
+        settings = {
+          check_i_know_what_i_am_doing = true;
           checks = [
             {
               name = "repository";
@@ -57,6 +34,28 @@ in
               frequency = "6 weeks";
             }
           ];
+          encryption_passcommand = borg-pass-command;
+          exclude_from = [
+            (pkgs.writeText "borg-exclude.txt" (pkgs.callPackage ./borg-excludes.nix { inherit config; }))
+          ];
+          keep_within = "2d";
+          keep_hourly = 2;
+          keep_daily = 7;
+          keep_weekly = 4;
+          keep_monthly = 6;
+          keep_yearly = -1;
+          one_file_system = true;
+          repositories = [
+            {
+              path = main-repository;
+              label = "borgbase";
+            }
+          ];
+          source_directories = [ config.home.homeDirectory ];
+          verbosity = 1;
+        };
+        location = {
+          excludeHomeManagerSymlinks = true;
         };
       };
     };
