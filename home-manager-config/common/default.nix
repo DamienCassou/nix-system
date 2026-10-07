@@ -71,7 +71,9 @@ in
         misc = {
           assume_yes = true;
           disable = [
+            "atom"
             "bun"
+            "containers"
             "emacs"
             "gem"
             "git_repos"
@@ -80,6 +82,7 @@ in
             "pipx"
             "ruby_gems"
             "stack"
+            "vscode"
           ];
           remote_topgrades = [ "framework" ];
         };
