@@ -1,4 +1,4 @@
-_: {
+{ pkgs, ... }: {
   home.extraOutputsToInstall = [ "doc" ];
 
   manual = {
@@ -9,7 +9,7 @@ _: {
 
   programs.man = {
     enable = true;
-    generateCaches = true;
+    generateCaches = !pkgs.stdenv.hostPlatform.isDarwin;
   };
 
   programs.info.enable = true;
