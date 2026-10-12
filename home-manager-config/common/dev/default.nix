@@ -47,6 +47,7 @@
     ++ (with pkgs-unstable; [
       apm-cli
       dapr-cli
+      jfrog-cli
       openspec
       spec-kit
     ]);
