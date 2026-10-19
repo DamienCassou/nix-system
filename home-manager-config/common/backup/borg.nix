@@ -73,20 +73,12 @@ in
 
   launchd.agents.borgmatic.config.StartCalendarInterval = lib.mkForce [
     {
-      Minute = 0;
-      Hour = 8;
+      Minute = 00;
+      Hour = 10;
     }
     {
-      Minute = 0;
-      Hour = 12;
-    }
-    {
-      Minute = 0;
-      Hour = 16;
-    }
-    {
-      Minute = 0;
-      Hour = 20;
+      Minute = 00;
+      Hour = 15;
     }
   ];
 }
