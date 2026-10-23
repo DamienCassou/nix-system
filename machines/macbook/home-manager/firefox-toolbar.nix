@@ -18,12 +18,20 @@ in
 {
   bookmarks = [
     {
-      name = "Project (jira)";
+      name = "CapegoWeb (jira)";
       url = "https://wk-dxg.atlassian.net/browse/FIN-3516";
     }
     {
-      name = "Project (confluence)";
+      name = "CapegoWeb (confluence)";
       url = "https://wk-dxg.atlassian.net/wiki/spaces/TAAEFINSIT/pages/454992429/Capego+web+PDF+export+and+print";
+    }
+    {
+      name = "DevEx (Jira)";
+      url = "https://wk-dxg.atlassian.net/browse/FIN-4635";
+    }
+    {
+      name = "Repo migration (Jira)";
+      url = "https://wk-dxg.atlassian.net/browse/FIN-4522";
     }
     {
       name = "mergeable";
