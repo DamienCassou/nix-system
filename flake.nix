@@ -55,8 +55,8 @@
     };
 
     nixpkgs-unstable = {
-      # url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=system";
-      url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
+      url = "git+file:///Users/cassou/personal/projects/nix/nixpkgs?ref=nixpkgs-unstable";
+      # url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
       # url = "github:DamienCassou/nixpkgs/system";
     };
 
