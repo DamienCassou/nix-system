@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   ...
 }:
 let
@@ -8,12 +9,14 @@ let
   home = config.home.homeDirectory;
 in
 {
-  home.packages = with pkgs; [
-    git-absorb
-    git-when-merged
-    git-crypt
-    gh
-  ];
+  home.packages =
+    with pkgs;
+    [
+      git-absorb
+      git-when-merged
+      git-crypt
+    ]
+    ++ (with pkgs-unstable; [ gh ]);
 
   programs.git = {
     enable = true;
