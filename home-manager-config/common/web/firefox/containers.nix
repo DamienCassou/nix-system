@@ -20,11 +20,6 @@ _: {
       color = "turquoise";
       icon = "dollar";
     };
-    "slack" = {
-      id = 10;
-      color = "purple";
-      icon = "fence";
-    };
     "cantine" = {
       id = 11;
       color = "blue";
