@@ -103,6 +103,7 @@
       # > gpg: decryption failed: No such file or directory
       FINSIT_GITHUB = builtins.readFile ../../../secrets/FINSIT_GITHUB;
       WK_GITHUB = builtins.readFile ../../../secrets/WK_GITHUB;
+      ARTIFACTORY_USERNAME = "damien.cassou";
       ARTIFACTORY_TOKEN = builtins.readFile ../../../secrets/ARTIFACTORY_TOKEN;
       WK_GROUP_NPM_TOKEN = builtins.readFile ../../../secrets/ARTIFACTORY_TOKEN;
     };
