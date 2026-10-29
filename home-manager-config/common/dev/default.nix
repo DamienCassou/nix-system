@@ -45,6 +45,7 @@
       yarn
     ]
     ++ (with pkgs-unstable; [
+      actionlint # to validate github workflow files
       apm-cli
       dapr-cli
       jfrog-cli
