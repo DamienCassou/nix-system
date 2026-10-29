@@ -10,11 +10,6 @@ _: {
       color = "blue";
       icon = "circle";
     };
-    "github" = {
-      id = 8;
-      color = "green";
-      icon = "circle";
-    };
     "banque populaire" = {
       id = 9;
       color = "turquoise";
