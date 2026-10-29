@@ -35,7 +35,7 @@ in
     }
     {
       name = "mergeable";
-      url = "https://github.com/pulls/2270075?q=is%3Aopen+is%3Apr+archived%3Afalse+label%3Amergeable+user%3Aforetagsplatsen+";
+      url = "https://github.com/pulls/2270075?q=is%3Aopen+is%3Apr+archived%3Afalse+label%3Amergeable+user%3wk-taa+";
     }
     {
       name = "mine";
