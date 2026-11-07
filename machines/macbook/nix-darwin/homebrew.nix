@@ -38,7 +38,7 @@
       "slack"
       {
         # Force taking regular breaks
-        name = "stretchly";
+        name = "hovancik/stretchly/stretchly";
         args = {
           "no_quarantine" = true;
         };
