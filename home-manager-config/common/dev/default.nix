@@ -51,6 +51,7 @@
       jfrog-cli
       openspec
       spec-kit
+      xc
     ]);
 
   home = {
