@@ -49,6 +49,7 @@
       };
       khard = {
         enable = true;
+        addressbooks = [ "contacts" ];
       };
       local = {
         path = "${config.home.homeDirectory}/personal";
