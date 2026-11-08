@@ -1,5 +1,7 @@
 { config, lib, ... }:
 {
+  imports = [ ./karabiner.nix ];
+
   launchd = {
     enable = true;
     agents = {
