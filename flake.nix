@@ -21,8 +21,8 @@
     };
 
     home-manager = {
-      # url = "git+file:///Users/cassou/personal/projects/nix/home-manager?ref=system";
-      url = "github:nix-community/home-manager";
+      url = "git+file:///Users/cassou/personal/projects/nix/home-manager?ref=system";
+      # url = "github:nix-community/home-manager";
       # url = "github:DamienCassou/home-manager/system";
       inputs.nixpkgs.follows = "nixpkgs-stable";
     };
