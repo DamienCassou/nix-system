@@ -7,6 +7,7 @@ in
   imports = [
     ../../../home-manager-config/common
     ../../../home-manager-config/darwin
+    ./unison.nix
   ];
 
   programs.firefox.profiles.home-manager.bookmarks.settings = [
