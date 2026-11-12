@@ -37,7 +37,7 @@ let
     };
     "to" = [
       {
-        "key_code" = "right_arrow";
+        "key_code" = "left_arrow";
         "modifiers" = [ "option" ];
       }
     ];
