@@ -1,41 +1,60 @@
 _:
 let
-  repos = [
-    "Api.Lib"
-    "AuditApi"
-    "ComputationApi"
-    "frontend"
-    "ImportApi"
-    "IntegrationApi"
-    "LedgerApi"
-    "monitor"
-    "PublicApi"
-    "ReferentialApi"
-    "setup"
-    "UsageApi"
+  capegoWebRepos = [
+    "wktaasc-capegoweb-gitops"
+    "wktaasc-capegoweb-reportingpbc-service"
+    "wktaasc-capegoweb-specs"
+    "wktaasc-capegoweb-ui"
+    "wktaasc-common-actions"
   ];
+  finsitRepos = [
+    "wktaasc-finsit-actions"
+    "wktaasc-finsit-ai-tools"
+    "wktaasc-finsit-api-acceptance-tests"
+    "wktaasc-finsit-api-lib"
+    "wktaasc-finsit-audit-api"
+    "wktaasc-finsit-computation-api"
+    "wktaasc-finsit-frontend"
+    "wktaasc-finsit-graphapi-lib"
+    "wktaasc-finsit-import-api"
+    "wktaasc-finsit-integration-api"
+    "wktaasc-finsit-misc"
+    "wktaasc-finsit-monitor"
+    "wktaasc-finsit-public-api"
+    "wktaasc-finsit-referential-api"
+    "wktaasc-finsit-setup"
+    "wktaasc-finsit-usage-api"
+    "wktaasc-finsit-user-acceptance-tests"
+  ];
+  makeWkTaaGitHubBookmarks =
+    repos:
+    (map (repo: {
+      name = repo;
+      url = "https://github.com/wk-taa/${repo}/pulls";
+    }) repos);
 in
 {
   bookmarks = [
     {
-      name = "CapegoWeb (jira)";
-      url = "https://wk-dxg.atlassian.net/browse/FIN-3516";
-    }
-    {
-      name = "CapegoWeb (confluence)";
-      url = "https://wk-dxg.atlassian.net/wiki/spaces/TAAEFINSIT/pages/454992429/Capego+web+PDF+export+and+print";
+      name = "CW P&L/BS PDF";
+      bookmarks = [
+        {
+          name = "Jira";
+          url = "https://wk-dxg.atlassian.net/browse/FIN-3516";
+        }
+        {
+          name = "Confluence";
+          url = "https://wk-dxg.atlassian.net/wiki/spaces/TAAEFINSIT/pages/454992429/Capego+web+PDF+export+and+print";
+        }
+      ];
     }
     {
       name = "DevEx (Jira)";
       url = "https://wk-dxg.atlassian.net/browse/FIN-4635";
     }
     {
-      name = "Repo migration (Jira)";
-      url = "https://wk-dxg.atlassian.net/browse/FIN-4522";
-    }
-    {
       name = "mergeable";
-      url = "https://github.com/pulls/2270075?q=is%3Aopen+is%3Apr+archived%3Afalse+label%3Amergeable+user%3wk-taa+";
+      url = "https://github.com/pulls/reviews?q=is%3Apr+state%3Aopen+archived%3Afalse+sort%3Aupdated-desc+label%3Amergeable+org%3Awk-taa";
     }
     {
       name = "mine";
@@ -51,10 +70,6 @@ in
         {
           name = "finsit (confluence)";
           url = "https://wk-dxg.atlassian.net/wiki/spaces/TAAEFINSIT/overview?homepageId=454950914";
-        }
-        {
-          name = "Tickets of the current cycle";
-          url = "https://wk-dxg.atlassian.net/secure/RapidBoard.jspa?rapidView=6800&view=planning&selectedIssue=FIN-908&epics=visible&issueLimit=100#";
         }
         {
           name = "Kanban";
@@ -81,28 +96,18 @@ in
           url = "https://wk-dxg.atlassian.net/browse/FIN-4306?jql=project%20%3D%20FIN%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Waiting%2C%20%22Pull%20Request%22)%20AND%20(assignee%20in%20(currentUser())%20OR%20labels%20in%20(DamienCassou))%20order%20by%20lastViewed%20DESC";
         }
         {
-          name = "Tech debt finsit";
+          name = "Tech debt Finsit";
           url = "https://wk-dxg.atlassian.net/wiki/spaces/TAAEARC/pages/378307608/Tech+Debt+Finsit";
         }
       ];
     }
     {
-      name = "Github";
-      bookmarks =
-        (map (repo: {
-          name = repo;
-          url = "https://github.com/foretagsplatsen/${repo}/pulls";
-        }) repos)
-        ++ [
-          {
-            name = "wktaasc-finsit-ai-tools";
-            url = "https://github.com/wk-taa/wktaasc-finsit-ai-tools";
-          }
-        ];
+      name = "Github CW";
+      bookmarks = makeWkTaaGitHubBookmarks capegoWebRepos;
     }
     {
-      name = "Workday learning";
-      url = "https://wd3.myworkday.com/wk/learning/mylearning";
+      name = "Github finsit";
+      bookmarks = makeWkTaaGitHubBookmarks finsitRepos;
     }
   ];
 }
