@@ -123,7 +123,6 @@
       epkgs.xref-js2
       epkgs.yasnippet
       epkgs.ytdl
-      pkgs.notmuch.emacs
     ];
   };
 

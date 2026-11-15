@@ -10,6 +10,10 @@ in
     ./unison.nix
   ];
 
+  programs.emacs.extraPackages = epkgs: [
+    pkgs.notmuch.emacs
+  ];
+
   programs.firefox.profiles.home-manager.bookmarks.settings = [
     {
       name = "Bookmarks Toolbar";
