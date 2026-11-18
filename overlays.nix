@@ -32,7 +32,7 @@ in
     in
     {
       inherit emacs;
-      notmuch = pkgs.notmuch.override { inherit emacs; };
+      notmuch = pkgs-unstable.notmuch.override { inherit emacs; };
     }
   )
 ]
