@@ -62,7 +62,7 @@ in
 
     rofi = {
       enable = true;
-      cycle = true;
+      settings.cycle = true;
     };
   };
 
