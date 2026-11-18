@@ -37,6 +37,11 @@ _: {
       url = "https://meteofrance.com/previsions-meteo-france/brest/29200";
     }
     {
+      name = "Météo & Radar Brest";
+      url = "https://www.meteoetradar.com/carte-meteo/brest/15071070?center=48.42,-4.48&placemark=48.3903,-4.4863&zoom=8&period=periodCurrentHighRes&tz=Europe%2FParis";
+    }
+
+    {
       name = "Freebox OS";
       url = "http://192.168.1.254";
     }
