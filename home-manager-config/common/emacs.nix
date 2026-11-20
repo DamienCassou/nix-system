@@ -50,7 +50,6 @@
       epkgs.expreg
       epkgs.flash
       epkgs.flymake
-      epkgs.flymake-actionlint
       epkgs.flymake-eslint
       epkgs.flymake-hledger
       epkgs.fontaine
